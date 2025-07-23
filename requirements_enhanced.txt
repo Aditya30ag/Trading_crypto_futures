@@ -1,0 +1,91 @@
+# Enhanced Trading Bot Requirements
+# Core dependencies for real-time monitoring and intelligent trade management
+
+# Data processing and analysis
+numpy>=1.21.0
+pandas>=1.3.0
+scipy>=1.7.0
+
+# Technical analysis
+ta-lib>=0.4.24
+yfinance>=0.1.70
+
+# API and networking
+requests>=2.25.0
+websockets>=10.0
+aiohttp>=3.8.0
+
+# Configuration and serialization
+pyyaml>=6.0
+python-dotenv>=0.19.0
+
+# Logging and monitoring
+structlog>=21.1.0
+colorlog>=6.6.0
+
+# Date and time handling
+python-dateutil>=2.8.2
+pytz>=2021.3
+
+# Cryptography and security
+cryptography>=3.4.8
+hmac>=2.0.1
+
+# Data visualization (optional)
+matplotlib>=3.4.0
+plotly>=5.0.0
+seaborn>=0.11.0
+
+# Machine learning (for future enhancements)
+scikit-learn>=1.0.0
+tensorflow>=2.8.0
+
+# Database (for storing trade data)
+sqlalchemy>=1.4.0
+sqlite3
+
+# Testing
+pytest>=6.2.0
+pytest-asyncio>=0.16.0
+
+# Development tools
+black>=21.0.0
+flake8>=3.9.0
+mypy>=0.910
+
+# Performance monitoring
+psutil>=5.8.0
+memory-profiler>=0.60.0
+
+# Notification system (for alerts)
+twilio>=7.0.0
+slack-sdk>=3.15.0
+
+# Web framework (for dashboard)
+flask>=2.0.0
+flask-socketio>=5.1.0
+
+# Background tasks
+celery>=5.2.0
+redis>=4.0.0
+
+# Data validation
+pydantic>=1.8.0
+marshmallow>=3.13.0
+
+# Async support
+asyncio-mqtt>=0.11.0
+aiofiles>=0.8.0
+
+# Statistical analysis
+statsmodels>=0.13.0
+
+# Financial calculations
+pyfin>=0.1.0
+
+# Environment management
+virtualenv>=20.0.0
+
+# Documentation
+sphinx>=4.0.0
+sphinx-rtd-theme>=1.0.0 

@@ -1,0 +1,58 @@
+# CoinDCX API settings
+api:
+  public_base_url: "https://public.coindcx.com"  # For public endpoints like /market_data
+  api_base_url: "https://api.coindcx.com"        # For authenticated endpoints like /exchange
+  api_key: "376a11ea349817010f8283e382b7ddc879c12c637a6c714b"
+  api_secret: "bda2091e1095547751a75ea180db885a9a026bcdee85fba88ada7c9cbbb03711"
+
+# Trading settings
+trading:
+  initial_balance: 10000  # INR
+  position_size_ratio: 0.25  # 25% of balance per trade (increased from 10%)
+  instruments:
+    - B-BTC_USDT
+    - B-ETH_USDT
+    - B-XRP_USDT
+    - B-ADA_USDT
+    - B-DOT_USDT
+    - B-SOL_USDT
+    - B-BNB_USDT
+    - B-MATIC_USDT
+    - B-LINK_USDT
+    - B-TRX_USDT
+    - B-AVAX_USDT
+  timeframes:
+    scalping: ["5m"]  # Focus on 5m for scalping
+    swing: ["15m","1h"]  # Focus on 15m and 1h for swing
+    long_swing: ["30m","1h"]  # Focus on 30m and 1h for long swing
+    trend: ["1d"]  # Keep 1d for trend
+  leverage:
+    scalping: 25
+    swing: 25
+    long_swing: 25
+    trend: 25
+  risk_reward:
+    scalping: 2
+    swing: 2
+    long_swing: 2.5
+    trend: 3
+  min_profit_inr: 100
+  fees:
+    taker: 0.00075  # 0.075%
+    maker: 0.00025  # 0.025%
+
+  # Signal generation and monitoring settings - OPTIMIZED FOR PERFORMANCE
+  signal_generation:
+    max_signals: 20  # Reduced from 40 for faster generation
+    max_monitor_signals: 15  # Monitor top 15 signals
+    min_score_threshold: 5  # Score threshold for quality
+    max_active_signals: 15  # Monitor top 15 active signals
+    max_active_trades: 15  # Maximum active trades
+    profit_threshold: 300  # Minimum estimated profit
+    confidence_threshold: 0.5  # Confidence threshold
+    min_profit_for_monitoring: 200  # Minimum profit for monitoring
+
+# Logging settings
+logging:
+  log_file: "logs/trading_bot.log"
+  level: "INFO"
