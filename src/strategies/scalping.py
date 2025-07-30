@@ -116,129 +116,136 @@ class ScalpingStrategy:
                 self.logger.warning(f"Advanced indicator failure for {symbol}")
                 return None
 
-            # --- SIMPLIFIED AND RELIABLE SCALPING ENTRY LOGIC ---
+            # --- ENHANCED SCORING SYSTEM FOR BETTER SIGNAL QUALITY ---
             signal = None
             side = None
             
-            # SIMPLIFIED LONG CONDITIONS - Focus on clear bullish setups only
+            # ENHANCED LONG CONDITIONS with weighted scoring
             long_conditions = []
             
-            # 1. CLEAR EMA TREND: EMA20 > EMA50 with minimum distance
+            # 1. CLEAR EMA TREND: EMA20 > EMA50 with minimum distance (Weight: 2 points)
             ema_trend_strength = ((ema_20 - ema_50) / ema_50) * 100
-            ema_bullish = ema_20 > ema_50 and ema_trend_strength > 0.1  # Minimum 0.1% separation
-            long_conditions.append(("EMA20 > EMA50 (clear trend)", ema_bullish))
+            ema_bullish = ema_20 > ema_50 and ema_trend_strength > 0.1
+            long_conditions.append(("EMA20 > EMA50 (clear trend)", ema_bullish, 2))
             
-            # 2. PRICE ABOVE EMAs: Current price > EMA20
+            # 2. PRICE ABOVE EMAs: Current price > EMA20 (Weight: 2 points)
             price_above_ema = current_price > ema_20
-            long_conditions.append(("Price > EMA20", price_above_ema))
+            long_conditions.append(("Price > EMA20", price_above_ema, 2))
             
-            # 3. RSI NOT OVERBOUGHT: RSI between 45-65 (optimal bullish range)
-            rsi_bullish = 45 <= rsi <= 65  # Narrower, more reliable range
-            long_conditions.append(("RSI optimal bullish (45-65)", rsi_bullish))
+            # 3. RSI OPTIMAL RANGE: RSI between 45-65 (Weight: 2 points)
+            rsi_bullish = 45 <= rsi <= 65
+            long_conditions.append(("RSI optimal bullish (45-65)", rsi_bullish, 2))
             
-            # 4. MACD POSITIVE AND RISING: MACD > 0 and histogram increasing
-            macd_bullish = macd > 0 and stoch_k > stoch_d  # MACD positive + momentum
-            long_conditions.append(("MACD positive + momentum", macd_bullish))
+            # 4. MACD POSITIVE AND RISING (Weight: 2 points)
+            macd_bullish = macd > 0 and stoch_k > stoch_d
+            long_conditions.append(("MACD positive + momentum", macd_bullish, 2))
             
-            # 5. VOLUME CONFIRMATION: Current volume > average
-            long_conditions.append(("Volume > average", volume_ok))
+            # 5. VOLUME CONFIRMATION (Weight: 1 point)
+            long_conditions.append(("Volume > average", volume_ok, 1))
             
-            # 6. PRICE ABOVE VWAP: Current price > daily VWAP
+            # 6. PRICE ABOVE VWAP (Weight: 2 points)
             above_vwap = current_price > vwap_daily
-            long_conditions.append(("Price > VWAP", above_vwap))
+            long_conditions.append(("Price > VWAP", above_vwap, 2))
             
-            # 7. NOT OVERBOUGHT: StochRSI < 80 (avoid extreme overbought)
+            # 7. NOT OVERBOUGHT (Weight: 1 point)
             not_overbought = stoch_k < 80 and stoch_d < 80
-            long_conditions.append(("Not overbought (StochRSI < 80)", not_overbought))
+            long_conditions.append(("Not overbought (StochRSI < 80)", not_overbought, 1))
             
-            # 8. MULTI-TIMEFRAME TREND CONFIRMATION
+            # 8. MULTI-TIMEFRAME TREND CONFIRMATION (Weight: 3 points)
             multi_tf_bullish = trend_confirmation.get('trend', 'neutral') in ['bullish', 'strong_bullish']
-            long_conditions.append(("Multi-timeframe trend bullish", multi_tf_bullish))
+            long_conditions.append(("Multi-timeframe trend bullish", multi_tf_bullish, 3))
             
-            # --- ENHANCED LONG CONDITIONS ---
-            # 9. Supertrend in uptrend
+            # 9. Supertrend in uptrend (Weight: 2 points)
             supertrend_up = supertrend['in_uptrend']
-            long_conditions.append(("Supertrend uptrend", supertrend_up))
-            # 10. ADX strong trend
+            long_conditions.append(("Supertrend uptrend", supertrend_up, 2))
+            
+            # 10. ADX strong trend (Weight: 2 points)
             adx_ok = adx['adx'] > 25 and adx['di_plus'] > adx['di_minus']
-            long_conditions.append(("ADX > 25 and DI+ > DI-", adx_ok))
-            # 11. Price above EMA100
+            long_conditions.append(("ADX > 25 and DI+ > DI-", adx_ok, 2))
+            
+            # 11. Price above EMA100 (Weight: 1 point)
             price_above_ema100 = current_price > ema_100
-            long_conditions.append(("Price > EMA100", price_above_ema100))
-            # 12. OBV rising (last 2 values)
-            obv_rising = obv > 0  # For simplicity, positive OBV means rising
-            long_conditions.append(("OBV rising", obv_rising))
+            long_conditions.append(("Price > EMA100", price_above_ema100, 1))
+            
+            # 12. OBV rising (Weight: 1 point)
+            obv_rising = obv > 0
+            long_conditions.append(("OBV rising", obv_rising, 1))
 
-            # --- SIMPLIFIED SHORT CONDITIONS - Focus on clear bearish setups only ---
+            # --- ENHANCED SHORT CONDITIONS with weighted scoring ---
             short_conditions = []
             
-            # 1. CLEAR EMA TREND: EMA20 < EMA50 with minimum distance
-            ema_bearish = ema_20 < ema_50 and ema_trend_strength < -0.1  # Minimum 0.1% separation
-            short_conditions.append(("EMA20 < EMA50 (clear trend)", ema_bearish))
+            # 1. CLEAR EMA TREND: EMA20 < EMA50 with minimum distance (Weight: 2 points)
+            ema_bearish = ema_20 < ema_50 and ema_trend_strength < -0.1
+            short_conditions.append(("EMA20 < EMA50 (clear trend)", ema_bearish, 2))
             
-            # 2. PRICE BELOW EMAs: Current price < EMA20
+            # 2. PRICE BELOW EMAs: Current price < EMA20 (Weight: 2 points)
             price_below_ema = current_price < ema_20
-            short_conditions.append(("Price < EMA20", price_below_ema))
+            short_conditions.append(("Price < EMA20", price_below_ema, 2))
             
-            # 3. RSI NOT OVERSOLD: RSI between 35-55 (optimal bearish range)
-            rsi_bearish = 35 <= rsi <= 55  # Narrower, more reliable range
-            short_conditions.append(("RSI optimal bearish (35-55)", rsi_bearish))
+            # 3. RSI OPTIMAL RANGE: RSI between 35-55 (Weight: 2 points)
+            rsi_bearish = 35 <= rsi <= 55
+            short_conditions.append(("RSI optimal bearish (35-55)", rsi_bearish, 2))
             
-            # 4. MACD NEGATIVE AND FALLING: MACD < 0 and histogram decreasing
-            macd_bearish = macd < 0 and stoch_k < stoch_d  # MACD negative + momentum
-            short_conditions.append(("MACD negative + momentum", macd_bearish))
+            # 4. MACD NEGATIVE AND FALLING (Weight: 2 points)
+            macd_bearish = macd < 0 and stoch_k < stoch_d
+            short_conditions.append(("MACD negative + momentum", macd_bearish, 2))
             
-            # 5. VOLUME CONFIRMATION: Current volume > average
-            short_conditions.append(("Volume > average", volume_ok))
+            # 5. VOLUME CONFIRMATION (Weight: 1 point)
+            short_conditions.append(("Volume > average", volume_ok, 1))
             
-            # 6. PRICE BELOW VWAP: Current price < daily VWAP
+            # 6. PRICE BELOW VWAP (Weight: 2 points)
             below_vwap = current_price < vwap_daily
-            short_conditions.append(("Price < VWAP", below_vwap))
+            short_conditions.append(("Price < VWAP", below_vwap, 2))
             
-            # 7. NOT OVERSOLD: StochRSI > 20 (avoid extreme oversold)
+            # 7. NOT OVERSOLD (Weight: 1 point)
             not_oversold = stoch_k > 20 and stoch_d > 20
-            short_conditions.append(("Not oversold (StochRSI > 20)", not_oversold))
+            short_conditions.append(("Not oversold (StochRSI > 20)", not_oversold, 1))
             
-            # 8. MULTI-TIMEFRAME TREND CONFIRMATION
+            # 8. MULTI-TIMEFRAME TREND CONFIRMATION (Weight: 3 points)
             multi_tf_bearish = trend_confirmation.get('trend', 'neutral') in ['bearish', 'strong_bearish']
-            short_conditions.append(("Multi-timeframe trend bearish", multi_tf_bearish))
+            short_conditions.append(("Multi-timeframe trend bearish", multi_tf_bearish, 3))
             
-            # --- ENHANCED SHORT CONDITIONS ---
-            # 9. Supertrend in downtrend
+            # 9. Supertrend in downtrend (Weight: 2 points)
             supertrend_down = not supertrend['in_uptrend']
-            short_conditions.append(("Supertrend downtrend", supertrend_down))
-            # 10. ADX strong trend
+            short_conditions.append(("Supertrend downtrend", supertrend_down, 2))
+            
+            # 10. ADX strong trend (Weight: 2 points)
             adx_ok_short = adx['adx'] > 25 and adx['di_minus'] > adx['di_plus']
-            short_conditions.append(("ADX > 25 and DI- > DI+", adx_ok_short))
-            # 11. Price below EMA100
+            short_conditions.append(("ADX > 25 and DI- > DI+", adx_ok_short, 2))
+            
+            # 11. Price below EMA100 (Weight: 1 point)
             price_below_ema100 = current_price < ema_100
-            short_conditions.append(("Price < EMA100", price_below_ema100))
-            # 12. OBV falling (last 2 values)
-            obv_falling = obv < 0  # For simplicity, negative OBV means falling
-            short_conditions.append(("OBV falling", obv_falling))
+            short_conditions.append(("Price < EMA100", price_below_ema100, 1))
+            
+            # 12. OBV falling (Weight: 1 point)
+            obv_falling = obv < 0
+            short_conditions.append(("OBV falling", obv_falling, 1))
 
-            # --- BONUS CONFIDENCE BOOSTERS ---
+            # --- BONUS CONFIDENCE BOOSTERS (Additional points) ---
             bonus_score = 0
             bonus_reasons = []
             if cci > 100:
+                bonus_score += 2
+                bonus_reasons.append("CCI > 100 (strong bullish)")
+            elif cci < -100:
+                bonus_score += 2
+                bonus_reasons.append("CCI < -100 (strong bearish)")
+            
+            if momentum_osc > 0.02:  # Strong positive momentum
                 bonus_score += 1
-                bonus_reasons.append("CCI > 100 (bullish)")
-            if cci < -100:
+                bonus_reasons.append("Strong positive momentum")
+            elif momentum_osc < -0.02:  # Strong negative momentum
                 bonus_score += 1
-                bonus_reasons.append("CCI < -100 (bearish)")
-            if momentum_osc > 0:
-                bonus_score += 1
-                bonus_reasons.append("Momentum Oscillator positive (bullish)")
-            if momentum_osc < 0:
-                bonus_score += 1
-                bonus_reasons.append("Momentum Oscillator negative (bearish)")
+                bonus_reasons.append("Strong negative momentum")
+            
             if current_price > keltner_upper:
-                bonus_score += 1
+                bonus_score += 2
                 bonus_reasons.append("Price above Keltner upper (bullish breakout)")
-            if current_price < keltner_lower:
-                bonus_score += 1
+            elif current_price < keltner_lower:
+                bonus_score += 2
                 bonus_reasons.append("Price below Keltner lower (bearish breakout)")
-            # Fibonacci confluence (entry near 38.2% or 61.8%)
+            
+            # Fibonacci confluence (entry near key levels)
             fib_382 = fib_levels['38.2%']
             fib_618 = fib_levels['61.8%']
             if abs(current_price - fib_382) / current_price < 0.005:
@@ -248,28 +255,32 @@ class ScalpingStrategy:
                 bonus_score += 1
                 bonus_reasons.append("Entry near Fib 61.8% level")
 
-            # Add bonus_score to main score for final decision
-            # (You may want to cap the max score or adjust thresholds accordingly)
-
-            # Check long conditions (NEED 6 out of 8 for reliability)
-            long_score = sum(1 for _, condition in long_conditions if condition)
-            self.logger.debug(f"[Scalping] {symbol} {timeframe} Long conditions: {[(name, condition) for name, condition in long_conditions]}")
+            # Calculate weighted scores
+            long_score = sum(weight for _, condition, weight in long_conditions if condition)
+            short_score = sum(weight for _, condition, weight in short_conditions if condition)
             
-            # Check short conditions (NEED 6 out of 8 for reliability)
-            short_score = sum(1 for _, condition in short_conditions if condition)
-            self.logger.debug(f"[Scalping] {symbol} {timeframe} Short conditions: {[(name, condition) for name, condition in short_conditions]}")
+            # Maximum possible score calculation
+            max_long_score = sum(weight for _, _, weight in long_conditions)
+            max_short_score = sum(weight for _, _, weight in short_conditions)
+            max_possible_score = max(max_long_score, max_short_score)
             
-            # DETERMINE TRADE DIRECTION (MORE SELECTIVE: Need 6 out of 8 for better quality)
-            if long_score >= 6 and long_score > short_score:
+            self.logger.debug(f"[Scalping] {symbol} {timeframe} Long score: {long_score}/{max_long_score}")
+            self.logger.debug(f"[Scalping] {symbol} {timeframe} Short score: {short_score}/{max_short_score}")
+            
+            # DETERMINE TRADE DIRECTION (Need minimum 10 points for signal generation)
+            min_score_required = 10  # Minimum 10 points required
+            
+            if long_score >= min_score_required and long_score > short_score:
                 side = "long"
-                score = long_score
-                reasons = [name for name, condition in long_conditions if condition]
-            elif short_score >= 6 and short_score > long_score:
+                score = long_score + bonus_score
+                reasons = [name for name, condition, _ in long_conditions if condition]
+            elif short_score >= min_score_required and short_score > long_score:
                 side = "short"
-                score = short_score
-                reasons = [name for name, condition in short_conditions if condition]
+                score = short_score + bonus_score
+                reasons = [name for name, condition, _ in short_conditions if condition]
             else:
-                self.logger.debug(f"[Scalping] No signal for {symbol}: Long score={long_score}/8, Short score={short_score}/8 (need 6+)")
+                self.logger.debug(f"[Scalping] No signal for {symbol}: Long score={long_score}/{max_long_score}, "
+                                f"Short score={short_score}/{max_short_score} (need {min_score_required}+)")
                 return None
 
             # ENHANCED: Incorporate multi-timeframe trend confirmation
@@ -278,23 +289,23 @@ class ScalpingStrategy:
             
             # Adjust scores based on multi-timeframe trend alignment
             if side == "long" and trend_trend in ['bullish', 'strong_bullish']:
-                score += 1  # Bonus for trend alignment
-                reasons.append("Multi-timeframe trend bullish")
+                score += 2  # Bonus for trend alignment
+                reasons.append("Multi-timeframe trend aligned (bullish)")
             elif side == "short" and trend_trend in ['bearish', 'strong_bearish']:
-                score += 1  # Bonus for trend alignment
-                reasons.append("Multi-timeframe trend bearish")
+                score += 2  # Bonus for trend alignment
+                reasons.append("Multi-timeframe trend aligned (bearish)")
             elif side == "long" and trend_trend in ['bearish', 'strong_bearish']:
-                score -= 1  # Penalty for trend misalignment
-                reasons.append("Multi-timeframe trend bearish (penalty)")
+                score -= 2  # Penalty for trend misalignment
+                reasons.append("Multi-timeframe trend misaligned (penalty)")
             elif side == "short" and trend_trend in ['bullish', 'strong_bullish']:
-                score -= 1  # Penalty for trend misalignment
-                reasons.append("Multi-timeframe trend bullish (penalty)")
+                score -= 2  # Penalty for trend misalignment
+                reasons.append("Multi-timeframe trend misaligned (penalty)")
 
             # Calculate pivot points
             pivots = self.indicators.calculate_pivot_points(candles)
 
-            # Generate signal if conditions are met (MORE SELECTIVE: Need 6+ for better quality)
-            if side and score >= 6:  # MORE SELECTIVE: Need 6+ out of 8
+            # Generate signal only if score meets minimum threshold (10+)
+            if side and score >= 10:
                 entry_price = current_price
                 
                 # SIMPLIFIED AND REALISTIC TP/SL CALCULATION
@@ -318,9 +329,6 @@ class ScalpingStrategy:
                     tp1 = entry_price * 0.985  # 1.5% below entry
                     tp2 = entry_price * 0.98   # 2% below entry (capped)
 
-                # SIMPLIFIED: No complex pivot point logic for scalping
-                # Use simple, predictable levels
-                
                 # Entry price validation (0.5% slippage tolerance)
                 entry_tolerance = entry_price * 0.005  # 0.5% tolerance
                 min_entry_price = entry_price - entry_tolerance
@@ -339,44 +347,35 @@ class ScalpingStrategy:
                 taker_fee = inr_profit * taker_fee_rate
                 net_profit = inr_profit - taker_fee
                 
-                # Simple profit adjustment based on score
-                score_multiplier = 1.0 + (score - 6) * 0.1  # 10% increase per score point above 6
+                # Score-based profit multiplier (more conservative)
+                score_multiplier = 1.0 + (score - 10) * 0.05  # 5% increase per score point above 10
                 final_profit = net_profit * score_multiplier
                 
                 # Cap profit at reasonable levels
-                final_profit = min(final_profit, 1000.0)  # Maximum ₹1000 profit
+                final_profit = min(final_profit, 800.0)  # Maximum ₹800 profit for scalping
 
-                # CAP SL TO 2.1% AND TP TO 2% FOR SCALPING
+                # CAP SL TO 2% AND TP TO 2% FOR SCALPING
                 if side == "long":
-                    stop_loss = max(stop_loss, entry_price * 0.979)
+                    stop_loss = max(stop_loss, entry_price * 0.98)
                     tp1 = min(tp1, entry_price * 1.02)
                     tp2 = tp1
                 else:
-                    stop_loss = min(stop_loss, entry_price * 1.021)
+                    stop_loss = min(stop_loss, entry_price * 1.02)
                     tp1 = max(tp1, entry_price * 0.98)
                     tp2 = tp1
 
-                # Remove undefined multipliers from profit calculation
-                # final_profit = net_profit * score_multiplier * rsi_multiplier * volume_multiplier * macd_multiplier * structure_multiplier
-                final_profit = net_profit * score_multiplier
-                # Remove minimum profit threshold (no more final_profit = max(final_profit, 100.0))
-                # Keep only the maximum cap if needed
-                final_profit = min(final_profit, 1000.0)  # Increased maximum from ₹500 to ₹1000
-                
                 # Calculate confidence and quality score with multi-timeframe trend
-                base_confidence = min(score / 8.0, 1.0)  # Normalize to 0-1
+                base_confidence = min(score / max_possible_score, 1.0)  # Normalize to 0-1
                 confidence = (base_confidence + trend_strength) / 2
-                quality_score = (score * 10) + (trend_strength * 50) + (confidence * 100)
+                quality_score = (score * 5) + (trend_strength * 30) + (confidence * 50)
                 
                 # Normalize quality score to 0-100
-                max_possible_score = 8 * 10 + 1.0 * 50 + 1.0 * 100  # 230
-                normalized_score = min((quality_score / max_possible_score) * 100, 100)
+                max_quality_score = (max_possible_score + 5) * 5 + 1.0 * 30 + 1.0 * 50  # Theoretical max
+                normalized_score = min((quality_score / max_quality_score) * 100, 100)
 
-                # Calculate total possible score
-                score_max = len(long_conditions) + 5  # 5 is the max possible bonus points
-                # Add bonus_score to main score
-                total_score = score + bonus_score
+                # Add bonus reasons to main reasons
                 total_reasons = reasons + bonus_reasons
+                
                 signal = {
                     "symbol": symbol,
                     "timeframe": primary_tf,
@@ -387,9 +386,9 @@ class ScalpingStrategy:
                     "take_profit": tp1,
                     "tp1": tp1,
                     "tp2": tp2,
-                    "max_hold_time": 2,  # 2 hours max hold time
-                    "score": total_score,
-                    "score_max": score_max,
+                    "max_hold_time": 0.5,  # 30 minutes for scalping
+                    "score": score,
+                    "score_max": max_possible_score + 5,  # Include bonus points in max
                     "score_reasons": total_reasons,
                     "indicators": {
                         "rsi": rsi,
@@ -425,15 +424,15 @@ class ScalpingStrategy:
                     "bonus_reasons": bonus_reasons
                 }
                 
-                if score >= 8:
-                    self.logger.info(f"[Scalping] Generated STRONG signal (score {score}/9): {signal}")
-                elif score >= 7:
-                    self.logger.info(f"[Scalping] Generated signal (score {score}/9): {signal}")
+                if score >= 15:
+                    self.logger.info(f"[Scalping] Generated STRONG signal (score {score}): {symbol} {side}")
+                elif score >= 12:
+                    self.logger.info(f"[Scalping] Generated GOOD signal (score {score}): {symbol} {side}")
                 else:
-                    self.logger.debug(f"[Scalping] Generated weak signal (score {score}/9): {signal}")
+                    self.logger.debug(f"[Scalping] Generated signal (score {score}): {symbol} {side}")
                 return signal
             else:
-                self.logger.debug(f"[Scalping] No signal for {symbol}: Long score={long_score}/9, Short score={short_score}/9 (need 7+)")
+                self.logger.debug(f"[Scalping] No signal for {symbol}: Final score={score} (need 10+)")
                 return None
                 
         except Exception as e:

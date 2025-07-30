@@ -172,3 +172,379 @@
 2025-07-23 21:10:31 - INFO - SIGNAL: B-PIPPIN_USDT SHORT scalping - Score: 11
 2025-07-23 21:10:31 - INFO - SIGNAL: B-SYN_USDT SHORT scalping - Score: 9
 2025-07-23 21:10:31 - INFO - === Trading Bot execution completed ===
+2025-07-30 00:12:43 - INFO - === Logger initialized successfully ===
+2025-07-30 00:12:43 - INFO - Log file: logs/trading_bot.log
+2025-07-30 00:12:43 - INFO - Log level: INFO
+2025-07-30 00:12:46 - INFO - === Starting Crypto Futures Trading Bot ===
+2025-07-30 00:12:46 - INFO - Configuration loaded successfully
+2025-07-30 00:12:46 - INFO - Trading instruments: 11
+2025-07-30 00:12:46 - INFO - Initial balance: 10000 INR
+2025-07-30 00:12:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:12:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:12:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:12:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:12:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:12:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:12:46 - INFO - StrategyManager initialized with all strategies
+2025-07-30 00:12:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:12:46 - INFO - EnhancedSignalGenerator initialized
+2025-07-30 00:12:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:12:46 - INFO - SignalMonitor initialized
+2025-07-30 00:12:46 - INFO - Trade executor initialized
+2025-07-30 00:12:46 - INFO - Generating trading signals...
+2025-07-30 00:12:46 - INFO - === GENERATING ENTRY SIGNALS (TOP MOVERS, MIXED STRATEGY) ===
+2025-07-30 00:12:46 - INFO - Fetching top 40 movers by 24h %% change from CoinDCX with volume filter...
+2025-07-30 00:12:47 - INFO - Filtered to 27 top movers that are active instruments
+2025-07-30 00:12:47 - INFO - Found 27 top movers to analyze (min_volume=100000)
+2025-07-30 00:13:09 - INFO - Selected 15 symbols with high ATR% (max of 15m/30m/1h) and volume for signal generation.
+2025-07-30 00:13:09 - INFO - Skipping blacklisted symbol: B-FARTCOIN_USDT
+2025-07-30 00:13:10 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:10 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:11 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:11 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:11 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:12 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:18 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:19 - INFO - [Scalping] Generated STRONG signal (score 9/9): {'symbol': 'B-VINE_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.13428, 'stop_loss': 0.13226580000000002, 'take_profit': 0.1362942, 'tp1': 0.1362942, 'tp2': 0.1362942, 'max_hold_time': 2, 'score': 12, 'score_max': 17, 'score_reasons': ['Price > EMA20', 'MACD positive + momentum', 'Volume > average', 'Price > VWAP', 'Not overbought (StochRSI < 80)', 'Supertrend uptrend', 'ADX > 25 and DI+ > DI-', 'Price > EMA100', 'OBV rising', 'CCI > 100 (bullish)', 'Momentum Oscillator positive (bullish)', 'Price above Keltner upper (bullish breakout)'], 'indicators': {'rsi': 72.1360381861575, 'ema_20': 0.12752916036870013, 'ema_50': 0.12796930154580471, 'macd': 0.00034613260857613293, 'bollinger_upper': 0.13200599084900086, 'bollinger_lower': 0.12108400915099912, 'vwap_daily': 0.11537745097202264, 'volume_ok': True, 'stoch_rsi_k': 1.0, 'stoch_rsi_d': 0.9444448869450198, 'atr': 0.002280714285714288, 'multi_timeframe_trend': 'neutral', 'trend_strength': 0.75, 'ema_100': 0.13102342440265574, 'supertrend': {'supertrend': 0.11538499999999999, 'in_uptrend': True}, 'adx': {'adx': 61.39601634187118, 'di_plus': 36.141559661760056, 'di_minus': 12.496085186345054}, 'obv': 1269870250.0, 'cci': 287.1904673245199, 'momentum_osc': 0.009489999999999985, 'keltner_upper': 0.13174943275208356, 'keltner_lower': 0.12305143275208356, 'fib_levels': {'0.0%': 0.13614, '23.6%': 0.13304132000000002, '38.2%': 0.13112434, '50.0%': 0.129575, '61.8%': 0.12802566, '78.6%': 0.12581982, '100.0%': 0.12301}}, 'timestamp': '2025-07-30T00:13:19.208542+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.875, 'quality_score': 215.0, 'normalized_score': 93.47826086956522, 'side': 'long', 'bonus_score': 3, 'bonus_reasons': ['CCI > 100 (bullish)', 'Momentum Oscillator positive (bullish)', 'Price above Keltner upper (bullish breakout)']}
+2025-07-30 00:13:20 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:25 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:33 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:34 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:34 - INFO - [Scalping] Generated STRONG signal (score 8/9): {'symbol': 'B-PENGU_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.SHORT', 'entry_price': 0.037727, 'stop_loss': 0.038292904999999995, 'take_profit': 0.037161095, 'tp1': 0.037161095, 'tp2': 0.037161095, 'max_hold_time': 2, 'score': 11, 'score_max': 17, 'score_reasons': ['EMA20 < EMA50 (clear trend)', 'Price < EMA20', 'RSI optimal bearish (35-55)', 'MACD negative + momentum', 'Price < VWAP', 'Supertrend downtrend', 'ADX > 25 and DI- > DI+', 'Price < EMA100', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 48.16199376947031, 'ema_20': 0.037734912202188914, 'ema_50': 0.03793690364481876, 'macd': -2.065114671162549e-05, 'bollinger_upper': 0.0379292336178897, 'bollinger_lower': 0.03756316638211029, 'vwap_daily': 0.040886570289394165, 'volume_ok': False, 'stoch_rsi_k': 0.2090906010103608, 'stoch_rsi_d': 0.21895445343810582, 'atr': 0.00020435714285714255, 'multi_timeframe_trend': 'weak_bearish', 'trend_strength': 0.5750000000000001, 'ema_100': 0.038461682880794504, 'supertrend': {'supertrend': 0.0394042, 'in_uptrend': False}, 'adx': {'adx': 29.646128339615935, 'di_plus': 9.052778748689363, 'di_minus': 19.119189094722117}, 'obv': 18471492346.0, 'cci': 18.701870187021125, 'momentum_osc': -1.0000000000003062e-05, 'keltner_upper': 0.03817884761942035, 'keltner_lower': 0.037289247619420346, 'fib_levels': {'0.0%': 0.038064, '23.6%': 0.037900452, '38.2%': 0.037799274, '50.0%': 0.0377175, '61.8%': 0.037635726, '78.6%': 0.037519302000000004, '100.0%': 0.037371}}, 'timestamp': '2025-07-30T00:13:34.868711+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.7875000000000001, 'quality_score': 187.5, 'normalized_score': 81.52173913043478, 'side': 'short', 'bonus_score': 3, 'bonus_reasons': ['Momentum Oscillator negative (bearish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level']}
+2025-07-30 00:13:35 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:35 - INFO - [Scalping] Generated STRONG signal (score 9/9): {'symbol': 'B-1000BONK_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.SHORT', 'entry_price': 0.030194, 'stop_loss': 0.030646909999999996, 'take_profit': 0.029741089999999998, 'tp1': 0.029741089999999998, 'tp2': 0.029741089999999998, 'max_hold_time': 2, 'score': 12, 'score_max': 17, 'score_reasons': ['EMA20 < EMA50 (clear trend)', 'RSI optimal bearish (35-55)', 'MACD negative + momentum', 'Price < VWAP', 'Multi-timeframe trend bearish', 'Supertrend downtrend', 'ADX > 25 and DI- > DI+', 'Price < EMA100', 'Multi-timeframe trend bearish', 'Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 45.850451930977776, 'ema_20': 0.030178069666623168, 'ema_50': 0.030377831762825366, 'macd': -1.5855182447416932e-05, 'bollinger_upper': 0.030376548341695515, 'bollinger_lower': 0.02997315165830449, 'vwap_daily': 0.033783389378139135, 'volume_ok': False, 'stoch_rsi_k': 0.02168105695773348, 'stoch_rsi_d': 0.14186959530818097, 'atr': 0.00017307142857142844, 'multi_timeframe_trend': 'bearish', 'trend_strength': 0.7000000000000001, 'ema_100': 0.030794409081517586, 'supertrend': {'supertrend': 0.031667999999999995, 'in_uptrend': False}, 'adx': {'adx': 31.199645113200383, 'di_plus': 12.628972348328416, 'di_minus': 16.508460586050262}, 'obv': 1254566586.0, 'cci': 35.56061756517488, 'momentum_osc': 8.999999999998592e-06, 'keltner_upper': 0.030577941045591545, 'keltner_lower': 0.029796541045591544, 'fib_levels': {'0.0%': 0.030574, '23.6%': 0.030392988, '38.2%': 0.030281006, '50.0%': 0.030190500000000002, '61.8%': 0.030099994, '78.6%': 0.029971138, '100.0%': 0.029807}}, 'timestamp': '2025-07-30T00:13:35.833944+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.8500000000000001, 'quality_score': 210.0, 'normalized_score': 91.30434782608695, 'side': 'short', 'bonus_score': 3, 'bonus_reasons': ['Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level']}
+2025-07-30 00:13:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:36 - INFO - [Scalping] Generated STRONG signal (score 11/9): {'symbol': 'B-BIO_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.SHORT', 'entry_price': 0.06788, 'stop_loss': 0.06889819999999999, 'take_profit': 0.0668618, 'tp1': 0.0668618, 'tp2': 0.0668618, 'max_hold_time': 2, 'score': 14, 'score_max': 17, 'score_reasons': ['EMA20 < EMA50 (clear trend)', 'Price < EMA20', 'MACD negative + momentum', 'Volume > average', 'Price < VWAP', 'Multi-timeframe trend bearish', 'Supertrend downtrend', 'ADX > 25 and DI- > DI+', 'Price < EMA100', 'OBV falling', 'Multi-timeframe trend bearish', 'CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)', 'Price below Keltner lower (bearish breakout)'], 'indicators': {'rsi': 28.19767441860462, 'ema_20': 0.06895329713474632, 'ema_50': 0.07017265091363077, 'macd': -0.0005785505486053111, 'bollinger_upper': 0.07022652188985692, 'bollinger_lower': 0.06780047811014309, 'vwap_daily': 0.06965657442391959, 'volume_ok': True, 'stoch_rsi_k': 0.04033686162145897, 'stoch_rsi_d': 0.09256309211288309, 'atr': 0.0005285714285714278, 'multi_timeframe_trend': 'strong_bearish', 'trend_strength': 1.0, 'ema_100': 0.07108144393685638, 'supertrend': {'supertrend': 0.07222799999999999, 'in_uptrend': False}, 'adx': {'adx': 38.121124119011256, 'di_plus': 9.864864864864806, 'di_minus': 31.756756756756864}, 'obv': -367392368.0, 'cci': -163.52594677717772, 'momentum_osc': -0.0011400000000000021, 'keltner_upper': 0.07006754842750058, 'keltner_lower': 0.06795154842750058, 'fib_levels': {'0.0%': 0.07037, '23.6%': 0.06974932, '38.2%': 0.06936534, '50.0%': 0.069055, '61.8%': 0.06874466, '78.6%': 0.06830282, '100.0%': 0.06774}}, 'timestamp': '2025-07-30T00:13:36.692275+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 1.0, 'quality_score': 260.0, 'normalized_score': 100, 'side': 'short', 'bonus_score': 3, 'bonus_reasons': ['CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)', 'Price below Keltner lower (bearish breakout)']}
+2025-07-30 00:13:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:38 - INFO - [Swing] Generated SHORT signal for B-OP_USDT on 15m - Score: 6/7, Confidence: 0.770, TP: 0.713830, SL: 0.735570
+2025-07-30 00:13:38 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:45 - INFO - [Swing] Generated SHORT signal for B-1000BONK_USDT on 15m - Score: 6/7, Confidence: 0.770, TP: 0.029739, SL: 0.030645
+2025-07-30 00:13:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:47 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:48 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:55 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:13:59 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:02 - INFO - [Long Swing] Generated SHORT signal for B-ENA_USDT on 30m - Score: 6/9, Confidence: 0.664, TP: 0.567557, SL: 0.584843
+2025-07-30 00:14:02 - INFO - [Swing] Generated LONG signal for B-OMNI_USDT on 5m - Score: 7/7, Confidence: 0.842, TP: 4.737005, SL: 4.596995
+2025-07-30 00:14:03 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:03 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:04 - INFO - [Long Swing] Generated SHORT signal for B-OP_USDT on 30m - Score: 6/9, Confidence: 0.664, TP: 0.713041, SL: 0.734758
+2025-07-30 00:14:04 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:04 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:06 - INFO - [Long Swing] Generated LONG signal for B-CFX_USDT on 1h - Score: 7/9, Confidence: 0.814, TP: 0.213383, SL: 0.207077
+2025-07-30 00:14:06 - INFO - [Long Swing] Generated SHORT signal for B-PENGU_USDT on 30m - Score: 7/9, Confidence: 0.719, TP: 0.037198, SL: 0.038330
+2025-07-30 00:14:06 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:06 - INFO - [Long Swing] Generated SHORT signal for B-1000BONK_USDT on 30m - Score: 8/9, Confidence: 0.894, TP: 0.029722, SL: 0.030628
+2025-07-30 00:14:06 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:07 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:07 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:08 - INFO - [Long Swing] Generated LONG signal for B-OMNI_USDT on 30m - Score: 7/9, Confidence: 0.744, TP: 4.747155, SL: 4.606845
+2025-07-30 00:14:08 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:09 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:09 - INFO - [Long Swing] Generated SHORT signal for B-ENA_USDT on 1h - Score: 6/9, Confidence: 0.664, TP: 0.566966, SL: 0.584234
+2025-07-30 00:14:09 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:11 - INFO - [Long Swing] Generated SHORT signal for B-PENGU_USDT on 1h - Score: 7/9, Confidence: 0.719, TP: 0.037190, SL: 0.038322
+2025-07-30 00:14:12 - INFO - [Long Swing] Generated SHORT signal for B-OP_USDT on 1h - Score: 6/9, Confidence: 0.664, TP: 0.712647, SL: 0.734352
+2025-07-30 00:14:12 - INFO - [Long Swing] Generated LONG signal for B-BIO_USDT on 1h - Score: 7/9, Confidence: 0.814, TP: 0.068878, SL: 0.066842
+2025-07-30 00:14:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:13 - INFO - [Long Swing] Generated SHORT signal for B-1000BONK_USDT on 1h - Score: 9/9, Confidence: 0.950, TP: 0.029715, SL: 0.030621
+2025-07-30 00:14:14 - INFO - [Long Swing] Generated LONG signal for B-OMNI_USDT on 1h - Score: 8/9, Confidence: 0.800, TP: 4.748170, SL: 4.607830
+2025-07-30 00:14:14 - INFO - [Scalping] Generated STRONG signal (score 9/9): {'symbol': 'B-MUBARAK_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.0418, 'stop_loss': 0.041172999999999994, 'take_profit': 0.04242699999999999, 'tp1': 0.04242699999999999, 'tp2': 0.04242699999999999, 'max_hold_time': 2, 'score': 12, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'Price > EMA20', 'RSI optimal bullish (45-65)', 'MACD positive + momentum', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'ADX > 25 and DI+ > DI-', 'Price > EMA100', 'Multi-timeframe trend bullish', 'Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 51.063829787234006, 'ema_20': 0.041598790053130205, 'ema_50': 0.0414915211085916, 'macd': 0.00012491634184726846, 'bollinger_upper': 0.04204649658157832, 'bollinger_lower': 0.04135750341842168, 'vwap_daily': 0.04512718214058751, 'volume_ok': False, 'stoch_rsi_k': 0.2887590085295298, 'stoch_rsi_d': 0.1999645961151951, 'atr': 0.00022571428571428593, 'multi_timeframe_trend': 'bullish', 'trend_strength': 0.625, 'ema_100': 0.04168290427192208, 'supertrend': {'supertrend': 0.043827, 'in_uptrend': False}, 'adx': {'adx': 30.621564116752634, 'di_plus': 31.645569620253383, 'di_minus': 18.987341772151765}, 'obv': -55337060.0, 'cci': 48.80155473979771, 'momentum_osc': 0.00034999999999999615, 'keltner_upper': 0.042116026715905544, 'keltner_lower': 0.04109202671590555, 'fib_levels': {'0.0%': 0.04241, '23.6%': 0.042162200000000004, '38.2%': 0.0420089, '50.0%': 0.041885000000000006, '61.8%': 0.0417611, '78.6%': 0.0415847, '100.0%': 0.04136}}, 'timestamp': '2025-07-30T00:14:14.604002+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.8125, 'quality_score': 202.5, 'normalized_score': 88.04347826086956, 'side': 'long', 'bonus_score': 3, 'bonus_reasons': ['Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level']}
+2025-07-30 00:14:15 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:16 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:24 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:25 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:27 - INFO - [Scalping] Generated STRONG signal (score 10/9): {'symbol': 'B-ALCH_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.15235, 'stop_loss': 0.15006475000000002, 'take_profit': 0.15463525, 'tp1': 0.15463525, 'tp2': 0.15463525, 'max_hold_time': 2, 'score': 12, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'Price > EMA20', 'RSI optimal bullish (45-65)', 'MACD positive + momentum', 'Price > VWAP', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'Price > EMA100', 'OBV rising', 'Multi-timeframe trend bullish', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 50.36818851251847, 'ema_20': 0.15162783868653895, 'ema_50': 0.14712101386760174, 'macd': 0.0018209162525396616, 'bollinger_upper': 0.15457369107974897, 'bollinger_lower': 0.15118630892025106, 'vwap_daily': 0.14234026033511996, 'volume_ok': False, 'stoch_rsi_k': 0.2074396877092601, 'stoch_rsi_d': 0.20639646689171587, 'atr': 0.001996428571428568, 'multi_timeframe_trend': 'bullish', 'trend_strength': 0.75, 'ema_100': 0.1429719799222653, 'supertrend': {'supertrend': 0.172715, 'in_uptrend': False}, 'adx': {'adx': 21.945024391981402, 'di_plus': 24.2576028622541, 'di_minus': 22.25402504472277}, 'obv': 1360020.0, 'cci': -52.45617543158073, 'momentum_osc': -0.0021599999999999953, 'keltner_upper': 0.15575715347708818, 'keltner_lower': 0.1475011534770882, 'fib_levels': {'0.0%': 0.15694, '23.6%': 0.15526911999999998, '38.2%': 0.15423544, '50.0%': 0.15339999999999998, '61.8%': 0.15256456, '78.6%': 0.15137512, '100.0%': 0.14986}}, 'timestamp': '2025-07-30T00:14:27.348572+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.875, 'quality_score': 225.0, 'normalized_score': 97.82608695652173, 'side': 'long', 'bonus_score': 2, 'bonus_reasons': ['Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level']}
+2025-07-30 00:14:27 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:27 - INFO - [Swing] Generated SHORT signal for B-1000CAT_USDT on 15m - Score: 6/7, Confidence: 0.770, TP: 0.010277, SL: 0.010591
+2025-07-30 00:14:28 - INFO - [Scalping] Generated STRONG signal (score 8/9): {'symbol': 'B-ORDI_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.SHORT', 'entry_price': 10.176, 'stop_loss': 10.32864, 'take_profit': 10.02336, 'tp1': 10.02336, 'tp2': 10.02336, 'max_hold_time': 2, 'score': 10, 'score_max': 17, 'score_reasons': ['EMA20 < EMA50 (clear trend)', 'Price < EMA20', 'RSI optimal bearish (35-55)', 'MACD negative + momentum', 'Price < VWAP', 'Supertrend downtrend', 'Price < EMA100', 'OBV falling', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 37.850467289719745, 'ema_20': 10.193450510916838, 'ema_50': 10.2298277287395, 'macd': -0.0054006553766381415, 'bollinger_upper': 10.284975219583648, 'bollinger_lower': 10.130824780416349, 'vwap_daily': 10.627895295330037, 'volume_ok': False, 'stoch_rsi_k': 0.016013404663532536, 'stoch_rsi_d': 0.07177109554882655, 'atr': 0.05571428571428567, 'multi_timeframe_trend': 'weak_bearish', 'trend_strength': 0.5750000000000001, 'ema_100': 10.327491473247983, 'supertrend': {'supertrend': 10.675999999999998, 'in_uptrend': False}, 'adx': {'adx': 18.9301638364505, 'di_plus': 16.282051282051384, 'di_minus': 23.07692307692329}, 'obv': -2475994.000000002, 'cci': -38.67181218845822, 'momentum_osc': -0.018000000000000682, 'keltner_upper': 10.310873977236547, 'keltner_lower': 10.080473977236547, 'fib_levels': {'0.0%': 10.341, '23.6%': 10.292148, '38.2%': 10.261925999999999, '50.0%': 10.2375, '61.8%': 10.213074, '78.6%': 10.178298, '100.0%': 10.134}}, 'timestamp': '2025-07-30T00:14:28.020469+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.7875000000000001, 'quality_score': 187.5, 'normalized_score': 81.52173913043478, 'side': 'short', 'bonus_score': 2, 'bonus_reasons': ['Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level']}
+2025-07-30 00:14:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:29 - INFO - [Scalping] Generated STRONG signal (score 9/9): {'symbol': 'B-B3_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.003379, 'stop_loss': 0.003328315, 'take_profit': 0.0034296849999999996, 'tp1': 0.0034296849999999996, 'tp2': 0.0034296849999999996, 'max_hold_time': 2, 'score': 11, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'Price > EMA20', 'Price > VWAP', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'Supertrend uptrend', 'Price > EMA100', 'OBV rising', 'Multi-timeframe trend bullish', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 38.2% level'], 'indicators': {'rsi': 43.223443223443155, 'ema_20': 0.00335583745604021, 'ema_50': 0.0032859700734940594, 'macd': 3.54767685440331e-05, 'bollinger_upper': 0.003441931591405332, 'bollinger_lower': 0.0033001684085946672, 'vwap_daily': 0.003113151618156964, 'volume_ok': False, 'stoch_rsi_k': 0.0, 'stoch_rsi_d': 0.04209038736481315, 'atr': 4.957142857142859e-05, 'multi_timeframe_trend': 'bullish', 'trend_strength': 0.75, 'ema_100': 0.003223894164718658, 'supertrend': {'supertrend': 0.002998, 'in_uptrend': True}, 'adx': {'adx': 55.269846351261094, 'di_plus': 12.391930835734888, 'di_minus': 15.273775216138288}, 'obv': 475276347.0, 'cci': 32.14759642138557, 'momentum_osc': -6.000000000000363e-06, 'keltner_upper': 0.0034628430563089477, 'keltner_lower': 0.003248243056308947, 'fib_levels': {'0.0%': 0.003448, '23.6%': 0.0034062280000000003, '38.2%': 0.003380386, '50.0%': 0.0033595, '61.8%': 0.003338614, '78.6%': 0.003308878, '100.0%': 0.003271}}, 'timestamp': '2025-07-30T00:14:29.054484+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.875, 'quality_score': 215.0, 'normalized_score': 93.47826086956522, 'side': 'long', 'bonus_score': 2, 'bonus_reasons': ['Momentum Oscillator negative (bearish)', 'Entry near Fib 38.2% level']}
+2025-07-30 00:14:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:33 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:35 - INFO - [Swing] Generated SHORT signal for B-CHILLGUY_USDT on 15m - Score: 6/7, Confidence: 0.795, TP: 0.059901, SL: 0.061725
+2025-07-30 00:14:36 - INFO - [Swing] Generated LONG signal for B-B3_USDT on 15m - Score: 10/7, Confidence: 0.975, TP: 0.003424, SL: 0.003322
+2025-07-30 00:14:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:37 - INFO - [Swing] Generated LONG signal for B-ALCH_USDT on 15m - Score: 9/7, Confidence: 0.975, TP: 0.154889, SL: 0.150311
+2025-07-30 00:14:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:38 - INFO - [Long Swing] Generated SHORT signal for B-MUBARAK_USDT on 30m - Score: 8/9, Confidence: 0.775, TP: 0.041143, SL: 0.042397
+2025-07-30 00:14:39 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:40 - INFO - [Swing] Skipping B-ORDI_USDT due to low liquidity (avg_volume=21471.69 < 100000)
+2025-07-30 00:14:40 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:43 - INFO - [Long Swing] Generated SHORT signal for B-MUBARAK_USDT on 1h - Score: 9/9, Confidence: 0.831, TP: 0.041143, SL: 0.042397
+2025-07-30 00:14:44 - INFO - [Long Swing] Generated SHORT signal for B-1000CAT_USDT on 30m - Score: 7/9, Confidence: 0.814, TP: 0.010284, SL: 0.010598
+2025-07-30 00:14:45 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:46 - INFO - [Swing] Generated LONG signal for B-B3_USDT on 5m - Score: 10/7, Confidence: 0.975, TP: 0.003431, SL: 0.003329
+2025-07-30 00:14:47 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:47 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:48 - INFO - [Long Swing] Generated SHORT signal for B-ORDI_USDT on 30m - Score: 9/9, Confidence: 0.881, TP: 10.033210, SL: 10.338790
+2025-07-30 00:14:48 - INFO - [Swing] Generated LONG signal for B-ALCH_USDT on 5m - Score: 8/7, Confidence: 0.975, TP: 0.154980, SL: 0.150400
+2025-07-30 00:14:48 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:51 - INFO - [Long Swing] Generated SHORT signal for B-CHILLGUY_USDT on 30m - Score: 9/9, Confidence: 0.975, TP: 0.059910, SL: 0.061734
+2025-07-30 00:14:51 - INFO - [Long Swing] Generated LONG signal for B-B3_USDT on 30m - Score: 9/9, Confidence: 0.975, TP: 0.003430, SL: 0.003328
+2025-07-30 00:14:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:52 - INFO - [Long Swing] Generated SHORT signal for B-ORDI_USDT on 1h - Score: 8/9, Confidence: 0.850, TP: 10.030255, SL: 10.335745
+2025-07-30 00:14:54 - INFO - [Long Swing] Generated LONG signal for B-B3_USDT on 1h - Score: 10/9, Confidence: 0.975, TP: 0.003430, SL: 0.003328
+2025-07-30 00:14:54 - INFO - [Long Swing] Generated LONG signal for B-ALCH_USDT on 30m - Score: 10/9, Confidence: 0.881, TP: 0.155031, SL: 0.150449
+2025-07-30 00:14:54 - INFO - [Long Swing] Generated SHORT signal for B-CHILLGUY_USDT on 1h - Score: 9/9, Confidence: 0.975, TP: 0.059910, SL: 0.061734
+2025-07-30 00:14:55 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:14:57 - INFO - [Long Swing] Generated LONG signal for B-ALCH_USDT on 1h - Score: 10/9, Confidence: 0.881, TP: 0.154980, SL: 0.150400
+2025-07-30 00:14:57 - INFO - Generated 12 profitable signals (mix of scalping, swing, and long_swing) from 15 top movers
+2025-07-30 00:14:57 - INFO - 1. B-ORDI_USDT - long_swing (30m): Score 10, Normalized 142.9%, Confidence 0.616, Est. Profit ₹25146.62
+2025-07-30 00:14:57 - INFO - 2. B-B3_USDT - long_swing (1h): Score 12, Normalized 171.4%, Confidence 0.800, Est. Profit ₹22410.67
+2025-07-30 00:14:57 - INFO - 3. B-ALCH_USDT - long_swing (30m): Score 13, Normalized 185.7%, Confidence 0.800, Est. Profit ₹22303.96
+2025-07-30 00:14:57 - INFO - 4. B-MUBARAK_USDT - long_swing (1h): Score 11, Normalized 157.1%, Confidence 0.704, Est. Profit ₹21946.14
+2025-07-30 00:14:57 - INFO - 5. B-ALCH_USDT - swing (5m): Score 10, Normalized 142.9%, Confidence 0.800, Est. Profit ₹20574.51
+2025-07-30 00:14:57 - INFO - 6. B-B3_USDT - swing (5m): Score 12, Normalized 171.4%, Confidence 0.800, Est. Profit ₹20276.32
+2025-07-30 00:14:57 - INFO - 7. B-1000CAT_USDT - swing (15m): Score 7, Normalized 100.0%, Confidence 0.352, Est. Profit ₹16459.61
+2025-07-30 00:14:57 - INFO - 8. B-OP_USDT - swing (15m): Score 7, Normalized 100.0%, Confidence 0.352, Est. Profit ₹16459.61
+2025-07-30 00:14:57 - INFO - 9. B-ALCH_USDT - scalping (5m): Score 12, Normalized 171.4%, Confidence 0.800, Est. Profit ₹2042.97
+2025-07-30 00:14:57 - INFO - 10. B-ORDI_USDT - scalping (5m): Score 10, Normalized 142.9%, Confidence 0.678, Est. Profit ₹1802.62
+2025-07-30 00:14:57 - INFO - 11. B-1000BONK_USDT - scalping (5m): Score 12, Normalized 171.4%, Confidence 0.800, Est. Profit ₹1671.52
+2025-07-30 00:14:57 - INFO - 12. B-MUBARAK_USDT - scalping (5m): Score 12, Normalized 171.4%, Confidence 0.800, Est. Profit ₹1671.52
+2025-07-30 00:14:58 - INFO - Added high-profit signal to monitoring: B-ORDI_USDT_long_swing_2025-07-30 00:14:48.032888+05:30 (Est. Profit: ₹25146.62)
+2025-07-30 00:14:59 - INFO - Added high-profit signal to monitoring: B-B3_USDT_long_swing_2025-07-30 00:14:54.733710+05:30 (Est. Profit: ₹22410.67)
+2025-07-30 00:15:00 - INFO - Added high-profit signal to monitoring: B-ALCH_USDT_long_swing_2025-07-30 00:14:54.790412+05:30 (Est. Profit: ₹22303.96)
+2025-07-30 00:15:00 - INFO - Added high-profit signal to monitoring: B-MUBARAK_USDT_long_swing_2025-07-30 00:14:43.479222+05:30 (Est. Profit: ₹21946.14)
+2025-07-30 00:15:01 - INFO - Added high-profit signal to monitoring: B-ALCH_USDT_swing_2025-07-30 00:14:48.038782+05:30 (Est. Profit: ₹20574.51)
+2025-07-30 00:15:02 - INFO - Added high-profit signal to monitoring: B-B3_USDT_swing_2025-07-30 00:14:46.604434+05:30 (Est. Profit: ₹20276.32)
+2025-07-30 00:15:03 - INFO - Added signal to monitoring: B-1000CAT_USDT_swing_2025-07-30 00:14:27.998468+05:30
+2025-07-30 00:15:03 - INFO - Added signal to monitoring: B-OP_USDT_swing_2025-07-30 00:13:38.538156+05:30
+2025-07-30 00:15:04 - INFO - Added high-profit signal to monitoring: B-ALCH_USDT_scalping_2025-07-30 00:14:27.348572+05:30 (Est. Profit: ₹2042.97)
+2025-07-30 00:15:04 - INFO - Added high-profit signal to monitoring: B-ORDI_USDT_scalping_2025-07-30 00:14:28.020469+05:30 (Est. Profit: ₹1802.62)
+2025-07-30 00:15:05 - INFO - Added high-profit signal to monitoring: B-1000BONK_USDT_scalping_2025-07-30 00:13:35.833944+05:30 (Est. Profit: ₹1671.52)
+2025-07-30 00:15:05 - INFO - Added high-profit signal to monitoring: B-MUBARAK_USDT_scalping_2025-07-30 00:14:14.604002+05:30 (Est. Profit: ₹1671.52)
+2025-07-30 00:15:05 - INFO - Monitoring data saved to latest_monitoring_data.json with 12 active signals
+2025-07-30 00:15:05 - INFO - Generated 12 signals, saved to latest_signals.json
+2025-07-30 00:15:05 - INFO - SIGNAL: B-ORDI_USDT SHORT long_swing - Score: 10
+2025-07-30 00:15:05 - INFO - SIGNAL: B-B3_USDT LONG long_swing - Score: 12
+2025-07-30 00:15:05 - INFO - SIGNAL: B-ALCH_USDT LONG long_swing - Score: 13
+2025-07-30 00:15:05 - INFO - SIGNAL: B-MUBARAK_USDT SHORT long_swing - Score: 11
+2025-07-30 00:15:05 - INFO - SIGNAL: B-ALCH_USDT LONG swing - Score: 10
+2025-07-30 00:15:05 - INFO - SIGNAL: B-B3_USDT LONG swing - Score: 12
+2025-07-30 00:15:05 - INFO - SIGNAL: B-1000CAT_USDT SHORT swing - Score: 7
+2025-07-30 00:15:05 - INFO - SIGNAL: B-OP_USDT SHORT swing - Score: 7
+2025-07-30 00:15:05 - INFO - SIGNAL: B-ALCH_USDT LONG scalping - Score: 12
+2025-07-30 00:15:05 - INFO - SIGNAL: B-ORDI_USDT SHORT scalping - Score: 10
+2025-07-30 00:15:05 - INFO - SIGNAL: B-1000BONK_USDT SHORT scalping - Score: 12
+2025-07-30 00:15:05 - INFO - SIGNAL: B-MUBARAK_USDT LONG scalping - Score: 12
+2025-07-30 00:15:05 - INFO - === Trading Bot execution completed ===
+2025-07-30 00:19:56 - INFO - === Logger initialized successfully ===
+2025-07-30 00:19:56 - INFO - Log file: logs/trading_bot.log
+2025-07-30 00:19:56 - INFO - Log level: INFO
+2025-07-30 00:19:57 - INFO - === Starting Crypto Futures Trading Bot ===
+2025-07-30 00:19:57 - INFO - Configuration loaded successfully
+2025-07-30 00:19:57 - INFO - Trading instruments: 11
+2025-07-30 00:19:57 - INFO - Initial balance: 10000 INR
+2025-07-30 00:19:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:19:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:19:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:19:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:19:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:19:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:19:57 - INFO - StrategyManager initialized with all strategies
+2025-07-30 00:19:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:19:57 - INFO - EnhancedSignalGenerator initialized
+2025-07-30 00:19:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:19:57 - INFO - SignalMonitor initialized
+2025-07-30 00:19:57 - INFO - Trade executor initialized
+2025-07-30 00:19:57 - INFO - Generating trading signals...
+2025-07-30 00:19:57 - INFO - === GENERATING ENTRY SIGNALS (TOP MOVERS, MIXED STRATEGY) ===
+2025-07-30 00:19:57 - INFO - Fetching top 40 movers by 24h %% change from CoinDCX with volume filter...
+2025-07-30 00:20:01 - INFO - Filtered to 27 top movers that are active instruments
+2025-07-30 00:20:01 - INFO - Found 27 top movers to analyze (min_volume=100000)
+2025-07-30 00:20:13 - INFO - === Logger initialized successfully ===
+2025-07-30 00:20:13 - INFO - Log file: logs/trading_bot.log
+2025-07-30 00:20:13 - INFO - Log level: INFO
+2025-07-30 00:20:13 - INFO - === Starting Crypto Futures Trading Bot ===
+2025-07-30 00:20:13 - INFO - Configuration loaded successfully
+2025-07-30 00:20:13 - INFO - Trading instruments: 11
+2025-07-30 00:20:13 - INFO - Initial balance: 10000 INR
+2025-07-30 00:20:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:13 - INFO - StrategyManager initialized with all strategies
+2025-07-30 00:20:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:13 - INFO - EnhancedSignalGenerator initialized
+2025-07-30 00:20:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:13 - INFO - SignalMonitor initialized
+2025-07-30 00:20:13 - INFO - Trade executor initialized
+2025-07-30 00:20:13 - INFO - Generating trading signals...
+2025-07-30 00:20:13 - INFO - === GENERATING ENTRY SIGNALS (TOP MOVERS, MIXED STRATEGY) ===
+2025-07-30 00:20:13 - INFO - Fetching top 40 movers by 24h %% change from CoinDCX with volume filter...
+2025-07-30 00:20:14 - INFO - Filtered to 27 top movers that are active instruments
+2025-07-30 00:20:14 - INFO - Found 27 top movers to analyze (min_volume=100000)
+2025-07-30 00:20:42 - INFO - Selected 15 symbols with high ATR% (max of 15m/30m/1h) and volume for signal generation.
+2025-07-30 00:20:42 - INFO - Skipping blacklisted symbol: B-FARTCOIN_USDT
+2025-07-30 00:20:42 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:42 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:44 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:45 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:52 - INFO - [Scalping] Generated STRONG signal (score 10/9): {'symbol': 'B-BIO_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.SHORT', 'entry_price': 0.06827, 'stop_loss': 0.06929405, 'take_profit': 0.06724595, 'tp1': 0.06724595, 'tp2': 0.06724595, 'max_hold_time': 2, 'score': 12, 'score_max': 17, 'score_reasons': ['EMA20 < EMA50 (clear trend)', 'Price < EMA20', 'RSI optimal bearish (35-55)', 'Price < VWAP', 'Multi-timeframe trend bearish', 'Supertrend downtrend', 'ADX > 25 and DI- > DI+', 'Price < EMA100', 'OBV falling', 'Multi-timeframe trend bearish', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 39.666666666666515, 'ema_20': 0.06882757861769916, 'ema_50': 0.07002581011093022, 'macd': -0.0005480661249276236, 'bollinger_upper': 0.0699004229808254, 'bollinger_lower': 0.0677745770191746, 'vwap_daily': 0.0696561069180101, 'volume_ok': False, 'stoch_rsi_k': 0.3136358986240862, 'stoch_rsi_d': 0.18138527055614787, 'atr': 0.0004935714285714266, 'multi_timeframe_trend': 'strong_bearish', 'trend_strength': 0.875, 'ema_100': 0.07097096566395457, 'supertrend': {'supertrend': 0.072586, 'in_uptrend': False}, 'adx': {'adx': 40.447549211906, 'di_plus': 12.590448625180889, 'di_minus': 25.325615050651358}, 'obv': -366749660.0, 'cci': -94.02339526196684, 'momentum_osc': -0.0006499999999999978, 'keltner_upper': 0.06987560306254349, 'keltner_lower': 0.0678356030625435, 'fib_levels': {'0.0%': 0.06992, '23.6%': 0.06940552, '38.2%': 0.06908724, '50.0%': 0.06883, '61.8%': 0.06857276, '78.6%': 0.06820651999999999, '100.0%': 0.06774}}, 'timestamp': '2025-07-30T00:20:52.014781+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.9375, 'quality_score': 237.5, 'normalized_score': 100, 'side': 'short', 'bonus_score': 2, 'bonus_reasons': ['Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level']}
+2025-07-30 00:20:53 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:20:56 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:07 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:07 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:07 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:07 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:08 - INFO - [Scalping] Generated STRONG signal (score 8/9): {'symbol': 'B-VINE_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.13374, 'stop_loss': 0.1317339, 'take_profit': 0.13574609999999998, 'tp1': 0.13574609999999998, 'tp2': 0.13574609999999998, 'max_hold_time': 2, 'score': 11, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'Price > EMA20', 'Price > VWAP', 'Not overbought (StochRSI < 80)', 'Supertrend uptrend', 'ADX > 25 and DI+ > DI-', 'Price > EMA100', 'OBV rising', 'CCI > 100 (bullish)', 'Momentum Oscillator positive (bullish)', 'Price above Keltner upper (bullish breakout)'], 'indicators': {'rsi': 73.28145265888465, 'ema_20': 0.12860573855470422, 'ema_50': 0.12839182911237257, 'macd': 0.0010881876905014798, 'bollinger_upper': 0.13392414798627902, 'bollinger_lower': 0.12015485201372098, 'vwap_daily': 0.11546123136965537, 'volume_ok': False, 'stoch_rsi_k': 0.9900340375910632, 'stoch_rsi_d': 0.9966780125303537, 'atr': 0.0022692857142857176, 'multi_timeframe_trend': 'weak_bullish', 'trend_strength': 0.5750000000000001, 'ema_100': 0.1311191471420617, 'supertrend': {'supertrend': 0.110651, 'in_uptrend': True}, 'adx': {'adx': 57.85436450009491, 'di_plus': 36.32357570034617, 'di_minus': 10.764872521246463}, 'obv': 1253937117.0, 'cci': 177.95099715099684, 'momentum_osc': 0.008740000000000012, 'keltner_upper': 0.13294616438399873, 'keltner_lower': 0.12406416438399873, 'fib_levels': {'0.0%': 0.13614, '23.6%': 0.13304132000000002, '38.2%': 0.13112434, '50.0%': 0.129575, '61.8%': 0.12802566, '78.6%': 0.12581982, '100.0%': 0.12301}}, 'timestamp': '2025-07-30T00:21:08.999124+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.7875000000000001, 'quality_score': 187.5, 'normalized_score': 81.52173913043478, 'side': 'long', 'bonus_score': 3, 'bonus_reasons': ['CCI > 100 (bullish)', 'Momentum Oscillator positive (bullish)', 'Price above Keltner upper (bullish breakout)']}
+2025-07-30 00:21:09 - INFO - [Swing] Generated SHORT signal for B-OP_USDT on 15m - Score: 6/7, Confidence: 0.820, TP: 0.713337, SL: 0.735063
+2025-07-30 00:21:09 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:10 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:10 - INFO - [Swing] Generated LONG signal for B-OMNI_USDT on 15m - Score: 6/7, Confidence: 0.770, TP: 4.750200, SL: 4.609800
+2025-07-30 00:21:10 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:17 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:24 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:24 - INFO - [Swing] Generated SHORT signal for B-1000BONK_USDT on 15m - Score: 6/7, Confidence: 0.770, TP: 0.029828, SL: 0.030736
+2025-07-30 00:21:26 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:27 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:34 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:35 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:36 - INFO - [Swing] Generated LONG signal for B-OMNI_USDT on 5m - Score: 8/7, Confidence: 0.892, TP: 4.766440, SL: 4.625560
+2025-07-30 00:21:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:40 - INFO - [Long Swing] Generated SHORT signal for B-PENGU_USDT on 30m - Score: 7/9, Confidence: 0.719, TP: 0.037306, SL: 0.038442
+2025-07-30 00:21:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:41 - INFO - [Long Swing] Generated SHORT signal for B-OP_USDT on 30m - Score: 6/9, Confidence: 0.664, TP: 0.713140, SL: 0.734860
+2025-07-30 00:21:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:42 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:42 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:43 - INFO - [Long Swing] Generated LONG signal for B-CFX_USDT on 1h - Score: 7/9, Confidence: 0.814, TP: 0.214023, SL: 0.207697
+2025-07-30 00:21:43 - INFO - [Long Swing] Generated LONG signal for B-OMNI_USDT on 30m - Score: 7/9, Confidence: 0.744, TP: 4.752230, SL: 4.611770
+2025-07-30 00:21:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:44 - INFO - [Long Swing] Generated SHORT signal for B-ENA_USDT on 30m - Score: 6/9, Confidence: 0.664, TP: 0.567754, SL: 0.585046
+2025-07-30 00:21:44 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:44 - INFO - [Long Swing] Generated LONG signal for B-BIO_USDT on 1h - Score: 7/9, Confidence: 0.814, TP: 0.069193, SL: 0.067147
+2025-07-30 00:21:44 - INFO - [Long Swing] Generated SHORT signal for B-OP_USDT on 1h - Score: 6/9, Confidence: 0.664, TP: 0.713337, SL: 0.735063
+2025-07-30 00:21:44 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:45 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:45 - INFO - [Long Swing] Generated SHORT signal for B-1000BONK_USDT on 30m - Score: 8/9, Confidence: 0.894, TP: 0.029821, SL: 0.030729
+2025-07-30 00:21:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:47 - INFO - [Long Swing] Generated LONG signal for B-OMNI_USDT on 1h - Score: 8/9, Confidence: 0.800, TP: 4.752230, SL: 4.611770
+2025-07-30 00:21:48 - INFO - [Long Swing] Generated SHORT signal for B-PENGU_USDT on 1h - Score: 7/9, Confidence: 0.719, TP: 0.037321, SL: 0.038457
+2025-07-30 00:21:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:50 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:51 - INFO - [Long Swing] Generated SHORT signal for B-1000BONK_USDT on 1h - Score: 9/9, Confidence: 0.950, TP: 0.029815, SL: 0.030723
+2025-07-30 00:21:53 - INFO - [Long Swing] Generated SHORT signal for B-ENA_USDT on 1h - Score: 6/9, Confidence: 0.664, TP: 0.567951, SL: 0.585249
+2025-07-30 00:21:53 - INFO - [Scalping] Generated signal (score 7/9): {'symbol': 'B-MUBARAK_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.04178, 'stop_loss': 0.0411533, 'take_profit': 0.04240669999999999, 'tp1': 0.04240669999999999, 'tp2': 0.04240669999999999, 'max_hold_time': 2, 'score': 10, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'Price > EMA20', 'RSI optimal bullish (45-65)', 'MACD positive + momentum', 'Not overbought (StochRSI < 80)', 'ADX > 25 and DI+ > DI-', 'Price > EMA100', 'Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 58.68263473053892, 'ema_20': 0.04163018544355686, 'ema_50': 0.04151299403146716, 'macd': 0.00012114684075438531, 'bollinger_upper': 0.04197821501213721, 'bollinger_lower': 0.04138678498786279, 'vwap_daily': 0.045126350218817814, 'volume_ok': False, 'stoch_rsi_k': 0.47348309121947363, 'stoch_rsi_d': 0.37974505103269224, 'atr': 0.0002128571428571431, 'multi_timeframe_trend': 'weak_bullish', 'trend_strength': 0.5, 'ema_100': 0.04168633490764343, 'supertrend': {'supertrend': 0.04372, 'in_uptrend': False}, 'adx': {'adx': 30.509234848080215, 'di_plus': 33.557046979865994, 'di_minus': 13.087248322147685}, 'obv': -55570794.0, 'cci': 40.84131356858221, 'momentum_osc': 0.00032999999999999696, 'keltner_upper': 0.04205481141704783, 'keltner_lower': 0.041210811417047834, 'fib_levels': {'0.0%': 0.04207, '23.6%': 0.041902440000000006, '38.2%': 0.04179878, '50.0%': 0.041715, '61.8%': 0.041631220000000004, '78.6%': 0.041511940000000004, '100.0%': 0.04136}}, 'timestamp': '2025-07-30T00:21:53.625788+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.6875, 'quality_score': 163.75, 'normalized_score': 71.19565217391305, 'side': 'long', 'bonus_score': 3, 'bonus_reasons': ['Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level']}
+2025-07-30 00:21:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:55 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:57 - INFO - [Scalping] Generated signal (score 7/9): {'symbol': 'B-B3_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.003355, 'stop_loss': 0.003304675, 'take_profit': 0.0034053249999999994, 'tp1': 0.0034053249999999994, 'tp2': 0.0034053249999999994, 'max_hold_time': 2, 'score': 9, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'MACD positive + momentum', 'Price > VWAP', 'Not overbought (StochRSI < 80)', 'Supertrend uptrend', 'Price > EMA100', 'OBV rising', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 42.386831275720205, 'ema_20': 0.0033557200900810745, 'ema_50': 0.0032912840571832935, 'macd': 2.7709099514636876e-05, 'bollinger_upper': 0.0034292841681211753, 'bollinger_lower': 0.003324115831878826, 'vwap_daily': 0.0031145498027446293, 'volume_ok': False, 'stoch_rsi_k': 0.023422643758201304, 'stoch_rsi_d': 0.015615095838800276, 'atr': 4.407142857142857e-05, 'multi_timeframe_trend': 'weak_bullish', 'trend_strength': 0.5750000000000001, 'ema_100': 0.0032290366189581146, 'supertrend': {'supertrend': 0.0030207000000000003, 'in_uptrend': True}, 'adx': {'adx': 43.84127492268964, 'di_plus': 13.938411669367934, 'di_minus': 20.907617504051828}, 'obv': 429248365.0, 'cci': -59.85915492957709, 'momentum_osc': -1.299999999999999e-05, 'keltner_upper': 0.0034606708753422734, 'keltner_lower': 0.003251870875342273, 'fib_levels': {'0.0%': 0.003448, '23.6%': 0.003407644, '38.2%': 0.003382678, '50.0%': 0.0033625, '61.8%': 0.003342322, '78.6%': 0.003313594, '100.0%': 0.003277}}, 'timestamp': '2025-07-30T00:21:57.973876+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.7250000000000001, 'quality_score': 171.25, 'normalized_score': 74.45652173913044, 'side': 'long', 'bonus_score': 2, 'bonus_reasons': ['Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level']}
+2025-07-30 00:21:58 - INFO - [Swing] Skipping B-ORDI_USDT due to low liquidity (avg_volume=96424.30 < 100000)
+2025-07-30 00:21:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:59 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:21:59 - INFO - [Scalping] Generated STRONG signal (score 10/9): {'symbol': 'B-ALCH_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.15399, 'stop_loss': 0.15168014999999999, 'take_profit': 0.15629984999999996, 'tp1': 0.15629984999999996, 'tp2': 0.15629984999999996, 'max_hold_time': 2, 'score': 13, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'Price > EMA20', 'RSI optimal bullish (45-65)', 'MACD positive + momentum', 'Price > VWAP', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'Price > EMA100', 'OBV rising', 'Multi-timeframe trend bullish', 'CCI > 100 (bullish)', 'Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level'], 'indicators': {'rsi': 56.30136986301362, 'ema_20': 0.15199172282503529, 'ema_50': 0.14761960610249228, 'macd': 0.001730379119816411, 'bollinger_upper': 0.15453339716548253, 'bollinger_lower': 0.1511356028345175, 'vwap_daily': 0.142402697998101, 'volume_ok': False, 'stoch_rsi_k': 0.3296433670333366, 'stoch_rsi_d': 0.2499384623877791, 'atr': 0.0020028571428571396, 'multi_timeframe_trend': 'strong_bullish', 'trend_strength': 0.875, 'ema_100': 0.14338853693923462, 'supertrend': {'supertrend': 0.172296, 'in_uptrend': False}, 'adx': {'adx': 16.221782852507694, 'di_plus': 30.385164051355257, 'di_minus': 20.363766048502246}, 'obv': 1394592.0, 'cci': 139.93896159823288, 'momentum_osc': 0.0022999999999999965, 'keltner_upper': 0.15585304986968354, 'keltner_lower': 0.14811504986968352, 'fib_levels': {'0.0%': 0.15681, '23.6%': 0.1551698, '38.2%': 0.1541551, '50.0%': 0.153335, '61.8%': 0.1525149, '78.6%': 0.1513473, '100.0%': 0.14986}}, 'timestamp': '2025-07-30T00:21:59.590295+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.9375, 'quality_score': 237.5, 'normalized_score': 100, 'side': 'long', 'bonus_score': 3, 'bonus_reasons': ['CCI > 100 (bullish)', 'Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level']}
+2025-07-30 00:22:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:03 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:03 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:03 - INFO - [Swing] Skipping B-ORDI_USDT due to low liquidity (avg_volume=19758.72 < 100000)
+2025-07-30 00:22:04 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:04 - INFO - [Swing] Generated LONG signal for B-B3_USDT on 15m - Score: 10/7, Confidence: 0.950, TP: 0.003411, SL: 0.003311
+2025-07-30 00:22:04 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:06 - INFO - [Swing] Generated SHORT signal for B-CHILLGUY_USDT on 15m - Score: 6/7, Confidence: 0.795, TP: 0.060001, SL: 0.061829
+2025-07-30 00:22:06 - INFO - [Swing] Generated LONG signal for B-ALCH_USDT on 15m - Score: 9/7, Confidence: 0.975, TP: 0.156290, SL: 0.151670
+2025-07-30 00:22:06 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:07 - INFO - [Long Swing] Generated SHORT signal for B-1000CAT_USDT on 30m - Score: 7/9, Confidence: 0.814, TP: 0.010310, SL: 0.010624
+2025-07-30 00:22:08 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:08 - INFO - [Long Swing] Generated SHORT signal for B-ORDI_USDT on 30m - Score: 9/9, Confidence: 0.881, TP: 10.048970, SL: 10.355030
+2025-07-30 00:22:08 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:08 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:11 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:12 - INFO - [Swing] Generated LONG signal for B-B3_USDT on 5m - Score: 9/7, Confidence: 0.950, TP: 0.003418, SL: 0.003316
+2025-07-30 00:22:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:14 - INFO - [Long Swing] Generated SHORT signal for B-ORDI_USDT on 1h - Score: 8/9, Confidence: 0.825, TP: 10.047985, SL: 10.354015
+2025-07-30 00:22:16 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:17 - INFO - [Swing] Generated LONG signal for B-ALCH_USDT on 5m - Score: 8/7, Confidence: 0.975, TP: 0.156401, SL: 0.151779
+2025-07-30 00:22:17 - INFO - [Long Swing] Generated SHORT signal for B-MUBARAK_USDT on 30m - Score: 7/9, Confidence: 0.719, TP: 0.041153, SL: 0.042407
+2025-07-30 00:22:17 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:17 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:18 - INFO - [Long Swing] Generated LONG signal for B-B3_USDT on 30m - Score: 9/9, Confidence: 0.975, TP: 0.003404, SL: 0.003304
+2025-07-30 00:22:20 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:20 - INFO - [Long Swing] Generated SHORT signal for B-CHILLGUY_USDT on 30m - Score: 9/9, Confidence: 0.975, TP: 0.059975, SL: 0.061801
+2025-07-30 00:22:21 - INFO - [Long Swing] Generated LONG signal for B-ALCH_USDT on 30m - Score: 10/9, Confidence: 0.881, TP: 0.155792, SL: 0.151188
+2025-07-30 00:22:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:22 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-07-30 00:22:22 - INFO - [Long Swing] Generated LONG signal for B-B3_USDT on 1h - Score: 10/9, Confidence: 0.975, TP: 0.003405, SL: 0.003305
+2025-07-30 00:22:22 - INFO - [Long Swing] Generated SHORT signal for B-MUBARAK_USDT on 1h - Score: 9/9, Confidence: 0.831, TP: 0.041153, SL: 0.042407
+2025-07-30 00:22:24 - INFO - [Long Swing] Generated LONG signal for B-ALCH_USDT on 1h - Score: 10/9, Confidence: 0.881, TP: 0.155610, SL: 0.151010
+2025-07-30 00:22:25 - INFO - [Long Swing] Generated SHORT signal for B-CHILLGUY_USDT on 1h - Score: 9/9, Confidence: 0.975, TP: 0.059935, SL: 0.061761
+2025-07-30 00:22:25 - INFO - Generated 12 profitable signals (mix of scalping, swing, and long_swing) from 15 top movers
+2025-07-30 00:22:25 - INFO - 1. B-ORDI_USDT - long_swing (1h): Score 10, Normalized 142.9%, Confidence 0.616, Est. Profit ₹25146.62
+2025-07-30 00:22:25 - INFO - 2. B-B3_USDT - long_swing (1h): Score 12, Normalized 171.4%, Confidence 0.800, Est. Profit ₹22410.67
+2025-07-30 00:22:25 - INFO - 3. B-ALCH_USDT - long_swing (30m): Score 13, Normalized 185.7%, Confidence 0.800, Est. Profit ₹22303.96
+2025-07-30 00:22:25 - INFO - 4. B-1000BONK_USDT - long_swing (1h): Score 11, Normalized 157.1%, Confidence 0.704, Est. Profit ₹21946.14
+2025-07-30 00:22:25 - INFO - 5. B-ALCH_USDT - swing (5m): Score 11, Normalized 157.1%, Confidence 0.800, Est. Profit ₹21946.14
+2025-07-30 00:22:25 - INFO - 6. B-B3_USDT - swing (5m): Score 11, Normalized 157.1%, Confidence 0.800, Est. Profit ₹19083.60
+2025-07-30 00:22:25 - INFO - 7. B-CHILLGUY_USDT - swing (15m): Score 8, Normalized 114.3%, Confidence 0.440, Est. Profit ₹17831.24
+2025-07-30 00:22:25 - INFO - 8. B-1000BONK_USDT - swing (15m): Score 8, Normalized 114.3%, Confidence 0.440, Est. Profit ₹17831.24
+2025-07-30 00:22:25 - INFO - 9. B-ALCH_USDT - scalping (5m): Score 13, Normalized 185.7%, Confidence 0.800, Est. Profit ₹2163.15
+2025-07-30 00:22:25 - INFO - 10. B-BIO_USDT - scalping (5m): Score 12, Normalized 171.4%, Confidence 0.800, Est. Profit ₹1671.52
+2025-07-30 00:22:25 - INFO - 11. B-MUBARAK_USDT - scalping (5m): Score 10, Normalized 142.9%, Confidence 0.800, Est. Profit ₹1474.87
+2025-07-30 00:22:25 - INFO - 12. B-VINE_USDT - scalping (5m): Score 11, Normalized 157.1%, Confidence 0.739, Est. Profit ₹1421.20
+2025-07-30 00:22:26 - INFO - Added high-profit signal to monitoring: B-ORDI_USDT_long_swing_2025-07-30 00:22:14.981900+05:30 (Est. Profit: ₹25146.62)
+2025-07-30 00:22:26 - INFO - Added high-profit signal to monitoring: B-B3_USDT_long_swing_2025-07-30 00:22:22.537644+05:30 (Est. Profit: ₹22410.67)
+2025-07-30 00:22:27 - INFO - Added high-profit signal to monitoring: B-ALCH_USDT_long_swing_2025-07-30 00:22:21.685666+05:30 (Est. Profit: ₹22303.96)
+2025-07-30 00:22:27 - INFO - Added high-profit signal to monitoring: B-1000BONK_USDT_long_swing_2025-07-30 00:21:51.778350+05:30 (Est. Profit: ₹21946.14)
+2025-07-30 00:22:29 - INFO - Added high-profit signal to monitoring: B-ALCH_USDT_swing_2025-07-30 00:22:17.178383+05:30 (Est. Profit: ₹21946.14)
+2025-07-30 00:22:29 - INFO - Added high-profit signal to monitoring: B-B3_USDT_swing_2025-07-30 00:22:12.420971+05:30 (Est. Profit: ₹19083.60)
+2025-07-30 00:22:30 - INFO - Added signal to monitoring: B-CHILLGUY_USDT_swing_2025-07-30 00:22:06.466684+05:30
+2025-07-30 00:22:30 - INFO - Added signal to monitoring: B-1000BONK_USDT_swing_2025-07-30 00:21:24.406672+05:30
+2025-07-30 00:22:31 - INFO - Added high-profit signal to monitoring: B-ALCH_USDT_scalping_2025-07-30 00:21:59.590295+05:30 (Est. Profit: ₹2163.15)
+2025-07-30 00:22:31 - INFO - Added high-profit signal to monitoring: B-BIO_USDT_scalping_2025-07-30 00:20:52.014781+05:30 (Est. Profit: ₹1671.52)
+2025-07-30 00:22:32 - INFO - Added high-profit signal to monitoring: B-MUBARAK_USDT_scalping_2025-07-30 00:21:53.625788+05:30 (Est. Profit: ₹1474.87)
+2025-07-30 00:22:32 - INFO - Added high-profit signal to monitoring: B-VINE_USDT_scalping_2025-07-30 00:21:08.999124+05:30 (Est. Profit: ₹1421.20)
+2025-07-30 00:22:32 - INFO - Monitoring data saved to latest_monitoring_data.json with 12 active signals
+2025-07-30 00:22:32 - INFO - Generated 12 signals, saved to latest_signals.json
+2025-07-30 00:22:32 - INFO - SIGNAL: B-ORDI_USDT SHORT long_swing - Score: 10
+2025-07-30 00:22:32 - INFO - SIGNAL: B-B3_USDT LONG long_swing - Score: 12
+2025-07-30 00:22:32 - INFO - SIGNAL: B-ALCH_USDT LONG long_swing - Score: 13
+2025-07-30 00:22:32 - INFO - SIGNAL: B-1000BONK_USDT SHORT long_swing - Score: 11
+2025-07-30 00:22:32 - INFO - SIGNAL: B-ALCH_USDT LONG swing - Score: 11
+2025-07-30 00:22:32 - INFO - SIGNAL: B-B3_USDT LONG swing - Score: 11
+2025-07-30 00:22:32 - INFO - SIGNAL: B-CHILLGUY_USDT SHORT swing - Score: 8
+2025-07-30 00:22:32 - INFO - SIGNAL: B-1000BONK_USDT SHORT swing - Score: 8
+2025-07-30 00:22:32 - INFO - SIGNAL: B-ALCH_USDT LONG scalping - Score: 13
+2025-07-30 00:22:32 - INFO - SIGNAL: B-BIO_USDT SHORT scalping - Score: 12
+2025-07-30 00:22:32 - INFO - SIGNAL: B-MUBARAK_USDT LONG scalping - Score: 10
+2025-07-30 00:22:32 - INFO - SIGNAL: B-VINE_USDT LONG scalping - Score: 11
+2025-07-30 00:22:32 - INFO - === Trading Bot execution completed ===
