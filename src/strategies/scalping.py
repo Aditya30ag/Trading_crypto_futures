@@ -592,9 +592,9 @@ class ScalpingStrategy:
             # Get current volume
             current_volume = float(candles[-1]["volume"]) if candles else 0
             
-            # Liquidity requirements for scalping (more stringent)
-            min_avg_volume = 10000  # Minimum average volume
-            min_current_volume = 5000  # Minimum current volume
+            # Liquidity requirements for scalping - INCREASED for highly voluminous signals
+            min_avg_volume = 200000  # Increased minimum average volume for high volume signals
+            min_current_volume = 100000  # Increased minimum current volume for high volume signals
             
             # Check if volume meets requirements
             volume_ok = avg_volume >= min_avg_volume and current_volume >= min_current_volume

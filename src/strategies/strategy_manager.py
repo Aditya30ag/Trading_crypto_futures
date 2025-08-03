@@ -45,13 +45,12 @@ class StrategyManager:
                 if symbol in data.get("prices", {}):
                     price_data = data["prices"][symbol]
                     market_data[symbol] = {
-                        "volume": float(price_data.get("v", 0)),
-                        "change_24h": float(price_data.get("pc", 0))
+                        "volume": float(price_data.get("v", 0))
                     }
-            # Sort by volatility * volume
+            # Sort by volume only - REMOVED 24hr change component
             sorted_instruments = sorted(
                 market_data.keys(),
-                key=lambda x: market_data[x]["volume"] * abs(market_data[x]["change_24h"]),
+                key=lambda x: market_data[x]["volume"],
                 reverse=True
             )
             top_instruments = sorted_instruments[:35]

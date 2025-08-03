@@ -1,0 +1,611 @@
+{
+  "timestamp": "2025-08-02T20:24:31.826543",
+  "summary": {
+    "total_signals": 12,
+    "passed_signals": 0,
+    "failed_signals": 12,
+    "success_rate": 0.0,
+    "issue_types": {
+      "Price deviation too high": 12,
+      "Volume too low": 12,
+      "Confidence too low": 5
+    },
+    "total_issues": 29
+  },
+  "signals": {
+    "B-HBAR_USDT_long_swing_2025-07-23 21:10:25.612736+05:30": {
+      "symbol": "B-HBAR_USDT",
+      "side": "short",
+      "score": 10,
+      "confidence": 0.515,
+      "entry_price": 0.25249,
+      "current_price": 0.23215,
+      "price_change_percent": -8.055764584736028,
+      "validation_passed": false,
+      "issues": [
+        "Price deviation too high: 8.06% > 2.00%",
+        "Volume too low: 0 < 100000"
+      ],
+      "warnings": [],
+      "strengths": [
+        "Score good: 10",
+        "Confidence good: 51.5%"
+      ],
+      "technical_analysis": {
+        "rsi_analysis": {
+          "status": "warning",
+          "message": "RSI oversold: 20.69"
+        },
+        "ema_analysis": {
+          "status": "good",
+          "message": "EMA20 < EMA50 (bearish trend)"
+        },
+        "macd_analysis": {
+          "status": "good",
+          "message": "MACD negative: -0.001791"
+        },
+        "trend_analysis": {},
+        "overall_score": 2
+      },
+      "market_conditions": {},
+      "direction_validation": {
+        "direction_correct": false,
+        "reasons": [
+          "EMA trend supports short",
+          "MACD supports short"
+        ],
+        "warnings": [
+          "RSI may not support direction",
+          "Direction validation failed (2/3 conditions)"
+        ]
+      }
+    },
+    "B-AIXBT_USDT_long_swing_2025-07-23 21:10:28.422498+05:30": {
+      "symbol": "B-AIXBT_USDT",
+      "side": "short",
+      "score": 9,
+      "confidence": 0.48,
+      "entry_price": 0.15907,
+      "current_price": 0.11479,
+      "price_change_percent": -27.836801408185067,
+      "validation_passed": false,
+      "issues": [
+        "Price deviation too high: 27.84% > 2.00%",
+        "Volume too low: 0 < 100000",
+        "Confidence too low: 48.0% < 50.0%"
+      ],
+      "warnings": [],
+      "strengths": [
+        "Score good: 9"
+      ],
+      "technical_analysis": {
+        "rsi_analysis": {
+          "status": "good",
+          "message": "RSI in bearish range: 30.28"
+        },
+        "ema_analysis": {
+          "status": "good",
+          "message": "EMA20 < EMA50 (bearish trend)"
+        },
+        "macd_analysis": {
+          "status": "good",
+          "message": "MACD negative: -0.001350"
+        },
+        "trend_analysis": {},
+        "overall_score": 3
+      },
+      "market_conditions": {},
+      "direction_validation": {
+        "direction_correct": true,
+        "reasons": [
+          "EMA trend supports short",
+          "RSI supports short",
+          "MACD supports short",
+          "Direction validation passed (3/3 conditions)"
+        ],
+        "warnings": []
+      }
+    },
+    "B-VOXEL_USDT_long_swing_2025-07-23 21:09:08.093029+05:30": {
+      "symbol": "B-VOXEL_USDT",
+      "side": "long",
+      "score": 9,
+      "confidence": 0.66,
+      "entry_price": 0.06132,
+      "current_price": 0.05386,
+      "price_change_percent": -12.165688193085455,
+      "validation_passed": false,
+      "issues": [
+        "Price deviation too high: 12.17% > 2.00%",
+        "Volume too low: 0 < 100000"
+      ],
+      "warnings": [],
+      "strengths": [
+        "Score good: 9",
+        "Confidence good: 66.0%"
+      ],
+      "technical_analysis": {
+        "rsi_analysis": {
+          "status": "good",
+          "message": "RSI in bullish range: 51.66"
+        },
+        "ema_analysis": {
+          "status": "good",
+          "message": "EMA20 > EMA50 (bullish trend)"
+        },
+        "macd_analysis": {
+          "status": "good",
+          "message": "MACD positive: 0.000635"
+        },
+        "trend_analysis": {},
+        "overall_score": 3
+      },
+      "market_conditions": {},
+      "direction_validation": {
+        "direction_correct": true,
+        "reasons": [
+          "EMA trend supports long",
+          "RSI supports long",
+          "MACD supports long",
+          "Direction validation passed (3/3 conditions)"
+        ],
+        "warnings": []
+      }
+    },
+    "B-HBAR_USDT_long_swing_2025-07-23 21:10:21.201146+05:30": {
+      "symbol": "B-HBAR_USDT",
+      "side": "short",
+      "score": 10,
+      "confidence": 0.448,
+      "entry_price": 0.25232,
+      "current_price": 0.23216,
+      "price_change_percent": -7.989854153455924,
+      "validation_passed": false,
+      "issues": [
+        "Price deviation too high: 7.99% > 2.00%",
+        "Volume too low: 0 < 100000",
+        "Confidence too low: 44.8% < 50.0%"
+      ],
+      "warnings": [],
+      "strengths": [
+        "Score good: 10"
+      ],
+      "technical_analysis": {
+        "rsi_analysis": {
+          "status": "warning",
+          "message": "RSI oversold: 22.17"
+        },
+        "ema_analysis": {
+          "status": "good",
+          "message": "EMA20 < EMA50 (bearish trend)"
+        },
+        "macd_analysis": {
+          "status": "good",
+          "message": "MACD negative: -0.001736"
+        },
+        "trend_analysis": {},
+        "overall_score": 2
+      },
+      "market_conditions": {},
+      "direction_validation": {
+        "direction_correct": false,
+        "reasons": [
+          "EMA trend supports short",
+          "MACD supports short"
+        ],
+        "warnings": [
+          "RSI may not support direction",
+          "Direction validation failed (2/3 conditions)"
+        ]
+      }
+    },
+    "B-PIPPIN_USDT_long_swing_2025-07-23 21:09:05.503224+05:30": {
+      "symbol": "B-PIPPIN_USDT",
+      "side": "short",
+      "score": 8,
+      "confidence": 0.44,
+      "entry_price": 0.01948,
+      "current_price": 0.01686,
+      "price_change_percent": -13.44969199178645,
+      "validation_passed": false,
+      "issues": [
+        "Price deviation too high: 13.45% > 2.00%",
+        "Volume too low: 0 < 100000",
+        "Confidence too low: 44.0% < 50.0%"
+      ],
+      "warnings": [],
+      "strengths": [
+        "Score good: 8"
+      ],
+      "technical_analysis": {
+        "rsi_analysis": {
+          "status": "good",
+          "message": "RSI in bearish range: 39.81"
+        },
+        "ema_analysis": {
+          "status": "good",
+          "message": "EMA20 < EMA50 (bearish trend)"
+        },
+        "macd_analysis": {
+          "status": "good",
+          "message": "MACD negative: -0.000388"
+        },
+        "trend_analysis": {},
+        "overall_score": 3
+      },
+      "market_conditions": {},
+      "direction_validation": {
+        "direction_correct": true,
+        "reasons": [
+          "EMA trend supports short",
+          "RSI supports short",
+          "MACD supports short",
+          "Direction validation passed (3/3 conditions)"
+        ],
+        "warnings": []
+      }
+    },
+    "B-VOXEL_USDT_swing_2025-07-23 21:08:50.805524+05:30": {
+      "symbol": "B-VOXEL_USDT",
+      "side": "long",
+      "score": 8,
+      "confidence": 0.578,
+      "entry_price": 0.06121,
+      "current_price": 0.05386,
+      "price_change_percent": -12.007841855905902,
+      "validation_passed": false,
+      "issues": [
+        "Price deviation too high: 12.01% > 2.00%",
+        "Volume too low: 0 < 100000"
+      ],
+      "warnings": [],
+      "strengths": [
+        "Score good: 8",
+        "Confidence good: 57.8%"
+      ],
+      "technical_analysis": {
+        "rsi_analysis": {
+          "status": "good",
+          "message": "RSI in bullish range: 48.85"
+        },
+        "ema_analysis": {
+          "status": "warning",
+          "message": "EMA20 < EMA50 (bearish trend)"
+        },
+        "macd_analysis": {
+          "status": "good",
+          "message": "MACD positive: 0.000144"
+        },
+        "trend_analysis": {},
+        "overall_score": 2
+      },
+      "market_conditions": {},
+      "direction_validation": {
+        "direction_correct": false,
+        "reasons": [
+          "RSI supports long",
+          "MACD supports long"
+        ],
+        "warnings": [
+          "EMA trend doesn't support direction",
+          "Direction validation failed (2/3 conditions)"
+        ]
+      }
+    },
+    "B-ARB_USDT_long_swing_2025-07-23 21:09:13.129831+05:30": {
+      "symbol": "B-ARB_USDT",
+      "side": "short",
+      "score": 9,
+      "confidence": 0.384,
+      "entry_price": 0.4406,
+      "current_price": 0.3717,
+      "price_change_percent": -15.637766681797553,
+      "validation_passed": false,
+      "issues": [
+        "Price deviation too high: 15.64% > 2.00%",
+        "Volume too low: 0 < 100000",
+        "Confidence too low: 38.4% < 50.0%"
+      ],
+      "warnings": [],
+      "strengths": [
+        "Score good: 9"
+      ],
+      "technical_analysis": {
+        "rsi_analysis": {
+          "status": "warning",
+          "message": "RSI oversold: 25.96"
+        },
+        "ema_analysis": {
+          "status": "good",
+          "message": "EMA20 < EMA50 (bearish trend)"
+        },
+        "macd_analysis": {
+          "status": "good",
+          "message": "MACD negative: -0.003662"
+        },
+        "trend_analysis": {},
+        "overall_score": 2
+      },
+      "market_conditions": {},
+      "direction_validation": {
+        "direction_correct": false,
+        "reasons": [
+          "EMA trend supports short",
+          "MACD supports short"
+        ],
+        "warnings": [
+          "RSI may not support direction",
+          "Direction validation failed (2/3 conditions)"
+        ]
+      }
+    },
+    "B-PIPPIN_USDT_swing_2025-07-23 21:08:42.474651+05:30": {
+      "symbol": "B-PIPPIN_USDT",
+      "side": "short",
+      "score": 8,
+      "confidence": 0.46,
+      "entry_price": 0.01944,
+      "current_price": 0.01686,
+      "price_change_percent": -13.2716049382716,
+      "validation_passed": false,
+      "issues": [
+        "Price deviation too high: 13.27% > 2.00%",
+        "Volume too low: 0 < 100000",
+        "Confidence too low: 46.0% < 50.0%"
+      ],
+      "warnings": [],
+      "strengths": [
+        "Score good: 8"
+      ],
+      "technical_analysis": {
+        "rsi_analysis": {
+          "status": "good",
+          "message": "RSI in bearish range: 34.75"
+        },
+        "ema_analysis": {
+          "status": "good",
+          "message": "EMA20 < EMA50 (bearish trend)"
+        },
+        "macd_analysis": {
+          "status": "good",
+          "message": "MACD negative: -0.000003"
+        },
+        "trend_analysis": {},
+        "overall_score": 3
+      },
+      "market_conditions": {},
+      "direction_validation": {
+        "direction_correct": true,
+        "reasons": [
+          "EMA trend supports short",
+          "RSI supports short",
+          "MACD supports short",
+          "Direction validation passed (3/3 conditions)"
+        ],
+        "warnings": []
+      }
+    },
+    "B-OP_USDT_scalping_2025-07-23 21:08:19.474957+05:30": {
+      "symbol": "B-OP_USDT",
+      "side": "short",
+      "score": 12,
+      "confidence": 0.8,
+      "entry_price": 0.719,
+      "current_price": 0.6283,
+      "price_change_percent": -12.614742698191932,
+      "validation_passed": false,
+      "issues": [
+        "Price deviation too high: 12.61% > 2.00%",
+        "Volume too low: 0 < 100000"
+      ],
+      "warnings": [],
+      "strengths": [
+        "Score good: 12",
+        "Confidence good: 80.0%"
+      ],
+      "technical_analysis": {
+        "rsi_analysis": {
+          "status": "good",
+          "message": "RSI in bearish range: 38.30"
+        },
+        "ema_analysis": {
+          "status": "good",
+          "message": "EMA20 < EMA50 (bearish trend)"
+        },
+        "macd_analysis": {
+          "status": "good",
+          "message": "MACD negative: -0.003744"
+        },
+        "trend_analysis": {},
+        "overall_score": 3
+      },
+      "market_conditions": {},
+      "direction_validation": {
+        "direction_correct": true,
+        "reasons": [
+          "EMA trend supports short",
+          "RSI supports short",
+          "MACD supports short",
+          "Direction validation passed (3/3 conditions)"
+        ],
+        "warnings": []
+      }
+    },
+    "B-VIRTUAL_USDT_scalping_2025-07-23 21:08:19.551896+05:30": {
+      "symbol": "B-VIRTUAL_USDT",
+      "side": "short",
+      "score": 12,
+      "confidence": 0.8,
+      "entry_price": 1.7434,
+      "current_price": 1.1709,
+      "price_change_percent": -32.838132384994836,
+      "validation_passed": false,
+      "issues": [
+        "Price deviation too high: 32.84% > 2.00%",
+        "Volume too low: 0 < 100000"
+      ],
+      "warnings": [],
+      "strengths": [
+        "Score good: 12",
+        "Confidence good: 80.0%"
+      ],
+      "technical_analysis": {
+        "rsi_analysis": {
+          "status": "good",
+          "message": "RSI in bearish range: 39.24"
+        },
+        "ema_analysis": {
+          "status": "good",
+          "message": "EMA20 < EMA50 (bearish trend)"
+        },
+        "macd_analysis": {
+          "status": "good",
+          "message": "MACD negative: -0.009858"
+        },
+        "trend_analysis": {},
+        "overall_score": 3
+      },
+      "market_conditions": {},
+      "direction_validation": {
+        "direction_correct": true,
+        "reasons": [
+          "EMA trend supports short",
+          "RSI supports short",
+          "MACD supports short",
+          "Direction validation passed (3/3 conditions)"
+        ],
+        "warnings": []
+      }
+    },
+    "B-PIPPIN_USDT_scalping_2025-07-23 21:08:02.336756+05:30": {
+      "symbol": "B-PIPPIN_USDT",
+      "side": "short",
+      "score": 11,
+      "confidence": 0.8,
+      "entry_price": 0.01945,
+      "current_price": 0.01686,
+      "price_change_percent": -13.316195372750636,
+      "validation_passed": false,
+      "issues": [
+        "Price deviation too high: 13.32% > 2.00%",
+        "Volume too low: 0 < 100000"
+      ],
+      "warnings": [],
+      "strengths": [
+        "Score good: 11",
+        "Confidence good: 80.0%"
+      ],
+      "technical_analysis": {
+        "rsi_analysis": {
+          "status": "good",
+          "message": "RSI in bearish range: 35.00"
+        },
+        "ema_analysis": {
+          "status": "good",
+          "message": "EMA20 < EMA50 (bearish trend)"
+        },
+        "macd_analysis": {
+          "status": "good",
+          "message": "MACD negative: -0.000018"
+        },
+        "trend_analysis": {},
+        "overall_score": 3
+      },
+      "market_conditions": {},
+      "direction_validation": {
+        "direction_correct": true,
+        "reasons": [
+          "EMA trend supports short",
+          "RSI supports short",
+          "MACD supports short",
+          "Direction validation passed (3/3 conditions)"
+        ],
+        "warnings": []
+      }
+    },
+    "B-SYN_USDT_scalping_2025-07-23 21:08:19.527424+05:30": {
+      "symbol": "B-SYN_USDT",
+      "side": "short",
+      "score": 9,
+      "confidence": 0.581,
+      "entry_price": 0.1649,
+      "current_price": 0.1165,
+      "price_change_percent": -29.351121892055783,
+      "validation_passed": false,
+      "issues": [
+        "Price deviation too high: 29.35% > 2.00%",
+        "Volume too low: 0 < 100000"
+      ],
+      "warnings": [],
+      "strengths": [
+        "Score good: 9",
+        "Confidence good: 58.1%"
+      ],
+      "technical_analysis": {
+        "rsi_analysis": {
+          "status": "good",
+          "message": "RSI in bearish range: 49.23"
+        },
+        "ema_analysis": {
+          "status": "good",
+          "message": "EMA20 < EMA50 (bearish trend)"
+        },
+        "macd_analysis": {
+          "status": "good",
+          "message": "MACD negative: -0.001825"
+        },
+        "trend_analysis": {},
+        "overall_score": 3
+      },
+      "market_conditions": {},
+      "direction_validation": {
+        "direction_correct": true,
+        "reasons": [
+          "EMA trend supports short",
+          "RSI supports short",
+          "MACD supports short",
+          "Direction validation passed (3/3 conditions)"
+        ],
+        "warnings": []
+      }
+    }
+  },
+  "issues": [
+    "Price deviation too high: 8.06% > 2.00%",
+    "Volume too low: 0 < 100000",
+    "Price deviation too high: 27.84% > 2.00%",
+    "Volume too low: 0 < 100000",
+    "Confidence too low: 48.0% < 50.0%",
+    "Price deviation too high: 12.17% > 2.00%",
+    "Volume too low: 0 < 100000",
+    "Price deviation too high: 7.99% > 2.00%",
+    "Volume too low: 0 < 100000",
+    "Confidence too low: 44.8% < 50.0%",
+    "Price deviation too high: 13.45% > 2.00%",
+    "Volume too low: 0 < 100000",
+    "Confidence too low: 44.0% < 50.0%",
+    "Price deviation too high: 12.01% > 2.00%",
+    "Volume too low: 0 < 100000",
+    "Price deviation too high: 15.64% > 2.00%",
+    "Volume too low: 0 < 100000",
+    "Confidence too low: 38.4% < 50.0%",
+    "Price deviation too high: 13.27% > 2.00%",
+    "Volume too low: 0 < 100000",
+    "Confidence too low: 46.0% < 50.0%",
+    "Price deviation too high: 12.61% > 2.00%",
+    "Volume too low: 0 < 100000",
+    "Price deviation too high: 32.84% > 2.00%",
+    "Volume too low: 0 < 100000",
+    "Price deviation too high: 13.32% > 2.00%",
+    "Volume too low: 0 < 100000",
+    "Price deviation too high: 29.35% > 2.00%",
+    "Volume too low: 0 < 100000"
+  ],
+  "recommendations": [
+    "\u26a0\ufe0f Low signal success rate - consider tightening validation criteria",
+    "\ud83d\udcca Many signals have high price deviations - check market data freshness",
+    "\ud83c\udfaf Many signals have low confidence - review scoring algorithm",
+    "\ud83d\udcc8 Many signals have low volume - consider volume filters",
+    "\ud83d\udea8 More failed signals than passed - review signal generation logic"
+  ]
+}

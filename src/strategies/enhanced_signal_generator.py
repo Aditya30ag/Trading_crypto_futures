@@ -65,17 +65,16 @@ class EnhancedSignalGenerator:
             # Use existing instruments from config
             instruments = self.config["trading"]["instruments"]
             
-            # Filter by checking market data for each instrument
+            # Filter by checking market data for each instrument - FOCUS ON HIGH VOLUME ONLY
             high_liquidity = []
             for symbol in instruments:
                 try:
                     market_data = self.fetcher.fetch_market_data(symbol)
-                    if market_data and 'volume' in market_data and 'change_24h' in market_data:
+                    if market_data and 'volume' in market_data:
                         volume = float(market_data.get('volume', 0))
-                        change_24h = abs(float(market_data.get('change_24h', 0)))
                         
-                        # High liquidity criteria
-                        if volume > 100000 and change_24h > 1.0:  # Lowered thresholds
+                        # High volume criteria - REMOVED 24hr change requirement
+                        if volume > 500000:  # Increased volume threshold for highly active symbols
                             high_liquidity.append(symbol)
                 except Exception as e:
                     self.logger.debug(f"Error checking liquidity for {symbol}: {e}")

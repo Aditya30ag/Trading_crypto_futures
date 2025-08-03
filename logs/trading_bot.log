@@ -172,3 +172,1178 @@
 2025-07-23 21:10:31 - INFO - SIGNAL: B-PIPPIN_USDT SHORT scalping - Score: 11
 2025-07-23 21:10:31 - INFO - SIGNAL: B-SYN_USDT SHORT scalping - Score: 9
 2025-07-23 21:10:31 - INFO - === Trading Bot execution completed ===
+2025-08-02 12:05:32 - INFO - === Logger initialized successfully ===
+2025-08-02 12:05:32 - INFO - Log file: logs/trading_bot.log
+2025-08-02 12:05:32 - INFO - Log level: INFO
+2025-08-02 12:05:32 - INFO - Starting Enhanced Signal Generator Test
+2025-08-02 12:05:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 12:05:32 - INFO - Generating enhanced signals...
+2025-08-02 12:05:32 - INFO - Starting enhanced signal generation for high-quality signals only
+2025-08-02 12:05:32 - ERROR - Error fetching high liquidity instruments: 'CoinDCXFetcher' object has no attribute 'fetch_market_data_all'
+2025-08-02 12:05:32 - INFO - Analyzing 11 high-liquidity instruments
+2025-08-02 12:05:49 - WARNING - Unsupported resolution: 4h for B-BTC_USDT, skipping
+2025-08-02 12:05:50 - WARNING - Unsupported resolution: 4h for B-ETH_USDT, skipping
+2025-08-02 12:05:51 - WARNING - Unsupported resolution: 4h for B-XRP_USDT, skipping
+2025-08-02 12:05:52 - WARNING - Unsupported resolution: 4h for B-ADA_USDT, skipping
+2025-08-02 12:05:53 - WARNING - Unsupported resolution: 4h for B-DOT_USDT, skipping
+2025-08-02 12:05:54 - WARNING - Unsupported resolution: 4h for B-SOL_USDT, skipping
+2025-08-02 12:05:54 - WARNING - Unsupported resolution: 4h for B-BNB_USDT, skipping
+2025-08-02 12:05:55 - WARNING - No data available for B-MATIC_USDT on 5m timeframe
+2025-08-02 12:05:55 - WARNING - No data available for B-MATIC_USDT on 15m timeframe
+2025-08-02 12:05:55 - WARNING - No data available for B-MATIC_USDT on 1h timeframe
+2025-08-02 12:05:55 - WARNING - Unsupported resolution: 4h for B-MATIC_USDT, skipping
+2025-08-02 12:05:56 - WARNING - Unsupported resolution: 4h for B-LINK_USDT, skipping
+2025-08-02 12:05:57 - WARNING - Unsupported resolution: 4h for B-TRX_USDT, skipping
+2025-08-02 12:05:49 - WARNING - Unsupported resolution: 4h for B-AVAX_USDT, skipping
+2025-08-02 12:05:49 - INFO - Enhanced signal generation complete: 0 high-quality signals
+2025-08-02 12:05:49 - WARNING - No enhanced signals generated. Market conditions may not be suitable.
+2025-08-02 12:09:51 - INFO - === Logger initialized successfully ===
+2025-08-02 12:09:51 - INFO - Log file: logs/trading_bot.log
+2025-08-02 12:09:51 - INFO - Log level: INFO
+2025-08-02 12:09:51 - INFO - Starting Enhanced Signal Generator Test
+2025-08-02 12:09:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 12:09:51 - INFO - Generating enhanced signals...
+2025-08-02 12:09:51 - INFO - Starting enhanced signal generation for high-quality signals only
+2025-08-02 12:09:51 - ERROR - Error fetching high liquidity instruments: 'CoinDCXFetcher' object has no attribute 'fetch_market_data_all'
+2025-08-02 12:09:51 - INFO - Analyzing 11 high-liquidity instruments
+2025-08-02 12:09:52 - WARNING - Unsupported resolution: 4h for B-BTC_USDT, skipping
+2025-08-02 12:10:02 - WARNING - Unsupported resolution: 4h for B-ETH_USDT, skipping
+2025-08-02 12:10:03 - WARNING - Unsupported resolution: 4h for B-XRP_USDT, skipping
+2025-08-02 12:10:03 - WARNING - Unsupported resolution: 4h for B-ADA_USDT, skipping
+2025-08-02 12:10:04 - WARNING - Unsupported resolution: 4h for B-DOT_USDT, skipping
+2025-08-02 12:10:05 - WARNING - Unsupported resolution: 4h for B-SOL_USDT, skipping
+2025-08-02 12:10:06 - WARNING - Unsupported resolution: 4h for B-BNB_USDT, skipping
+2025-08-02 12:10:07 - WARNING - No data available for B-MATIC_USDT on 5m timeframe
+2025-08-02 12:10:07 - WARNING - No data available for B-MATIC_USDT on 15m timeframe
+2025-08-02 12:10:07 - WARNING - No data available for B-MATIC_USDT on 1h timeframe
+2025-08-02 12:10:07 - WARNING - Unsupported resolution: 4h for B-MATIC_USDT, skipping
+2025-08-02 12:10:08 - WARNING - Unsupported resolution: 4h for B-LINK_USDT, skipping
+2025-08-02 12:10:09 - WARNING - Unsupported resolution: 4h for B-TRX_USDT, skipping
+2025-08-02 12:10:10 - WARNING - Unsupported resolution: 4h for B-AVAX_USDT, skipping
+2025-08-02 12:10:10 - INFO - Enhanced signal generation complete: 0 high-quality signals
+2025-08-02 12:10:10 - WARNING - No enhanced signals generated. Market conditions may not be suitable.
+2025-08-02 12:10:59 - INFO - === Logger initialized successfully ===
+2025-08-02 12:10:59 - INFO - Log file: logs/trading_bot.log
+2025-08-02 12:10:59 - INFO - Log level: INFO
+2025-08-02 12:10:59 - INFO - Starting Enhanced Signal Generator Test
+2025-08-02 12:10:59 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 12:10:59 - INFO - Generating enhanced signals...
+2025-08-02 12:10:59 - INFO - Starting enhanced signal generation for high-quality signals only
+2025-08-02 12:11:00 - INFO - Analyzing 9 high-liquidity instruments
+2025-08-02 12:11:05 - WARNING - No data available for B-MATIC_USDT on 5m timeframe
+2025-08-02 12:11:05 - WARNING - No data available for B-MATIC_USDT on 15m timeframe
+2025-08-02 12:11:05 - WARNING - No data available for B-MATIC_USDT on 1h timeframe
+2025-08-02 12:11:07 - INFO - Enhanced signal generation complete: 0 high-quality signals
+2025-08-02 12:11:07 - WARNING - No enhanced signals generated. Market conditions may not be suitable.
+2025-08-02 12:12:43 - INFO - === Logger initialized successfully ===
+2025-08-02 12:12:43 - INFO - Log file: logs/trading_bot.log
+2025-08-02 12:12:43 - INFO - Log level: INFO
+2025-08-02 12:12:43 - INFO - Starting Simple Enhanced Signal Generator Test
+2025-08-02 12:12:44 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 12:12:44 - INFO - Generating enhanced signals...
+2025-08-02 12:12:44 - INFO - Starting simple enhanced signal generation
+2025-08-02 12:12:44 - INFO - Analyzing 5 instruments
+2025-08-02 12:12:54 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff46f117a30>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-02 12:12:55 - INFO - Generated signal for B-BTC_USDT: TradeDirection.SHORT
+2025-08-02 12:12:55 - INFO - Generated signal for B-ETH_USDT: TradeDirection.SHORT
+2025-08-02 12:12:56 - INFO - Generated signal for B-ADA_USDT: TradeDirection.SHORT
+2025-08-02 12:13:05 - INFO - === Logger initialized successfully ===
+2025-08-02 12:13:05 - INFO - Log file: logs/trading_bot.log
+2025-08-02 12:13:05 - INFO - Log level: INFO
+2025-08-02 12:13:05 - INFO - Starting Simple Enhanced Signal Generator Test
+2025-08-02 12:13:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 12:13:05 - INFO - Generating enhanced signals...
+2025-08-02 12:13:05 - INFO - Starting simple enhanced signal generation
+2025-08-02 12:13:05 - INFO - Analyzing 5 instruments
+2025-08-02 12:13:06 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff46f114100>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-02 12:13:11 - INFO - Generated signal for B-BTC_USDT: TradeDirection.SHORT
+2025-08-02 12:13:11 - INFO - Generated signal for B-ETH_USDT: TradeDirection.SHORT
+2025-08-02 12:13:17 - INFO - Generated signal for B-ADA_USDT: TradeDirection.SHORT
+2025-08-02 12:13:17 - ERROR - Attempt 2/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff46f1141f0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-02 12:13:19 - INFO - Generated signal for B-DOT_USDT: TradeDirection.SHORT
+2025-08-02 12:13:19 - INFO - Signal generation complete: 3 signals
+2025-08-02 12:13:19 - INFO - Generated 3 enhanced signals:
+2025-08-02 12:13:19 - INFO - Signals saved to simple_enhanced_signals_20250802_121319.json
+2025-08-02 12:13:14 - INFO - Generated signal for B-DOT_USDT: TradeDirection.SHORT
+2025-08-02 12:13:14 - INFO - Signal generation complete: 3 signals
+2025-08-02 12:13:14 - INFO - Generated 3 enhanced signals:
+2025-08-02 12:13:14 - INFO - Signals saved to simple_enhanced_signals_20250802_121314.json
+2025-08-02 12:21:42 - INFO - === Logger initialized successfully ===
+2025-08-02 12:21:42 - INFO - Log file: logs/trading_bot.log
+2025-08-02 12:21:42 - INFO - Log level: INFO
+2025-08-02 12:21:42 - INFO - Starting Simple Enhanced Signal Generator Test
+2025-08-02 12:21:42 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 12:21:42 - INFO - Generating enhanced signals...
+2025-08-02 12:21:42 - INFO - Starting simple enhanced signal generation
+2025-08-02 12:21:42 - INFO - Analyzing 5 instruments
+2025-08-02 12:21:47 - INFO - Generated signal for B-BTC_USDT: TradeDirection.SHORT
+2025-08-02 12:21:48 - INFO - Generated signal for B-ETH_USDT: TradeDirection.SHORT
+2025-08-02 12:21:48 - INFO - Generated signal for B-XRP_USDT: TradeDirection.LONG
+2025-08-02 12:21:54 - INFO - === Logger initialized successfully ===
+2025-08-02 12:21:54 - INFO - Log file: logs/trading_bot.log
+2025-08-02 12:21:54 - INFO - Log level: INFO
+2025-08-02 12:21:54 - INFO - Starting Enhanced Signal Generator Test
+2025-08-02 12:21:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 12:21:54 - INFO - Generating enhanced signals...
+2025-08-02 12:21:54 - INFO - Starting enhanced signal generation for high-quality signals only
+2025-08-02 12:22:13 - INFO - Analyzing 9 high-liquidity instruments
+2025-08-02 12:22:18 - WARNING - No data available for B-MATIC_USDT on 5m timeframe
+2025-08-02 12:22:18 - WARNING - No data available for B-MATIC_USDT on 15m timeframe
+2025-08-02 12:22:18 - WARNING - No data available for B-MATIC_USDT on 1h timeframe
+2025-08-02 12:22:20 - INFO - Enhanced signal generation complete: 0 high-quality signals
+2025-08-02 12:22:20 - WARNING - No enhanced signals generated. Market conditions may not be suitable.
+2025-08-02 12:26:12 - INFO - === Logger initialized successfully ===
+2025-08-02 12:26:12 - INFO - Log file: logs/trading_bot.log
+2025-08-02 12:26:12 - INFO - Log level: INFO
+2025-08-02 12:26:12 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 12:26:12 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 12:26:12 - INFO - Starting live signal monitoring for 24 hours
+2025-08-02 12:26:12 - INFO - Starting simple enhanced signal generation
+2025-08-02 12:26:12 - INFO - Analyzing 5 instruments
+2025-08-02 12:26:18 - INFO - Generated signal for B-BTC_USDT: TradeDirection.SHORT
+2025-08-02 12:26:18 - INFO - Generated signal for B-ETH_USDT: TradeDirection.SHORT
+2025-08-02 12:26:24 - INFO - Generated signal for B-XRP_USDT: TradeDirection.LONG
+2025-08-02 12:26:24 - INFO - Generated signal for B-ADA_USDT: TradeDirection.SHORT
+2025-08-02 12:26:30 - INFO - Generated signal for B-DOT_USDT: TradeDirection.SHORT
+2025-08-02 12:26:30 - INFO - Signal generation complete: 3 signals
+2025-08-02 20:11:35 - INFO - === Logger initialized successfully ===
+2025-08-02 20:11:35 - INFO - Log file: logs/trading_bot.log
+2025-08-02 20:11:35 - INFO - Log level: INFO
+2025-08-02 20:11:35 - INFO - === Analyzing Existing Signals ===
+2025-08-02 20:11:35 - INFO - Analyzing 12 signals
+2025-08-02 20:11:35 - INFO - 
+=== Signal 1 Analysis ===
+2025-08-02 20:11:35 - INFO - Symbol: B-HBAR_USDT
+2025-08-02 20:11:35 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:11:35 - INFO - Side: short
+2025-08-02 20:11:35 - INFO - Score: 10
+2025-08-02 20:11:35 - INFO - Estimated Profit: ₹20543.12
+2025-08-02 20:11:35 - INFO - Key Indicators:
+2025-08-02 20:11:35 - INFO -   RSI: 20.6949569495695
+2025-08-02 20:11:35 - INFO -   EMA20: 0.2634559794404208
+2025-08-02 20:11:35 - INFO -   EMA50: 0.2675735108509652
+2025-08-02 20:11:35 - INFO -   MACD: -0.0017910664406315714
+2025-08-02 20:11:35 - WARNING - ⚠️ CONTRADICTIONS DETECTED: RSI oversold for short signal
+2025-08-02 20:11:35 - INFO - Score Reasons (10):
+2025-08-02 20:11:35 - INFO -   - Price < EMA20
+2025-08-02 20:11:35 - INFO -   - Strong MACD momentum (36,78,18) bearish
+2025-08-02 20:11:35 - INFO -   - Price < VWAP
+2025-08-02 20:11:35 - INFO -   - Volume > 20MA
+2025-08-02 20:11:35 - INFO -   - Multi-timeframe trend bearish
+2025-08-02 20:11:35 - INFO -   - ADX > 25 and DI- > DI+
+2025-08-02 20:11:35 - INFO -   - Price < EMA100
+2025-08-02 20:11:35 - INFO -   - CCI < -100 (bearish)
+2025-08-02 20:11:35 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:11:35 - INFO -   - Price below Keltner lower (bearish breakout)
+2025-08-02 20:11:35 - INFO - 
+=== Signal 2 Analysis ===
+2025-08-02 20:11:35 - INFO - Symbol: B-AIXBT_USDT
+2025-08-02 20:11:35 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:11:35 - INFO - Side: short
+2025-08-02 20:11:35 - INFO - Score: 9
+2025-08-02 20:11:35 - INFO - Estimated Profit: ₹20408.85
+2025-08-02 20:11:35 - INFO - Key Indicators:
+2025-08-02 20:11:35 - INFO -   RSI: 30.281439258995377
+2025-08-02 20:11:35 - INFO -   EMA20: 0.1665147326654617
+2025-08-02 20:11:35 - INFO -   EMA50: 0.1697515667372586
+2025-08-02 20:11:35 - INFO -   MACD: -0.0013496158494413271
+2025-08-02 20:11:35 - INFO - ✅ No major contradictions detected
+2025-08-02 20:11:35 - INFO - Score Reasons (9):
+2025-08-02 20:11:35 - INFO -   - Price < EMA20
+2025-08-02 20:11:35 - INFO -   - Strong MACD momentum (36,78,18) bearish
+2025-08-02 20:11:35 - INFO -   - Price < VWAP
+2025-08-02 20:11:35 - INFO -   - Multi-timeframe trend bearish
+2025-08-02 20:11:35 - INFO -   - Supertrend downtrend
+2025-08-02 20:11:35 - INFO -   - ADX > 25 and DI- > DI+
+2025-08-02 20:11:35 - INFO -   - Price < EMA100
+2025-08-02 20:11:35 - INFO -   - CCI < -100 (bearish)
+2025-08-02 20:11:35 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:11:35 - INFO - 
+=== Signal 3 Analysis ===
+2025-08-02 20:11:35 - INFO - Symbol: B-VOXEL_USDT
+2025-08-02 20:11:35 - INFO - Direction: TradeDirection.LONG
+2025-08-02 20:11:35 - INFO - Side: long
+2025-08-02 20:11:35 - INFO - Score: 9
+2025-08-02 20:11:35 - INFO - Estimated Profit: ₹19202.87
+2025-08-02 20:11:35 - INFO - Key Indicators:
+2025-08-02 20:11:35 - INFO -   RSI: 51.65984538426559
+2025-08-02 20:11:35 - INFO -   EMA20: 0.06329222809565936
+2025-08-02 20:11:35 - INFO -   EMA50: 0.06040452132098588
+2025-08-02 20:11:35 - INFO -   MACD: 0.000635092822644429
+2025-08-02 20:11:35 - INFO - ✅ No major contradictions detected
+2025-08-02 20:11:35 - INFO - Score Reasons (9):
+2025-08-02 20:11:35 - INFO -   - Strong EMA uptrend (20>50>200)
+2025-08-02 20:11:35 - INFO -   - RSI optimal bullish (45-65)
+2025-08-02 20:11:35 - INFO -   - Strong MACD momentum (36,78,18)
+2025-08-02 20:11:35 - INFO -   - StochRSI not overbought
+2025-08-02 20:11:35 - INFO -   - Supertrend uptrend
+2025-08-02 20:11:35 - INFO -   - ADX > 25 and DI+ > DI-
+2025-08-02 20:11:35 - INFO -   - Price > EMA100
+2025-08-02 20:11:35 - INFO -   - OBV rising
+2025-08-02 20:11:35 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:11:35 - INFO - 
+=== Signal 4 Analysis ===
+2025-08-02 20:11:35 - INFO - Symbol: B-HBAR_USDT
+2025-08-02 20:11:35 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:11:35 - INFO - Side: short
+2025-08-02 20:11:35 - INFO - Score: 10
+2025-08-02 20:11:35 - INFO - Estimated Profit: ₹18586.63
+2025-08-02 20:11:35 - INFO - Key Indicators:
+2025-08-02 20:11:35 - INFO -   RSI: 22.16764898493767
+2025-08-02 20:11:35 - INFO -   EMA20: 0.2599684212614787
+2025-08-02 20:11:35 - INFO -   EMA50: 0.26512594525937894
+2025-08-02 20:11:35 - INFO -   MACD: -0.001736036532994217
+2025-08-02 20:11:35 - WARNING - ⚠️ CONTRADICTIONS DETECTED: RSI oversold for short signal
+2025-08-02 20:11:35 - INFO - Score Reasons (10):
+2025-08-02 20:11:35 - INFO -   - Strong EMA downtrend (20<50<200)
+2025-08-02 20:11:35 - INFO -   - Price < EMA20
+2025-08-02 20:11:35 - INFO -   - Strong MACD momentum (36,78,18) bearish
+2025-08-02 20:11:35 - INFO -   - Price < VWAP
+2025-08-02 20:11:35 - INFO -   - Multi-timeframe trend bearish
+2025-08-02 20:11:35 - INFO -   - ADX > 25 and DI- > DI+
+2025-08-02 20:11:35 - INFO -   - Price < EMA100
+2025-08-02 20:11:35 - INFO -   - CCI < -100 (bearish)
+2025-08-02 20:11:35 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:11:35 - INFO -   - Price below Keltner lower (bearish breakout)
+2025-08-02 20:11:35 - INFO - 
+=== Signal 5 Analysis ===
+2025-08-02 20:11:35 - INFO - Symbol: B-PIPPIN_USDT
+2025-08-02 20:11:35 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:11:35 - INFO - Side: short
+2025-08-02 20:11:35 - INFO - Score: 8
+2025-08-02 20:11:35 - INFO - Estimated Profit: ₹17831.24
+2025-08-02 20:11:35 - INFO - Key Indicators:
+2025-08-02 20:11:35 - INFO -   RSI: 39.81240229286087
+2025-08-02 20:11:35 - INFO -   EMA20: 0.021169420107691926
+2025-08-02 20:11:35 - INFO -   EMA50: 0.021560334926247926
+2025-08-02 20:11:35 - INFO -   MACD: -0.00038801318513178684
+2025-08-02 20:11:35 - INFO - ✅ No major contradictions detected
+2025-08-02 20:11:35 - INFO - Score Reasons (8):
+2025-08-02 20:11:35 - INFO -   - Price < EMA20
+2025-08-02 20:11:35 - INFO -   - RSI optimal bearish (35-55)
+2025-08-02 20:11:35 - INFO -   - Strong MACD momentum (36,78,18) bearish
+2025-08-02 20:11:35 - INFO -   - Price < VWAP
+2025-08-02 20:11:35 - INFO -   - Supertrend downtrend
+2025-08-02 20:11:35 - INFO -   - Price < EMA100
+2025-08-02 20:11:35 - INFO -   - OBV falling
+2025-08-02 20:11:35 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:11:35 - INFO - 
+=== Signal Analysis Complete ===
+2025-08-02 20:11:58 - INFO - === Logger initialized successfully ===
+2025-08-02 20:11:58 - INFO - Log file: logs/trading_bot.log
+2025-08-02 20:11:58 - INFO - Log level: INFO
+2025-08-02 20:11:58 - INFO - === Analyzing Existing Signals ===
+2025-08-02 20:11:58 - INFO - Analyzing 12 signals
+2025-08-02 20:11:58 - INFO - 
+=== Signal 1 Analysis ===
+2025-08-02 20:11:58 - INFO - Symbol: B-HBAR_USDT
+2025-08-02 20:11:58 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:11:58 - INFO - Side: short
+2025-08-02 20:11:58 - INFO - Score: 10
+2025-08-02 20:11:58 - INFO - Estimated Profit: ₹20543.12
+2025-08-02 20:11:58 - INFO - Key Indicators:
+2025-08-02 20:11:58 - INFO -   RSI: 20.6949569495695
+2025-08-02 20:11:58 - INFO -   EMA20: 0.2634559794404208
+2025-08-02 20:11:58 - INFO -   EMA50: 0.2675735108509652
+2025-08-02 20:11:58 - INFO -   MACD: -0.0017910664406315714
+2025-08-02 20:11:58 - WARNING - ⚠️ CONTRADICTIONS DETECTED: RSI oversold for short signal
+2025-08-02 20:11:58 - INFO - Score Reasons (10):
+2025-08-02 20:11:58 - INFO -   - Price < EMA20
+2025-08-02 20:11:58 - INFO -   - Strong MACD momentum (36,78,18) bearish
+2025-08-02 20:11:58 - INFO -   - Price < VWAP
+2025-08-02 20:11:58 - INFO -   - Volume > 20MA
+2025-08-02 20:11:58 - INFO -   - Multi-timeframe trend bearish
+2025-08-02 20:11:58 - INFO -   - ADX > 25 and DI- > DI+
+2025-08-02 20:11:58 - INFO -   - Price < EMA100
+2025-08-02 20:11:58 - INFO -   - CCI < -100 (bearish)
+2025-08-02 20:11:58 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:11:58 - INFO -   - Price below Keltner lower (bearish breakout)
+2025-08-02 20:11:58 - INFO - 
+=== Signal 2 Analysis ===
+2025-08-02 20:11:58 - INFO - Symbol: B-AIXBT_USDT
+2025-08-02 20:11:58 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:11:58 - INFO - Side: short
+2025-08-02 20:11:58 - INFO - Score: 9
+2025-08-02 20:11:58 - INFO - Estimated Profit: ₹20408.85
+2025-08-02 20:11:58 - INFO - Key Indicators:
+2025-08-02 20:11:58 - INFO -   RSI: 30.281439258995377
+2025-08-02 20:11:58 - INFO -   EMA20: 0.1665147326654617
+2025-08-02 20:11:58 - INFO -   EMA50: 0.1697515667372586
+2025-08-02 20:11:58 - INFO -   MACD: -0.0013496158494413271
+2025-08-02 20:11:58 - INFO - ✅ No major contradictions detected
+2025-08-02 20:11:58 - INFO - Score Reasons (9):
+2025-08-02 20:11:58 - INFO -   - Price < EMA20
+2025-08-02 20:11:58 - INFO -   - Strong MACD momentum (36,78,18) bearish
+2025-08-02 20:11:58 - INFO -   - Price < VWAP
+2025-08-02 20:11:58 - INFO -   - Multi-timeframe trend bearish
+2025-08-02 20:11:58 - INFO -   - Supertrend downtrend
+2025-08-02 20:11:58 - INFO -   - ADX > 25 and DI- > DI+
+2025-08-02 20:11:58 - INFO -   - Price < EMA100
+2025-08-02 20:11:58 - INFO -   - CCI < -100 (bearish)
+2025-08-02 20:11:58 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:11:58 - INFO - 
+=== Signal 3 Analysis ===
+2025-08-02 20:11:58 - INFO - Symbol: B-VOXEL_USDT
+2025-08-02 20:11:58 - INFO - Direction: TradeDirection.LONG
+2025-08-02 20:11:58 - INFO - Side: long
+2025-08-02 20:11:58 - INFO - Score: 9
+2025-08-02 20:11:58 - INFO - Estimated Profit: ₹19202.87
+2025-08-02 20:11:58 - INFO - Key Indicators:
+2025-08-02 20:11:58 - INFO -   RSI: 51.65984538426559
+2025-08-02 20:11:58 - INFO -   EMA20: 0.06329222809565936
+2025-08-02 20:11:58 - INFO -   EMA50: 0.06040452132098588
+2025-08-02 20:11:58 - INFO -   MACD: 0.000635092822644429
+2025-08-02 20:11:58 - INFO - ✅ No major contradictions detected
+2025-08-02 20:11:58 - INFO - Score Reasons (9):
+2025-08-02 20:11:58 - INFO -   - Strong EMA uptrend (20>50>200)
+2025-08-02 20:11:58 - INFO -   - RSI optimal bullish (45-65)
+2025-08-02 20:11:58 - INFO -   - Strong MACD momentum (36,78,18)
+2025-08-02 20:11:58 - INFO -   - StochRSI not overbought
+2025-08-02 20:11:58 - INFO -   - Supertrend uptrend
+2025-08-02 20:11:58 - INFO -   - ADX > 25 and DI+ > DI-
+2025-08-02 20:11:58 - INFO -   - Price > EMA100
+2025-08-02 20:11:58 - INFO -   - OBV rising
+2025-08-02 20:11:58 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:11:58 - INFO - 
+=== Signal 4 Analysis ===
+2025-08-02 20:11:58 - INFO - Symbol: B-HBAR_USDT
+2025-08-02 20:11:58 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:11:58 - INFO - Side: short
+2025-08-02 20:11:58 - INFO - Score: 10
+2025-08-02 20:11:58 - INFO - Estimated Profit: ₹18586.63
+2025-08-02 20:11:58 - INFO - Key Indicators:
+2025-08-02 20:11:58 - INFO -   RSI: 22.16764898493767
+2025-08-02 20:11:58 - INFO -   EMA20: 0.2599684212614787
+2025-08-02 20:11:58 - INFO -   EMA50: 0.26512594525937894
+2025-08-02 20:11:58 - INFO -   MACD: -0.001736036532994217
+2025-08-02 20:11:58 - WARNING - ⚠️ CONTRADICTIONS DETECTED: RSI oversold for short signal
+2025-08-02 20:11:58 - INFO - Score Reasons (10):
+2025-08-02 20:11:58 - INFO -   - Strong EMA downtrend (20<50<200)
+2025-08-02 20:11:58 - INFO -   - Price < EMA20
+2025-08-02 20:11:58 - INFO -   - Strong MACD momentum (36,78,18) bearish
+2025-08-02 20:11:58 - INFO -   - Price < VWAP
+2025-08-02 20:11:58 - INFO -   - Multi-timeframe trend bearish
+2025-08-02 20:11:58 - INFO -   - ADX > 25 and DI- > DI+
+2025-08-02 20:11:58 - INFO -   - Price < EMA100
+2025-08-02 20:11:58 - INFO -   - CCI < -100 (bearish)
+2025-08-02 20:11:58 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:11:58 - INFO -   - Price below Keltner lower (bearish breakout)
+2025-08-02 20:11:58 - INFO - 
+=== Signal 5 Analysis ===
+2025-08-02 20:11:58 - INFO - Symbol: B-PIPPIN_USDT
+2025-08-02 20:11:58 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:11:58 - INFO - Side: short
+2025-08-02 20:11:58 - INFO - Score: 8
+2025-08-02 20:11:58 - INFO - Estimated Profit: ₹17831.24
+2025-08-02 20:11:58 - INFO - Key Indicators:
+2025-08-02 20:11:58 - INFO -   RSI: 39.81240229286087
+2025-08-02 20:11:58 - INFO -   EMA20: 0.021169420107691926
+2025-08-02 20:11:58 - INFO -   EMA50: 0.021560334926247926
+2025-08-02 20:11:58 - INFO -   MACD: -0.00038801318513178684
+2025-08-02 20:11:58 - INFO - ✅ No major contradictions detected
+2025-08-02 20:11:58 - INFO - Score Reasons (8):
+2025-08-02 20:11:58 - INFO -   - Price < EMA20
+2025-08-02 20:11:58 - INFO -   - RSI optimal bearish (35-55)
+2025-08-02 20:11:58 - INFO -   - Strong MACD momentum (36,78,18) bearish
+2025-08-02 20:11:58 - INFO -   - Price < VWAP
+2025-08-02 20:11:58 - INFO -   - Supertrend downtrend
+2025-08-02 20:11:58 - INFO -   - Price < EMA100
+2025-08-02 20:11:58 - INFO -   - OBV falling
+2025-08-02 20:11:58 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:11:58 - INFO - 
+=== Signal Analysis Complete ===
+2025-08-02 20:12:55 - INFO - === Logger initialized successfully ===
+2025-08-02 20:12:55 - INFO - Log file: logs/trading_bot.log
+2025-08-02 20:12:55 - INFO - Log level: INFO
+2025-08-02 20:12:55 - INFO - === Analyzing Existing Signals ===
+2025-08-02 20:12:55 - INFO - Analyzing 12 signals
+2025-08-02 20:12:55 - INFO - 
+=== Signal 1 Analysis ===
+2025-08-02 20:12:55 - INFO - Symbol: B-HBAR_USDT
+2025-08-02 20:12:55 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:12:55 - INFO - Side: short
+2025-08-02 20:12:55 - INFO - Score: 10
+2025-08-02 20:12:55 - INFO - Estimated Profit: ₹20543.12
+2025-08-02 20:12:55 - INFO - Key Indicators:
+2025-08-02 20:12:55 - INFO -   RSI: 20.6949569495695
+2025-08-02 20:12:55 - INFO -   EMA20: 0.2634559794404208
+2025-08-02 20:12:55 - INFO -   EMA50: 0.2675735108509652
+2025-08-02 20:12:55 - INFO -   MACD: -0.0017910664406315714
+2025-08-02 20:12:55 - WARNING - ⚠️ CONTRADICTIONS DETECTED: RSI oversold for short signal
+2025-08-02 20:12:55 - INFO - Score Reasons (10):
+2025-08-02 20:12:55 - INFO -   - Price < EMA20
+2025-08-02 20:12:55 - INFO -   - Strong MACD momentum (36,78,18) bearish
+2025-08-02 20:12:55 - INFO -   - Price < VWAP
+2025-08-02 20:12:55 - INFO -   - Volume > 20MA
+2025-08-02 20:12:55 - INFO -   - Multi-timeframe trend bearish
+2025-08-02 20:12:55 - INFO -   - ADX > 25 and DI- > DI+
+2025-08-02 20:12:55 - INFO -   - Price < EMA100
+2025-08-02 20:12:55 - INFO -   - CCI < -100 (bearish)
+2025-08-02 20:12:55 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:12:55 - INFO -   - Price below Keltner lower (bearish breakout)
+2025-08-02 20:12:55 - INFO - 
+=== Signal 2 Analysis ===
+2025-08-02 20:12:55 - INFO - Symbol: B-AIXBT_USDT
+2025-08-02 20:12:55 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:12:55 - INFO - Side: short
+2025-08-02 20:12:55 - INFO - Score: 9
+2025-08-02 20:12:55 - INFO - Estimated Profit: ₹20408.85
+2025-08-02 20:12:55 - INFO - Key Indicators:
+2025-08-02 20:12:55 - INFO -   RSI: 30.281439258995377
+2025-08-02 20:12:55 - INFO -   EMA20: 0.1665147326654617
+2025-08-02 20:12:55 - INFO -   EMA50: 0.1697515667372586
+2025-08-02 20:12:55 - INFO -   MACD: -0.0013496158494413271
+2025-08-02 20:12:55 - INFO - ✅ No major contradictions detected
+2025-08-02 20:12:55 - INFO - Score Reasons (9):
+2025-08-02 20:12:55 - INFO -   - Price < EMA20
+2025-08-02 20:12:55 - INFO -   - Strong MACD momentum (36,78,18) bearish
+2025-08-02 20:12:55 - INFO -   - Price < VWAP
+2025-08-02 20:12:55 - INFO -   - Multi-timeframe trend bearish
+2025-08-02 20:12:55 - INFO -   - Supertrend downtrend
+2025-08-02 20:12:55 - INFO -   - ADX > 25 and DI- > DI+
+2025-08-02 20:12:55 - INFO -   - Price < EMA100
+2025-08-02 20:12:55 - INFO -   - CCI < -100 (bearish)
+2025-08-02 20:12:55 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:12:55 - INFO - 
+=== Signal 3 Analysis ===
+2025-08-02 20:12:55 - INFO - Symbol: B-VOXEL_USDT
+2025-08-02 20:12:55 - INFO - Direction: TradeDirection.LONG
+2025-08-02 20:12:55 - INFO - Side: long
+2025-08-02 20:12:55 - INFO - Score: 9
+2025-08-02 20:12:55 - INFO - Estimated Profit: ₹19202.87
+2025-08-02 20:12:55 - INFO - Key Indicators:
+2025-08-02 20:12:55 - INFO -   RSI: 51.65984538426559
+2025-08-02 20:12:55 - INFO -   EMA20: 0.06329222809565936
+2025-08-02 20:12:55 - INFO -   EMA50: 0.06040452132098588
+2025-08-02 20:12:55 - INFO -   MACD: 0.000635092822644429
+2025-08-02 20:12:55 - INFO - ✅ No major contradictions detected
+2025-08-02 20:12:55 - INFO - Score Reasons (9):
+2025-08-02 20:12:55 - INFO -   - Strong EMA uptrend (20>50>200)
+2025-08-02 20:12:55 - INFO -   - RSI optimal bullish (45-65)
+2025-08-02 20:12:55 - INFO -   - Strong MACD momentum (36,78,18)
+2025-08-02 20:12:55 - INFO -   - StochRSI not overbought
+2025-08-02 20:12:55 - INFO -   - Supertrend uptrend
+2025-08-02 20:12:55 - INFO -   - ADX > 25 and DI+ > DI-
+2025-08-02 20:12:55 - INFO -   - Price > EMA100
+2025-08-02 20:12:55 - INFO -   - OBV rising
+2025-08-02 20:12:55 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:12:55 - INFO - 
+=== Signal 4 Analysis ===
+2025-08-02 20:12:55 - INFO - Symbol: B-HBAR_USDT
+2025-08-02 20:12:55 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:12:55 - INFO - Side: short
+2025-08-02 20:12:55 - INFO - Score: 10
+2025-08-02 20:12:55 - INFO - Estimated Profit: ₹18586.63
+2025-08-02 20:12:55 - INFO - Key Indicators:
+2025-08-02 20:12:55 - INFO -   RSI: 22.16764898493767
+2025-08-02 20:12:55 - INFO -   EMA20: 0.2599684212614787
+2025-08-02 20:12:55 - INFO -   EMA50: 0.26512594525937894
+2025-08-02 20:12:55 - INFO -   MACD: -0.001736036532994217
+2025-08-02 20:12:55 - WARNING - ⚠️ CONTRADICTIONS DETECTED: RSI oversold for short signal
+2025-08-02 20:12:55 - INFO - Score Reasons (10):
+2025-08-02 20:12:55 - INFO -   - Strong EMA downtrend (20<50<200)
+2025-08-02 20:12:55 - INFO -   - Price < EMA20
+2025-08-02 20:12:55 - INFO -   - Strong MACD momentum (36,78,18) bearish
+2025-08-02 20:12:55 - INFO -   - Price < VWAP
+2025-08-02 20:12:55 - INFO -   - Multi-timeframe trend bearish
+2025-08-02 20:12:55 - INFO -   - ADX > 25 and DI- > DI+
+2025-08-02 20:12:55 - INFO -   - Price < EMA100
+2025-08-02 20:12:55 - INFO -   - CCI < -100 (bearish)
+2025-08-02 20:12:55 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:12:55 - INFO -   - Price below Keltner lower (bearish breakout)
+2025-08-02 20:12:55 - INFO - 
+=== Signal 5 Analysis ===
+2025-08-02 20:12:55 - INFO - Symbol: B-PIPPIN_USDT
+2025-08-02 20:12:55 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:12:55 - INFO - Side: short
+2025-08-02 20:12:55 - INFO - Score: 8
+2025-08-02 20:12:55 - INFO - Estimated Profit: ₹17831.24
+2025-08-02 20:12:55 - INFO - Key Indicators:
+2025-08-02 20:12:55 - INFO -   RSI: 39.81240229286087
+2025-08-02 20:12:55 - INFO -   EMA20: 0.021169420107691926
+2025-08-02 20:12:55 - INFO -   EMA50: 0.021560334926247926
+2025-08-02 20:12:55 - INFO -   MACD: -0.00038801318513178684
+2025-08-02 20:12:55 - INFO - ✅ No major contradictions detected
+2025-08-02 20:12:55 - INFO - Score Reasons (8):
+2025-08-02 20:12:55 - INFO -   - Price < EMA20
+2025-08-02 20:12:55 - INFO -   - RSI optimal bearish (35-55)
+2025-08-02 20:12:55 - INFO -   - Strong MACD momentum (36,78,18) bearish
+2025-08-02 20:12:55 - INFO -   - Price < VWAP
+2025-08-02 20:12:55 - INFO -   - Supertrend downtrend
+2025-08-02 20:12:55 - INFO -   - Price < EMA100
+2025-08-02 20:12:55 - INFO -   - OBV falling
+2025-08-02 20:12:55 - INFO -   - Momentum Oscillator negative (bearish)
+2025-08-02 20:12:55 - INFO - 
+=== Signal Analysis Complete ===
+2025-08-02 20:14:48 - INFO - === Logger initialized successfully ===
+2025-08-02 20:14:48 - INFO - Log file: logs/trading_bot.log
+2025-08-02 20:14:48 - INFO - Log level: INFO
+2025-08-02 20:14:48 - INFO - === Testing Enhanced Signal Generator ===
+2025-08-02 20:14:48 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 20:14:48 - INFO - Testing signal generation with confirmation...
+2025-08-02 20:14:48 - INFO - Starting simple enhanced signal generation with confirmation
+2025-08-02 20:14:48 - INFO - Analyzing 5 instruments
+2025-08-02 20:14:48 - INFO - SHORT signal: 9 points - EMA trend bearish, Price below EMA20, RSI in optimal range, MACD bearish
+2025-08-02 20:14:54 - INFO - SHORT signal: 9 points - EMA trend bearish, Price below EMA20, RSI in optimal range, MACD bearish
+2025-08-02 20:14:54 - INFO - ✅ B-ETH_USDT: Price below EMA20 and EMA20 < EMA50 (bearish)
+2025-08-02 20:14:54 - INFO - ✅ B-ETH_USDT: RSI in optimal range for short (45.0)
+2025-08-02 20:14:54 - INFO - ✅ B-ETH_USDT: MACD bearish for short (-2.124090)
+2025-08-02 20:14:54 - INFO - ✅ B-ETH_USDT: Volume data available
+2025-08-02 20:14:54 - INFO - B-ETH_USDT confirmation score: 5/4 (CONFIRMED)
+2025-08-02 20:14:54 - INFO - ✅ CONFIRMED signal for B-ETH_USDT: TradeDirection.SHORT (Score: 8)
+2025-08-02 20:14:55 - INFO - SHORT signal: 9 points - EMA trend bearish, Price below EMA20, RSI in optimal range, MACD bearish
+2025-08-02 20:14:55 - INFO - SHORT signal: 9 points - EMA trend bearish, Price below EMA20, RSI in optimal range, MACD bearish
+2025-08-02 20:14:55 - INFO - ✅ B-ADA_USDT: Price below EMA20 and EMA20 < EMA50 (bearish)
+2025-08-02 20:14:55 - INFO - ✅ B-ADA_USDT: RSI in optimal range for short (44.2)
+2025-08-02 20:14:55 - INFO - ✅ B-ADA_USDT: MACD bearish for short (-0.001972)
+2025-08-02 20:14:55 - INFO - ✅ B-ADA_USDT: Volume data available
+2025-08-02 20:14:55 - INFO - B-ADA_USDT confirmation score: 5/4 (CONFIRMED)
+2025-08-02 20:14:55 - INFO - ✅ CONFIRMED signal for B-ADA_USDT: TradeDirection.SHORT (Score: 8)
+2025-08-02 20:14:56 - INFO - SHORT signal: 9 points - EMA trend bearish, Price below EMA20, RSI in optimal range, MACD bearish
+2025-08-02 20:14:56 - INFO - ✅ B-DOT_USDT: Price below EMA20 and EMA20 < EMA50 (bearish)
+2025-08-02 20:14:56 - INFO - ✅ B-DOT_USDT: RSI in optimal range for short (49.3)
+2025-08-02 20:14:56 - INFO - ✅ B-DOT_USDT: MACD bearish for short (-0.005502)
+2025-08-02 20:14:56 - INFO - ✅ B-DOT_USDT: Volume data available
+2025-08-02 20:14:56 - INFO - B-DOT_USDT confirmation score: 5/4 (CONFIRMED)
+2025-08-02 20:14:56 - INFO - ✅ CONFIRMED signal for B-DOT_USDT: TradeDirection.SHORT (Score: 8)
+2025-08-02 20:14:56 - INFO - Signal generation complete: 3 confirmed signals
+2025-08-02 20:14:56 - INFO - Generated 3 confirmed signals
+2025-08-02 20:14:56 - INFO - 
+=== Signal 1 Analysis ===
+2025-08-02 20:14:56 - INFO - Symbol: B-ETH_USDT
+2025-08-02 20:14:56 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:14:56 - INFO - Side: short
+2025-08-02 20:14:56 - INFO - Score: 8
+2025-08-02 20:14:56 - INFO - Estimated Profit: ₹872.89
+2025-08-02 20:14:56 - INFO - Key Indicators:
+2025-08-02 20:14:56 - INFO -   RSI: 44.97812695295059
+2025-08-02 20:14:56 - INFO -   EMA20: 3497.639051052308
+2025-08-02 20:14:56 - INFO -   EMA50: 3505.611141988703
+2025-08-02 20:14:56 - INFO -   MACD: -2.124089982188252
+2025-08-02 20:14:56 - INFO - ✅ No major contradictions detected
+2025-08-02 20:14:56 - INFO - Score Reasons (4):
+2025-08-02 20:14:56 - INFO -   - EMA trend bearish
+2025-08-02 20:14:56 - INFO -   - RSI in optimal range
+2025-08-02 20:14:56 - INFO -   - MACD bearish
+2025-08-02 20:14:56 - INFO -   - Sufficient volatility
+2025-08-02 20:14:56 - INFO - 
+=== Signal 2 Analysis ===
+2025-08-02 20:14:56 - INFO - Symbol: B-ADA_USDT
+2025-08-02 20:14:56 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:14:56 - INFO - Side: short
+2025-08-02 20:14:56 - INFO - Score: 8
+2025-08-02 20:14:56 - INFO - Estimated Profit: ₹1384.56
+2025-08-02 20:14:56 - INFO - Key Indicators:
+2025-08-02 20:14:56 - INFO -   RSI: 44.19642857142857
+2025-08-02 20:14:56 - INFO -   EMA20: 0.7116195629957717
+2025-08-02 20:14:56 - INFO -   EMA50: 0.7147837466432936
+2025-08-02 20:14:56 - INFO -   MACD: -0.0019716986708612216
+2025-08-02 20:14:56 - INFO - ✅ No major contradictions detected
+2025-08-02 20:14:56 - INFO - Score Reasons (4):
+2025-08-02 20:14:56 - INFO -   - EMA trend bearish
+2025-08-02 20:14:56 - INFO -   - RSI in optimal range
+2025-08-02 20:14:56 - INFO -   - MACD bearish
+2025-08-02 20:14:56 - INFO -   - Sufficient volatility
+2025-08-02 20:14:56 - INFO - 
+=== Signal 3 Analysis ===
+2025-08-02 20:14:56 - INFO - Symbol: B-DOT_USDT
+2025-08-02 20:14:56 - INFO - Direction: TradeDirection.SHORT
+2025-08-02 20:14:56 - INFO - Side: short
+2025-08-02 20:14:56 - INFO - Score: 8
+2025-08-02 20:14:56 - INFO - Estimated Profit: ₹1309.63
+2025-08-02 20:14:56 - INFO - Key Indicators:
+2025-08-02 20:14:56 - INFO -   RSI: 49.32262920220774
+2025-08-02 20:14:56 - INFO -   EMA20: 3.5446061853972575
+2025-08-02 20:14:56 - INFO -   EMA50: 3.5571651421908252
+2025-08-02 20:14:56 - INFO -   MACD: -0.005501959367966158
+2025-08-02 20:14:56 - INFO - ✅ No major contradictions detected
+2025-08-02 20:14:56 - INFO - Score Reasons (4):
+2025-08-02 20:14:56 - INFO -   - EMA trend bearish
+2025-08-02 20:14:56 - INFO -   - RSI in optimal range
+2025-08-02 20:14:56 - INFO -   - MACD bearish
+2025-08-02 20:14:56 - INFO -   - Sufficient volatility
+2025-08-02 20:14:56 - INFO - 
+Saved 3 enhanced signals to enhanced_signals_test.json
+2025-08-02 20:14:56 - INFO - 
+=== ENHANCED GENERATOR TEST SUMMARY ===
+2025-08-02 20:14:56 - INFO - Total signals generated: 3
+2025-08-02 20:14:56 - INFO - Long signals: 0
+2025-08-02 20:14:56 - INFO - Short signals: 3
+2025-08-02 20:14:56 - INFO - Signals with RSI contradictions: 0
+2025-08-02 20:14:56 - INFO - ✅ ENHANCED GENERATOR: No RSI contradictions detected!
+2025-08-02 20:14:56 - INFO - === Enhanced Generator Test Complete ===
+2025-08-02 20:16:01 - INFO - === Logger initialized successfully ===
+2025-08-02 20:16:01 - INFO - Log file: logs/trading_bot.log
+2025-08-02 20:16:01 - INFO - Log level: INFO
+2025-08-02 20:16:01 - INFO - === Starting Enhanced Signal Generation with Alerts ===
+2025-08-02 20:16:01 - INFO - Configuration loaded successfully
+2025-08-02 20:16:01 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 20:16:01 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 20:16:01 - INFO - SignalMonitor initialized
+2025-08-02 20:16:01 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 20:16:01 - INFO - SignalAlertSystem initialized
+2025-08-02 20:16:01 - INFO - Components initialized
+2025-08-02 20:16:01 - INFO - Generating enhanced signals with confirmation...
+2025-08-02 20:16:01 - INFO - Starting simple enhanced signal generation with confirmation
+2025-08-02 20:16:01 - INFO - Analyzing 5 instruments
+2025-08-02 20:16:01 - INFO - SHORT signal: 7 points - EMA trend bearish, Price below EMA20, MACD bearish
+2025-08-02 20:16:02 - INFO - SHORT signal: 7 points - EMA trend bearish, Price below EMA20, MACD bearish
+2025-08-02 20:15:53 - INFO - SHORT signal: 7 points - EMA trend bearish, Price below EMA20, MACD bearish
+2025-08-02 20:15:59 - INFO - SHORT signal: 7 points - EMA trend bearish, Price below EMA20, MACD bearish
+2025-08-02 20:15:59 - INFO - SHORT signal: 9 points - EMA trend bearish, Price below EMA20, RSI in optimal range, MACD bearish
+2025-08-02 20:16:05 - INFO - Signal generation complete: 0 confirmed signals
+2025-08-02 20:16:05 - WARNING - No signals generated - check market conditions
+2025-08-02 20:18:15 - INFO - === Logger initialized successfully ===
+2025-08-02 20:18:15 - INFO - Log file: logs/trading_bot.log
+2025-08-02 20:18:15 - INFO - Log level: INFO
+2025-08-02 20:18:15 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 20:18:15 - INFO - SignalAlertSystem initialized
+2025-08-02 20:21:05 - INFO - === Logger initialized successfully ===
+2025-08-02 20:21:05 - INFO - Log file: logs/trading_bot.log
+2025-08-02 20:21:05 - INFO - Log level: INFO
+2025-08-02 20:21:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 20:21:05 - INFO - Enhanced SignalAlertSystem initialized with validation
+2025-08-02 20:21:05 - INFO - === Logger initialized successfully ===
+2025-08-02 20:21:05 - INFO - Log file: logs/trading_bot.log
+2025-08-02 20:21:05 - INFO - Log level: INFO
+2025-08-02 20:21:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 20:21:05 - INFO - Enhanced SignalAlertSystem initialized with validation
+2025-08-02 20:21:06 - WARNING - Price deviation too high for B-BTC_USDT: 126.15% > 2.00%
+2025-08-02 20:21:06 - INFO - Starting enhanced alert monitoring loop...
+2025-08-02 20:21:06 - INFO - Alert monitoring started with enhanced validation
+2025-08-02 20:21:06 - WARNING - Price deviation too high for B-HBAR_USDT: 7.60% > 2.00%
+2025-08-02 20:21:06 - WARNING - Signal B-HBAR_USDT_long_swing_2025-07-23 21:10:25.612736+05:30 failed validation - skipping alert
+2025-08-02 20:21:06 - WARNING - Signal B-AIXBT_USDT_long_swing_2025-07-23 21:10:28.422498+05:30 confidence too low: 0.48 < 0.5
+2025-08-02 20:21:06 - WARNING - Signal B-AIXBT_USDT_long_swing_2025-07-23 21:10:28.422498+05:30 failed validation - skipping alert
+2025-08-02 20:21:06 - WARNING - Price deviation too high for B-VOXEL_USDT: 12.08% > 2.00%
+2025-08-02 20:21:06 - WARNING - Signal B-VOXEL_USDT_long_swing_2025-07-23 21:09:08.093029+05:30 failed validation - skipping alert
+2025-08-02 20:21:06 - WARNING - Signal B-HBAR_USDT_long_swing_2025-07-23 21:10:21.201146+05:30 confidence too low: 0.448 < 0.5
+2025-08-02 20:21:06 - WARNING - Signal B-HBAR_USDT_long_swing_2025-07-23 21:10:21.201146+05:30 failed validation - skipping alert
+2025-08-02 20:21:06 - WARNING - Signal B-PIPPIN_USDT_long_swing_2025-07-23 21:09:05.503224+05:30 confidence too low: 0.44 < 0.5
+2025-08-02 20:21:06 - WARNING - Signal B-PIPPIN_USDT_long_swing_2025-07-23 21:09:05.503224+05:30 failed validation - skipping alert
+2025-08-02 20:21:06 - WARNING - Price deviation too high for B-VOXEL_USDT: 11.93% > 2.00%
+2025-08-02 20:21:06 - WARNING - Signal B-VOXEL_USDT_swing_2025-07-23 21:08:50.805524+05:30 failed validation - skipping alert
+2025-08-02 20:21:06 - WARNING - Signal B-ARB_USDT_long_swing_2025-07-23 21:09:13.129831+05:30 confidence too low: 0.384 < 0.5
+2025-08-02 20:21:06 - WARNING - Signal B-ARB_USDT_long_swing_2025-07-23 21:09:13.129831+05:30 failed validation - skipping alert
+2025-08-02 20:21:06 - WARNING - Signal B-PIPPIN_USDT_swing_2025-07-23 21:08:42.474651+05:30 confidence too low: 0.46 < 0.5
+2025-08-02 20:21:06 - WARNING - Signal B-PIPPIN_USDT_swing_2025-07-23 21:08:42.474651+05:30 failed validation - skipping alert
+2025-08-02 20:21:06 - WARNING - Price deviation too high for B-OP_USDT: 12.35% > 2.00%
+2025-08-02 20:21:06 - WARNING - Signal B-OP_USDT_scalping_2025-07-23 21:08:19.474957+05:30 failed validation - skipping alert
+2025-08-02 20:21:06 - WARNING - Price deviation too high for B-VIRTUAL_USDT: 32.64% > 2.00%
+2025-08-02 20:21:06 - WARNING - Signal B-VIRTUAL_USDT_scalping_2025-07-23 21:08:19.551896+05:30 failed validation - skipping alert
+2025-08-02 20:21:06 - WARNING - Price deviation too high for B-PIPPIN_USDT: 13.16% > 2.00%
+2025-08-02 20:21:06 - WARNING - Signal B-PIPPIN_USDT_scalping_2025-07-23 21:08:02.336756+05:30 failed validation - skipping alert
+2025-08-02 20:21:06 - WARNING - Price deviation too high for B-SYN_USDT: 29.29% > 2.00%
+2025-08-02 20:21:06 - WARNING - Signal B-SYN_USDT_scalping_2025-07-23 21:08:19.527424+05:30 failed validation - skipping alert
+2025-08-02 20:21:06 - WARNING - 🚨 🌊 MARKET ALERT: 10 symbols with >10% moves detected
+2025-08-02 20:21:13 - INFO - Alert monitoring stopped
+2025-08-02 20:21:35 - WARNING - Price deviation too high for B-BTC_USDT: 126.17% > 2.00%
+2025-08-02 20:21:35 - INFO - Starting enhanced alert monitoring loop...
+2025-08-02 20:21:35 - INFO - Alert monitoring started with enhanced validation
+2025-08-02 20:21:35 - WARNING - Price deviation too high for B-HBAR_USDT: 7.70% > 2.00%
+2025-08-02 20:21:35 - WARNING - Signal B-HBAR_USDT_long_swing_2025-07-23 21:10:25.612736+05:30 failed validation - skipping alert
+2025-08-02 20:21:35 - WARNING - Signal B-AIXBT_USDT_long_swing_2025-07-23 21:10:28.422498+05:30 confidence too low: 0.48 < 0.5
+2025-08-02 20:21:35 - WARNING - Signal B-AIXBT_USDT_long_swing_2025-07-23 21:10:28.422498+05:30 failed validation - skipping alert
+2025-08-02 20:21:35 - WARNING - Price deviation too high for B-VOXEL_USDT: 12.13% > 2.00%
+2025-08-02 20:21:35 - WARNING - Signal B-VOXEL_USDT_long_swing_2025-07-23 21:09:08.093029+05:30 failed validation - skipping alert
+2025-08-02 20:21:35 - WARNING - Signal B-HBAR_USDT_long_swing_2025-07-23 21:10:21.201146+05:30 confidence too low: 0.448 < 0.5
+2025-08-02 20:21:35 - WARNING - Signal B-HBAR_USDT_long_swing_2025-07-23 21:10:21.201146+05:30 failed validation - skipping alert
+2025-08-02 20:21:35 - WARNING - Signal B-PIPPIN_USDT_long_swing_2025-07-23 21:09:05.503224+05:30 confidence too low: 0.44 < 0.5
+2025-08-02 20:21:35 - WARNING - Signal B-PIPPIN_USDT_long_swing_2025-07-23 21:09:05.503224+05:30 failed validation - skipping alert
+2025-08-02 20:21:35 - WARNING - Price deviation too high for B-VOXEL_USDT: 11.98% > 2.00%
+2025-08-02 20:21:35 - WARNING - Signal B-VOXEL_USDT_swing_2025-07-23 21:08:50.805524+05:30 failed validation - skipping alert
+2025-08-02 20:21:35 - WARNING - Signal B-ARB_USDT_long_swing_2025-07-23 21:09:13.129831+05:30 confidence too low: 0.384 < 0.5
+2025-08-02 20:21:35 - WARNING - Signal B-ARB_USDT_long_swing_2025-07-23 21:09:13.129831+05:30 failed validation - skipping alert
+2025-08-02 20:21:35 - WARNING - Signal B-PIPPIN_USDT_swing_2025-07-23 21:08:42.474651+05:30 confidence too low: 0.46 < 0.5
+2025-08-02 20:21:35 - WARNING - Signal B-PIPPIN_USDT_swing_2025-07-23 21:08:42.474651+05:30 failed validation - skipping alert
+2025-08-02 20:21:35 - WARNING - Price deviation too high for B-OP_USDT: 12.49% > 2.00%
+2025-08-02 20:21:35 - WARNING - Signal B-OP_USDT_scalping_2025-07-23 21:08:19.474957+05:30 failed validation - skipping alert
+2025-08-02 20:21:35 - WARNING - Price deviation too high for B-VIRTUAL_USDT: 32.71% > 2.00%
+2025-08-02 20:21:35 - WARNING - Signal B-VIRTUAL_USDT_scalping_2025-07-23 21:08:19.551896+05:30 failed validation - skipping alert
+2025-08-02 20:21:35 - WARNING - Price deviation too high for B-PIPPIN_USDT: 13.21% > 2.00%
+2025-08-02 20:21:35 - WARNING - Signal B-PIPPIN_USDT_scalping_2025-07-23 21:08:02.336756+05:30 failed validation - skipping alert
+2025-08-02 20:21:35 - WARNING - Price deviation too high for B-SYN_USDT: 29.17% > 2.00%
+2025-08-02 20:21:35 - WARNING - Signal B-SYN_USDT_scalping_2025-07-23 21:08:19.527424+05:30 failed validation - skipping alert
+2025-08-02 20:21:35 - WARNING - 🚨 🌊 MARKET ALERT: 10 symbols with >10% moves detected
+2025-08-02 20:21:42 - INFO - Alert monitoring stopped
+2025-08-02 20:24:31 - INFO - === Logger initialized successfully ===
+2025-08-02 20:24:31 - INFO - Log file: logs/trading_bot.log
+2025-08-02 20:24:31 - INFO - Log level: INFO
+2025-08-02 20:24:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 20:47:18 - INFO - === Logger initialized successfully ===
+2025-08-02 20:47:18 - INFO - Log file: logs/trading_bot.log
+2025-08-02 20:47:18 - INFO - Log level: INFO
+2025-08-02 20:47:18 - INFO - === Putting Signals on Alert with Enhanced Validation ===
+2025-08-02 20:47:18 - INFO - Configuration loaded successfully
+2025-08-02 20:47:18 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 20:47:18 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 20:47:18 - INFO - SignalAlertSystem initialized with relaxed thresholds
+2025-08-02 20:47:18 - INFO - Components initialized
+2025-08-02 20:47:18 - INFO - Generating enhanced signals with confirmation...
+2025-08-02 20:47:18 - INFO - Starting simple enhanced signal generation with confirmation
+2025-08-02 20:47:18 - INFO - Analyzing 5 instruments
+2025-08-02 20:47:18 - INFO - SHORT signal: 9 points - EMA trend bearish, Price below EMA20, RSI in optimal range, MACD bearish
+2025-08-02 20:47:19 - INFO - SHORT signal: 9 points - EMA trend bearish, Price below EMA20, RSI in optimal range, MACD bearish
+2025-08-02 20:47:19 - INFO - SHORT signal: 7 points - EMA trend bearish, Price below EMA20, MACD bearish
+2025-08-02 20:47:20 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f171cc95f90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-02 20:47:22 - INFO - SHORT signal: 9 points - EMA trend bearish, Price below EMA20, RSI in optimal range, MACD bearish
+2025-08-02 20:47:22 - INFO - SHORT signal: 9 points - EMA trend bearish, Price below EMA20, RSI in optimal range, MACD bearish
+2025-08-02 20:47:23 - INFO - ✅ B-DOT_USDT: Price below EMA20 and EMA20 < EMA50 (bearish)
+2025-08-02 20:47:23 - INFO - ✅ B-DOT_USDT: RSI in optimal range for short (44.5)
+2025-08-02 20:47:23 - INFO - ✅ B-DOT_USDT: MACD bearish for short (-0.007266)
+2025-08-02 20:47:23 - INFO - ✅ B-DOT_USDT: Volume data available
+2025-08-02 20:47:23 - INFO - B-DOT_USDT confirmation score: 5/4 (CONFIRMED)
+2025-08-02 20:47:23 - INFO - ✅ CONFIRMED signal for B-DOT_USDT: TradeDirection.SHORT (Score: 8)
+2025-08-02 20:47:23 - INFO - Signal generation complete: 1 confirmed signals
+2025-08-02 20:47:23 - INFO - Generated 1 signals
+2025-08-02 20:47:23 - INFO - ✅ VALID SIGNAL: B-DOT_USDT - enhanced (15m) - Score: 8, Confidence: 0.80
+2025-08-02 20:47:23 - INFO - Putting 1 top signals on alert
+2025-08-02 20:47:23 - INFO - 🚨 ALERT SET: B-DOT_USDT - SHORT - Score: 8
+2025-08-02 20:47:23 - INFO - ✅ Successfully put 1 signals on alert
+2025-08-02 20:47:23 - INFO - Alert data saved to latest_alerts.json
+2025-08-02 20:48:54 - INFO - === Logger initialized successfully ===
+2025-08-02 20:48:54 - INFO - Log file: logs/trading_bot.log
+2025-08-02 20:48:54 - INFO - Log level: INFO
+2025-08-02 20:48:54 - INFO - === Starting Enhanced Signal Generation with Alerts ===
+2025-08-02 20:48:54 - INFO - Configuration loaded successfully
+2025-08-02 20:48:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 20:48:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 20:48:54 - INFO - SignalMonitor initialized
+2025-08-02 20:48:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-02 20:48:54 - INFO - SignalAlertSystem initialized with relaxed thresholds
+2025-08-02 20:48:54 - INFO - Components initialized
+2025-08-02 20:48:54 - INFO - Generating enhanced signals with confirmation...
+2025-08-02 20:48:54 - INFO - Starting simple enhanced signal generation with confirmation
+2025-08-02 20:48:54 - INFO - Analyzing 5 instruments
+2025-08-02 20:49:24 - INFO - SHORT signal: 9 points - EMA trend bearish, Price below EMA20, RSI in optimal range, MACD bearish
+2025-08-02 20:49:25 - INFO - SHORT signal: 9 points - EMA trend bearish, Price below EMA20, RSI in optimal range, MACD bearish
+2025-08-02 20:49:25 - INFO - SHORT signal: 7 points - EMA trend bearish, Price below EMA20, MACD bearish
+2025-08-02 20:49:26 - INFO - SHORT signal: 9 points - EMA trend bearish, Price below EMA20, RSI in optimal range, MACD bearish
+2025-08-02 20:49:26 - INFO - SHORT signal: 9 points - EMA trend bearish, Price below EMA20, RSI in optimal range, MACD bearish
+2025-08-02 20:49:27 - INFO - ✅ B-DOT_USDT: Price below EMA20 and EMA20 < EMA50 (bearish)
+2025-08-02 20:49:27 - INFO - ✅ B-DOT_USDT: RSI in optimal range for short (45.6)
+2025-08-02 20:49:27 - INFO - ✅ B-DOT_USDT: MACD bearish for short (-0.007027)
+2025-08-02 20:49:27 - INFO - ✅ B-DOT_USDT: Volume data available
+2025-08-02 20:49:27 - INFO - B-DOT_USDT confirmation score: 5/4 (CONFIRMED)
+2025-08-02 20:49:27 - INFO - ✅ CONFIRMED signal for B-DOT_USDT: TradeDirection.SHORT (Score: 8)
+2025-08-02 20:49:27 - INFO - Signal generation complete: 1 confirmed signals
+2025-08-02 20:49:27 - INFO - Generated 1 confirmed signals
+2025-08-02 20:49:27 - INFO - Added high-profit signal to monitoring: B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345 (Est. Profit: ₹1242.28)
+2025-08-02 20:49:27 - INFO - 🔥 HIGH-PROFIT: B-DOT_USDT - enhanced (15m) - Profit: ₹1242.28
+2025-08-02 20:49:27 - INFO - Saved 1 signals to enhanced_signals.json
+2025-08-02 20:49:27 - INFO - === SIGNAL MONITORING SUMMARY ===
+2025-08-02 20:49:27 - INFO - Total signals monitored: 1
+2025-08-02 20:49:27 - INFO - High-profit signals: 1
+2025-08-02 20:49:27 - INFO - Total estimated profit: ₹1242.28
+2025-08-02 20:49:27 - INFO - Average profit per signal: ₹0.00
+2025-08-02 20:49:27 - INFO - Starting alert monitoring system...
+2025-08-02 20:49:27 - INFO - Starting enhanced alert monitoring loop...
+2025-08-02 20:49:27 - INFO - Alert monitoring started with enhanced validation
+2025-08-02 20:49:27 - INFO - Starting signal monitoring...
+2025-08-02 20:49:27 - INFO - Monitoring data saved to latest_monitoring_data.json with 1 active signals
+2025-08-02 20:49:32 - INFO - Monitoring 1 signals. Total P&L: 0.01%
+2025-08-02 20:49:32 - INFO - Monitoring data saved to latest_monitoring_data.json with 1 active signals
+2025-08-02 20:49:37 - WARNING - Price deviation high for B-HBAR_USDT: 7.00% > 5.00%
+2025-08-02 20:49:37 - WARNING - Volume low for B-HBAR_USDT: 0 < 50000
+2025-08-02 20:49:37 - WARNING - RSI deviation too high for B-HBAR_USDT: 20.69 vs 39.75
+2025-08-02 20:49:37 - WARNING - Signal B-HBAR_USDT_long_swing_2025-07-23 21:10:25.612736+05:30 failed validation - skipping alert
+2025-08-02 20:49:37 - WARNING - Price deviation high for B-AIXBT_USDT: 26.96% > 5.00%
+2025-08-02 20:49:37 - WARNING - Volume low for B-AIXBT_USDT: 0 < 50000
+2025-08-02 20:49:37 - WARNING - RSI deviation too high for B-AIXBT_USDT: 30.28 vs 45.59
+2025-08-02 20:49:37 - WARNING - Signal B-AIXBT_USDT_long_swing_2025-07-23 21:10:28.422498+05:30 failed validation - skipping alert
+2025-08-02 20:49:37 - WARNING - Price deviation high for B-VOXEL_USDT: 11.58% > 5.00%
+2025-08-02 20:49:37 - WARNING - Volume low for B-VOXEL_USDT: 0 < 50000
+2025-08-02 20:49:37 - WARNING - EMA20 deviation too high for B-VOXEL_USDT
+2025-08-02 20:49:37 - WARNING - Signal B-VOXEL_USDT_long_swing_2025-07-23 21:09:08.093029+05:30 failed validation - skipping alert
+2025-08-02 20:49:38 - WARNING - Price deviation high for B-HBAR_USDT: 6.94% > 5.00%
+2025-08-02 20:49:38 - WARNING - Volume low for B-HBAR_USDT: 0 < 50000
+2025-08-02 20:49:38 - WARNING - RSI deviation too high for B-HBAR_USDT: 22.17 vs 39.95
+2025-08-02 20:49:38 - WARNING - Signal B-HBAR_USDT_long_swing_2025-07-23 21:10:21.201146+05:30 failed validation - skipping alert
+2025-08-02 20:49:38 - WARNING - Price deviation high for B-PIPPIN_USDT: 11.50% > 5.00%
+2025-08-02 20:49:38 - WARNING - Volume low for B-PIPPIN_USDT: 0 < 50000
+2025-08-02 20:49:38 - WARNING - RSI deviation too high for B-PIPPIN_USDT: 39.81 vs 62.20
+2025-08-02 20:49:38 - WARNING - Signal B-PIPPIN_USDT_long_swing_2025-07-23 21:09:05.503224+05:30 failed validation - skipping alert
+2025-08-02 20:49:38 - WARNING - Price deviation high for B-VOXEL_USDT: 11.42% > 5.00%
+2025-08-02 20:49:38 - WARNING - Volume low for B-VOXEL_USDT: 0 < 50000
+2025-08-02 20:49:38 - WARNING - EMA20 deviation too high for B-VOXEL_USDT
+2025-08-02 20:49:38 - WARNING - Signal B-VOXEL_USDT_swing_2025-07-23 21:08:50.805524+05:30 failed validation - skipping alert
+2025-08-02 20:49:38 - WARNING - Signal B-ARB_USDT_long_swing_2025-07-23 21:09:13.129831+05:30 confidence too low: 0.384 < 0.4
+2025-08-02 20:49:38 - WARNING - Signal B-ARB_USDT_long_swing_2025-07-23 21:09:13.129831+05:30 failed validation - skipping alert
+2025-08-02 20:49:38 - WARNING - Price deviation high for B-PIPPIN_USDT: 11.32% > 5.00%
+2025-08-02 20:49:38 - WARNING - Volume low for B-PIPPIN_USDT: 0 < 50000
+2025-08-02 20:49:38 - WARNING - RSI deviation too high for B-PIPPIN_USDT: 34.75 vs 62.20
+2025-08-02 20:49:38 - WARNING - Signal B-PIPPIN_USDT_swing_2025-07-23 21:08:42.474651+05:30 failed validation - skipping alert
+2025-08-02 20:49:38 - WARNING - Price deviation high for B-OP_USDT: 11.61% > 5.00%
+2025-08-02 20:49:38 - WARNING - Volume low for B-OP_USDT: 0 < 50000
+2025-08-02 20:49:39 - WARNING - EMA20 deviation too high for B-OP_USDT
+2025-08-02 20:49:39 - WARNING - Signal B-OP_USDT_scalping_2025-07-23 21:08:19.474957+05:30 failed validation - skipping alert
+2025-08-02 20:49:39 - WARNING - Price deviation high for B-VIRTUAL_USDT: 31.93% > 5.00%
+2025-08-02 20:49:39 - WARNING - Volume low for B-VIRTUAL_USDT: 0 < 50000
+2025-08-02 20:49:39 - WARNING - EMA20 deviation too high for B-VIRTUAL_USDT
+2025-08-02 20:49:39 - WARNING - Signal B-VIRTUAL_USDT_scalping_2025-07-23 21:08:19.551896+05:30 failed validation - skipping alert
+2025-08-02 20:49:39 - WARNING - Price deviation high for B-PIPPIN_USDT: 11.36% > 5.00%
+2025-08-02 20:49:39 - WARNING - Volume low for B-PIPPIN_USDT: 0 < 50000
+2025-08-02 20:49:39 - WARNING - RSI deviation too high for B-PIPPIN_USDT: 35.00 vs 62.20
+2025-08-02 20:49:39 - WARNING - Signal B-PIPPIN_USDT_scalping_2025-07-23 21:08:02.336756+05:30 failed validation - skipping alert
+2025-08-02 20:49:39 - WARNING - Price deviation high for B-SYN_USDT: 28.74% > 5.00%
+2025-08-02 20:49:39 - WARNING - Volume low for B-SYN_USDT: 0 < 50000
+2025-08-02 20:49:39 - WARNING - EMA20 deviation too high for B-SYN_USDT
+2025-08-02 20:49:39 - WARNING - Signal B-SYN_USDT_scalping_2025-07-23 21:08:19.527424+05:30 failed validation - skipping alert
+2025-08-02 20:49:39 - WARNING - 🚨 🌊 MARKET ALERT: 10 symbols with >10% moves detected
+2025-08-02 20:50:01 - WARNING - Volume low for B-DOT_USDT: 0 < 50000
+2025-08-02 20:50:01 - INFO - ✅ Signal B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345 passed all validation checks
+2025-08-02 20:50:01 - INFO - 🚨 ✅ VALIDATED SIGNAL: B-DOT_USDT SHORT (Score: 8, Confidence: 80.0%, P&L: 0.05%)
+2025-08-02 20:50:01 - WARNING - 🚨 🌊 MARKET ALERT: 10 symbols with >10% moves detected
+2025-08-02 20:50:32 - INFO - Active alerts: 1 (Critical: 0, High: 1)
+2025-08-02 20:50:32 - INFO - Monitoring 1 signals. Total P&L: 0.04%
+2025-08-02 20:50:32 - INFO - Monitoring data saved to latest_monitoring_data.json with 1 active signals
+2025-08-02 20:50:40 - WARNING - Volume low for B-DOT_USDT: 0 < 50000
+2025-08-02 20:50:41 - INFO - ✅ Signal B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345 passed all validation checks
+2025-08-02 20:50:41 - WARNING - 🚨 🌊 MARKET ALERT: 10 symbols with >10% moves detected
+2025-08-02 20:51:11 - WARNING - Volume low for B-DOT_USDT: 0 < 50000
+2025-08-02 20:51:11 - WARNING - Short signal validation failed for B-DOT_USDT: price=3.5407, ema20=3.5402011884885183, ema50=3.5537570540023915
+2025-08-02 20:51:11 - WARNING - Signal B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345 failed validation - skipping alert
+2025-08-02 20:51:11 - WARNING - 🚨 🌊 MARKET ALERT: 10 symbols with >10% moves detected
+2025-08-02 20:51:23 - INFO - Active alerts: 1 (Critical: 0, High: 1)
+2025-08-02 20:51:24 - INFO - Monitoring 1 signals. Total P&L: -0.08%
+2025-08-02 20:51:24 - INFO - Monitoring data saved to latest_monitoring_data.json with 1 active signals
+2025-08-02 20:51:33 - WARNING - Volume low for B-DOT_USDT: 0 < 50000
+2025-08-02 20:51:33 - INFO - ✅ Signal B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345 passed all validation checks
+2025-08-02 20:51:33 - WARNING - 🚨 🌊 MARKET ALERT: 10 symbols with >10% moves detected
+2025-08-02 20:52:12 - WARNING - Volume low for B-DOT_USDT: 0 < 50000
+2025-08-02 20:52:13 - INFO - ✅ Signal B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345 passed all validation checks
+2025-08-02 20:52:13 - WARNING - 🚨 🌊 MARKET ALERT: 10 symbols with >10% moves detected
+2025-08-02 20:52:33 - INFO - Active alerts: 1 (Critical: 0, High: 1)
+2025-08-02 20:52:33 - INFO - Monitoring 1 signals. Total P&L: 0.00%
+2025-08-02 20:52:33 - INFO - Monitoring data saved to latest_monitoring_data.json with 1 active signals
+2025-08-02 20:52:34 - WARNING - Volume low for B-DOT_USDT: 0 < 50000
+2025-08-02 20:52:35 - INFO - ✅ Signal B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345 passed all validation checks
+2025-08-02 20:52:35 - WARNING - 🚨 ⚠️ SIGNAL CONFIRMATION: B-DOT_USDT SHORT not performing as expected after 3.1 minutes
+2025-08-02 20:52:35 - WARNING - 🚨 🌊 MARKET ALERT: 10 symbols with >10% moves detected
+2025-08-02 20:53:14 - WARNING - Volume low for B-DOT_USDT: 0 < 50000
+2025-08-02 20:53:14 - INFO - ✅ Signal B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345 passed all validation checks
+2025-08-02 20:53:14 - WARNING - 🚨 🌊 MARKET ALERT: 10 symbols with >10% moves detected
+2025-08-02 20:53:26 - INFO - Shutdown requested by user
+2025-08-02 20:53:31 - INFO - Alert monitoring stopped
+2025-08-02 20:53:31 - INFO - Monitoring data saved to latest_monitoring_data.json with 1 active signals
+2025-08-02 20:53:31 - INFO - Monitoring stopped and data saved
+2025-08-02 20:53:31 - INFO - === Enhanced Signal Generation with Alerts Completed ===
+2025-08-03 18:54:31 - INFO - === Logger initialized successfully ===
+2025-08-03 18:54:31 - INFO - Log file: logs/trading_bot.log
+2025-08-03 18:54:31 - INFO - Log level: INFO
+2025-08-03 18:54:32 - INFO - === Starting Crypto Futures Trading Bot ===
+2025-08-03 18:54:32 - INFO - Configuration loaded successfully
+2025-08-03 18:54:32 - INFO - Trading instruments: 11
+2025-08-03 18:54:32 - INFO - Initial balance: 10000 INR
+2025-08-03 18:54:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:54:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:54:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:54:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:54:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:54:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:54:32 - INFO - StrategyManager initialized with all strategies
+2025-08-03 18:54:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:54:32 - INFO - EnhancedSignalGenerator initialized
+2025-08-03 18:54:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:54:32 - INFO - SignalMonitor initialized
+2025-08-03 18:54:32 - INFO - Trade executor initialized
+2025-08-03 18:54:32 - INFO - Generating trading signals...
+2025-08-03 18:54:32 - INFO - === GENERATING ENTRY SIGNALS (TOP MOVERS, MIXED STRATEGY) ===
+2025-08-03 18:54:32 - INFO - Fetching top 40 movers by 24h %% change from CoinDCX with volume filter...
+2025-08-03 18:54:46 - ERROR - Attempt 1/3 - Error fetching active instruments: HTTPSConnectionPool(host='api.coindcx.com', port=443): Max retries exceeded with url: /exchange/v1/derivatives/futures/data/active_instruments?margin_currency_short_name%5B%5D=USDT (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff0ea1594b0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:54:47 - INFO - Filtered to 16 top movers that are active instruments
+2025-08-03 18:54:47 - INFO - Found 16 top movers to analyze (min_volume=100000)
+2025-08-03 18:54:59 - INFO - Selected 15 symbols with high ATR% (max of 15m/30m/1h) and volume for signal generation.
+2025-08-03 18:54:59 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:54:59 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:11 - INFO - [Scalping] Generated STRONG signal (score 9/9): {'symbol': 'B-MAGIC_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.1645, 'stop_loss': 0.1620325, 'take_profit': 0.1669675, 'tp1': 0.1669675, 'tp2': 0.1669675, 'max_hold_time': 2, 'score': 12, 'score_max': 17, 'score_reasons': ['Price > EMA20', 'RSI optimal bullish (45-65)', 'MACD positive + momentum', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'Supertrend uptrend', 'ADX > 25 and DI+ > DI-', 'OBV rising', 'Multi-timeframe trend bullish', 'Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 63.888888888888715, 'ema_20': 0.16428387280292045, 'ema_50': 0.16426347851428355, 'macd': 7.841001375136214e-05, 'bollinger_upper': 0.16556444964602737, 'bollinger_lower': 0.16292555035397263, 'vwap_daily': 0.17937963030521123, 'volume_ok': False, 'stoch_rsi_k': 0.9653740539816437, 'stoch_rsi_d': 0.8144560094124689, 'atr': 0.0006357142857142851, 'multi_timeframe_trend': 'strong_bullish', 'trend_strength': 0.875, 'ema_100': 0.16481787520799773, 'supertrend': {'supertrend': 0.15833, 'in_uptrend': True}, 'adx': {'adx': 26.116839970661008, 'di_plus': 23.595505617977445, 'di_minus': 19.101123595505403}, 'obv': 662199832.3000022, 'cci': 43.18658280922435, 'momentum_osc': 0.0009000000000000119, 'keltner_upper': 0.16559427647240657, 'keltner_lower': 0.16291427647240656, 'fib_levels': {'0.0%': 0.1657, '23.6%': 0.16501559999999998, '38.2%': 0.1645922, '50.0%': 0.16425, '61.8%': 0.1639078, '78.6%': 0.1634206, '100.0%': 0.1628}}, 'timestamp': '2025-08-03T18:55:11.628588+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.9375, 'quality_score': 227.5, 'normalized_score': 98.91304347826086, 'side': 'long', 'bonus_score': 3, 'bonus_reasons': ['Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level']}
+2025-08-03 18:55:11 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:13 - ERROR - Attempt 1/3 - Error fetching order book for B-VINE_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-VINE_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff0e8275630>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:55:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:14 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:17 - INFO - [Scalping] Generated STRONG signal (score 10/9): {'symbol': 'B-ENA_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.5719, 'stop_loss': 0.5633214999999999, 'take_profit': 0.5804784999999999, 'tp1': 0.5804784999999999, 'tp2': 0.5804784999999999, 'max_hold_time': 2, 'score': 11, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'Price > EMA20', 'MACD positive + momentum', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'Supertrend uptrend', 'ADX > 25 and DI+ > DI-', 'Price > EMA100', 'OBV rising', 'Multi-timeframe trend bullish', 'Momentum Oscillator positive (bullish)'], 'indicators': {'rsi': 73.0103806228373, 'ema_20': 0.5663304781970722, 'ema_50': 0.5604951417318604, 'macd': 0.003957828723883394, 'bollinger_upper': 0.576471401886392, 'bollinger_lower': 0.5536285981136081, 'vwap_daily': 0.5836702983681762, 'volume_ok': False, 'stoch_rsi_k': 0.9818428878905792, 'stoch_rsi_d': 0.948705405019845, 'atr': 0.004507142857142853, 'multi_timeframe_trend': 'strong_bullish', 'trend_strength': 0.875, 'ema_100': 0.5538450297174219, 'supertrend': {'supertrend': 0.5249199999999999, 'in_uptrend': True}, 'adx': {'adx': 39.3897913402227, 'di_plus': 27.575277337559413, 'di_minus': 1.4263074484944736}, 'obv': 537465624.0, 'cci': 98.08311335360635, 'momentum_osc': 0.009000000000000008, 'keltner_upper': 0.5745827175640303, 'keltner_lower': 0.5577027175640303, 'fib_levels': {'0.0%': 0.5755, '23.6%': 0.5705676, '38.2%': 0.5675162, '50.0%': 0.56505, '61.8%': 0.5625838, '78.6%': 0.5590726, '100.0%': 0.5546}}, 'timestamp': '2025-08-03T18:55:17.696184+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.9375, 'quality_score': 237.5, 'normalized_score': 100, 'side': 'long', 'bonus_score': 1, 'bonus_reasons': ['Momentum Oscillator positive (bullish)']}
+2025-08-03 18:55:18 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:13 - ERROR - Attempt 1/3 - Error fetching order book for B-CFX_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-CFX_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff0c3e3d6c0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:55:29 - INFO - [Scalping] Generated STRONG signal (score 8/9): {'symbol': 'B-IP_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 6.18145, 'stop_loss': 6.08872825, 'take_profit': 6.274171749999999, 'tp1': 6.274171749999999, 'tp2': 6.274171749999999, 'max_hold_time': 2, 'score': 11, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'RSI optimal bullish (45-65)', 'Volume > average', 'Price > VWAP', 'Not overbought (StochRSI < 80)', 'Supertrend uptrend', 'ADX > 25 and DI+ > DI-', 'Price > EMA100', 'CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 48.210837945681575, 'ema_20': 6.204455141343747, 'ema_50': 6.192196410099274, 'macd': 0.004010896940426001, 'bollinger_upper': 6.231250211855619, 'bollinger_lower': 6.176314788144381, 'vwap_daily': 5.991379110423363, 'volume_ok': True, 'stoch_rsi_k': 0.5928618882235058, 'stoch_rsi_d': 0.7581934917372802, 'atr': 0.02325571428571425, 'multi_timeframe_trend': 'neutral', 'trend_strength': 0.75, 'ema_100': 6.153112725220933, 'supertrend': {'supertrend': 6.016279000000001, 'in_uptrend': True}, 'adx': {'adx': 35.78891694695252, 'di_plus': 28.26954972664197, 'di_minus': 18.44400761717592}, 'obv': -1972207.8999999964, 'cci': -110.6986007843748, 'momentum_osc': -0.022250000000000547, 'keltner_upper': 6.250933603932806, 'keltner_lower': 6.160397603932806, 'fib_levels': {'0.0%': 6.24982, '23.6%': 6.23198312, '38.2%': 6.22094844, '50.0%': 6.21203, '61.8%': 6.20311156, '78.6%': 6.19041412, '100.0%': 6.17424}}, 'timestamp': '2025-08-03T18:55:29.786155+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.875, 'quality_score': 205.0, 'normalized_score': 89.13043478260869, 'side': 'long', 'bonus_score': 3, 'bonus_reasons': ['CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level']}
+2025-08-03 18:55:30 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:33 - INFO - [Scalping] Generated STRONG signal (score 8/9): {'symbol': 'B-VINE_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.SHORT', 'entry_price': 0.06752, 'stop_loss': 0.06853279999999999, 'take_profit': 0.0665072, 'tp1': 0.0665072, 'tp2': 0.0665072, 'max_hold_time': 2, 'score': 11, 'score_max': 17, 'score_reasons': ['Price < EMA20', 'MACD negative + momentum', 'Volume > average', 'Price < VWAP', 'Supertrend downtrend', 'ADX > 25 and DI- > DI+', 'Price < EMA100', 'OBV falling', 'CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 33.56481481481484, 'ema_20': 0.06887501192578398, 'ema_50': 0.06881658801033783, 'macd': -0.0003683004438396198, 'bollinger_upper': 0.07017081733263905, 'bollinger_lower': 0.06780518266736094, 'vwap_daily': 0.1008055414245216, 'volume_ok': True, 'stoch_rsi_k': 0.13006296814692203, 'stoch_rsi_d': 0.1882739358246532, 'atr': 0.0007871428571428543, 'multi_timeframe_trend': 'weak_bullish', 'trend_strength': 0.5750000000000001, 'ema_100': 0.06835098372737564, 'supertrend': {'supertrend': 0.07431100000000002, 'in_uptrend': False}, 'adx': {'adx': 31.380356466864782, 'di_plus': 14.06533575317618, 'di_minus': 34.754990925590086}, 'obv': -566069208.0, 'cci': -201.81229773462786, 'momentum_osc': -0.0012899999999999995, 'keltner_upper': 0.07038388928208186, 'keltner_lower': 0.06738188928208186, 'fib_levels': {'0.0%': 0.07018, '23.6%': 0.06919824000000001, '38.2%': 0.06859088, '50.0%': 0.0681, '61.8%': 0.06760912, '78.6%': 0.06691024, '100.0%': 0.06602}}, 'timestamp': '2025-08-03T18:55:33.387431+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.7875000000000001, 'quality_score': 187.5, 'normalized_score': 81.52173913043478, 'side': 'short', 'bonus_score': 3, 'bonus_reasons': ['CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level']}
+2025-08-03 18:55:33 - INFO - [Scalping] Generated signal (score 7/9): {'symbol': 'B-OM_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.SHORT', 'entry_price': 0.25196, 'stop_loss': 0.2557394, 'take_profit': 0.2481806, 'tp1': 0.2481806, 'tp2': 0.2481806, 'max_hold_time': 2, 'score': 9, 'score_max': 17, 'score_reasons': ['EMA20 < EMA50 (clear trend)', 'Price < EMA20', 'RSI optimal bearish (35-55)', 'Supertrend downtrend', 'ADX > 25 and DI- > DI+', 'Price < EMA100', 'OBV falling', 'CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)'], 'indicators': {'rsi': 35.37936913896007, 'ema_20': 0.25546941755712305, 'ema_50': 0.2558423123222329, 'macd': -0.001494845542500789, 'bollinger_upper': 0.2609847500231127, 'bollinger_lower': 0.2511662499768873, 'vwap_daily': 0.24841366923155572, 'volume_ok': False, 'stoch_rsi_k': 0.27048018394885365, 'stoch_rsi_d': 0.1264313055041941, 'atr': 0.0021950000000000003, 'multi_timeframe_trend': 'weak_bearish', 'trend_strength': 0.5750000000000001, 'ema_100': 0.2527163378368239, 'supertrend': {'supertrend': 0.272867, 'in_uptrend': False}, 'adx': {'adx': 27.16698028962757, 'di_plus': 10.868857793686981, 'di_minus': 34.78685323787813}, 'obv': -422277993.2000006, 'cci': -167.7644222938857, 'momentum_osc': -0.004799999999999971, 'keltner_upper': 0.2601868640901884, 'keltner_lower': 0.25084686409018836, 'fib_levels': {'0.0%': 0.26156, '23.6%': 0.25844716, '38.2%': 0.25652142, '50.0%': 0.254965, '61.8%': 0.25340858, '78.6%': 0.25119266, '100.0%': 0.24837}}, 'timestamp': '2025-08-03T18:55:33.434055+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.7250000000000001, 'quality_score': 171.25, 'normalized_score': 74.45652173913044, 'side': 'short', 'bonus_score': 2, 'bonus_reasons': ['CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)']}
+2025-08-03 18:55:34 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:34 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:36 - INFO - [Swing] Generated LONG signal for B-ENA_USDT on 15m - Score: 9/7, Confidence: 1.000, TP: 0.581798, SL: 0.564602
+2025-08-03 18:55:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:38 - INFO - [Swing] Generated LONG signal for B-PONKE_USDT on 15m - Score: 8/7, Confidence: 0.892, TP: 0.119151, SL: 0.115629
+2025-08-03 18:55:39 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:42 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:46 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff0e8274f70>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:55:47 - INFO - [Swing] Generated LONG signal for B-IP_USDT on 15m - Score: 7/7, Confidence: 0.842, TP: 6.275593, SL: 6.090107
+2025-08-03 18:55:47 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:48 - ERROR - Attempt 1/3 - Error fetching order book for B-OM_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-OM_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff0c3e3caf0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:55:48 - INFO - [Swing] Generated LONG signal for B-ETHFI_USDT on 15m - Score: 9/7, Confidence: 0.867, TP: 1.007590, SL: 0.977809
+2025-08-03 18:55:48 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:51 - INFO - [Swing] Skipping B-IP_USDT due to low liquidity (avg_volume=30290.36 < 100000)
+2025-08-03 18:55:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:52 - INFO - [Swing] Generated LONG signal for B-PONKE_USDT on 5m - Score: 6/7, Confidence: 0.904, TP: 0.119334, SL: 0.115806
+2025-08-03 18:55:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:58 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff0e82768f0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:55:58 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff0e8276a40>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:55:59 - INFO - [Long Swing] Generated LONG signal for B-PONKE_USDT on 30m - Score: 8/9, Confidence: 0.775, TP: 0.123357, SL: 0.113746
+2025-08-03 18:55:59 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:59 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:55:59 - INFO - [Long Swing] Generated SHORT signal for B-MAGIC_USDT on 30m - Score: 6/9, Confidence: 0.758, TP: 0.160471, SL: 0.167557
+2025-08-03 18:55:59 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:56:00 - INFO - [Swing] Generated LONG signal for B-ENA_USDT on 5m - Score: 9/7, Confidence: 1.000, TP: 0.581290, SL: 0.564109
+2025-08-03 18:56:01 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:56:01 - INFO - [Long Swing] Generated SHORT signal for B-VINE_USDT on 30m - Score: 7/9, Confidence: 0.889, TP: 0.061916, SL: 0.070739
+2025-08-03 18:56:01 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:56:02 - INFO - [Long Swing] Generated LONG signal for B-PONKE_USDT on 1h - Score: 8/9, Confidence: 0.775, TP: 0.124785, SL: 0.112985
+2025-08-03 18:56:06 - INFO - [Swing] Generated LONG signal for B-ETHFI_USDT on 5m - Score: 6/7, Confidence: 0.795, TP: 1.007286, SL: 0.977514
+2025-08-03 18:56:07 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:56:08 - INFO - [Long Swing] Generated LONG signal for B-ETHFI_USDT on 30m - Score: 8/9, Confidence: 0.869, TP: 1.017529, SL: 0.977643
+2025-08-03 18:56:08 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:56:09 - ERROR - Attempt 2/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff0ea6f2ce0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:56:10 - INFO - [Long Swing] Generated LONG signal for B-IP_USDT on 30m - Score: 11/9, Confidence: 0.975, TP: 6.348957, SL: 6.091394
+2025-08-03 18:56:10 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:56:04 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff11633f850>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:56:04 - INFO - [Long Swing] Generated SHORT signal for B-VINE_USDT on 1h - Score: 8/9, Confidence: 0.944, TP: 0.060513, SL: 0.071436
+2025-08-03 18:56:05 - INFO - [Swing] Generated LONG signal for B-CFX_USDT on 15m - Score: 7/7, Confidence: 0.842, TP: 0.211201, SL: 0.204959
+2025-08-03 18:56:05 - INFO - [Long Swing] Generated LONG signal for B-ENA_USDT on 30m - Score: 9/9, Confidence: 0.925, TP: 0.596682, SL: 0.558311
+2025-08-03 18:56:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:56:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:56:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:56:07 - INFO - [Long Swing] Generated LONG signal for B-OM_USDT on 30m - Score: 7/9, Confidence: 0.814, TP: 0.271092, SL: 0.239761
+2025-08-03 18:56:17 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:56:10 - ERROR - Attempt 1/3 - Error fetching order book for B-ETHFI_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-ETHFI_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff116340a30>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:56:12 - INFO - [Long Swing] Generated LONG signal for B-IP_USDT on 1h - Score: 9/9, Confidence: 0.975, TP: 6.436411, SL: 6.043705
+2025-08-03 18:56:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:56:32 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff11633ffa0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:56:33 - INFO - [Long Swing] Generated LONG signal for B-ENA_USDT on 1h - Score: 8/9, Confidence: 0.869, TP: 0.601486, SL: 0.555429
+2025-08-03 18:56:43 - INFO - [Long Swing] Generated LONG signal for B-CFX_USDT on 30m - Score: 8/9, Confidence: 0.800, TP: 0.220151, SL: 0.200917
+2025-08-03 18:56:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:05 - INFO - === Logger initialized successfully ===
+2025-08-03 18:57:05 - INFO - Log file: logs/trading_bot.log
+2025-08-03 18:57:05 - INFO - Log level: INFO
+2025-08-03 18:57:05 - INFO - === Starting Crypto Futures Trading Bot ===
+2025-08-03 18:57:05 - INFO - Configuration loaded successfully
+2025-08-03 18:57:05 - INFO - Trading instruments: 11
+2025-08-03 18:57:05 - INFO - Initial balance: 10000 INR
+2025-08-03 18:57:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:06 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:06 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:06 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:06 - INFO - StrategyManager initialized with all strategies
+2025-08-03 18:57:06 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:06 - INFO - EnhancedSignalGenerator initialized
+2025-08-03 18:57:06 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:06 - INFO - SignalMonitor initialized
+2025-08-03 18:57:06 - INFO - Trade executor initialized
+2025-08-03 18:57:06 - INFO - Generating trading signals...
+2025-08-03 18:57:06 - INFO - === GENERATING ENTRY SIGNALS (TOP MOVERS, MIXED STRATEGY) ===
+2025-08-03 18:57:06 - INFO - Fetching top 40 movers by 24h %% change from CoinDCX with volume filter...
+2025-08-03 18:57:16 - INFO - Filtered to 16 top movers that are active instruments
+2025-08-03 18:57:16 - INFO - Found 16 top movers to analyze (min_volume=100000)
+2025-08-03 18:57:26 - INFO - Selected 15 symbols with high ATR% (max of 15m/30m/1h) and volume for signal generation.
+2025-08-03 18:57:27 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:27 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:27 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:27 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:27 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:27 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:27 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:36 - INFO - [Scalping] Generated signal (score 7/9): {'symbol': 'B-VINE_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.SHORT', 'entry_price': 0.0671, 'stop_loss': 0.0681065, 'take_profit': 0.0660935, 'tp1': 0.0660935, 'tp2': 0.0660935, 'max_hold_time': 2, 'score': 10, 'score_max': 17, 'score_reasons': ['Price < EMA20', 'MACD negative + momentum', 'Price < VWAP', 'Supertrend downtrend', 'ADX > 25 and DI- > DI+', 'Price < EMA100', 'OBV falling', 'CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)', 'Price below Keltner lower (bearish breakout)'], 'indicators': {'rsi': 23.571428571428626, 'ema_20': 0.06871838947480229, 'ema_50': 0.06875460724253525, 'macd': -0.0004516418815433687, 'bollinger_upper': 0.07028919354905308, 'bollinger_lower': 0.06747480645094694, 'vwap_daily': 0.1007588574132523, 'volume_ok': False, 'stoch_rsi_k': 0.043836065755714415, 'stoch_rsi_d': 0.11171407004639966, 'atr': 0.0007714285714285697, 'multi_timeframe_trend': 'weak_bullish', 'trend_strength': 0.5, 'ema_100': 0.06832894483776383, 'supertrend': {'supertrend': 0.074375, 'in_uptrend': False}, 'adx': {'adx': 31.36509395160224, 'di_plus': 14.351851851851974, 'di_minus': 39.81481481481515}, 'obv': -579211075.0, 'cci': -223.41328330877027, 'momentum_osc': -0.0018099999999999922, 'keltner_upper': 0.07023770859459713, 'keltner_lower': 0.06721770859459714, 'fib_levels': {'0.0%': 0.07018, '23.6%': 0.06919824000000001, '38.2%': 0.06859088, '50.0%': 0.0681, '61.8%': 0.06760912, '78.6%': 0.06691024, '100.0%': 0.06602}}, 'timestamp': '2025-08-03T18:57:36.585495+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.6875, 'quality_score': 163.75, 'normalized_score': 71.19565217391305, 'side': 'short', 'bonus_score': 3, 'bonus_reasons': ['CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)', 'Price below Keltner lower (bearish breakout)']}
+2025-08-03 18:57:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:43 - INFO - [Scalping] Generated STRONG signal (score 10/9): {'symbol': 'B-ENA_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.5723, 'stop_loss': 0.5637155, 'take_profit': 0.5808845, 'tp1': 0.5808845, 'tp2': 0.5808845, 'max_hold_time': 2, 'score': 11, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'Price > EMA20', 'MACD positive + momentum', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'Supertrend uptrend', 'ADX > 25 and DI+ > DI-', 'Price > EMA100', 'OBV rising', 'Multi-timeframe trend bullish', 'Momentum Oscillator positive (bullish)'], 'indicators': {'rsi': 79.55390334572503, 'ema_20': 0.5669507047633374, 'ema_50': 0.5609806840399537, 'macd': 0.003978280148950519, 'bollinger_upper': 0.5774300104356669, 'bollinger_lower': 0.5535999895643331, 'vwap_daily': 0.5836555253745549, 'volume_ok': False, 'stoch_rsi_k': 0.9917317340121037, 'stoch_rsi_d': 0.9779548276618572, 'atr': 0.004471428571428571, 'multi_timeframe_trend': 'strong_bullish', 'trend_strength': 1.0, 'ema_100': 0.5542221205905795, 'supertrend': {'supertrend': 0.5242799999999999, 'in_uptrend': True}, 'adx': {'adx': 43.871060917985275, 'di_plus': 27.795527156549483, 'di_minus': 1.4376996805112014}, 'obv': 549598305.0, 'cci': 85.51973614214188, 'momentum_osc': 0.007400000000000073, 'keltner_upper': 0.5749941367529435, 'keltner_lower': 0.5584541367529435, 'fib_levels': {'0.0%': 0.5755, '23.6%': 0.5705676, '38.2%': 0.5675162, '50.0%': 0.56505, '61.8%': 0.5625838, '78.6%': 0.5590726, '100.0%': 0.5546}}, 'timestamp': '2025-08-03T18:57:43.121536+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 1.0, 'quality_score': 250.0, 'normalized_score': 100, 'side': 'long', 'bonus_score': 1, 'bonus_reasons': ['Momentum Oscillator positive (bullish)']}
+2025-08-03 18:57:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:45 - INFO - [Scalping] Generated signal (score 7/9): {'symbol': 'B-IP_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 6.1851, 'stop_loss': 6.0923235, 'take_profit': 6.2778765, 'tp1': 6.2778765, 'tp2': 6.2778765, 'max_hold_time': 2, 'score': 10, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'RSI optimal bullish (45-65)', 'Price > VWAP', 'Not overbought (StochRSI < 80)', 'Supertrend uptrend', 'ADX > 25 and DI+ > DI-', 'Price > EMA100', 'CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 45.37370171746661, 'ema_20': 6.20252227073958, 'ema_50': 6.191881256762048, 'macd': 0.001921983678455419, 'bollinger_upper': 6.231151409073057, 'bollinger_lower': 6.173847590926943, 'vwap_daily': 5.991579419644021, 'volume_ok': False, 'stoch_rsi_k': 0.2929755994254793, 'stoch_rsi_d': 0.5803041489806895, 'atr': 0.02304714285714279, 'multi_timeframe_trend': 'neutral', 'trend_strength': 0.75, 'ema_100': 6.1537275227413115, 'supertrend': {'supertrend': 5.998706, 'in_uptrend': True}, 'adx': {'adx': 34.29897460821039, 'di_plus': 24.626541870699906, 'di_minus': 20.337197049526157}, 'obv': -1956906.7999999963, 'cci': -120.57884660730913, 'momentum_osc': -0.02754000000000012, 'keltner_upper': 6.248568927367777, 'keltner_lower': 6.158686927367778, 'fib_levels': {'0.0%': 6.24982, '23.6%': 6.23198312, '38.2%': 6.22094844, '50.0%': 6.21203, '61.8%': 6.20311156, '78.6%': 6.19041412, '100.0%': 6.17424}}, 'timestamp': '2025-08-03T18:57:45.628719+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.8125, 'quality_score': 188.75, 'normalized_score': 82.06521739130434, 'side': 'long', 'bonus_score': 3, 'bonus_reasons': ['CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level']}
+2025-08-03 18:57:45 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:45 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:43 - INFO - [Swing] Generated LONG signal for B-ENA_USDT on 15m - Score: 9/7, Confidence: 1.000, TP: 0.581595, SL: 0.564405
+2025-08-03 18:57:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:44 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:45 - INFO - [Swing] Generated LONG signal for B-IP_USDT on 15m - Score: 7/7, Confidence: 0.842, TP: 6.279196, SL: 6.093604
+2025-08-03 18:57:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:57:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:01 - INFO - [Swing] Skipping B-IP_USDT due to low liquidity (avg_volume=30801.89 < 100000)
+2025-08-03 18:58:01 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:02 - INFO - [Swing] Generated LONG signal for B-ETHFI_USDT on 15m - Score: 9/7, Confidence: 0.867, TP: 1.008910, SL: 0.979090
+2025-08-03 18:58:02 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:02 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:04 - INFO - [Long Swing] Generated SHORT signal for B-VINE_USDT on 30m - Score: 7/9, Confidence: 0.889, TP: 0.061606, SL: 0.070429
+2025-08-03 18:58:04 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:08 - ERROR - Attempt 1/3 - Error fetching order book for B-ENA_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-ENA_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7a65f15d20>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:58:12 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7a65f14ee0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:58:17 - INFO - [Scalping] Generated STRONG signal (score 8/9): {'symbol': 'B-PONKE_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.11765, 'stop_loss': 0.11588525000000001, 'take_profit': 0.11941475, 'tp1': 0.11941475, 'tp2': 0.11941475, 'max_hold_time': 2, 'score': 11, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'Price > EMA20', 'Volume > average', 'Price > VWAP', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'Price > EMA100', 'Multi-timeframe trend bullish', 'Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 70.39999999999992, 'ema_20': 0.11745761760898919, 'ema_50': 0.11659650245907117, 'macd': 0.00042452680556273603, 'bollinger_upper': 0.11912353649557654, 'bollinger_lower': 0.11558846350442349, 'vwap_daily': 0.11589951999764717, 'volume_ok': True, 'stoch_rsi_k': 0.6960043120748488, 'stoch_rsi_d': 0.7043111077857761, 'atr': 0.0010242857142857117, 'multi_timeframe_trend': 'bullish', 'trend_strength': 0.7000000000000001, 'ema_100': 0.11513749353674328, 'supertrend': {'supertrend': 0.127084, 'in_uptrend': False}, 'adx': {'adx': 17.524551381251687, 'di_plus': 22.454672245467282, 'di_minus': 16.108786610878745}, 'obv': -47974404.0, 'cci': 16.531035583213885, 'momentum_osc': 0.0003000000000000086, 'keltner_upper': 0.11919460414373736, 'keltner_lower': 0.11566260414373736, 'fib_levels': {'0.0%': 0.11977, '23.6%': 0.118767, '38.2%': 0.1181465, '50.0%': 0.117645, '61.8%': 0.1171435, '78.6%': 0.11642949999999999, '100.0%': 0.11552}}, 'timestamp': '2025-08-03T18:58:17.512709+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.8500000000000001, 'quality_score': 200.0, 'normalized_score': 86.95652173913044, 'side': 'long', 'bonus_score': 3, 'bonus_reasons': ['Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level']}
+2025-08-03 18:58:18 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:18 - INFO - [Long Swing] Generated SHORT signal for B-VINE_USDT on 1h - Score: 8/9, Confidence: 0.944, TP: 0.060283, SL: 0.071206
+2025-08-03 18:58:18 - INFO - [Swing] Generated LONG signal for B-ENA_USDT on 5m - Score: 9/7, Confidence: 1.000, TP: 0.581087, SL: 0.563913
+2025-08-03 18:58:18 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:18 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:21 - INFO - [Swing] Generated LONG signal for B-CFX_USDT on 15m - Score: 7/7, Confidence: 0.842, TP: 0.211333, SL: 0.205087
+2025-08-03 18:58:22 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:23 - ERROR - Attempt 2/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7a8865ece0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:58:25 - INFO - [Scalping] Generated signal (score 7/9): {'symbol': 'B-OM_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.SHORT', 'entry_price': 0.25218, 'stop_loss': 0.2559627, 'take_profit': 0.24839730000000002, 'tp1': 0.24839730000000002, 'tp2': 0.24839730000000002, 'max_hold_time': 2, 'score': 10, 'score_max': 17, 'score_reasons': ['EMA20 < EMA50 (clear trend)', 'Price < EMA20', 'RSI optimal bearish (35-55)', 'Supertrend downtrend', 'ADX > 25 and DI- > DI+', 'Price < EMA100', 'OBV falling', 'CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 36.74339300937774, 'ema_20': 0.2554998937475992, 'ema_50': 0.25585486134184077, 'macd': -0.0014693184769737355, 'bollinger_upper': 0.26094383432700297, 'bollinger_lower': 0.2512391656729971, 'vwap_daily': 0.2484162511234347, 'volume_ok': False, 'stoch_rsi_k': 0.2864957531102022, 'stoch_rsi_d': 0.13176982855797692, 'atr': 0.002274285714285715, 'multi_timeframe_trend': 'weak_bearish', 'trend_strength': 0.5750000000000001, 'ema_100': 0.2527226744704873, 'supertrend': {'supertrend': 0.272592, 'in_uptrend': False}, 'adx': {'adx': 26.968935640299645, 'di_plus': 11.306532663316554, 'di_minus': 33.57412060301491}, 'obv': -420578206.4000006, 'cci': -170.2288091523647, 'momentum_osc': -0.004479999999999984, 'keltner_upper': 0.2602905625028868, 'keltner_lower': 0.25072856250288683, 'fib_levels': {'0.0%': 0.26156, '23.6%': 0.25844716, '38.2%': 0.25652142, '50.0%': 0.254965, '61.8%': 0.25340858, '78.6%': 0.25119266, '100.0%': 0.24837}}, 'timestamp': '2025-08-03T18:58:25.236455+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.7250000000000001, 'quality_score': 171.25, 'normalized_score': 74.45652173913044, 'side': 'short', 'bonus_score': 3, 'bonus_reasons': ['CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 61.8% level']}
+2025-08-03 18:58:25 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:27 - INFO - [Swing] Generated LONG signal for B-PONKE_USDT on 15m - Score: 8/7, Confidence: 0.975, TP: 0.119465, SL: 0.115934
+2025-08-03 18:58:27 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:28 - INFO - [Long Swing] Generated LONG signal for B-ENA_USDT on 30m - Score: 9/9, Confidence: 0.925, TP: 0.596682, SL: 0.558311
+2025-08-03 18:58:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:29 - INFO - [Scalping] Generated STRONG signal (score 9/9): {'symbol': 'B-MAGIC_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.1649, 'stop_loss': 0.1624265, 'take_profit': 0.16737349999999998, 'tp1': 0.16737349999999998, 'tp2': 0.16737349999999998, 'max_hold_time': 2, 'score': 11, 'score_max': 17, 'score_reasons': ['Price > EMA20', 'MACD positive + momentum', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'Supertrend uptrend', 'ADX > 25 and DI+ > DI-', 'Price > EMA100', 'OBV rising', 'Multi-timeframe trend bullish', 'Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level'], 'indicators': {'rsi': 71.79487179487165, 'ema_20': 0.16436069217316385, 'ema_50': 0.1642961294914243, 'macd': 0.000131440643250047, 'bollinger_upper': 0.1654384545863214, 'bollinger_lower': 0.16300154541367862, 'vwap_daily': 0.1793790249414452, 'volume_ok': False, 'stoch_rsi_k': 0.9653740539816437, 'stoch_rsi_d': 0.9230295107794665, 'atr': 0.0006142857142857121, 'multi_timeframe_trend': 'strong_bullish', 'trend_strength': 1.0, 'ema_100': 0.16482342262570035, 'supertrend': {'supertrend': 0.15884, 'in_uptrend': True}, 'adx': {'adx': 25.210161509803015, 'di_plus': 25.58139534883739, 'di_minus': 13.95348837209283}, 'obv': 663268168.7000022, 'cci': 82.84153005464842, 'momentum_osc': 0.0011000000000000176, 'keltner_upper': 0.1656122970048909, 'keltner_lower': 0.16301229700489092, 'fib_levels': {'0.0%': 0.1657, '23.6%': 0.16501559999999998, '38.2%': 0.1645922, '50.0%': 0.16425, '61.8%': 0.1639078, '78.6%': 0.1634206, '100.0%': 0.1628}}, 'timestamp': '2025-08-03T18:58:29.391141+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 1.0, 'quality_score': 240.0, 'normalized_score': 100, 'side': 'long', 'bonus_score': 2, 'bonus_reasons': ['Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level']}
+2025-08-03 18:58:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:31 - INFO - [Swing] Generated LONG signal for B-ETHFI_USDT on 5m - Score: 6/7, Confidence: 0.795, TP: 1.009011, SL: 0.979189
+2025-08-03 18:58:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:32 - INFO - [Long Swing] Generated LONG signal for B-ENA_USDT on 1h - Score: 8/9, Confidence: 0.869, TP: 0.600986, SL: 0.554929
+2025-08-03 18:58:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:33 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:36 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7a65f176d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 18:58:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:37 - INFO - [Long Swing] Generated LONG signal for B-ETHFI_USDT on 30m - Score: 8/9, Confidence: 0.869, TP: 1.020329, SL: 0.980443
+2025-08-03 18:58:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:42 - INFO - [Scalping] Generated STRONG signal (score 8/9): {'symbol': 'B-SPX_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 1.6691, 'stop_loss': 1.6440635, 'take_profit': 1.6941365, 'tp1': 1.6941365, 'tp2': 1.6941365, 'max_hold_time': 2, 'score': 10, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'Price > EMA20', 'RSI optimal bullish (45-65)', 'MACD positive + momentum', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'Price > EMA100', 'Multi-timeframe trend bullish', 'Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level'], 'indicators': {'rsi': 59.72222222222217, 'ema_20': 1.6670353833969749, 'ema_50': 1.6467507282510816, 'macd': 0.006187057434876575, 'bollinger_upper': 1.6938933459208525, 'bollinger_lower': 1.6364166540791474, 'vwap_daily': 1.7347056340629021, 'volume_ok': False, 'stoch_rsi_k': 0.988364646662224, 'stoch_rsi_d': 0.9791636625634048, 'atr': 0.014035714285714278, 'multi_timeframe_trend': 'bullish', 'trend_strength': 0.7000000000000001, 'ema_100': 1.61525103044439, 'supertrend': {'supertrend': 1.7982200000000002, 'in_uptrend': False}, 'adx': {'adx': 21.55713639166611, 'di_plus': 24.02035623409677, 'di_minus': 11.501272264631025}, 'obv': -8470019.0, 'cci': 10.11286964417052, 'momentum_osc': 0.005800000000000027, 'keltner_upper': 1.694441507251853, 'keltner_lower': 1.6387615072518529, 'fib_levels': {'0.0%': 1.6917, '23.6%': 1.6790268, '38.2%': 1.6711866, '50.0%': 1.66485, '61.8%': 1.6585134, '78.6%': 1.6494917999999998, '100.0%': 1.638}}, 'timestamp': '2025-08-03T18:58:42.713000+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.8500000000000001, 'quality_score': 200.0, 'normalized_score': 86.95652173913044, 'side': 'long', 'bonus_score': 2, 'bonus_reasons': ['Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level']}
+2025-08-03 18:58:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:43 - INFO - [Long Swing] Generated LONG signal for B-IP_USDT on 30m - Score: 11/9, Confidence: 0.856, TP: 6.344537, SL: 6.086974
+2025-08-03 18:58:33 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:50 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:50 - INFO - [Long Swing] Generated LONG signal for B-IP_USDT on 1h - Score: 9/9, Confidence: 0.950, TP: 6.433071, SL: 6.040365
+2025-08-03 18:58:50 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:54 - INFO - [Swing] Generated LONG signal for B-SPX_USDT on 15m - Score: 8/7, Confidence: 0.950, TP: 1.695557, SL: 1.645443
+2025-08-03 18:58:55 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 18:58:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:05:19 - INFO - === Logger initialized successfully ===
+2025-08-03 19:05:19 - INFO - Log file: logs/trading_bot.log
+2025-08-03 19:05:19 - INFO - Log level: INFO
+2025-08-03 19:05:19 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:05:53 - INFO - === Logger initialized successfully ===
+2025-08-03 19:05:53 - INFO - Log file: logs/trading_bot.log
+2025-08-03 19:05:53 - INFO - Log level: INFO
+2025-08-03 19:05:54 - INFO - === Starting Crypto Futures Trading Bot ===
+2025-08-03 19:05:54 - INFO - Configuration loaded successfully
+2025-08-03 19:05:54 - INFO - Trading instruments: 11
+2025-08-03 19:05:54 - INFO - Initial balance: 10000 INR
+2025-08-03 19:05:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:05:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:05:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:05:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:05:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:05:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:05:54 - INFO - StrategyManager initialized with all strategies
+2025-08-03 19:05:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:05:54 - INFO - EnhancedSignalGenerator initialized
+2025-08-03 19:05:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:05:54 - INFO - SignalMonitor initialized
+2025-08-03 19:05:54 - INFO - Trade executor initialized
+2025-08-03 19:05:54 - INFO - Generating trading signals...
+2025-08-03 19:05:54 - INFO - === GENERATING ENTRY SIGNALS (HIGH VOLUME SYMBOLS, MIXED STRATEGY) ===
+2025-08-03 19:05:54 - INFO - Fetching top 40 high volume symbols from CoinDCX with increased volume filter...
+2025-08-03 19:06:33 - INFO - === Logger initialized successfully ===
+2025-08-03 19:06:33 - INFO - Log file: logs/trading_bot.log
+2025-08-03 19:06:33 - INFO - Log level: INFO
+2025-08-03 19:06:33 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:06:40 - INFO - Filtered to 27 top movers that are active instruments
+2025-08-03 19:06:40 - INFO - Found 27 top movers to analyze (min_volume=500000)
+2025-08-03 19:06:57 - INFO - Selected 15 symbols with high ATR% (max of 15m/30m/1h) and volume for signal generation.
+2025-08-03 19:06:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:06:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:06:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:06:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:06:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:06:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:06:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:16 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:26 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:27 - INFO - [Scalping] Generated STRONG signal (score 10/9): {'symbol': 'B-ENA_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.578, 'stop_loss': 0.56933, 'take_profit': 0.5866699999999999, 'tp1': 0.5866699999999999, 'tp2': 0.5866699999999999, 'max_hold_time': 2, 'score': 13, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'Price > EMA20', 'Volume > average', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'Supertrend uptrend', 'ADX > 25 and DI+ > DI-', 'Price > EMA100', 'OBV rising', 'Multi-timeframe trend bullish', 'CCI > 100 (bullish)', 'Momentum Oscillator positive (bullish)', 'Price above Keltner upper (bullish breakout)'], 'indicators': {'rsi': 75.15527950310558, 'ema_20': 0.5683017053029761, 'ema_50': 0.5619988582172496, 'macd': 0.00417363723285924, 'bollinger_upper': 0.579604793598891, 'bollinger_lower': 0.5540352064011091, 'vwap_daily': 0.583603036233916, 'volume_ok': True, 'stoch_rsi_k': 0.9613837005019937, 'stoch_rsi_d': 0.9615895732916044, 'atr': 0.005028571428571438, 'multi_timeframe_trend': 'strong_bullish', 'trend_strength': 0.875, 'ema_100': 0.5550039805792046, 'supertrend': {'supertrend': 0.52992, 'in_uptrend': True}, 'adx': {'adx': 48.77359422469241, 'di_plus': 28.409090909090885, 'di_minus': 6.676136363636405}, 'obv': 572286871.0, 'cci': 120.3800611545489, 'momentum_osc': 0.007800000000000029, 'keltner_upper': 0.5771210118479717, 'keltner_lower': 0.5587010118479716, 'fib_levels': {'0.0%': 0.5793, '23.6%': 0.5734708000000001, '38.2%': 0.5698646, '50.0%': 0.5669500000000001, '61.8%': 0.5640354, '78.6%': 0.5598858, '100.0%': 0.5546}}, 'timestamp': '2025-08-03T19:07:27.573160+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.9375, 'quality_score': 237.5, 'normalized_score': 100, 'side': 'long', 'bonus_score': 3, 'bonus_reasons': ['CCI > 100 (bullish)', 'Momentum Oscillator positive (bullish)', 'Price above Keltner upper (bullish breakout)']}
+2025-08-03 19:07:28 - INFO - [Scalping] Generated STRONG signal (score 8/9): {'symbol': 'B-VINE_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.SHORT', 'entry_price': 0.06688, 'stop_loss': 0.06788319999999999, 'take_profit': 0.0658768, 'tp1': 0.0658768, 'tp2': 0.0658768, 'max_hold_time': 2, 'score': 11, 'score_max': 17, 'score_reasons': ['EMA20 < EMA50 (clear trend)', 'Price < EMA20', 'MACD negative + momentum', 'Price < VWAP', 'Supertrend downtrend', 'ADX > 25 and DI- > DI+', 'Price < EMA100', 'OBV falling', 'CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)', 'Price below Keltner lower (bearish breakout)'], 'indicators': {'rsi': 25.51546391752585, 'ema_20': 0.06842201172751065, 'ema_50': 0.068627120424691, 'macd': -0.0005762519634815583, 'bollinger_upper': 0.07027947942983608, 'bollinger_lower': 0.0669635205701639, 'vwap_daily': 0.10063593311792546, 'volume_ok': False, 'stoch_rsi_k': 0.018556456990965763, 'stoch_rsi_d': 0.03591747509472735, 'atr': 0.0007778571428571417, 'multi_timeframe_trend': 'weak_bullish', 'trend_strength': 0.5, 'ema_100': 0.06828078645351915, 'supertrend': {'supertrend': 0.075381, 'in_uptrend': False}, 'adx': {'adx': 32.4587916925627, 'di_plus': 11.753902662993621, 'di_minus': 39.302112029385}, 'obv': -610903883.0, 'cci': -167.7911810808973, 'momentum_osc': -0.0028900000000000037, 'keltner_upper': 0.06995732727088227, 'keltner_lower': 0.06689932727088227, 'fib_levels': {'0.0%': 0.06997, '23.6%': 0.0690378, '38.2%': 0.0684611, '50.0%': 0.067995, '61.8%': 0.0675289, '78.6%': 0.0668653, '100.0%': 0.06602}}, 'timestamp': '2025-08-03T19:07:28.094019+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.75, 'quality_score': 180.0, 'normalized_score': 78.26086956521739, 'side': 'short', 'bonus_score': 3, 'bonus_reasons': ['CCI < -100 (bearish)', 'Momentum Oscillator negative (bearish)', 'Price below Keltner lower (bearish breakout)']}
+2025-08-03 19:07:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:32 - INFO - [Scalping] Generated STRONG signal (score 8/9): {'symbol': 'B-PENGU_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.034347, 'stop_loss': 0.033831795000000005, 'take_profit': 0.034862205, 'tp1': 0.034862205, 'tp2': 0.034862205, 'max_hold_time': 2, 'score': 11, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'Price > EMA20', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'ADX > 25 and DI+ > DI-', 'Price > EMA100', 'OBV rising', 'Multi-timeframe trend bullish', 'CCI > 100 (bullish)', 'Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level'], 'indicators': {'rsi': 68.76770538243625, 'ema_20': 0.03416799009272575, 'ema_50': 0.034083541675773335, 'macd': 7.883539425544706e-05, 'bollinger_upper': 0.034512486485462436, 'bollinger_lower': 0.03364541351453757, 'vwap_daily': 0.035340437858584046, 'volume_ok': False, 'stoch_rsi_k': 0.9102538992332687, 'stoch_rsi_d': 0.9121775548507721, 'atr': 0.00021249999999999988, 'multi_timeframe_trend': 'bullish', 'trend_strength': 0.7000000000000001, 'ema_100': 0.03395116266121413, 'supertrend': {'supertrend': 0.036492000000000004, 'in_uptrend': False}, 'adx': {'adx': 27.81359089676207, 'di_plus': 31.663865546218688, 'di_minus': 11.428571428571436}, 'obv': 7722303731.0, 'cci': 100.8161767801599, 'momentum_osc': 0.00020900000000000085, 'keltner_upper': 0.03455657120857891, 'keltner_lower': 0.03377657120857891, 'fib_levels': {'0.0%': 0.034545, '23.6%': 0.034335196, '38.2%': 0.034205401999999996, '50.0%': 0.0341005, '61.8%': 0.033995598, '78.6%': 0.033846245999999997, '100.0%': 0.033656}}, 'timestamp': '2025-08-03T19:07:32.395544+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.8500000000000001, 'quality_score': 200.0, 'normalized_score': 86.95652173913044, 'side': 'long', 'bonus_score': 3, 'bonus_reasons': ['CCI > 100 (bullish)', 'Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level']}
+2025-08-03 19:07:32 - INFO - [Scalping] Generated STRONG signal (score 8/9): {'symbol': 'B-XRP_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 2.8758, 'stop_loss': 2.8326629999999997, 'take_profit': 2.9189369999999997, 'tp1': 2.9189369999999997, 'tp2': 2.9189369999999997, 'max_hold_time': 2, 'score': 11, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'Price > EMA20', 'RSI optimal bullish (45-65)', 'MACD positive + momentum', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'Price > EMA100', 'Multi-timeframe trend bullish', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 61.943319838056844, 'ema_20': 2.8738769784542653, 'ema_50': 2.8697216434582877, 'macd': 0.0014203089756579246, 'bollinger_upper': 2.8851146857362027, 'bollinger_lower': 2.8583353142637975, 'vwap_daily': 2.9932249254605754, 'volume_ok': False, 'stoch_rsi_k': 0.9420065884728421, 'stoch_rsi_d': 0.9349298855870978, 'atr': 0.007564285714285753, 'multi_timeframe_trend': 'bullish', 'trend_strength': 0.7000000000000001, 'ema_100': 2.8596191425443713, 'supertrend': {'supertrend': 2.93854, 'in_uptrend': False}, 'adx': {'adx': 16.808546040882053, 'di_plus': 23.607176581680626, 'di_minus': 13.31444759206834}, 'obv': -575868337.9999995, 'cci': 66.20988923147658, 'momentum_osc': -0.0002999999999997449, 'keltner_upper': 2.888472251982252, 'keltner_lower': 2.858792251982252, 'fib_levels': {'0.0%': 2.8826, '23.6%': 2.8766292, '38.2%': 2.8729354, '50.0%': 2.8699500000000002, '61.8%': 2.8669646, '78.6%': 2.8627142, '100.0%': 2.8573}}, 'timestamp': '2025-08-03T19:07:32.656027+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.8500000000000001, 'quality_score': 200.0, 'normalized_score': 86.95652173913044, 'side': 'long', 'bonus_score': 3, 'bonus_reasons': ['Momentum Oscillator negative (bearish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level']}
+2025-08-03 19:07:32 - INFO - [Scalping] Generated STRONG signal (score 9/9): {'symbol': 'B-DOGE_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.19851, 'stop_loss': 0.19553235, 'take_profit': 0.20148764999999996, 'tp1': 0.20148764999999996, 'tp2': 0.20148764999999996, 'max_hold_time': 2, 'score': 12, 'score_max': 17, 'score_reasons': ['EMA20 > EMA50 (clear trend)', 'Price > EMA20', 'RSI optimal bullish (45-65)', 'MACD positive + momentum', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'ADX > 25 and DI+ > DI-', 'Price > EMA100', 'Multi-timeframe trend bullish', 'Momentum Oscillator negative (bearish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 57.63440860215025, 'ema_20': 0.19828232622903597, 'ema_50': 0.19776924567245352, 'macd': 0.00020779056250644357, 'bollinger_upper': 0.19920647034949518, 'bollinger_lower': 0.1972455296505048, 'vwap_daily': 0.20993099092221268, 'volume_ok': False, 'stoch_rsi_k': 0.7608467131307647, 'stoch_rsi_d': 0.7600898587659533, 'atr': 0.0006178571428571442, 'multi_timeframe_trend': 'bullish', 'trend_strength': 0.7000000000000001, 'ema_100': 0.19701550321153988, 'supertrend': {'supertrend': 0.203474, 'in_uptrend': False}, 'adx': {'adx': 34.39870173872429, 'di_plus': 26.358381502890165, 'di_minus': 6.820809248554982}, 'obv': -4361067044.0, 'cci': 54.6149323927078, 'momentum_osc': -9.000000000000674e-05, 'keltner_upper': 0.1994373405879359, 'keltner_lower': 0.1970893405879359, 'fib_levels': {'0.0%': 0.1992, '23.6%': 0.1986926, '38.2%': 0.1983787, '50.0%': 0.198125, '61.8%': 0.1978713, '78.6%': 0.1975101, '100.0%': 0.19705}}, 'timestamp': '2025-08-03T19:07:32.686171+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.8500000000000001, 'quality_score': 210.0, 'normalized_score': 91.30434782608695, 'side': 'long', 'bonus_score': 3, 'bonus_reasons': ['Momentum Oscillator negative (bearish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level']}
+2025-08-03 19:07:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:33 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:33 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:34 - INFO - [Swing] Generated LONG signal for B-CFX_USDT on 15m - Score: 7/7, Confidence: 0.717, TP: 0.211567, SL: 0.205313
+2025-08-03 19:07:34 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:35 - INFO - [Swing] Generated LONG signal for B-ENA_USDT on 15m - Score: 10/7, Confidence: 1.000, TP: 0.584640, SL: 0.567360
+2025-08-03 19:07:35 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:36 - ERROR - Attempt 1/3 - Error fetching order book for B-MAGIC_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-MAGIC_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8650f26980>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 19:07:42 - ERROR - Attempt 1/3 - Error fetching order book for B-VINE_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-VINE_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8650f25d20>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 19:07:45 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:47 - INFO - [Swing] Generated LONG signal for B-ENA_USDT on 5m - Score: 10/7, Confidence: 1.000, TP: 0.584234, SL: 0.566966
+2025-08-03 19:07:48 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:48 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:51 - WARNING - CoinDesk API 400 error for B-XRP_USDT (XRP-USDT-VANILLA-PERPETUAL): Bad Request
+2025-08-03 19:07:51 - INFO - [Swing] Generated LONG signal for B-PENGU_USDT on 15m - Score: 9/7, Confidence: 1.000, TP: 0.034904, SL: 0.033872
+2025-08-03 19:07:51 - INFO - Adding XRP to problematic coins list - CoinDesk API not supported
+2025-08-03 19:07:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:53 - WARNING - CoinDesk API 400 error for B-DOGE_USDT (DOGE-USDT-VANILLA-PERPETUAL): Bad Request
+2025-08-03 19:07:53 - INFO - Adding DOGE to problematic coins list - CoinDesk API not supported
+2025-08-03 19:07:53 - INFO - [Scalping] Generated signal (score 7/9): {'symbol': 'B-MAGIC_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.LONG', 'entry_price': 0.1653, 'stop_loss': 0.1628205, 'take_profit': 0.1677795, 'tp1': 0.1677795, 'tp2': 0.1677795, 'max_hold_time': 2, 'score': 9, 'score_max': 17, 'score_reasons': ['Price > EMA20', 'Not overbought (StochRSI < 80)', 'Multi-timeframe trend bullish', 'Supertrend uptrend', 'Price > EMA100', 'OBV rising', 'Multi-timeframe trend bullish', 'CCI > 100 (bullish)', 'Momentum Oscillator positive (bullish)'], 'indicators': {'rsi': 70.73170731707268, 'ema_20': 0.16453035388886247, 'ema_50': 0.1643731788856051, 'macd': 0.00023107724546775343, 'bollinger_upper': 0.16550535013821568, 'bollinger_lower': 0.16296464986178436, 'vwap_daily': 0.1793697750526545, 'volume_ok': False, 'stoch_rsi_k': 0.963597883597878, 'stoch_rsi_d': 0.9712681296928792, 'atr': 0.0006571428571428542, 'multi_timeframe_trend': 'strong_bullish', 'trend_strength': 1.0, 'ema_100': 0.1648420724434931, 'supertrend': {'supertrend': 0.15946, 'in_uptrend': True}, 'adx': {'adx': 23.98886502534851, 'di_plus': 23.913043478260757, 'di_minus': 13.043478260869696}, 'obv': 663992309.4000019, 'cci': 133.55481727574417, 'momentum_osc': 0.0015999999999999903, 'keltner_upper': 0.1658333470389171, 'keltner_lower': 0.1630933470389171, 'fib_levels': {'0.0%': 0.1654, '23.6%': 0.1647864, '38.2%': 0.1644068, '50.0%': 0.1641, '61.8%': 0.1637932, '78.6%': 0.16335639999999998, '100.0%': 0.1628}}, 'timestamp': '2025-08-03T19:07:53.423891+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.9375, 'quality_score': 213.75, 'normalized_score': 92.93478260869566, 'side': 'long', 'bonus_score': 2, 'bonus_reasons': ['CCI > 100 (bullish)', 'Momentum Oscillator positive (bullish)']}
+2025-08-03 19:07:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:49 - INFO - [Long Swing] Generated LONG signal for B-ENA_USDT on 30m - Score: 8/9, Confidence: 0.869, TP: 0.601186, SL: 0.561529
+2025-08-03 19:07:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:53 - WARNING - CoinDesk API 400 error for B-DOGE_USDT (DOGE-USDT-VANILLA-PERPETUAL): Bad Request
+2025-08-03 19:07:53 - INFO - Adding DOGE to problematic coins list - CoinDesk API not supported
+2025-08-03 19:07:53 - INFO - [Long Swing] Generated LONG signal for B-ENA_USDT on 1h - Score: 9/9, Confidence: 0.925, TP: 0.605654, SL: 0.558368
+2025-08-03 19:07:53 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:53 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:07:55 - ERROR - Attempt 1/3 - Error fetching order book for B-PENGU_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-PENGU_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8650f243d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 19:08:01 - WARNING - CoinDesk API 400 error for B-XRP_USDT (XRP-USDT-VANILLA-PERPETUAL): Bad Request
+2025-08-03 19:08:01 - INFO - Adding XRP to problematic coins list - CoinDesk API not supported
+2025-08-03 19:08:04 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:06 - WARNING - CoinDesk API 400 error for B-DOGE_USDT (DOGE-USDT-VANILLA-PERPETUAL): Bad Request
+2025-08-03 19:08:06 - INFO - Adding DOGE to problematic coins list - CoinDesk API not supported
+2025-08-03 19:08:18 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:09 - INFO - [Long Swing] Generated LONG signal for B-CFX_USDT on 30m - Score: 8/9, Confidence: 0.800, TP: 0.219718, SL: 0.201801
+2025-08-03 19:08:10 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:26 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:27 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:28 - WARNING - CoinDesk API 400 error for B-DOGE_USDT (DOGE-USDT-VANILLA-PERPETUAL): Bad Request
+2025-08-03 19:08:28 - INFO - Adding DOGE to problematic coins list - CoinDesk API not supported
+2025-08-03 19:08:28 - INFO - [Long Swing] Generated SHORT signal for B-VINE_USDT on 30m - Score: 6/9, Confidence: 0.833, TP: 0.061489, SL: 0.070115
+2025-08-03 19:08:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:30 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:33 - INFO - [Long Swing] Generated LONG signal for B-CFX_USDT on 1h - Score: 9/9, Confidence: 0.856, TP: 0.228785, SL: 0.196473
+2025-08-03 19:08:33 - WARNING - CoinDesk API 400 error for B-XRP_USDT (XRP-USDT-VANILLA-PERPETUAL): Bad Request
+2025-08-03 19:08:33 - INFO - Adding XRP to problematic coins list - CoinDesk API not supported
+2025-08-03 19:08:33 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:34 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:36 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f863b110340>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-03 19:08:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:37 - INFO - [Swing] Generated LONG signal for B-PENGU_USDT on 5m - Score: 8/7, Confidence: 1.000, TP: 0.034888, SL: 0.033856
+2025-08-03 19:08:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:37 - INFO - [Long Swing] Generated SHORT signal for B-VINE_USDT on 1h - Score: 8/9, Confidence: 0.944, TP: 0.060023, SL: 0.070946
+2025-08-03 19:08:37 - INFO - Skipping blacklisted symbol: B-FARTCOIN_USDT
+2025-08-03 19:08:38 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:40 - INFO - [Swing] Generated LONG signal for B-SUI_USDT on 15m - Score: 6/7, Confidence: 0.770, TP: 3.497994, SL: 3.394605
+2025-08-03 19:08:40 - INFO - [Long Swing] Generated LONG signal for B-PENGU_USDT on 30m - Score: 8/9, Confidence: 0.869, TP: 0.035413, SL: 0.033795
+2025-08-03 19:08:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:42 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:42 - WARNING - CoinDesk API 400 error for B-XRP_USDT (XRP-USDT-VANILLA-PERPETUAL): Bad Request
+2025-08-03 19:08:42 - INFO - Adding XRP to problematic coins list - CoinDesk API not supported
+2025-08-03 19:08:43 - INFO - [Long Swing] Generated LONG signal for B-PENGU_USDT on 1h - Score: 7/9, Confidence: 0.814, TP: 0.035922, SL: 0.033495
+2025-08-03 19:08:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:44 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-03 19:08:45 - WARNING - CoinDesk API 400 error for B-LTC_USDT (LTC-USDT-VANILLA-PERPETUAL): Bad Request
+2025-08-03 19:08:45 - INFO - Adding LTC to problematic coins list - CoinDesk API not supported
+2025-08-03 19:08:46 - INFO - [Swing] Skipping B-LTC_USDT due to low liquidity (avg_volume=29980.04 < 300000)
+2025-08-03 19:08:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com

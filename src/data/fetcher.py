@@ -321,8 +321,8 @@ class CoinDCXFetcher:
         self.logger.error(f"Failed to fetch order book for {symbol} after {retries} attempts")
         return None
 
-    def fetch_top_movers(self, top_n=40, min_volume=100000, retries=3):
-        """Fetch top N movers (by absolute 24h % change) from CoinDCX futures market data, filtered by min_volume (in USDT)."""
+    def fetch_top_movers(self, top_n=40, min_volume=500000, retries=3):
+        """Fetch top N symbols by volume (REMOVED 24h change logic) from CoinDCX futures market data, filtered by min_volume (in USDT)."""
         for attempt in range(retries):
             try:
                 # Test DNS resolution first
@@ -342,23 +342,23 @@ class CoinDCXFetcher:
                 response.raise_for_status()
                 data = response.json()
                 prices = data.get("prices", {})
-                # Build a list of (symbol, abs(% change), pct_change, volume)
-                movers = []
+                # Build a list of (symbol, volume, pct_change for compatibility)
+                high_volume_symbols = []
                 for symbol, price_data in prices.items():
-                    pct_change = float(price_data.get("pc", 0))
+                    pct_change = float(price_data.get("pc", 0))  # Keep for compatibility but don't use for sorting
                     volume = float(price_data.get("v", 0))
                     if volume >= min_volume:
-                        movers.append((symbol, abs(pct_change), pct_change, volume))
-                # Sort by absolute % change, descending
-                movers.sort(key=lambda x: x[1], reverse=True)
-                # Return top N symbols (with direction info and volume)
-                return [(symbol, pct_change, volume) for symbol, _, pct_change, volume in movers[:top_n]]
+                        high_volume_symbols.append((symbol, volume, pct_change))
+                # Sort by volume only, descending - REMOVED 24h change sorting
+                high_volume_symbols.sort(key=lambda x: x[1], reverse=True)
+                # Return top N symbols (with volume and pct_change for compatibility)
+                return [(symbol, pct_change, volume) for symbol, volume, pct_change in high_volume_symbols[:top_n]]
             except Exception as e:
-                self.logger.error(f"Attempt {attempt + 1}/{retries} - Error fetching top movers: {e}")
+                self.logger.error(f"Attempt {attempt + 1}/{retries} - Error fetching high volume symbols: {e}")
                 if attempt < retries - 1:
                     time.sleep(1)
                 continue
-        self.logger.error("Failed to fetch top movers after retries")
+        self.logger.error("Failed to fetch high volume symbols after retries")
         return []
 
     def _convert_symbol_to_coindesk_format(self, symbol):

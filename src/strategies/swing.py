@@ -73,7 +73,7 @@ class SwingStrategy:
             # Remove VOLATILITY FILTER and add LIQUIDITY FILTER
             volumes = [float(candle["volume"]) for candle in candles]
             avg_volume = sum(volumes[-20:]) / 20 if len(volumes) >= 20 else 1.0
-            min_avg_volume = 100000  # You can adjust this threshold
+            min_avg_volume = 300000  # Increased threshold for highly voluminous signals
             if avg_volume < min_avg_volume:
                 self.logger.info(f"[Swing] Skipping {symbol} due to low liquidity (avg_volume={avg_volume:.2f} < {min_avg_volume})")
                 return None

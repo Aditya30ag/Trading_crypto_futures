@@ -1,0 +1,29 @@
+{
+  "active_alerts": {
+    "B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345_validation_success": {
+      "alert_id": "B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345_validation_success",
+      "signal_id": "B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345",
+      "symbol": "B-DOT_USDT",
+      "type": "validation_success",
+      "message": "\u2705 VALIDATED SIGNAL: B-DOT_USDT SHORT (Score: 8, Confidence: 80.0%, P&L: 0.05%)",
+      "priority": "high",
+      "timestamp": "2025-08-02T20:50:01.624501",
+      "score": 8,
+      "confidence": 0.8,
+      "profit_loss_percent": 0.0480674074702416,
+      "side": "short"
+    },
+    "B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345_confirmation_warning": {
+      "alert_id": "B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345_confirmation_warning",
+      "signal_id": "B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345",
+      "symbol": "B-DOT_USDT",
+      "type": "confirmation_warning",
+      "message": "\u26a0\ufe0f SIGNAL CONFIRMATION: B-DOT_USDT SHORT not performing as expected after 3.1 minutes",
+      "priority": "medium",
+      "timestamp": "2025-08-02T20:52:35.103311",
+      "time_elapsed_minutes": 3.1343394
+    }
+  },
+  "alert_count": 2,
+  "last_update": "2025-08-02T20:53:14.830847"
+}

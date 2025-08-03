@@ -347,9 +347,9 @@ class EnhancedSignalGenerator:
 
     def generate_entry_signals(self) -> List[EntrySignal]:
         try:
-            self.logger.info("=== GENERATING ENTRY SIGNALS (TOP MOVERS, MIXED STRATEGY) ===")
-            self.logger.info("Fetching top 40 movers by 24h %% change from CoinDCX with volume filter...")
-            min_volume = 100000
+            self.logger.info("=== GENERATING ENTRY SIGNALS (HIGH VOLUME SYMBOLS, MIXED STRATEGY) ===")
+            self.logger.info("Fetching top 40 high volume symbols from CoinDCX with increased volume filter...")
+            min_volume = 500000  # Increased from 100K to 500K for highly voluminous signals
             top_movers = self.fetcher.fetch_top_movers(top_n=40, min_volume=min_volume)
             if not top_movers:
                 self.logger.warning("No top movers found")
@@ -392,7 +392,7 @@ class EnhancedSignalGenerator:
                 if not atr_pcts:
                     continue
                 max_atr_pct = max(atr_pcts)
-                if volume >= 100000 and max_atr_pct >= 0.8:
+                if volume >= 500000 and max_atr_pct >= 0.8:  # Increased volume threshold for more selective signals
                     filtered_by_atr.append((symbol, pct_change, volume, max_atr_pct))
             # Sort by ATR% * volume (composite score)
             filtered_by_atr.sort(key=lambda x: x[2] * x[3], reverse=True)

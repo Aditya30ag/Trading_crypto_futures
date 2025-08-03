@@ -74,7 +74,7 @@ class LongSwingStrategy:
             # Remove VOLATILITY FILTER and add LIQUIDITY FILTER
             volumes = [float(candle["volume"]) for candle in candles]
             avg_volume = sum(volumes[-20:]) / 20 if len(volumes) >= 20 else 1.0
-            min_avg_volume = 100000  # You can adjust this threshold
+            min_avg_volume = 300000  # Increased threshold for highly voluminous signals
             if avg_volume < min_avg_volume:
                 self.logger.info(f"[LongSwing] Skipping {symbol} due to low liquidity (avg_volume={avg_volume:.2f} < {min_avg_volume})")
                 return None
@@ -232,25 +232,25 @@ class LongSwingStrategy:
                 bonus_score += 1
                 bonus_reasons.append("Entry near Fib 61.8% level")
 
-            # Check long/short conditions (NEED 6 out of 8 for reliability)
+            # Check long/short conditions (REDUCED TO 5 out of 8 for better signal generation)
             long_score = sum(1 for _, condition in long_conditions if condition)
             short_score = sum(1 for _, condition in short_conditions if condition)
             self.logger.debug(f"[Long Swing] {symbol} {timeframe} Long conditions: {[(name, condition) for name, condition in long_conditions]}")
             self.logger.debug(f"[Long Swing] {symbol} {timeframe} Short conditions: {[(name, condition) for name, condition in short_conditions]}")
             
-            # DETERMINE TRADE DIRECTION (NEED 6 out of 8 for reliability)
-            if long_score >= 6 and long_score > short_score:
+            # DETERMINE TRADE DIRECTION (REDUCED TO 5 out of 8 for better signal generation)
+            if long_score >= 5 and long_score > short_score:
                 side = "long"
                 score = long_score
                 reasons = [name for name, condition in long_conditions if condition]
                 self.logger.debug(f"[Long Swing] LONG signal conditions met: {reasons}")
-            elif short_score >= 6 and short_score > long_score:
+            elif short_score >= 5 and short_score > long_score:
                 side = "short"
                 score = short_score
                 reasons = [name for name, condition in short_conditions if condition]
                 self.logger.debug(f"[Long Swing] SHORT signal conditions met: {reasons}")
             else:
-                self.logger.debug(f"[Long Swing] No signal: Long score={long_score}/8, Short score={short_score}/8 (need 6+)")
+                self.logger.debug(f"[Long Swing] No signal: Long score={long_score}/8, Short score={short_score}/8 (need 5+)")
                 return None
             # Force direction if specified
             if direction is not None and side != direction:
@@ -262,17 +262,21 @@ class LongSwingStrategy:
             if side and score >= 6:  # Need 6 out of 8 conditions
                 entry_price = current_price
                 
-                # SIMPLIFIED: Realistic TP/SL for long swing trading
+                # IMPROVED: Better TP/SL for long swing trading with ATR
                 if side == "long":
                     # Long trade: SL below entry, TP above entry
-                    stop_loss = entry_price * 0.985  # 1.5% below entry
-                    tp1 = entry_price * 1.015  # 1.5% above entry
-                    tp2 = entry_price * 1.02   # 2% above entry (capped)
+                    atr_multiplier_sl = 1.5
+                    atr_multiplier_tp = 2.5
+                    stop_loss = entry_price - (atr * atr_multiplier_sl)
+                    tp1 = entry_price + (atr * atr_multiplier_tp)
+                    tp2 = entry_price + (atr * (atr_multiplier_tp + 1.0))
                 else:
                     # Short trade: SL above entry, TP below entry
-                    stop_loss = entry_price * 1.015  # 1.5% above entry
-                    tp1 = entry_price * 0.985  # 1.5% below entry
-                    tp2 = entry_price * 0.98   # 2% below entry (capped)
+                    atr_multiplier_sl = 1.5
+                    atr_multiplier_tp = 2.5
+                    stop_loss = entry_price + (atr * atr_multiplier_sl)
+                    tp1 = entry_price - (atr * atr_multiplier_tp)
+                    tp2 = entry_price - (atr * (atr_multiplier_tp + 1.0))
 
                 # Calculate estimated profit in INR
                 usdt_inr_rate = self.fetcher.fetch_usdt_inr_rate()

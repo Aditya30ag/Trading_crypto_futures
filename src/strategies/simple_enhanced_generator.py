@@ -20,14 +20,16 @@ class SimpleEnhancedGenerator:
         self.balance = balance
         self.logger = setup_logger()
         
-        # Relaxed thresholds for current market conditions
-        self.min_score_threshold = 6  # Reduced from 8
-        self.min_profit_threshold = 200  # Reduced from 500
+        # Enhanced thresholds for better signal quality
+        self.min_score_threshold = 7  # Increased from 6 for better quality
+        self.min_profit_threshold = 300  # Increased from 200
         self.max_signals = 3
+        self.confirmation_required = True  # New: require signal confirmation
         
     def generate_signals(self) -> List[Dict]:
-        """Generate 2-3 high-quality signals."""
-        self.logger.info("Starting simple enhanced signal generation")
+        """Generate 2-3 high-quality signals with confirmation."""
+        self.logger.info("Starting simple enhanced signal generation with "
+                        "confirmation")
         
         # Use existing instruments
         instruments = self.config["trading"]["instruments"][:5]  # Top 5 instruments
@@ -39,8 +41,14 @@ class SimpleEnhancedGenerator:
             try:
                 signal = self._generate_signal(symbol)
                 if signal:
-                    all_signals.append(signal)
-                    self.logger.info(f"Generated signal for {symbol}: {signal['direction']}")
+                    # NEW: Confirm signal before adding
+                    if self._confirm_signal(signal):
+                        all_signals.append(signal)
+                        self.logger.info(f"✅ CONFIRMED signal for {symbol}: "
+                                       f"{signal['direction']} (Score: {signal['score']})")
+                    else:
+                        self.logger.info(f"❌ Signal for {symbol} failed "
+                                       f"confirmation")
             except Exception as e:
                 self.logger.error(f"Error generating signal for {symbol}: {e}")
                 continue
@@ -49,8 +57,87 @@ class SimpleEnhancedGenerator:
         all_signals.sort(key=lambda x: x['score'], reverse=True)
         top_signals = all_signals[:self.max_signals]
         
-        self.logger.info(f"Signal generation complete: {len(top_signals)} signals")
+        self.logger.info(f"Signal generation complete: {len(top_signals)} confirmed signals")
         return top_signals
+    
+    def _confirm_signal(self, signal: Dict) -> bool:
+        """Confirm signal validity before displaying."""
+        try:
+            symbol = signal['symbol']
+            direction = signal['side']
+            
+            # Get fresh market data for confirmation
+            market_data = self.fetcher.fetch_market_data(symbol)
+            if not market_data:
+                self.logger.warning(f"Could not fetch market data for {symbol} confirmation")
+                return False
+            
+            current_price = market_data["last_price"]
+            
+            # Get fresh candlestick data
+            candles = self.fetcher.fetch_candlestick_data(symbol, "15m", limit=50)
+            if not candles or len(candles) < 30:
+                self.logger.warning(f"Insufficient candlestick data for {symbol} confirmation")
+                return False
+            
+            # Recalculate key indicators for confirmation
+            fresh_indicators = self._calculate_indicators(candles)
+            if not fresh_indicators:
+                return False
+            
+            # Confirmation checks
+            confirmation_score = 0
+            
+            # 1. Price vs EMA trend confirmation
+            if direction == 'long':
+                if current_price > fresh_indicators['ema_20'] > fresh_indicators['ema_50']:
+                    confirmation_score += 2
+                    self.logger.info(f"✅ {symbol}: Price above EMA20 and EMA20 > EMA50 (bullish)")
+                else:
+                    self.logger.warning(f"❌ {symbol}: Price/EMA trend doesn't confirm long signal")
+            else:  # short
+                if current_price < fresh_indicators['ema_20'] < fresh_indicators['ema_50']:
+                    confirmation_score += 2
+                    self.logger.info(f"✅ {symbol}: Price below EMA20 and EMA20 < EMA50 (bearish)")
+                else:
+                    self.logger.warning(f"❌ {symbol}: Price/EMA trend doesn't confirm short signal")
+            
+            # 2. RSI confirmation
+            rsi = fresh_indicators['rsi']
+            if direction == 'long' and 30 <= rsi <= 70:
+                confirmation_score += 1
+                self.logger.info(f"✅ {symbol}: RSI in optimal range for long ({rsi:.1f})")
+            elif direction == 'short' and 30 <= rsi <= 70:
+                confirmation_score += 1
+                self.logger.info(f"✅ {symbol}: RSI in optimal range for short ({rsi:.1f})")
+            else:
+                self.logger.warning(f"❌ {symbol}: RSI not optimal for {direction} ({rsi:.1f})")
+            
+            # 3. MACD confirmation
+            macd = fresh_indicators['macd']
+            if direction == 'long' and macd > 0:
+                confirmation_score += 1
+                self.logger.info(f"✅ {symbol}: MACD bullish for long ({macd:.6f})")
+            elif direction == 'short' and macd < 0:
+                confirmation_score += 1
+                self.logger.info(f"✅ {symbol}: MACD bearish for short ({macd:.6f})")
+            else:
+                self.logger.warning(f"❌ {symbol}: MACD doesn't confirm {direction} ({macd:.6f})")
+            
+            # 4. Volume confirmation (if available)
+            if market_data.get("volume", 0) > 0:
+                confirmation_score += 1
+                self.logger.info(f"✅ {symbol}: Volume data available")
+            
+            # Require at least 3 out of 4 confirmations
+            confirmed = confirmation_score >= 3
+            self.logger.info(f"{symbol} confirmation score: {confirmation_score}/4 ({'CONFIRMED' if confirmed else 'REJECTED'})")
+            
+            return confirmed
+            
+        except Exception as e:
+            self.logger.error(f"Error confirming signal for {signal['symbol']}: {e}")
+            return False
     
     def _generate_signal(self, symbol: str) -> Optional[Dict]:
         """Generate a single high-quality signal."""
@@ -72,8 +159,8 @@ class SimpleEnhancedGenerator:
             if not indicators:
                 return None
             
-            # Determine signal direction
-            signal_direction = self._determine_direction(indicators, current_price)
+            # Determine signal direction with enhanced logic
+            signal_direction = self._determine_direction_enhanced(indicators, current_price)
             if not signal_direction:
                 return None
             
@@ -160,41 +247,90 @@ class SimpleEnhancedGenerator:
             self.logger.error(f"Error calculating indicators: {e}")
             return None
     
-    def _determine_direction(self, indicators: Dict, current_price: float) -> Optional[str]:
-        """Determine signal direction based on indicators."""
+    def _determine_direction_enhanced(self, indicators: Dict, current_price: float) -> Optional[str]:
+        """Enhanced direction determination with better logic."""
         try:
-            # Long conditions
+            # Long conditions with weighted scoring
             long_score = 0
+            long_reasons = []
+            
+            # Trend conditions (weight: 3)
             if indicators['ema_20'] > indicators['ema_50']:
-                long_score += 1
-            if indicators['rsi'] > 40 and indicators['rsi'] < 70:
-                long_score += 1
-            if indicators['macd'] > 0:
-                long_score += 1
+                long_score += 3
+                long_reasons.append("EMA trend bullish")
+            
+            # Price vs EMA conditions (weight: 2)
             if current_price > indicators['ema_20']:
-                long_score += 1
-            if indicators['stoch_rsi']['%K'] > 20 and indicators['stoch_rsi']['%K'] < 80:
-                long_score += 1
+                long_score += 2
+                long_reasons.append("Price above EMA20")
             
-            # Short conditions
+            # RSI conditions (weight: 2)
+            if 40 <= indicators['rsi'] <= 70:
+                long_score += 2
+                long_reasons.append("RSI in optimal range")
+            elif indicators['rsi'] < 40:
+                long_score += 1
+                long_reasons.append("RSI oversold (potential reversal)")
+            
+            # MACD conditions (weight: 2)
+            if indicators['macd'] > 0:
+                long_score += 2
+                long_reasons.append("MACD bullish")
+            
+            # StochRSI conditions (weight: 1)
+            stoch_k = indicators['stoch_rsi']['%K']
+            if 20 <= stoch_k <= 80:
+                long_score += 1
+                long_reasons.append("StochRSI not extreme")
+            
+            # Short conditions with weighted scoring
             short_score = 0
-            if indicators['ema_20'] < indicators['ema_50']:
-                short_score += 1
-            if indicators['rsi'] < 60 and indicators['rsi'] > 30:
-                short_score += 1
-            if indicators['macd'] < 0:
-                short_score += 1
-            if current_price < indicators['ema_20']:
-                short_score += 1
-            if indicators['stoch_rsi']['%K'] > 20 and indicators['stoch_rsi']['%K'] < 80:
-                short_score += 1
+            short_reasons = []
             
-            # Need at least 3 out of 5 conditions
-            if long_score >= 3 and long_score > short_score:
+            # Trend conditions (weight: 3)
+            if indicators['ema_20'] < indicators['ema_50']:
+                short_score += 3
+                short_reasons.append("EMA trend bearish")
+            
+            # Price vs EMA conditions (weight: 2)
+            if current_price < indicators['ema_20']:
+                short_score += 2
+                short_reasons.append("Price below EMA20")
+            
+            # RSI conditions (weight: 2)
+            if 30 <= indicators['rsi'] <= 60:
+                short_score += 2
+                short_reasons.append("RSI in optimal range")
+            elif indicators['rsi'] > 70:
+                short_score += 1
+                short_reasons.append("RSI overbought (potential reversal)")
+            
+            # MACD conditions (weight: 2)
+            if indicators['macd'] < 0:
+                short_score += 2
+                short_reasons.append("MACD bearish")
+            
+            # StochRSI conditions (weight: 1)
+            if 20 <= stoch_k <= 80:
+                short_score += 1
+                short_reasons.append("StochRSI not extreme")
+            
+            # Determine direction with clear winner
+            max_score = max(long_score, short_score)
+            min_score_threshold = 6  # Require at least 6 points
+            
+            if max_score < min_score_threshold:
+                self.logger.info(f"Insufficient score for direction: long={long_score}, short={short_score}")
+                return None
+            
+            if long_score > short_score and long_score >= min_score_threshold:
+                self.logger.info(f"LONG signal: {long_score} points - {', '.join(long_reasons)}")
                 return 'long'
-            elif short_score >= 3 and short_score > long_score:
+            elif short_score > long_score and short_score >= min_score_threshold:
+                self.logger.info(f"SHORT signal: {short_score} points - {', '.join(short_reasons)}")
                 return 'short'
             
+            self.logger.info(f"No clear direction: long={long_score}, short={short_score}")
             return None
             
         except Exception as e:

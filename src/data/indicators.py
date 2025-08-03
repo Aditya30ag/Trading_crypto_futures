@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from src.utils.logger import setup_logger
 
+
 class TechnicalIndicators:
     def __init__(self):
         self.logger = setup_logger()
@@ -14,7 +15,10 @@ class TechnicalIndicators:
             delta = df.diff()
             gain = (delta.where(delta > 0, 0)).rolling(window=period).mean()
             loss = (-delta.where(delta < 0, 0)).rolling(window=period).mean()
+            
+            # Handle division by zero in RSI calculation
             rs = gain / loss
+            rs = rs.replace([np.inf, -np.inf], 0)  # Replace infinite values
             rsi = 100 - (100 / (1 + rs))
             return rsi.iloc[-1]
         except Exception as e:
@@ -79,25 +83,58 @@ class TechnicalIndicators:
         try:
             closes = [float(candle["close"]) for candle in data]
             if len(set(closes)) == 1:
-                self.logger.warning("All close prices are identical (flat candles), cannot calculate StochRSI.")
+                self.logger.warning(
+                    "All close prices are identical (flat candles), "
+                    "cannot calculate StochRSI."
+                )
                 return None
             df = pd.Series(closes)
             delta = df.diff()
             gain = (delta.where(delta > 0, 0)).rolling(window=period).mean()
             loss = (-delta.where(delta < 0, 0)).rolling(window=period).mean()
+            
+            # Handle division by zero in RSI calculation
             rs = gain / loss
+            rs = rs.replace([np.inf, -np.inf], 0)  # Replace infinite values
             rsi = 100 - (100 / (1 + rs))
-            stoch_rsi = (rsi - rsi.rolling(window=period).min()) / (rsi.rolling(window=period).max() - rsi.rolling(window=period).min())
+            
+            # Calculate StochRSI with proper division by zero handling
+            rsi_min = rsi.rolling(window=period).min()
+            rsi_max = rsi.rolling(window=period).max()
+            denominator = rsi_max - rsi_min
+            
+            # Handle division by zero in StochRSI calculation
+            stoch_rsi = np.where(
+                denominator != 0,
+                (rsi - rsi_min) / denominator,
+                0.5  # Default to 0.5 when denominator is zero
+            )
+            
+            stoch_rsi = pd.Series(stoch_rsi, index=rsi.index)
             k = stoch_rsi.rolling(window=smooth_k).mean()
             d = k.rolling(window=smooth_d).mean()
+            
             # Fix NaN for %D
             d_value = d.iloc[-1]
             if pd.isna(d_value):
-                self.logger.warning("StochRSI %D is NaN, setting to 0.0 (not enough data for smoothing window)")
-                d_value = 0.0
+                self.logger.warning(
+                    "StochRSI %D is NaN, setting to 0.5 "
+                    "(not enough data for smoothing window)"
+                )
+                d_value = 0.5
+            
+            k_value = k.iloc[-1]
+            if pd.isna(k_value):
+                self.logger.warning("StochRSI %K is NaN, setting to 0.5")
+                k_value = 0.5
+                
+            stoch_rsi_value = stoch_rsi.iloc[-1]
+            if pd.isna(stoch_rsi_value):
+                stoch_rsi_value = 0.5
+                
             return {
-                "stoch_rsi": stoch_rsi.iloc[-1],
-                "%K": k.iloc[-1],
+                "stoch_rsi": stoch_rsi_value,
+                "%K": k_value,
                 "%D": d_value
             }
         except Exception as e:
@@ -364,12 +401,25 @@ class TechnicalIndicators:
             df["dm_plus_smooth"] = df["dm_plus"].rolling(window=period).mean()
             df["dm_minus_smooth"] = df["dm_minus"].rolling(window=period).mean()
             
-            # Calculate Directional Indicators (DI)
-            df["di_plus"] = 100 * (df["dm_plus_smooth"] / df["tr_smooth"])
-            df["di_minus"] = 100 * (df["dm_minus_smooth"] / df["tr_smooth"])
+            # Calculate Directional Indicators (DI) with division by zero handling
+            df["di_plus"] = np.where(
+                df["tr_smooth"] != 0,
+                100 * (df["dm_plus_smooth"] / df["tr_smooth"]),
+                0
+            )
+            df["di_minus"] = np.where(
+                df["tr_smooth"] != 0,
+                100 * (df["dm_minus_smooth"] / df["tr_smooth"]),
+                0
+            )
             
-            # Calculate Directional Index (DX)
-            df["dx"] = 100 * abs(df["di_plus"] - df["di_minus"]) / (df["di_plus"] + df["di_minus"])
+            # Calculate Directional Index (DX) with division by zero handling
+            denominator = df["di_plus"] + df["di_minus"]
+            df["dx"] = np.where(
+                denominator != 0,
+                100 * abs(df["di_plus"] - df["di_minus"]) / denominator,
+                0
+            )
             
             # Calculate ADX (Average of DX)
             adx = df["dx"].rolling(window=period).mean()
@@ -484,8 +534,17 @@ class TechnicalIndicators:
             tp_series = pd.Series(typical_price)
             sma = tp_series.rolling(window=period).mean()
             mad = tp_series.rolling(window=period).apply(lambda x: np.mean(np.abs(x - np.mean(x))))
-            cci = (tp_series - sma) / (0.015 * mad)
-            return cci.iloc[-1]
+            
+            # Handle division by zero in CCI calculation
+            cci = np.where(
+                mad != 0,
+                (tp_series - sma) / (0.015 * mad),
+                0  # Default to 0 when MAD is zero
+            )
+            
+            # Convert to pandas Series to use iloc, then get the last value
+            cci_series = pd.Series(cci)
+            return cci_series.iloc[-1]
         except Exception as e:
             self.logger.error(f"Error calculating CCI: {e}")
             return None

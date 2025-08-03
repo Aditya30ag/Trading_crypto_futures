@@ -1,0 +1,42 @@
+[
+  {
+    "symbol": "B-DOT_USDT",
+    "timeframe": "15m",
+    "strategy": "enhanced",
+    "direction": "TradeDirection.SHORT",
+    "entry_price": 3.5367,
+    "stop_loss": 3.5718750000000004,
+    "take_profit": 3.4663500000000003,
+    "tp1": 3.4663500000000003,
+    "tp2": 3.4663500000000003,
+    "max_hold_time": 6,
+    "score": 8,
+    "score_max": 10,
+    "score_reasons": [
+      "EMA trend bearish",
+      "RSI in optimal range",
+      "MACD bearish",
+      "Sufficient volatility"
+    ],
+    "indicators": {
+      "rsi": 45.550715619166155,
+      "ema_20": 3.539791664678994,
+      "ema_50": 3.553588426551411,
+      "macd": -0.007026999537822931,
+      "bollinger_upper": 3.5717815380972624,
+      "bollinger_lower": 3.5087184619027383,
+      "stoch_rsi": {
+        "stoch_rsi": 0.5680522299825932,
+        "%K": 0.297279925538969,
+        "%D": 0.28715800507816275
+      },
+      "atr": 0.023450000000000002
+    },
+    "timestamp": "2025-08-02T20:49:26.905345",
+    "estimated_profit_inr": 1242.2816025532259,
+    "confidence": 0.8,
+    "quality_score": 80,
+    "normalized_score": 80,
+    "side": "short"
+  }
+]

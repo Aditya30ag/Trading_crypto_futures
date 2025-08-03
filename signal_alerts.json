@@ -1,0 +1,365 @@
+[
+  {
+    "alert_id": "market_extreme_1754146266",
+    "type": "market_extreme",
+    "message": "\ud83c\udf0a MARKET ALERT: 10 symbols with >10% moves detected",
+    "priority": "high",
+    "timestamp": "2025-08-02T20:21:06.432242",
+    "extreme_moves": [
+      [
+        "B-ALPACA_USDT",
+        252.332,
+        2025320128.75309
+      ],
+      [
+        "B-BNX_USDT",
+        56.578,
+        400940211.62039
+      ],
+      [
+        "B-TROY_USDT",
+        -34.397,
+        50784263.143536
+      ],
+      [
+        "B-LINA_USDT",
+        30.675,
+        39931780.096196
+      ],
+      [
+        "B-MAGIC_USDT",
+        30.533,
+        805423718.28964
+      ]
+    ]
+  },
+  {
+    "alert_id": "market_extreme_1754146295",
+    "type": "market_extreme",
+    "message": "\ud83c\udf0a MARKET ALERT: 10 symbols with >10% moves detected",
+    "priority": "high",
+    "timestamp": "2025-08-02T20:21:35.497195",
+    "extreme_moves": [
+      [
+        "B-ALPACA_USDT",
+        252.332,
+        2025320128.75309
+      ],
+      [
+        "B-BNX_USDT",
+        56.578,
+        400940211.62039
+      ],
+      [
+        "B-TROY_USDT",
+        -34.397,
+        50784263.143536
+      ],
+      [
+        "B-LINA_USDT",
+        30.675,
+        39931780.096196
+      ],
+      [
+        "B-MAGIC_USDT",
+        30.554,
+        805746606.35013
+      ]
+    ]
+  },
+  {
+    "alert_id": "market_extreme_1754147979",
+    "type": "market_extreme",
+    "message": "\ud83c\udf0a MARKET ALERT: 10 symbols with >10% moves detected",
+    "priority": "high",
+    "timestamp": "2025-08-02T20:49:39.928233",
+    "extreme_moves": [
+      [
+        "B-ALPACA_USDT",
+        252.332,
+        2025320128.75309
+      ],
+      [
+        "B-BNX_USDT",
+        56.578,
+        400940211.62039
+      ],
+      [
+        "B-TROY_USDT",
+        -34.397,
+        50784263.143536
+      ],
+      [
+        "B-LINA_USDT",
+        30.675,
+        39931780.096196
+      ],
+      [
+        "B-MAGIC_USDT",
+        30.014,
+        824298790.24263
+      ]
+    ]
+  },
+  {
+    "alert_id": "B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345_validation_success",
+    "signal_id": "B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345",
+    "symbol": "B-DOT_USDT",
+    "type": "validation_success",
+    "message": "\u2705 VALIDATED SIGNAL: B-DOT_USDT SHORT (Score: 8, Confidence: 80.0%, P&L: 0.05%)",
+    "priority": "high",
+    "timestamp": "2025-08-02T20:50:01.624501",
+    "score": 8,
+    "confidence": 0.8,
+    "profit_loss_percent": 0.0480674074702416,
+    "side": "short"
+  },
+  {
+    "alert_id": "market_extreme_1754148001",
+    "type": "market_extreme",
+    "message": "\ud83c\udf0a MARKET ALERT: 10 symbols with >10% moves detected",
+    "priority": "high",
+    "timestamp": "2025-08-02T20:50:01.799242",
+    "extreme_moves": [
+      [
+        "B-ALPACA_USDT",
+        252.332,
+        2025320128.75309
+      ],
+      [
+        "B-BNX_USDT",
+        56.578,
+        400940211.62039
+      ],
+      [
+        "B-TROY_USDT",
+        -34.397,
+        50784263.143536
+      ],
+      [
+        "B-LINA_USDT",
+        30.675,
+        39931780.096196
+      ],
+      [
+        "B-MAGIC_USDT",
+        29.944,
+        824538336.75394
+      ]
+    ]
+  },
+  {
+    "alert_id": "market_extreme_1754148041",
+    "type": "market_extreme",
+    "message": "\ud83c\udf0a MARKET ALERT: 10 symbols with >10% moves detected",
+    "priority": "high",
+    "timestamp": "2025-08-02T20:50:41.546700",
+    "extreme_moves": [
+      [
+        "B-ALPACA_USDT",
+        252.332,
+        2025320128.75309
+      ],
+      [
+        "B-BNX_USDT",
+        56.578,
+        400940211.62039
+      ],
+      [
+        "B-TROY_USDT",
+        -34.397,
+        50784263.143536
+      ],
+      [
+        "B-LINA_USDT",
+        30.675,
+        39931780.096196
+      ],
+      [
+        "B-MAGIC_USDT",
+        29.784,
+        824755956.09972
+      ]
+    ]
+  },
+  {
+    "alert_id": "market_extreme_1754148071",
+    "type": "market_extreme",
+    "message": "\ud83c\udf0a MARKET ALERT: 10 symbols with >10% moves detected",
+    "priority": "high",
+    "timestamp": "2025-08-02T20:51:11.999687",
+    "extreme_moves": [
+      [
+        "B-ALPACA_USDT",
+        252.332,
+        2025320128.75309
+      ],
+      [
+        "B-BNX_USDT",
+        56.578,
+        400940211.62039
+      ],
+      [
+        "B-TROY_USDT",
+        -34.397,
+        50784263.143536
+      ],
+      [
+        "B-LINA_USDT",
+        30.675,
+        39931780.096196
+      ],
+      [
+        "B-MAGIC_USDT",
+        30.223,
+        824848261.68116
+      ]
+    ]
+  },
+  {
+    "alert_id": "market_extreme_1754148093",
+    "type": "market_extreme",
+    "message": "\ud83c\udf0a MARKET ALERT: 10 symbols with >10% moves detected",
+    "priority": "high",
+    "timestamp": "2025-08-02T20:51:33.742298",
+    "extreme_moves": [
+      [
+        "B-ALPACA_USDT",
+        252.332,
+        2025320128.75309
+      ],
+      [
+        "B-BNX_USDT",
+        56.578,
+        400940211.62039
+      ],
+      [
+        "B-TROY_USDT",
+        -34.397,
+        50784263.143536
+      ],
+      [
+        "B-LINA_USDT",
+        30.675,
+        39931780.096196
+      ],
+      [
+        "B-MAGIC_USDT",
+        30.292,
+        825053931.74687
+      ]
+    ]
+  },
+  {
+    "alert_id": "market_extreme_1754148133",
+    "type": "market_extreme",
+    "message": "\ud83c\udf0a MARKET ALERT: 10 symbols with >10% moves detected",
+    "priority": "high",
+    "timestamp": "2025-08-02T20:52:13.443083",
+    "extreme_moves": [
+      [
+        "B-ALPACA_USDT",
+        252.332,
+        2025320128.75309
+      ],
+      [
+        "B-BNX_USDT",
+        56.578,
+        400940211.62039
+      ],
+      [
+        "B-TROY_USDT",
+        -34.397,
+        50784263.143536
+      ],
+      [
+        "B-LINA_USDT",
+        30.675,
+        39931780.096196
+      ],
+      [
+        "B-MAGIC_USDT",
+        30.362,
+        825180290.52165
+      ]
+    ]
+  },
+  {
+    "alert_id": "B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345_confirmation_warning",
+    "signal_id": "B-DOT_USDT_enhanced_2025-08-02T20:49:26.905345",
+    "symbol": "B-DOT_USDT",
+    "type": "confirmation_warning",
+    "message": "\u26a0\ufe0f SIGNAL CONFIRMATION: B-DOT_USDT SHORT not performing as expected after 3.1 minutes",
+    "priority": "medium",
+    "timestamp": "2025-08-02T20:52:35.103311",
+    "time_elapsed_minutes": 3.1343394
+  },
+  {
+    "alert_id": "market_extreme_1754148155",
+    "type": "market_extreme",
+    "message": "\ud83c\udf0a MARKET ALERT: 10 symbols with >10% moves detected",
+    "priority": "high",
+    "timestamp": "2025-08-02T20:52:35.348909",
+    "extreme_moves": [
+      [
+        "B-ALPACA_USDT",
+        252.332,
+        2025320128.75309
+      ],
+      [
+        "B-BNX_USDT",
+        56.578,
+        400940211.62039
+      ],
+      [
+        "B-TROY_USDT",
+        -34.397,
+        50784263.143536
+      ],
+      [
+        "B-LINA_USDT",
+        30.675,
+        39931780.096196
+      ],
+      [
+        "B-MAGIC_USDT",
+        29.944,
+        825476305.31291
+      ]
+    ]
+  },
+  {
+    "alert_id": "market_extreme_1754148194",
+    "type": "market_extreme",
+    "message": "\ud83c\udf0a MARKET ALERT: 10 symbols with >10% moves detected",
+    "priority": "high",
+    "timestamp": "2025-08-02T20:53:14.829567",
+    "extreme_moves": [
+      [
+        "B-ALPACA_USDT",
+        252.332,
+        2025320128.75309
+      ],
+      [
+        "B-BNX_USDT",
+        56.578,
+        400940211.62039
+      ],
+      [
+        "B-TROY_USDT",
+        -34.397,
+        50784263.143536
+      ],
+      [
+        "B-LINA_USDT",
+        30.675,
+        39931780.096196
+      ],
+      [
+        "B-MAGIC_USDT",
+        30.084,
+        825555499.16396
+      ]
+    ]
+  }
+]
