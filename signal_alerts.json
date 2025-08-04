@@ -361,5 +361,38 @@
         825555499.16396
       ]
     ]
+  },
+  {
+    "alert_id": "market_extreme_1754232788",
+    "type": "market_extreme",
+    "message": "\ud83c\udf0a MARKET ALERT: 1 symbols with >10% moves detected",
+    "priority": "high",
+    "timestamp": "2025-08-03T20:23:08.063757",
+    "extreme_moves": [
+      [
+        "B-ALPACA_USDT",
+        252.332,
+        2025320128.75309
+      ]
+    ]
+  },
+  {
+    "alert_id": "market_extreme_1754307045",
+    "type": "market_extreme",
+    "message": "\ud83c\udf0a MARKET ALERT: 2 symbols with >10% moves detected",
+    "priority": "high",
+    "timestamp": "2025-08-04T17:00:45.870461",
+    "extreme_moves": [
+      [
+        "B-ALPACA_USDT",
+        252.332,
+        2025320128.75309
+      ],
+      [
+        "B-ENA_USDT",
+        10.156,
+        1304913041.3299
+      ]
+    ]
   }
 ]
