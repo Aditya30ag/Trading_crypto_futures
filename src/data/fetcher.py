@@ -17,6 +17,11 @@ class CoinDCXFetcher:
         self.api_base_url = self.config["api"]["api_base_url"]
         self.logger = setup_logger()
         
+        # Configure external APIs
+        self.external_apis = self.config.get("external_apis", {})
+        self.coindesk_enabled = self.external_apis.get("coindesk", {}).get("enabled", False)
+        self.coindesk_config = self.external_apis.get("coindesk", {})
+        
         # Create a session with better connection handling
         self.session = requests.Session()
         self.session.headers.update({
@@ -32,8 +37,14 @@ class CoinDCXFetcher:
         self.session.mount('http://', adapter)
         self.session.mount('https://', adapter)
         
+        # Initialize CoinDesk error tracking to reduce spam
+        self._coindesk_failed_symbols = set()
+        self._coindesk_error_count = 0
+        self._max_coindesk_errors = 10  # Stop trying after 10 errors
+        
         self.logger.info("CoinDCXFetcher initialized with public_base_url: %s, api_base_url: %s", 
                          self.public_base_url, self.api_base_url)
+        self.logger.info("CoinDesk API enabled: %s", self.coindesk_enabled)
 
     def fetch_market_data(self, symbol, retries=3):
         """Fetch real-time market data for a futures symbol with retries."""
@@ -443,12 +454,29 @@ class CoinDCXFetcher:
         Returns:
             List of candle dictionaries with OHLCV data
         """
+        # Check if CoinDesk API is enabled
+        if not self.coindesk_enabled:
+            self.logger.debug(f"CoinDesk API is disabled, skipping {symbol}")
+            return []
+        
+        # Check if we've hit too many errors globally
+        if self._coindesk_error_count >= self._max_coindesk_errors:
+            self.logger.debug(f"CoinDesk API disabled due to too many errors ({self._coindesk_error_count})")
+            return []
+        
+        # Check if this specific symbol failed before
+        if symbol in self._coindesk_failed_symbols:
+            self.logger.debug(f"Symbol {symbol} previously failed CoinDesk API, skipping")
+            return []
+        
         # Check if symbol is likely supported before making API call
         if not self._is_likely_coindesk_supported(symbol):
             self.logger.debug(f"Symbol {symbol} is unlikely to be supported by CoinDesk, skipping")
             return []
         
-        for attempt in range(retries):
+        # Use configured retries
+        max_retries = self.coindesk_config.get("max_retries", 1)
+        for attempt in range(max_retries):
             try:
                 # Map timeframe to aggregate parameter
                 timeframe_map = {
@@ -479,13 +507,18 @@ class CoinDCXFetcher:
                 
                 # Check for specific error responses
                 if response.status_code == 400:
-                    error_data = response.json() if response.content else {}
-                    error_msg = error_data.get('message', 'Bad Request')
-                    self.logger.warning(f"CoinDesk API 400 error for {symbol} ({instrument}): {error_msg}")
-                    # Add this symbol to problematic list for future reference
-                    if symbol.startswith('B-'):
-                        base_symbol = symbol[2:].split('_')[0]
-                        self.logger.info(f"Adding {base_symbol} to problematic coins list - CoinDesk API not supported")
+                    # Track this symbol as failed
+                    self._coindesk_failed_symbols.add(symbol)
+                    self._coindesk_error_count += 1
+                    
+                    # Only log the first few errors to avoid spam
+                    if self._coindesk_error_count <= 3:
+                        error_data = response.json() if response.content else {}
+                        error_msg = error_data.get('message', 'Bad Request')
+                        self.logger.warning(f"CoinDesk API 400 error for {symbol} ({instrument}): {error_msg}")
+                    elif self._coindesk_error_count == self._max_coindesk_errors:
+                        self.logger.warning(f"CoinDesk API has failed {self._max_coindesk_errors} times, disabling for this session")
+                    
                     # This instrument is not supported by CoinDesk, return empty list
                     return []
                 
@@ -526,20 +559,31 @@ class CoinDCXFetcher:
                 continue
             except requests.exceptions.HTTPError as e:
                 if e.response.status_code == 400:
-                    self.logger.warning(f"CoinDesk API 400 error for {symbol} - instrument not supported")
+                    # Track as failed and reduce spam
+                    self._coindesk_failed_symbols.add(symbol)
+                    self._coindesk_error_count += 1
+                    if self._coindesk_error_count <= 3:
+                        self.logger.warning(f"CoinDesk API 400 error for {symbol} - instrument not supported")
                     return []  # Don't retry for 400 errors
                 else:
-                    self.logger.error(f"HTTP error on attempt {attempt + 1}/{retries} for {symbol}: {e}")
-                    if attempt < retries - 1:
+                    self._coindesk_error_count += 1
+                    if self._coindesk_error_count <= 3:
+                        self.logger.error(f"HTTP error on attempt {attempt + 1}/{max_retries} for {symbol}: {e}")
+                    if attempt < max_retries - 1:
                         time.sleep(1)
                     continue
             except Exception as e:
-                self.logger.error(f"Unexpected error on attempt {attempt + 1}/{retries} for {symbol}: {e}")
-                if attempt < retries - 1:
+                self._coindesk_error_count += 1
+                if self._coindesk_error_count <= 3:
+                    self.logger.error(f"Unexpected error on attempt {attempt + 1}/{max_retries} for {symbol}: {e}")
+                if attempt < max_retries - 1:
                     time.sleep(1)
                 continue
                 
-        self.logger.error(f"Failed to fetch CoinDesk candlestick data for {symbol} after {retries} attempts")
+        # Track as failed after all retries exhausted
+        self._coindesk_failed_symbols.add(symbol)
+        if self._coindesk_error_count <= 3:
+            self.logger.error(f"Failed to fetch CoinDesk candlestick data for {symbol} after {max_retries} attempts")
         return []
 
     def fetch_multi_timeframe_data(self, symbol, timeframes, limit=100):

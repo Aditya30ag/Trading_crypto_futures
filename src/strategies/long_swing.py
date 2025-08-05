@@ -79,6 +79,44 @@ class LongSwingStrategy:
                 self.logger.info(f"[LongSwing] Skipping {symbol} due to low liquidity (avg_volume={avg_volume:.2f} < {min_avg_volume})")
                 return None
 
+            # ADD MOVEMENT FILTER - Filter out symbols that "hang" without hitting targets
+            # Calculate price movement characteristics to avoid sideways/ranging symbols
+            close_prices = [float(candle["close"]) for candle in candles[-20:]]
+            high_prices = [float(candle["high"]) for candle in candles[-20:]]
+            low_prices = [float(candle["low"]) for candle in candles[-20:]]
+            
+            # 1. Check directional momentum (5-day vs 20-day average)
+            recent_avg = sum(close_prices[-5:]) / 5
+            period_avg = sum(close_prices) / len(close_prices)
+            momentum_pct = ((recent_avg - period_avg) / period_avg) * 100
+            
+            # 2. Calculate price range efficiency (how much actual movement vs total range)
+            total_range = max(high_prices) - min(low_prices)
+            price_movement = abs(close_prices[-1] - close_prices[0])
+            movement_efficiency = (price_movement / total_range) if total_range > 0 else 0
+            
+            # 3. ATR relative to recent price movement
+            atr_to_movement_ratio = (atr / price_movement) if price_movement > 0 else float('inf')
+            
+            # Filter criteria for symbols that hang without hitting targets
+            min_momentum = 0.5  # Minimum 0.5% directional bias
+            min_efficiency = 0.3  # Minimum 30% movement efficiency
+            max_atr_ratio = 3.0  # ATR shouldn't be more than 3x the actual movement
+            
+            movement_checks = [
+                abs(momentum_pct) >= min_momentum,
+                movement_efficiency >= min_efficiency,
+                atr_to_movement_ratio <= max_atr_ratio
+            ]
+            
+            if not all(movement_checks):
+                self.logger.info(f"[LongSwing] FILTERED OUT {symbol} - Poor movement characteristics:")
+                self.logger.info(f"  Momentum: {momentum_pct:.2f}% (need ±{min_momentum}%)")
+                self.logger.info(f"  Movement efficiency: {movement_efficiency:.2f} (need ≥{min_efficiency})")
+                self.logger.info(f"  ATR/Movement ratio: {atr_to_movement_ratio:.2f} (need ≤{max_atr_ratio})")
+                self.logger.info(f"  This symbol tends to hang without hitting targets - similar to CFX behavior")
+                return None
+
             stoch_k = stoch_rsi["%K"]
             stoch_d = stoch_rsi["%D"]
             if pd.isna(stoch_d):

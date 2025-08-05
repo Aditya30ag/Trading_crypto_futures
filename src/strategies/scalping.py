@@ -31,10 +31,10 @@ class ScalpingStrategy:
             
             for tf in timeframes_to_fetch:
                 try:
-                    # Try CoinDesk first for 15m data
+                    # Try CoinDesk first for 1m data (only if enabled)
                     if tf == "1m":
                         coindesk_candles = self.fetcher.fetch_coindesk_candles(symbol, tf, limit=50)
-                        if coindesk_candles:
+                        if coindesk_candles and len(coindesk_candles) >= 50:
                             multi_tf_data[tf] = coindesk_candles
                             self.logger.debug(f"[Scalping] Using CoinDesk {tf} data for {symbol}")
                             continue
@@ -44,6 +44,8 @@ class ScalpingStrategy:
                     if candles and len(candles) >= 50:
                         multi_tf_data[tf] = candles
                         self.logger.debug(f"[Scalping] Using CoinDCX {tf} data for {symbol}")
+                    else:
+                        self.logger.debug(f"[Scalping] Insufficient {tf} data for {symbol}: {len(candles) if candles else 0} candles")
                 except Exception as e:
                     self.logger.warning(f"[Scalping] Failed to fetch {tf} data for {symbol}: {e}")
                     continue
