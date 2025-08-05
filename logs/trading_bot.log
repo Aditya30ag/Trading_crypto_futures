@@ -1877,3 +1877,78 @@ Saved 3 enhanced signals to enhanced_signals_test.json
 2025-08-04 17:09:18 - INFO -    📊 Result: REJECTED - Fails quality requirements
 2025-08-04 17:09:18 - INFO - ❌ B-ETH_USDT failed volume filters: REJECTED - Fails quality requirements
 2025-08-04 17:09:18 - INFO - ✅ Generated 0 signals, returning top 0
+2025-08-05 14:25:03 - INFO - === Logger initialized successfully ===
+2025-08-05 14:25:03 - INFO - Log file: logs/trading_bot.log
+2025-08-05 14:25:03 - INFO - Log level: INFO
+2025-08-05 14:25:03 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:25:22 - INFO - === Logger initialized successfully ===
+2025-08-05 14:25:22 - INFO - Log file: logs/trading_bot.log
+2025-08-05 14:25:22 - INFO - Log level: INFO
+2025-08-05 14:25:22 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:25:44 - ERROR - DNS resolution failed for public.coindcx.com on attempt 1
+2025-08-05 14:26:23 - WARNING - CoinDesk API 400 error for B-BTC_USDT (BTC-USDT-VANILLA-PERPETUAL): Bad Request
+2025-08-05 14:26:23 - INFO - Adding BTC to problematic coins list - CoinDesk API not supported
+2025-08-05 14:26:24 - INFO - [LongSwing] Skipping B-BTC_USDT due to low liquidity (avg_volume=4217.79 < 300000)
+2025-08-05 14:26:25 - WARNING - CoinDesk API 400 error for B-ETH_USDT (ETH-USDT-VANILLA-PERPETUAL): Bad Request
+2025-08-05 14:26:25 - INFO - Adding ETH to problematic coins list - CoinDesk API not supported
+2025-08-05 14:26:27 - INFO - [LongSwing] Skipping B-ETH_USDT due to low liquidity (avg_volume=257578.16 < 300000)
+2025-08-05 14:26:27 - WARNING - CoinDesk API 400 error for B-SOL_USDT (SOL-USDT-VANILLA-PERPETUAL): Bad Request
+2025-08-05 14:26:27 - INFO - Adding SOL to problematic coins list - CoinDesk API not supported
+2025-08-05 14:26:39 - ERROR - Attempt 1/3 - Error fetching order book for B-SOL_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-SOL_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f141039e980>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-05 14:26:41 - INFO - [Long Swing] Generated LONG signal for B-SOL_USDT on 1h - Score: 7/9, Confidence: 0.814, TP: 170.875357, SL: 164.066786
+2025-08-05 14:28:58 - INFO - === Logger initialized successfully ===
+2025-08-05 14:28:58 - INFO - Log file: logs/trading_bot.log
+2025-08-05 14:28:58 - INFO - Log level: INFO
+2025-08-05 14:28:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:30:10 - INFO - === Logger initialized successfully ===
+2025-08-05 14:30:10 - INFO - Log file: logs/trading_bot.log
+2025-08-05 14:30:10 - INFO - Log level: INFO
+2025-08-05 14:30:10 - INFO - === Starting Crypto Futures Trading Bot ===
+2025-08-05 14:30:10 - INFO - Configuration loaded successfully
+2025-08-05 14:30:10 - INFO - Trading instruments: 11
+2025-08-05 14:30:10 - INFO - Initial balance: 10000 INR
+2025-08-05 14:30:10 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:30:10 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:30:10 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:30:10 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:30:10 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:30:10 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:30:10 - INFO - StrategyManager initialized with all strategies
+2025-08-05 14:30:11 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:30:11 - INFO - EnhancedSignalGenerator initialized
+2025-08-05 14:30:11 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:30:11 - INFO - SignalMonitor initialized
+2025-08-05 14:30:11 - INFO - Trade executor initialized
+2025-08-05 14:30:11 - INFO - Generating trading signals...
+2025-08-05 14:30:11 - INFO - === GENERATING ENTRY SIGNALS (HIGH VOLUME SYMBOLS, MIXED STRATEGY) ===
+2025-08-05 14:30:11 - INFO - Fetching top 40 high volume symbols from CoinDCX with increased volume filter...
+2025-08-05 14:30:13 - INFO - Filtered to 27 top movers that are active instruments
+2025-08-05 14:30:13 - INFO - Found 27 top movers to analyze (min_volume=500000)
+2025-08-05 14:31:12 - INFO - Selected 15 symbols with high ATR% (max of 15m/30m/1h) and volume for signal generation.
+2025-08-05 14:31:14 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:15 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:15 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:15 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:17 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:12 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:34 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:35 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:37 - INFO - [Scalping] Generated STRONG signal (score 9/9): {'symbol': 'B-ENA_USDT', 'timeframe': '5m', 'strategy': 'scalping', 'direction': 'TradeDirection.SHORT', 'entry_price': 0.5793, 'stop_loss': 0.5879894999999999, 'take_profit': 0.5706105, 'tp1': 0.5706105, 'tp2': 0.5706105, 'max_hold_time': 2, 'score': 12, 'score_max': 17, 'score_reasons': ['EMA20 < EMA50 (clear trend)', 'Price < EMA20', 'RSI optimal bearish (35-55)', 'MACD negative + momentum', 'Price < VWAP', 'Multi-timeframe trend bearish', 'ADX > 25 and DI- > DI+', 'Price < EMA100', 'Multi-timeframe trend bearish', 'Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level'], 'indicators': {'rsi': 47.24770642201836, 'ema_20': 0.5804751309098284, 'ema_50': 0.5837297260144894, 'macd': -0.0015859612558445368, 'bollinger_upper': 0.5839449746645622, 'bollinger_lower': 0.5758950253354378, 'vwap_daily': 0.588015859281569, 'volume_ok': False, 'stoch_rsi_k': 0.7689793856321598, 'stoch_rsi_d': 0.7910324396835623, 'atr': 0.00293571428571428, 'multi_timeframe_trend': 'bearish', 'trend_strength': 0.7000000000000001, 'ema_100': 0.5885461357394731, 'supertrend': {'supertrend': 0.55182, 'in_uptrend': True}, 'adx': {'adx': 42.14253557189773, 'di_plus': 16.301703163017432, 'di_minus': 18.734793187348068}, 'obv': 523313306.0, 'cci': -26.722193302101125, 'momentum_osc': 0.0006000000000000449, 'keltner_upper': 0.5868165981686335, 'keltner_lower': 0.5744165981686336, 'fib_levels': {'0.0%': 0.5853, '23.6%': 0.5824916, '38.2%': 0.5807542, '50.0%': 0.57935, '61.8%': 0.5779458000000001, '78.6%': 0.5759466, '100.0%': 0.5734}}, 'timestamp': '2025-08-05T14:31:37.841787+05:30', 'estimated_profit_inr': 1000.0, 'confidence': 0.8500000000000001, 'quality_score': 210.0, 'normalized_score': 91.30434782608695, 'side': 'short', 'bonus_score': 3, 'bonus_reasons': ['Momentum Oscillator positive (bullish)', 'Entry near Fib 38.2% level', 'Entry near Fib 61.8% level']}
+2025-08-05 14:31:38 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:39 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:42 - WARNING - CoinDesk API 400 error for B-SOL_USDT (SOL-USDT-VANILLA-PERPETUAL): Bad Request
+2025-08-05 14:31:42 - INFO - Adding SOL to problematic coins list - CoinDesk API not supported
+2025-08-05 14:31:42 - INFO - [Swing] Generated LONG signal for B-ILV_USDT on 15m - Score: 9/7, Confidence: 1.000, TP: 22.064070, SL: 21.411930
+2025-08-05 14:31:42 - ERROR - Attempt 1/3 - Error fetching order book for B-GALA_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-GALA_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1a0e93aef0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-05 14:31:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:43 - INFO - [Swing] Skipping B-SOL_USDT due to low liquidity (avg_volume=156646.20 < 300000)
+2025-08-05 14:31:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:47 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:49 - INFO - [Swing] Skipping B-ILV_USDT due to low liquidity (avg_volume=107016.72 < 300000)
+2025-08-05 14:31:50 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:50 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-05 14:31:50 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com

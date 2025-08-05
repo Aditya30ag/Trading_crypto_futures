@@ -257,7 +257,13 @@ class LongSwingStrategy:
                 self.logger.debug(f"[Long Swing] Skipping signal for {symbol}: forced direction {direction}, got {side}")
                 return None
             # Calculate pivot points
-            pivots = self.indicators.calculate_pivot_points(candles)
+            # pivots = self.indicators.calculate_pivot_points(candles)
+            
+            # Filter out problematic score 8 signals (tend to hit SL frequently)
+            if side and score == 8:
+                self.logger.info(f"[Long Swing] FILTERED OUT: {symbol} {timeframe} {side.upper()} signal with score {score}/8 - Score 8 signals tend to hit stop loss frequently")
+                return None
+            
             # Generate signal if conditions are met
             if side and score >= 6:  # Need 6 out of 8 conditions
                 entry_price = current_price
