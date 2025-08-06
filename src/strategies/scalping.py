@@ -31,12 +31,12 @@ class ScalpingStrategy:
             
             for tf in timeframes_to_fetch:
                 try:
-                    # Try CoinDesk first for 1m data (only if enabled)
+                    # Try CryptoCompare first for 1m data (only if enabled)
                     if tf == "1m":
-                        coindesk_candles = self.fetcher.fetch_coindesk_candles(symbol, tf, limit=50)
-                        if coindesk_candles and len(coindesk_candles) >= 50:
-                            multi_tf_data[tf] = coindesk_candles
-                            self.logger.debug(f"[Scalping] Using CoinDesk {tf} data for {symbol}")
+                        cryptocompare_candles = self.fetcher.fetch_cryptocompare_candles(symbol, tf, limit=50)
+                        if cryptocompare_candles and len(cryptocompare_candles) >= 50:
+                            multi_tf_data[tf] = cryptocompare_candles
+                            self.logger.debug(f"[Scalping] Using CryptoCompare {tf} data for {symbol}")
                             continue
                     
                     # Fallback to CoinDCX

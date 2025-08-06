@@ -19,8 +19,8 @@ class CoinDCXFetcher:
         
         # Configure external APIs
         self.external_apis = self.config.get("external_apis", {})
-        self.coindesk_enabled = self.external_apis.get("coindesk", {}).get("enabled", False)
-        self.coindesk_config = self.external_apis.get("coindesk", {})
+        self.cryptocompare_enabled = self.external_apis.get("cryptocompare", {}).get("enabled", False)
+        self.cryptocompare_config = self.external_apis.get("cryptocompare", {})
         
         # Create a session with better connection handling
         self.session = requests.Session()
@@ -37,14 +37,14 @@ class CoinDCXFetcher:
         self.session.mount('http://', adapter)
         self.session.mount('https://', adapter)
         
-        # Initialize CoinDesk error tracking to reduce spam
-        self._coindesk_failed_symbols = set()
-        self._coindesk_error_count = 0
-        self._max_coindesk_errors = 10  # Stop trying after 10 errors
+        # Initialize CryptoCompare error tracking to reduce spam
+        self._cryptocompare_failed_symbols = set()
+        self._cryptocompare_error_count = 0
+        self._max_cryptocompare_errors = 10  # Stop trying after 10 errors
         
         self.logger.info("CoinDCXFetcher initialized with public_base_url: %s, api_base_url: %s", 
                          self.public_base_url, self.api_base_url)
-        self.logger.info("CoinDesk API enabled: %s", self.coindesk_enabled)
+        self.logger.info("CryptoCompare API enabled: %s", self.cryptocompare_enabled)
 
     def fetch_market_data(self, symbol, retries=3):
         """Fetch real-time market data for a futures symbol with retries."""
@@ -372,14 +372,14 @@ class CoinDCXFetcher:
         self.logger.error("Failed to fetch high volume symbols after retries")
         return []
 
-    def _convert_symbol_to_coindesk_format(self, symbol):
-        """Convert CoinDCX symbol format to CoinDesk format.
+    def _extract_currencies_from_symbol(self, symbol):
+        """Extract base and quote currencies from CoinDCX symbol format.
         
         Args:
             symbol: CoinDCX symbol (e.g., 'B-BTC_USDT')
             
         Returns:
-            CoinDesk instrument format (e.g., 'BTC-USDT-VANILLA-PERPETUAL')
+            Tuple of (base_currency, quote_currency) or (None, None) if parsing fails
         """
         try:
             original_symbol = symbol
@@ -392,20 +392,17 @@ class CoinDCXFetcher:
             if len(parts) >= 2:
                 base = parts[0]
                 quote = parts[1]
-                # Ensure proper format: BASE-QUOTE-VANILLA-PERPETUAL
-                converted = f"{base}-{quote}-VANILLA-PERPETUAL"
-                self.logger.debug(f"Symbol conversion: {original_symbol} -> {converted}")
-                return converted
+                self.logger.debug(f"Symbol currency extraction: {original_symbol} -> {base}/{quote}")
+                return base, quote
             else:
-                # Fallback: assume it's already in the right format
-                self.logger.debug(f"Symbol already in correct format: {symbol}")
-                return symbol
+                self.logger.warning(f"Cannot extract currencies from symbol: {symbol}")
+                return None, None
         except Exception as e:
-            self.logger.error(f"Error converting symbol {symbol}: {e}")
-            return symbol
+            self.logger.error(f"Error extracting currencies from symbol {symbol}: {e}")
+            return None, None
 
-    def _is_likely_coindesk_supported(self, symbol):
-        """Check if a symbol is likely to be supported by CoinDesk.
+    def _is_likely_cryptocompare_supported(self, symbol):
+        """Check if a symbol is likely to be supported by CryptoCompare.
         
         Args:
             symbol: Trading symbol
@@ -413,15 +410,10 @@ class CoinDCXFetcher:
         Returns:
             Boolean indicating if likely supported
         """
-        # Most reliable cryptocurrencies that are definitely supported by CoinDesk
-        # Only include the most stable and widely supported coins
+        # CryptoCompare supports most major cryptocurrencies
         definitely_supported = [
             'BTC', 'ETH', 'BNB', 'ADA', 'SOL', 'DOT', 'AVAX', 'MATIC', 
-            'LINK', 'UNI', 'LTC', 'BCH', 'XRP', 'DOGE', 'SHIB', 'TRX'
-        ]
-        
-        # Known problematic coins that cause 400 errors
-        problematic_coins = [
+            'LINK', 'UNI', 'LTC', 'BCH', 'XRP', 'DOGE', 'SHIB', 'TRX',
             'ALGO', 'FTM', 'VET', 'ICP', 'FIL', 'APT', 'NEAR', 'ATOM'
         ]
         
@@ -433,20 +425,15 @@ class CoinDCXFetcher:
         parts = symbol.split('_')
         if len(parts) >= 2:
             base = parts[0]
-            # Check if it's in the problematic list first
-            if base in problematic_coins:
-                self.logger.debug(f"Symbol {symbol} ({base}) is known to cause CoinDesk API errors, skipping")
-                return False
-            # Then check if it's definitely supported
             return base in definitely_supported
         
         return False
 
-    def fetch_coindesk_candles(self, symbol, timeframe, limit=100, retries=3):
-        """Fetch candlestick data from CoinDesk API with support for 15min and 30min timeframes.
+    def fetch_cryptocompare_candles(self, symbol, timeframe, limit=100, retries=3):
+        """Fetch candlestick data from CryptoCompare API.
         
         Args:
-            symbol: Trading symbol (e.g., 'BTC-USDT-VANILLA-PERPETUAL')
+            symbol: Trading symbol (e.g., 'B-BTC_USDT')
             timeframe: Timeframe in minutes ('1', '5', '15', '30', '60')
             limit: Number of candles to fetch
             retries: Number of retry attempts
@@ -454,97 +441,108 @@ class CoinDCXFetcher:
         Returns:
             List of candle dictionaries with OHLCV data
         """
-        # Check if CoinDesk API is enabled
-        if not self.coindesk_enabled:
-            self.logger.debug(f"CoinDesk API is disabled, skipping {symbol}")
+        # Check if CryptoCompare API is enabled
+        if not self.cryptocompare_enabled:
+            self.logger.debug(f"CryptoCompare API is disabled, skipping {symbol}")
             return []
         
         # Check if we've hit too many errors globally
-        if self._coindesk_error_count >= self._max_coindesk_errors:
-            self.logger.debug(f"CoinDesk API disabled due to too many errors ({self._coindesk_error_count})")
+        if self._cryptocompare_error_count >= self._max_cryptocompare_errors:
+            self.logger.debug(f"CryptoCompare API disabled due to too many errors ({self._cryptocompare_error_count})")
             return []
         
         # Check if this specific symbol failed before
-        if symbol in self._coindesk_failed_symbols:
-            self.logger.debug(f"Symbol {symbol} previously failed CoinDesk API, skipping")
+        if symbol in self._cryptocompare_failed_symbols:
+            self.logger.debug(f"Symbol {symbol} previously failed CryptoCompare API, skipping")
             return []
         
         # Check if symbol is likely supported before making API call
-        if not self._is_likely_coindesk_supported(symbol):
-            self.logger.debug(f"Symbol {symbol} is unlikely to be supported by CoinDesk, skipping")
+        if not self._is_likely_cryptocompare_supported(symbol):
+            self.logger.debug(f"Symbol {symbol} is unlikely to be supported by CryptoCompare, skipping")
             return []
         
         # Use configured retries
-        max_retries = self.coindesk_config.get("max_retries", 1)
+        max_retries = self.cryptocompare_config.get("max_retries", 3)
         for attempt in range(max_retries):
             try:
-                # Map timeframe to aggregate parameter
+                # Extract base and quote currency from symbol (e.g., B-BTC_USDT -> BTC, USDT)
+                fsym, tsym = self._extract_currencies_from_symbol(symbol)
+                if not fsym or not tsym:
+                    self.logger.warning(f"Could not extract currencies from symbol {symbol}")
+                    return []
+                
+                # Get base URL and API key from config
+                base_url = self.cryptocompare_config.get("base_url", "https://min-api.cryptocompare.com")
+                api_key = self.cryptocompare_config.get("api_key")
+                
+                # Build API URL for histominute endpoint
+                url = f"{base_url}/data/v2/histominute"
+                params = {
+                    "fsym": fsym,
+                    "tsym": tsym,
+                    "limit": limit
+                }
+                
+                # Add aggregate parameter if timeframe is not 1 minute
                 timeframe_map = {
                     "1m": 1, "5m": 5, "15m": 15, "30m": 30, "1h": 60,
                     "1": 1, "5": 5, "15": 15, "30": 30, "60": 60
                 }
-                
                 aggregate = timeframe_map.get(timeframe, 1)
+                if aggregate > 1:
+                    params["aggregate"] = aggregate
                 
-                # Convert symbol format if needed (e.g., B-BTC_USDT -> BTC-USDT-VANILLA-PERPETUAL)
-                instrument = self._convert_symbol_to_coindesk_format(symbol)
+                # Set up headers with API key
+                headers = {}
+                if api_key:
+                    headers["authorization"] = f"Apikey {api_key}"
                 
-                # Build API URL based on the example provided
-                url = "https://data-api.coindesk.com/futures/v1/historical/minutes"
-                params = {
-                    "market": "binance",
-                    "instrument": instrument,
-                    "groups": "ID,MAPPING,OHLC,TRADE,VOLUME",
-                    "limit": limit,
-                    "aggregate": aggregate,
-                    "fill": "true",
-                    "apply_mapping": "true"
-                }
+                self.logger.debug(f"Fetching CryptoCompare data: {url} with params {params}")
                 
-                self.logger.debug(f"Fetching CoinDesk data: {url} with params {params}")
-                
-                response = self.session.get(url, params=params, timeout=15, verify=False)
+                response = self.session.get(url, params=params, headers=headers, timeout=15)
                 
                 # Check for specific error responses
                 if response.status_code == 400:
                     # Track this symbol as failed
-                    self._coindesk_failed_symbols.add(symbol)
-                    self._coindesk_error_count += 1
+                    self._cryptocompare_failed_symbols.add(symbol)
+                    self._cryptocompare_error_count += 1
                     
                     # Only log the first few errors to avoid spam
-                    if self._coindesk_error_count <= 3:
+                    if self._cryptocompare_error_count <= 3:
                         error_data = response.json() if response.content else {}
-                        error_msg = error_data.get('message', 'Bad Request')
-                        self.logger.warning(f"CoinDesk API 400 error for {symbol} ({instrument}): {error_msg}")
-                    elif self._coindesk_error_count == self._max_coindesk_errors:
-                        self.logger.warning(f"CoinDesk API has failed {self._max_coindesk_errors} times, disabling for this session")
+                        error_msg = error_data.get('Message', 'Bad Request')
+                        self.logger.warning(f"CryptoCompare API 400 error for {symbol} ({fsym}/{tsym}): {error_msg}")
+                    elif self._cryptocompare_error_count == self._max_cryptocompare_errors:
+                        self.logger.warning(f"CryptoCompare API has failed {self._max_cryptocompare_errors} times, disabling for this session")
                     
-                    # This instrument is not supported by CoinDesk, return empty list
+                    # This symbol is not supported by CryptoCompare, return empty list
                     return []
                 
                 response.raise_for_status()
                 data = response.json()
                 
-                # Parse the response format shown in the image
-                if "Data" in data and isinstance(data["Data"], list):
+                # Parse CryptoCompare response format
+                if "Data" in data and "Data" in data["Data"] and isinstance(data["Data"]["Data"], list):
                     candles = []
-                    for item in data["Data"]:
-                        if "OHLC" in item:
-                            ohlc = item["OHLC"]
-                            candle = {
-                                "open": float(ohlc.get("OPEN", 0)),
-                                "high": float(ohlc.get("HIGH", 0)),
-                                "low": float(ohlc.get("LOW", 0)),
-                                "close": float(ohlc.get("CLOSE", 0)),
-                                "volume": float(ohlc.get("VOLUME", 0)),
-                                "timestamp": item.get("TIMESTAMP", 0)
-                            }
-                            candles.append(candle)
+                    for item in data["Data"]["Data"]:
+                        # Skip empty candles (volume = 0 indicates no trading)
+                        if item.get("volumefrom", 0) == 0:
+                            continue
+                            
+                        candle = {
+                            "open": float(item.get("open", 0)),
+                            "high": float(item.get("high", 0)),
+                            "low": float(item.get("low", 0)),
+                            "close": float(item.get("close", 0)),
+                            "volume": float(item.get("volumefrom", 0)),
+                            "timestamp": int(item.get("time", 0))
+                        }
+                        candles.append(candle)
                     
-                    self.logger.debug(f"Fetched {len(candles)} candles from CoinDesk for {symbol} {timeframe}")
+                    self.logger.debug(f"Fetched {len(candles)} candles from CryptoCompare for {symbol} {timeframe}")
                     return candles
                 else:
-                    self.logger.warning(f"Unexpected CoinDesk response format for {symbol}: {data}")
+                    self.logger.warning(f"Unexpected CryptoCompare response format for {symbol}: {data}")
                     return []
                     
             except requests.exceptions.ConnectionError as e:
@@ -560,30 +558,30 @@ class CoinDCXFetcher:
             except requests.exceptions.HTTPError as e:
                 if e.response.status_code == 400:
                     # Track as failed and reduce spam
-                    self._coindesk_failed_symbols.add(symbol)
-                    self._coindesk_error_count += 1
-                    if self._coindesk_error_count <= 3:
-                        self.logger.warning(f"CoinDesk API 400 error for {symbol} - instrument not supported")
+                    self._cryptocompare_failed_symbols.add(symbol)
+                    self._cryptocompare_error_count += 1
+                    if self._cryptocompare_error_count <= 3:
+                        self.logger.warning(f"CryptoCompare API 400 error for {symbol} - symbol not supported")
                     return []  # Don't retry for 400 errors
                 else:
-                    self._coindesk_error_count += 1
-                    if self._coindesk_error_count <= 3:
+                    self._cryptocompare_error_count += 1
+                    if self._cryptocompare_error_count <= 3:
                         self.logger.error(f"HTTP error on attempt {attempt + 1}/{max_retries} for {symbol}: {e}")
                     if attempt < max_retries - 1:
                         time.sleep(1)
                     continue
             except Exception as e:
-                self._coindesk_error_count += 1
-                if self._coindesk_error_count <= 3:
+                self._cryptocompare_error_count += 1
+                if self._cryptocompare_error_count <= 3:
                     self.logger.error(f"Unexpected error on attempt {attempt + 1}/{max_retries} for {symbol}: {e}")
                 if attempt < max_retries - 1:
                     time.sleep(1)
                 continue
                 
         # Track as failed after all retries exhausted
-        self._coindesk_failed_symbols.add(symbol)
-        if self._coindesk_error_count <= 3:
-            self.logger.error(f"Failed to fetch CoinDesk candlestick data for {symbol} after {max_retries} attempts")
+        self._cryptocompare_failed_symbols.add(symbol)
+        if self._cryptocompare_error_count <= 3:
+            self.logger.error(f"Failed to fetch CryptoCompare candlestick data for {symbol} after {max_retries} attempts")
         return []
 
     def fetch_multi_timeframe_data(self, symbol, timeframes, limit=100):
@@ -601,17 +599,17 @@ class CoinDCXFetcher:
         
         for tf in timeframes:
             try:
-                # Try CoinDesk first for 15m and 30m
+                # Try CryptoCompare first for 15m and 30m
                 if tf in ['15m', '30m']:
-                    candles = self.fetch_coindesk_candles(symbol, tf, limit)
+                    candles = self.fetch_cryptocompare_candles(symbol, tf, limit)
                     if candles:
                         multi_tf_data[tf] = candles
-                        self.logger.debug(f"Successfully fetched {tf} data from CoinDesk for {symbol}")
+                        self.logger.debug(f"Successfully fetched {tf} data from CryptoCompare for {symbol}")
                         continue
                     else:
-                        self.logger.debug(f"CoinDesk returned no data for {symbol} {tf}, trying CoinDCX")
+                        self.logger.debug(f"CryptoCompare returned no data for {symbol} {tf}, trying CoinDCX")
                 
-                # Fallback to CoinDCX for other timeframes or if CoinDesk fails
+                # Fallback to CoinDCX for other timeframes or if CryptoCompare fails
                 candles = self.fetch_candlestick_data(symbol, tf, limit)
                 if candles:
                     multi_tf_data[tf] = candles

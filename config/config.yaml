@@ -7,11 +7,11 @@ api:
 
 # External Data API settings
 external_apis:
-  coindesk:
-    enabled: false  # Disable CoinDesk API until proper credentials are configured
-    api_key: ""     # Add your CoinDesk API key here if available
-    base_url: "https://data-api.coindesk.com"
-    max_retries: 1  # Reduced retries to avoid spam
+  cryptocompare:
+    enabled: true
+    api_key: ""
+    base_url: "https://min-api.cryptocompare.com"
+    max_retries: 3
     timeout: 10
 
 # Trading settings
