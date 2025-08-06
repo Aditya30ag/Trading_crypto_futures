@@ -57,7 +57,17 @@ class TradeExecutor:
                     signals.append(signal)
                     existing_keys.add(key)
             # Keep only last 100 signals
-            signals = sorted(signals, key=lambda s: s.get('timestamp', ''), reverse=True)[:100]
+            
+            def safe_timestamp_key(signal):
+                timestamp = signal.get('timestamp', '')
+                if isinstance(timestamp, str):
+                    return timestamp
+                elif hasattr(timestamp, 'isoformat'):
+                    return timestamp.isoformat()
+                else:
+                    return str(timestamp)
+            
+            signals = sorted(signals, key=safe_timestamp_key, reverse=True)[:100]
             with open(filename, 'w') as f:
                 json.dump(signals, f, indent=2, default=str)
             self._signal_buffer.clear()

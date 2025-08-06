@@ -2134,3 +2134,598 @@ Saved 3 enhanced signals to enhanced_signals_test.json
 2025-08-05 20:34:51 - INFO -   Movement efficiency: 0.03 (need ≥0.3)
 2025-08-05 20:34:51 - INFO -   ATR/Movement ratio: 6.44 (need ≤3.0)
 2025-08-05 20:34:51 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:33:48 - INFO - === Logger initialized successfully ===
+2025-08-06 18:33:48 - INFO - Log file: logs/trading_bot.log
+2025-08-06 18:33:48 - INFO - Log level: INFO
+2025-08-06 18:33:49 - INFO - === Starting Crypto Futures Trading Bot ===
+2025-08-06 18:33:49 - INFO - Configuration loaded successfully
+2025-08-06 18:33:49 - INFO - Trading instruments: 11
+2025-08-06 18:33:49 - INFO - Initial balance: 10000 INR
+2025-08-06 18:33:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:33:49 - INFO - CoinDesk API enabled: False
+2025-08-06 18:33:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:33:49 - INFO - CoinDesk API enabled: False
+2025-08-06 18:33:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:33:49 - INFO - CoinDesk API enabled: False
+2025-08-06 18:33:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:33:49 - INFO - CoinDesk API enabled: False
+2025-08-06 18:33:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:33:49 - INFO - CoinDesk API enabled: False
+2025-08-06 18:33:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:33:49 - INFO - CoinDesk API enabled: False
+2025-08-06 18:33:49 - INFO - StrategyManager initialized with all strategies
+2025-08-06 18:33:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:33:49 - INFO - CoinDesk API enabled: False
+2025-08-06 18:33:49 - INFO - EnhancedSignalGenerator initialized
+2025-08-06 18:33:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:33:49 - INFO - CoinDesk API enabled: False
+2025-08-06 18:33:49 - INFO - SignalMonitor initialized
+2025-08-06 18:33:49 - INFO - Trade executor initialized
+2025-08-06 18:33:49 - INFO - Generating trading signals...
+2025-08-06 18:33:49 - INFO - === GENERATING ENTRY SIGNALS (HIGH VOLUME SYMBOLS, MIXED STRATEGY) ===
+2025-08-06 18:33:49 - INFO - Fetching top 40 high volume symbols from CoinDCX with increased volume filter...
+2025-08-06 18:33:49 - INFO - Filtered to 26 top movers that are active instruments
+2025-08-06 18:33:49 - INFO - Found 26 top movers to analyze (min_volume=500000)
+2025-08-06 18:34:18 - INFO - Selected 15 symbols with high ATR% (max of 15m/30m/1h) and volume for signal generation.
+2025-08-06 18:34:18 - INFO - Skipping blacklisted symbol: B-FARTCOIN_USDT
+2025-08-06 18:34:19 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:19 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:19 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:19 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:20 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:20 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:20 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:20 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:20 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:20 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:20 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:20 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:20 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:20 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:20 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:20 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:22 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:22 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:22 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:22 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:22 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:22 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:22 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:22 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:22 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:22 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:23 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:23 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:23 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:23 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:23 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:23 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:24 - INFO - [Swing] Skipping B-SOL_USDT due to low liquidity (avg_volume=144998.02 < 300000)
+2025-08-06 18:34:24 - INFO - [Swing] Skipping B-ETH_USDT due to low liquidity (avg_volume=41341.16 < 300000)
+2025-08-06 18:34:25 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:25 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:25 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:25 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:25 - INFO - [Swing] Skipping B-ILV_USDT due to low liquidity (avg_volume=219070.82 < 300000)
+2025-08-06 18:34:26 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:26 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:40 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:30 - INFO - [Swing] Skipping B-SOL_USDT due to low liquidity (avg_volume=55079.34 < 300000)
+2025-08-06 18:34:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:31 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:31 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:31 - INFO - [Swing] Skipping B-ETH_USDT due to low liquidity (avg_volume=17487.35 < 300000)
+2025-08-06 18:34:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:31 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:31 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:31 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:31 - INFO - [Swing] Skipping B-ILV_USDT due to low liquidity (avg_volume=52447.46 < 300000)
+2025-08-06 18:34:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:31 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:32 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:32 - INFO - [LongSwing] Skipping B-SOL_USDT due to low liquidity (avg_volume=275946.53 < 300000)
+2025-08-06 18:34:32 - INFO - [LongSwing] Skipping B-ETH_USDT due to low liquidity (avg_volume=84317.77 < 300000)
+2025-08-06 18:34:33 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:33 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:33 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:33 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:34 - INFO - [LongSwing] FILTERED OUT B-ILV_USDT - Poor movement characteristics:
+2025-08-06 18:34:34 - INFO -   Momentum: 1.96% (need ±0.5%)
+2025-08-06 18:34:34 - INFO -   Movement efficiency: 0.01 (need ≥0.3)
+2025-08-06 18:34:34 - INFO -   ATR/Movement ratio: 30.53 (need ≤3.0)
+2025-08-06 18:34:34 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:34:34 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:34 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:35 - INFO - [LongSwing] FILTERED OUT B-SOL_USDT - Poor movement characteristics:
+2025-08-06 18:34:35 - INFO -   Momentum: 0.25% (need ±0.5%)
+2025-08-06 18:34:35 - INFO -   Movement efficiency: 0.11 (need ≥0.3)
+2025-08-06 18:34:35 - INFO -   ATR/Movement ratio: 3.59 (need ≤3.0)
+2025-08-06 18:34:35 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:34:35 - INFO - [LongSwing] Skipping B-ETH_USDT due to low liquidity (avg_volume=154819.46 < 300000)
+2025-08-06 18:34:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:37 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:37 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:43 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:46 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:46 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:50 - INFO - [Swing] Generated SHORT signal for B-ENA_USDT on 5m - Score: 6/7, Confidence: 0.929, TP: 0.553275, SL: 0.570125
+2025-08-06 18:34:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:51 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:52 - INFO - [Swing] Skipping B-LTC_USDT due to low liquidity (avg_volume=41571.33 < 300000)
+2025-08-06 18:34:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:52 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:53 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:53 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:55 - INFO - [LongSwing] FILTERED OUT B-ENA_USDT - Poor movement characteristics:
+2025-08-06 18:34:55 - INFO -   Momentum: -1.15% (need ±0.5%)
+2025-08-06 18:34:55 - INFO -   Movement efficiency: 0.03 (need ≥0.3)
+2025-08-06 18:34:55 - INFO -   ATR/Movement ratio: 9.19 (need ≤3.0)
+2025-08-06 18:34:55 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:34:56 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:56 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:56 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:56 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:56 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:56 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:56 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:56 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:56 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:56 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:57 - INFO - [Swing] Skipping B-LTC_USDT due to low liquidity (avg_volume=14337.43 < 300000)
+2025-08-06 18:34:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:57 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:57 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:58 - INFO - [LongSwing] FILTERED OUT B-SUI_USDT - Poor movement characteristics:
+2025-08-06 18:34:58 - INFO -   Momentum: 0.05% (need ±0.5%)
+2025-08-06 18:34:58 - INFO -   Movement efficiency: 0.42 (need ≥0.3)
+2025-08-06 18:34:58 - INFO -   ATR/Movement ratio: 0.57 (need ≤3.0)
+2025-08-06 18:34:58 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:34:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:58 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:58 - INFO - [LongSwing] FILTERED OUT B-XRP_USDT - Poor movement characteristics:
+2025-08-06 18:34:58 - INFO -   Momentum: 0.16% (need ±0.5%)
+2025-08-06 18:34:58 - INFO -   Movement efficiency: 0.48 (need ≥0.3)
+2025-08-06 18:34:58 - INFO -   ATR/Movement ratio: 0.62 (need ≤3.0)
+2025-08-06 18:34:58 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:34:59 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:34:59 - INFO - CoinDesk API enabled: False
+2025-08-06 18:34:59 - INFO - [Long Swing] FILTERED OUT: B-ENA_USDT 1h SHORT signal with score 8/8 - Score 8 signals tend to hit stop loss frequently
+2025-08-06 18:35:00 - INFO - [LongSwing] Skipping B-LTC_USDT due to low liquidity (avg_volume=84781.30 < 300000)
+2025-08-06 18:35:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:00 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:00 - INFO - [Swing] Generated SHORT signal for B-PENGU_USDT on 15m - Score: 6/7, Confidence: 0.904, TP: 0.032266, SL: 0.033248
+2025-08-06 18:35:01 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:01 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:01 - INFO - [LongSwing] FILTERED OUT B-SUI_USDT - Poor movement characteristics:
+2025-08-06 18:35:01 - INFO -   Momentum: 0.25% (need ±0.5%)
+2025-08-06 18:35:01 - INFO -   Movement efficiency: 0.02 (need ≥0.3)
+2025-08-06 18:35:01 - INFO -   ATR/Movement ratio: 15.74 (need ≤3.0)
+2025-08-06 18:35:01 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:01 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:35:01 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:01 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:01 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:01 - INFO - [LongSwing] FILTERED OUT B-XRP_USDT - Poor movement characteristics:
+2025-08-06 18:35:01 - INFO -   Momentum: -0.00% (need ±0.5%)
+2025-08-06 18:35:01 - INFO -   Movement efficiency: 0.35 (need ≥0.3)
+2025-08-06 18:35:01 - INFO -   ATR/Movement ratio: 0.89 (need ≤3.0)
+2025-08-06 18:35:01 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:35:01 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:02 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:02 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:02 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:02 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:02 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:03 - INFO - [LongSwing] Skipping B-LTC_USDT due to low liquidity (avg_volume=165664.71 < 300000)
+2025-08-06 18:35:04 - INFO - [LongSwing] FILTERED OUT B-1000PEPE_USDT - Poor movement characteristics:
+2025-08-06 18:35:04 - INFO -   Momentum: 1.06% (need ±0.5%)
+2025-08-06 18:35:04 - INFO -   Movement efficiency: 0.30 (need ≥0.3)
+2025-08-06 18:35:04 - INFO -   ATR/Movement ratio: 0.92 (need ≤3.0)
+2025-08-06 18:35:04 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:35:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:05 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:06 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:06 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:06 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:06 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:11 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:11 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:15 - INFO - [LongSwing] FILTERED OUT B-DOGE_USDT - Poor movement characteristics:
+2025-08-06 18:35:15 - INFO -   Momentum: 0.25% (need ±0.5%)
+2025-08-06 18:35:15 - INFO -   Movement efficiency: 0.52 (need ≥0.3)
+2025-08-06 18:35:15 - INFO -   ATR/Movement ratio: 0.48 (need ≤3.0)
+2025-08-06 18:35:15 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:35:15 - INFO - [Swing] Generated LONG signal for B-OM_USDT on 15m - Score: 8/7, Confidence: 1.000, TP: 0.274801, SL: 0.266679
+2025-08-06 18:35:15 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:15 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:15 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:15 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:16 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:16 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:16 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:16 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:16 - INFO - [Swing] Generated SHORT signal for B-PENGU_USDT on 5m - Score: 6/7, Confidence: 0.904, TP: 0.032259, SL: 0.033241
+2025-08-06 18:35:17 - INFO - [LongSwing] FILTERED OUT B-DOGE_USDT - Poor movement characteristics:
+2025-08-06 18:35:17 - INFO -   Momentum: 0.62% (need ±0.5%)
+2025-08-06 18:35:17 - INFO -   Movement efficiency: 0.14 (need ≥0.3)
+2025-08-06 18:35:17 - INFO -   ATR/Movement ratio: 2.35 (need ≤3.0)
+2025-08-06 18:35:17 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:35:17 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:17 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:19 - INFO - [LongSwing] FILTERED OUT B-PENGU_USDT - Poor movement characteristics:
+2025-08-06 18:35:19 - INFO -   Momentum: -0.17% (need ±0.5%)
+2025-08-06 18:35:19 - INFO -   Movement efficiency: 0.14 (need ≥0.3)
+2025-08-06 18:35:19 - INFO -   ATR/Movement ratio: 2.57 (need ≤3.0)
+2025-08-06 18:35:19 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:35:20 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:20 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:25 - INFO - [Long Swing] FILTERED OUT: B-PENGU_USDT 1h SHORT signal with score 8/8 - Score 8 signals tend to hit stop loss frequently
+2025-08-06 18:35:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:28 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:28 - INFO - [Swing] Generated LONG signal for B-OM_USDT on 5m - Score: 7/7, Confidence: 1.000, TP: 0.274639, SL: 0.266521
+2025-08-06 18:35:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:29 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:29 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:29 - INFO - [LongSwing] FILTERED OUT B-ADA_USDT - Poor movement characteristics:
+2025-08-06 18:35:29 - INFO -   Momentum: 0.24% (need ±0.5%)
+2025-08-06 18:35:29 - INFO -   Movement efficiency: 0.54 (need ≥0.3)
+2025-08-06 18:35:29 - INFO -   ATR/Movement ratio: 0.51 (need ≤3.0)
+2025-08-06 18:35:29 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:35:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:29 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:30 - INFO - [LongSwing] FILTERED OUT B-1000BONK_USDT - Poor movement characteristics:
+2025-08-06 18:35:30 - INFO -   Momentum: 0.04% (need ±0.5%)
+2025-08-06 18:35:30 - INFO -   Movement efficiency: 0.22 (need ≥0.3)
+2025-08-06 18:35:30 - INFO -   ATR/Movement ratio: 1.43 (need ≤3.0)
+2025-08-06 18:35:30 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:35:30 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:30 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:31 - INFO - [LongSwing] FILTERED OUT B-ADA_USDT - Poor movement characteristics:
+2025-08-06 18:35:31 - INFO -   Momentum: 0.35% (need ±0.5%)
+2025-08-06 18:35:31 - INFO -   Movement efficiency: 0.06 (need ≥0.3)
+2025-08-06 18:35:31 - INFO -   ATR/Movement ratio: 5.85 (need ≤3.0)
+2025-08-06 18:35:31 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:35:31 - INFO - [LongSwing] FILTERED OUT B-1000BONK_USDT - Poor movement characteristics:
+2025-08-06 18:35:31 - INFO -   Momentum: -0.36% (need ±0.5%)
+2025-08-06 18:35:31 - INFO -   Movement efficiency: 0.65 (need ≥0.3)
+2025-08-06 18:35:31 - INFO -   ATR/Movement ratio: 0.36 (need ≤3.0)
+2025-08-06 18:35:31 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:35:31 - INFO - [Long Swing] Generated LONG signal for B-OM_USDT on 30m - Score: 9/9, Confidence: 0.975, TP: 0.285187, SL: 0.262008
+2025-08-06 18:35:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:35:31 - INFO - CoinDesk API enabled: False
+2025-08-06 18:35:33 - INFO - [Long Swing] Generated LONG signal for B-OM_USDT on 1h - Score: 9/9, Confidence: 0.975, TP: 0.289677, SL: 0.259426
+2025-08-06 18:35:33 - INFO - Generated 7 profitable signals (mix of scalping, swing, and long_swing) from 15 top movers
+2025-08-06 18:35:33 - INFO - 1. B-OM_USDT - long_swing (30m): Score 11, Normalized 157.1%, Confidence 0.800, Est. Profit ₹95702.27
+2025-08-06 18:35:33 - INFO - 2. B-OM_USDT - long_swing (1h): Score 10, Normalized 142.9%, Confidence 0.588, Est. Profit ₹86523.64
+2025-08-06 18:35:33 - INFO - 3. B-ENA_USDT - swing (5m): Score 9, Normalized 128.6%, Confidence 0.607, Est. Profit ₹21224.23
+2025-08-06 18:35:33 - INFO - 4. B-OM_USDT - swing (15m): Score 10, Normalized 142.9%, Confidence 0.800, Est. Profit ₹20574.51
+2025-08-06 18:35:33 - INFO - 5. B-PENGU_USDT - swing (15m): Score 9, Normalized 128.6%, Confidence 0.528, Est. Profit ₹19202.87
+2025-08-06 18:35:33 - INFO - 6. B-PENGU_USDT - swing (5m): Score 9, Normalized 128.6%, Confidence 0.528, Est. Profit ₹19202.87
+2025-08-06 18:35:33 - INFO - 7. B-OM_USDT - swing (5m): Score 9, Normalized 128.6%, Confidence 0.693, Est. Profit ₹19202.87
+2025-08-06 18:35:33 - INFO - Added high-profit signal to monitoring: B-OM_USDT_long_swing_2025-08-06 18:35:31.408725+05:30 (Est. Profit: ₹95702.27)
+2025-08-06 18:35:45 - INFO - Added high-profit signal to monitoring: B-OM_USDT_long_swing_2025-08-06 18:35:33.540986+05:30 (Est. Profit: ₹86523.64)
+2025-08-06 18:35:34 - INFO - Added high-profit signal to monitoring: B-ENA_USDT_swing_2025-08-06 18:34:50.357306+05:30 (Est. Profit: ₹21224.23)
+2025-08-06 18:35:34 - INFO - Added high-profit signal to monitoring: B-OM_USDT_swing_2025-08-06 18:35:15.311913+05:30 (Est. Profit: ₹20574.51)
+2025-08-06 18:35:34 - INFO - Added high-profit signal to monitoring: B-PENGU_USDT_swing_2025-08-06 18:35:00.983987+05:30 (Est. Profit: ₹19202.87)
+2025-08-06 18:35:34 - INFO - Added high-profit signal to monitoring: B-PENGU_USDT_swing_2025-08-06 18:35:16.934851+05:30 (Est. Profit: ₹19202.87)
+2025-08-06 18:35:34 - INFO - Added high-profit signal to monitoring: B-OM_USDT_swing_2025-08-06 18:35:28.927405+05:30 (Est. Profit: ₹19202.87)
+2025-08-06 18:35:34 - INFO - Monitoring data saved to latest_monitoring_data.json with 7 active signals
+2025-08-06 18:35:34 - INFO - Generated 7 signals, saved to latest_signals.json
+2025-08-06 18:35:34 - INFO - SIGNAL: B-OM_USDT LONG long_swing - Score: 11
+2025-08-06 18:35:34 - INFO - SIGNAL: B-OM_USDT LONG long_swing - Score: 10
+2025-08-06 18:35:34 - INFO - SIGNAL: B-ENA_USDT SHORT swing - Score: 9
+2025-08-06 18:35:34 - INFO - SIGNAL: B-OM_USDT LONG swing - Score: 10
+2025-08-06 18:35:34 - INFO - SIGNAL: B-PENGU_USDT SHORT swing - Score: 9
+2025-08-06 18:35:34 - INFO - SIGNAL: B-PENGU_USDT SHORT swing - Score: 9
+2025-08-06 18:35:34 - INFO - SIGNAL: B-OM_USDT LONG swing - Score: 9
+2025-08-06 18:35:34 - INFO - === Trading Bot execution completed ===
+2025-08-06 18:38:12 - INFO - === Logger initialized successfully ===
+2025-08-06 18:38:12 - INFO - Log file: logs/trading_bot.log
+2025-08-06 18:38:12 - INFO - Log level: INFO
+2025-08-06 18:38:12 - INFO - === Starting Crypto Futures Trading Bot ===
+2025-08-06 18:38:12 - INFO - Configuration loaded successfully
+2025-08-06 18:38:12 - INFO - Trading instruments: 11
+2025-08-06 18:38:12 - INFO - Initial balance: 10000 INR
+2025-08-06 18:38:12 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:12 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:12 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:12 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:12 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:12 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:12 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:12 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:13 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:13 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:13 - INFO - StrategyManager initialized with all strategies
+2025-08-06 18:38:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:13 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:13 - INFO - EnhancedSignalGenerator initialized
+2025-08-06 18:38:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:13 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:13 - INFO - SignalMonitor initialized
+2025-08-06 18:38:13 - INFO - Trade executor initialized
+2025-08-06 18:38:13 - INFO - Generating trading signals...
+2025-08-06 18:38:13 - INFO - === GENERATING ENTRY SIGNALS (HIGH VOLUME SYMBOLS, MIXED STRATEGY) ===
+2025-08-06 18:38:13 - INFO - Fetching top 40 high volume symbols from CoinDCX with increased volume filter...
+2025-08-06 18:38:13 - INFO - Filtered to 26 top movers that are active instruments
+2025-08-06 18:38:13 - INFO - Found 26 top movers to analyze (min_volume=500000)
+2025-08-06 18:38:21 - INFO - Selected 15 symbols with high ATR% (max of 15m/30m/1h) and volume for signal generation.
+2025-08-06 18:38:21 - INFO - Skipping blacklisted symbol: B-FARTCOIN_USDT
+2025-08-06 18:38:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:21 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:21 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:21 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:21 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:21 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:21 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:21 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:21 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:23 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:23 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:23 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:23 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:23 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:23 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:23 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:23 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:24 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:24 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:24 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:24 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:24 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:24 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:24 - INFO - [Swing] Skipping B-SOL_USDT due to low liquidity (avg_volume=146951.74 < 300000)
+2025-08-06 18:38:24 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:24 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:24 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:24 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:26 - INFO - [Swing] Skipping B-ILV_USDT due to low liquidity (avg_volume=223351.46 < 300000)
+2025-08-06 18:38:26 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:26 - INFO - [Swing] Skipping B-ETH_USDT due to low liquidity (avg_volume=41727.29 < 300000)
+2025-08-06 18:38:26 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:27 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:27 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:41 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:29 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:29 - INFO - [Swing] Skipping B-SOL_USDT due to low liquidity (avg_volume=55739.89 < 300000)
+2025-08-06 18:38:30 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:30 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:30 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:30 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:31 - INFO - [Swing] Skipping B-ILV_USDT due to low liquidity (avg_volume=55592.32 < 300000)
+2025-08-06 18:38:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:31 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:32 - INFO - [Swing] Skipping B-ETH_USDT due to low liquidity (avg_volume=17649.04 < 300000)
+2025-08-06 18:38:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:32 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:32 - INFO - [LongSwing] Skipping B-SOL_USDT due to low liquidity (avg_volume=277899.18 < 300000)
+2025-08-06 18:38:33 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:33 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:33 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:33 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:33 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:33 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:34 - INFO - [LongSwing] FILTERED OUT B-ILV_USDT - Poor movement characteristics:
+2025-08-06 18:38:34 - INFO -   Momentum: 1.76% (need ±0.5%)
+2025-08-06 18:38:34 - INFO -   Movement efficiency: 0.07 (need ≥0.3)
+2025-08-06 18:38:34 - INFO -   ATR/Movement ratio: 3.24 (need ≤3.0)
+2025-08-06 18:38:34 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:38:35 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:35 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:35 - INFO - [LongSwing] Skipping B-ETH_USDT due to low liquidity (avg_volume=84697.56 < 300000)
+2025-08-06 18:38:35 - INFO - [LongSwing] FILTERED OUT B-SOL_USDT - Poor movement characteristics:
+2025-08-06 18:38:35 - INFO -   Momentum: 0.24% (need ±0.5%)
+2025-08-06 18:38:35 - INFO -   Movement efficiency: 0.15 (need ≥0.3)
+2025-08-06 18:38:35 - INFO -   ATR/Movement ratio: 2.64 (need ≤3.0)
+2025-08-06 18:38:35 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:38:35 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:35 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:36 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:39 - INFO - [LongSwing] Skipping B-ETH_USDT due to low liquidity (avg_volume=155199.50 < 300000)
+2025-08-06 18:38:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:41 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:42 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:42 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:44 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:44 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:50 - INFO - [Swing] Skipping B-LTC_USDT due to low liquidity (avg_volume=42277.59 < 300000)
+2025-08-06 18:38:50 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:50 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:51 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:52 - INFO - [Swing] Generated SHORT signal for B-ENA_USDT on 5m - Score: 6/7, Confidence: 0.929, TP: 0.550714, SL: 0.567487
+2025-08-06 18:38:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:52 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:53 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:53 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:53 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:53 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:53 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:53 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:56 - INFO - [LongSwing] FILTERED OUT B-SUI_USDT - Poor movement characteristics:
+2025-08-06 18:38:56 - INFO -   Momentum: 0.04% (need ±0.5%)
+2025-08-06 18:38:56 - INFO - [LongSwing] FILTERED OUT B-ENA_USDT - Poor movement characteristics:
+2025-08-06 18:38:56 - INFO -   Movement efficiency: 0.41 (need ≥0.3)
+2025-08-06 18:38:56 - INFO -   Momentum: -1.18% (need ±0.5%)
+2025-08-06 18:38:56 - INFO - [Swing] Skipping B-LTC_USDT due to low liquidity (avg_volume=14636.70 < 300000)
+2025-08-06 18:38:56 - INFO -   ATR/Movement ratio: 0.59 (need ≤3.0)
+2025-08-06 18:38:56 - INFO -   Movement efficiency: 0.01 (need ≥0.3)
+2025-08-06 18:38:56 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:38:56 - INFO -   ATR/Movement ratio: 46.64 (need ≤3.0)
+2025-08-06 18:38:56 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:38:56 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:56 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:56 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:57 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:57 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:57 - INFO - [LongSwing] FILTERED OUT B-XRP_USDT - Poor movement characteristics:
+2025-08-06 18:38:57 - INFO -   Momentum: 0.16% (need ±0.5%)
+2025-08-06 18:38:57 - INFO -   Movement efficiency: 0.50 (need ≥0.3)
+2025-08-06 18:38:57 - INFO -   ATR/Movement ratio: 0.59 (need ≤3.0)
+2025-08-06 18:38:57 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:38:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:57 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:58 - INFO - CoinDesk API enabled: False
+2025-08-06 18:38:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:38:58 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:11 - INFO - [LongSwing] FILTERED OUT B-SUI_USDT - Poor movement characteristics:
+2025-08-06 18:38:59 - INFO -   Momentum: 0.24% (need ±0.5%)
+2025-08-06 18:38:59 - INFO -   Movement efficiency: 0.04 (need ≥0.3)
+2025-08-06 18:38:59 - INFO -   ATR/Movement ratio: 7.37 (need ≤3.0)
+2025-08-06 18:38:59 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:39:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:00 - INFO - [LongSwing] Skipping B-LTC_USDT due to low liquidity (avg_volume=85489.80 < 300000)
+2025-08-06 18:39:00 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:00 - INFO - [LongSwing] FILTERED OUT B-XRP_USDT - Poor movement characteristics:
+2025-08-06 18:39:00 - INFO -   Momentum: 0.01% (need ±0.5%)
+2025-08-06 18:39:00 - INFO -   Movement efficiency: 0.34 (need ≥0.3)
+2025-08-06 18:39:00 - INFO -   ATR/Movement ratio: 0.94 (need ≤3.0)
+2025-08-06 18:39:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:00 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:39:00 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:00 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:01 - INFO - [Long Swing] FILTERED OUT: B-ENA_USDT 1h SHORT signal with score 8/8 - Score 8 signals tend to hit stop loss frequently
+2025-08-06 18:39:01 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:01 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:01 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:01 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:01 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:02 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:02 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:02 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:03 - INFO - [LongSwing] Skipping B-LTC_USDT due to low liquidity (avg_volume=166368.31 < 300000)
+2025-08-06 18:39:03 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:03 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:04 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:04 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:04 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:04 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:05 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:05 - INFO - [LongSwing] FILTERED OUT B-1000PEPE_USDT - Poor movement characteristics:
+2025-08-06 18:39:05 - INFO -   Momentum: 1.05% (need ±0.5%)
+2025-08-06 18:39:05 - INFO -   Movement efficiency: 0.28 (need ≥0.3)
+2025-08-06 18:39:05 - INFO -   ATR/Movement ratio: 0.98 (need ≤3.0)
+2025-08-06 18:39:05 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:39:15 - INFO - [Swing] Generated LONG signal for B-OM_USDT on 15m - Score: 6/7, Confidence: 0.770, TP: 0.272152, SL: 0.264108
+2025-08-06 18:39:15 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:15 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:16 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:16 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:16 - INFO - [Swing] Generated SHORT signal for B-DOGE_USDT on 5m - Score: 6/7, Confidence: 0.770, TP: 0.196764, SL: 0.202756
+2025-08-06 18:39:16 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:16 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:17 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:17 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:17 - INFO - [Swing] Generated SHORT signal for B-PENGU_USDT on 5m - Score: 6/7, Confidence: 0.929, TP: 0.032127, SL: 0.033105
+2025-08-06 18:39:18 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:18 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:18 - INFO - [LongSwing] FILTERED OUT B-DOGE_USDT - Poor movement characteristics:
+2025-08-06 18:39:18 - INFO -   Momentum: 0.24% (need ±0.5%)
+2025-08-06 18:39:18 - INFO -   Movement efficiency: 0.50 (need ≥0.3)
+2025-08-06 18:39:18 - INFO -   ATR/Movement ratio: 0.50 (need ≤3.0)
+2025-08-06 18:39:18 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:39:18 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:18 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:20 - INFO - [LongSwing] FILTERED OUT B-PENGU_USDT - Poor movement characteristics:
+2025-08-06 18:39:20 - INFO -   Momentum: -0.22% (need ±0.5%)
+2025-08-06 18:39:20 - INFO -   Movement efficiency: 0.03 (need ≥0.3)
+2025-08-06 18:39:20 - INFO -   ATR/Movement ratio: 10.89 (need ≤3.0)
+2025-08-06 18:39:20 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:39:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:21 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:21 - INFO - [LongSwing] FILTERED OUT B-DOGE_USDT - Poor movement characteristics:
+2025-08-06 18:39:21 - INFO -   Momentum: 0.61% (need ±0.5%)
+2025-08-06 18:39:21 - INFO -   Movement efficiency: 0.11 (need ≥0.3)
+2025-08-06 18:39:21 - INFO -   ATR/Movement ratio: 2.86 (need ≤3.0)
+2025-08-06 18:39:21 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:39:27 - INFO - [Long Swing] Generated SHORT signal for B-PENGU_USDT on 1h - Score: 7/9, Confidence: 0.889, TP: 0.031261, SL: 0.033439
+2025-08-06 18:39:29 - INFO - [Swing] Generated LONG signal for B-OM_USDT on 5m - Score: 6/7, Confidence: 0.770, TP: 0.271939, SL: 0.263901
+2025-08-06 18:39:30 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:30 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:30 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:30 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:30 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:30 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:30 - INFO - [LongSwing] FILTERED OUT B-ADA_USDT - Poor movement characteristics:
+2025-08-06 18:39:30 - INFO -   Momentum: 0.23% (need ±0.5%)
+2025-08-06 18:39:30 - INFO -   Movement efficiency: 0.51 (need ≥0.3)
+2025-08-06 18:39:30 - INFO -   ATR/Movement ratio: 0.54 (need ≤3.0)
+2025-08-06 18:39:30 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:39:30 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:30 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:30 - INFO - [LongSwing] FILTERED OUT B-1000BONK_USDT - Poor movement characteristics:
+2025-08-06 18:39:30 - INFO -   Momentum: 0.01% (need ±0.5%)
+2025-08-06 18:39:30 - INFO -   Movement efficiency: 0.14 (need ≥0.3)
+2025-08-06 18:39:30 - INFO -   ATR/Movement ratio: 2.21 (need ≤3.0)
+2025-08-06 18:39:30 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:39:30 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:30 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:31 - INFO - [LongSwing] FILTERED OUT B-ADA_USDT - Poor movement characteristics:
+2025-08-06 18:39:31 - INFO -   Momentum: 0.34% (need ±0.5%)
+2025-08-06 18:39:31 - INFO -   Movement efficiency: 0.09 (need ≥0.3)
+2025-08-06 18:39:31 - INFO -   ATR/Movement ratio: 3.91 (need ≤3.0)
+2025-08-06 18:39:31 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:39:31 - INFO - [Long Swing] Generated LONG signal for B-OM_USDT on 30m - Score: 9/9, Confidence: 0.881, TP: 0.282856, SL: 0.259150
+2025-08-06 18:39:32 - INFO - [LongSwing] FILTERED OUT B-1000BONK_USDT - Poor movement characteristics:
+2025-08-06 18:39:32 - INFO -   Momentum: -0.40% (need ±0.5%)
+2025-08-06 18:39:32 - INFO -   Movement efficiency: 0.69 (need ≥0.3)
+2025-08-06 18:39:32 - INFO -   ATR/Movement ratio: 0.34 (need ≤3.0)
+2025-08-06 18:39:32 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-06 18:39:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-06 18:39:32 - INFO - CoinDesk API enabled: False
+2025-08-06 18:39:33 - INFO - [Long Swing] Generated LONG signal for B-OM_USDT on 1h - Score: 9/9, Confidence: 0.881, TP: 0.287216, SL: 0.256439
+2025-08-06 18:39:33 - INFO - Generated 8 profitable signals (mix of scalping, swing, and long_swing) from 15 top movers
+2025-08-06 18:39:33 - INFO - 1. B-OM_USDT - long_swing (30m): Score 10, Normalized 142.9%, Confidence 0.770, Est. Profit ₹92666.29
+2025-08-06 18:39:33 - INFO - 2. B-OM_USDT - long_swing (1h): Score 10, Normalized 142.9%, Confidence 0.588, Est. Profit ₹88943.73
+2025-08-06 18:39:33 - INFO - 3. B-PENGU_USDT - long_swing (1h): Score 9, Normalized 128.6%, Confidence 0.480, Est. Profit ₹46452.00
+2025-08-06 18:39:33 - INFO - 4. B-DOGE_USDT - swing (5m): Score 9, Normalized 128.6%, Confidence 0.607, Est. Profit ₹21224.23
+2025-08-06 18:39:33 - INFO - 5. B-ENA_USDT - swing (5m): Score 9, Normalized 128.6%, Confidence 0.552, Est. Profit ₹18455.85
+2025-08-06 18:39:33 - INFO - 6. B-PENGU_USDT - swing (5m): Score 8, Normalized 114.3%, Confidence 0.440, Est. Profit ₹17831.24
+2025-08-06 18:39:33 - INFO - 7. B-OM_USDT - swing (15m): Score 8, Normalized 114.3%, Confidence 0.578, Est. Profit ₹17831.24
+2025-08-06 18:39:33 - INFO - 8. B-OM_USDT - swing (5m): Score 8, Normalized 114.3%, Confidence 0.578, Est. Profit ₹17831.24
+2025-08-06 18:39:33 - INFO - Added high-profit signal to monitoring: B-OM_USDT_long_swing_2025-08-06 18:39:31.961058+05:30 (Est. Profit: ₹92666.29)
+2025-08-06 18:39:34 - INFO - Added high-profit signal to monitoring: B-OM_USDT_long_swing_2025-08-06 18:39:33.769952+05:30 (Est. Profit: ₹88943.73)
+2025-08-06 18:39:34 - INFO - Added signal to monitoring: B-PENGU_USDT_long_swing_2025-08-06 18:39:27.808226+05:30
+2025-08-06 18:39:34 - INFO - Added high-profit signal to monitoring: B-DOGE_USDT_swing_2025-08-06 18:39:16.683540+05:30 (Est. Profit: ₹21224.23)
+2025-08-06 18:39:34 - INFO - Added high-profit signal to monitoring: B-ENA_USDT_swing_2025-08-06 18:38:52.532462+05:30 (Est. Profit: ₹18455.85)
+2025-08-06 18:39:46 - INFO - Added signal to monitoring: B-PENGU_USDT_swing_2025-08-06 18:39:17.763173+05:30
+2025-08-06 18:39:34 - INFO - Added high-profit signal to monitoring: B-OM_USDT_swing_2025-08-06 18:39:15.250843+05:30 (Est. Profit: ₹17831.24)
+2025-08-06 18:39:34 - INFO - Added high-profit signal to monitoring: B-OM_USDT_swing_2025-08-06 18:39:29.810681+05:30 (Est. Profit: ₹17831.24)
+2025-08-06 18:39:34 - INFO - Monitoring data saved to latest_monitoring_data.json with 8 active signals
+2025-08-06 18:39:34 - INFO - Generated 8 signals, saved to latest_signals.json
+2025-08-06 18:39:34 - INFO - SIGNAL: B-OM_USDT LONG long_swing - Score: 10
+2025-08-06 18:39:34 - INFO - SIGNAL: B-OM_USDT LONG long_swing - Score: 10
+2025-08-06 18:39:34 - INFO - SIGNAL: B-PENGU_USDT SHORT long_swing - Score: 9
+2025-08-06 18:39:34 - INFO - SIGNAL: B-DOGE_USDT SHORT swing - Score: 9
+2025-08-06 18:39:34 - INFO - SIGNAL: B-ENA_USDT SHORT swing - Score: 9
+2025-08-06 18:39:34 - INFO - SIGNAL: B-PENGU_USDT SHORT swing - Score: 8
+2025-08-06 18:39:34 - INFO - SIGNAL: B-OM_USDT LONG swing - Score: 8
+2025-08-06 18:39:34 - INFO - SIGNAL: B-OM_USDT LONG swing - Score: 8
+2025-08-06 18:39:34 - INFO - === Trading Bot execution completed ===

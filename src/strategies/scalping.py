@@ -60,10 +60,10 @@ class ScalpingStrategy:
             trend_confirmation = self._analyze_multi_timeframe_trend(multi_tf_data, current_price)
             self.logger.debug(f"[Scalping] Multi-timeframe trend for {symbol}: {trend_confirmation}")
 
-            # ENHANCED: Liquidity filter (replacing volatility filter)
-            liquidity_ok = self._check_liquidity_filter(symbol, candles)
-            if not liquidity_ok:
-                self.logger.debug(f"[Scalping] No signal for {symbol}: Liquidity filter not met")
+            # ENHANCED: High volume and volatility filter (replacing liquidity filter)
+            volume_volatility_ok = self._check_volume_volatility_filter(symbol, candles)
+            if not volume_volatility_ok:
+                self.logger.debug(f"[Scalping] No signal for {symbol}: Volume/Volatility filter not met")
                 return None
 
             # Calculate indicators
@@ -134,9 +134,9 @@ class ScalpingStrategy:
             price_above_ema = current_price > ema_20
             long_conditions.append(("Price > EMA20", price_above_ema))
             
-            # 3. RSI NOT OVERBOUGHT: RSI between 45-65 (optimal bullish range)
-            rsi_bullish = 45 <= rsi <= 65  # Narrower, more reliable range
-            long_conditions.append(("RSI optimal bullish (45-65)", rsi_bullish))
+            # 3. RSI NOT OVERBOUGHT: RSI between 50-70 (optimal bullish range)
+            rsi_bullish = 50 <= rsi <= 70  # Refined range for better precision
+            long_conditions.append(("RSI optimal bullish (50-70)", rsi_bullish))
             
             # 4. MACD POSITIVE AND RISING: MACD > 0 and histogram increasing
             macd_bullish = macd > 0 and stoch_k > stoch_d  # MACD positive + momentum
@@ -170,6 +170,29 @@ class ScalpingStrategy:
             # 12. OBV rising (last 2 values)
             obv_rising = obv > 0  # For simplicity, positive OBV means rising
             long_conditions.append(("OBV rising", obv_rising))
+            
+            # Calculate ATR first for volatility conditions
+            atr = self.indicators.calculate_atr(candles)
+            if atr is None:
+                atr = entry_price * 0.01  # Default 1% ATR if calculation fails
+            
+            # 13. Strong momentum confirmation - EMA20 slope positive
+            ema_20_slope = ((ema_20 - self.indicators.calculate_ema(candles[:-1], 20)) / ema_20) * 100 if len(candles) > 20 else 0
+            strong_momentum = ema_20_slope > 0.05  # EMA20 rising by at least 0.05%
+            long_conditions.append(("Strong momentum (EMA20 slope > 0.05%)", strong_momentum))
+            
+            # 14. Price action confirmation - Recent candle bullish
+            recent_candle_bullish = float(candles[-1]['close']) > float(candles[-1]['open'])
+            long_conditions.append(("Recent candle bullish", recent_candle_bullish))
+            
+            # 15. Volume surge confirmation - Current volume > 1.8x average
+            volume_surge = current_volume > avg_volume * 1.8
+            long_conditions.append(("Volume surge (1.8x average)", volume_surge))
+            
+            # 16. Volatility confirmation - ATR within optimal range
+            atr_pct = (atr / current_price) * 100 if atr and current_price else 0
+            volatility_optimal = 1.5 <= atr_pct <= 6.0  # Optimal volatility range for scalping
+            long_conditions.append(("Optimal volatility (1.5-6% ATR)", volatility_optimal))
 
             # --- SIMPLIFIED SHORT CONDITIONS - Focus on clear bearish setups only ---
             short_conditions = []
@@ -182,9 +205,9 @@ class ScalpingStrategy:
             price_below_ema = current_price < ema_20
             short_conditions.append(("Price < EMA20", price_below_ema))
             
-            # 3. RSI NOT OVERSOLD: RSI between 35-55 (optimal bearish range)
-            rsi_bearish = 35 <= rsi <= 55  # Narrower, more reliable range
-            short_conditions.append(("RSI optimal bearish (35-55)", rsi_bearish))
+            # 3. RSI NOT OVERSOLD: RSI between 30-50 (optimal bearish range)
+            rsi_bearish = 30 <= rsi <= 50  # Refined range for better precision
+            short_conditions.append(("RSI optimal bearish (30-50)", rsi_bearish))
             
             # 4. MACD NEGATIVE AND FALLING: MACD < 0 and histogram decreasing
             macd_bearish = macd < 0 and stoch_k < stoch_d  # MACD negative + momentum
@@ -218,6 +241,22 @@ class ScalpingStrategy:
             # 12. OBV falling (last 2 values)
             obv_falling = obv < 0  # For simplicity, negative OBV means falling
             short_conditions.append(("OBV falling", obv_falling))
+            
+            # 13. Strong momentum confirmation - EMA20 slope negative (reuse calculated slope)
+            strong_momentum_down = ema_20_slope < -0.05  # EMA20 falling by at least 0.05%
+            short_conditions.append(("Strong momentum (EMA20 slope < -0.05%)", strong_momentum_down))
+            
+            # 14. Price action confirmation - Recent candle bearish
+            recent_candle_bearish = float(candles[-1]['close']) < float(candles[-1]['open'])
+            short_conditions.append(("Recent candle bearish", recent_candle_bearish))
+            
+            # 15. Volume surge confirmation - Current volume > 1.8x average
+            volume_surge = current_volume > avg_volume * 1.8
+            short_conditions.append(("Volume surge (1.8x average)", volume_surge))
+            
+            # 16. Volatility confirmation - ATR within optimal range (reuse calculated values)
+            volatility_optimal = 1.5 <= atr_pct <= 6.0  # Optimal volatility range for scalping
+            short_conditions.append(("Optimal volatility (1.5-6% ATR)", volatility_optimal))
 
             # --- BONUS CONFIDENCE BOOSTERS ---
             bonus_score = 0
@@ -253,25 +292,25 @@ class ScalpingStrategy:
             # Add bonus_score to main score for final decision
             # (You may want to cap the max score or adjust thresholds accordingly)
 
-            # Check long conditions (NEED 6 out of 8 for reliability)
+            # Check long conditions (NEED 8 out of 12 for higher precision)
             long_score = sum(1 for _, condition in long_conditions if condition)
             self.logger.debug(f"[Scalping] {symbol} {timeframe} Long conditions: {[(name, condition) for name, condition in long_conditions]}")
             
-            # Check short conditions (NEED 6 out of 8 for reliability)
+            # Check short conditions (NEED 8 out of 12 for higher precision)
             short_score = sum(1 for _, condition in short_conditions if condition)
             self.logger.debug(f"[Scalping] {symbol} {timeframe} Short conditions: {[(name, condition) for name, condition in short_conditions]}")
             
-            # DETERMINE TRADE DIRECTION (MORE SELECTIVE: Need 6 out of 8 for better quality)
-            if long_score >= 6 and long_score > short_score:
+            # DETERMINE TRADE DIRECTION (MUCH MORE SELECTIVE: Need 11 out of 16 for better quality)
+            if long_score >= 11 and long_score > short_score:
                 side = "long"
                 score = long_score
                 reasons = [name for name, condition in long_conditions if condition]
-            elif short_score >= 6 and short_score > long_score:
+            elif short_score >= 11 and short_score > long_score:
                 side = "short"
                 score = short_score
                 reasons = [name for name, condition in short_conditions if condition]
             else:
-                self.logger.debug(f"[Scalping] No signal for {symbol}: Long score={long_score}/8, Short score={short_score}/8 (need 6+)")
+                self.logger.debug(f"[Scalping] No signal for {symbol}: Long score={long_score}/16, Short score={short_score}/16 (need 11+)")
                 return None
 
             # ENHANCED: Incorporate multi-timeframe trend confirmation
@@ -292,41 +331,42 @@ class ScalpingStrategy:
                 score -= 1  # Penalty for trend misalignment
                 reasons.append("Multi-timeframe trend bullish (penalty)")
 
-            # Calculate pivot points
-            pivots = self.indicators.calculate_pivot_points(candles)
+            # Calculate pivot points (for potential future use)
+            # pivots = self.indicators.calculate_pivot_points(candles)
 
-            # Generate signal if conditions are met (MORE SELECTIVE: Need 6+ for better quality)
-            if side and score >= 6:  # MORE SELECTIVE: Need 6+ out of 8
+            # Generate signal if conditions are met (MUCH MORE SELECTIVE: Need 11+ for better quality)
+            if side and score >= 11:  # MUCH MORE SELECTIVE: Need 11+ out of 16
                 entry_price = current_price
                 
                 # SIMPLIFIED AND REALISTIC TP/SL CALCULATION
-                # Use ATR-based stops for better risk management
-                atr = self.indicators.calculate_atr(candles)
-                if atr is None:
-                    atr = entry_price * 0.01  # Default 1% ATR if calculation fails
+                # Use ATR-based stops for better risk management (ATR already calculated)
                 
                 # Calculate ATR percentage
                 atr_pct = (atr / entry_price) * 100
                 
-                # SIMPLIFIED: Use fixed percentages for scalping (more predictable)
+                # IMPROVED: Use adaptive SL based on volatility and score
+                # Calculate ATR-based dynamic SL (more conservative for high score signals)
+                score_factor = min(score / 15.0, 1.0)  # Normalize score
+                base_sl_pct = 0.8 + (0.7 * (1 - score_factor))  # 0.8% to 1.5% based on signal quality
+                
                 if side == "long":
                     # Long trade: SL below entry, TP above entry
-                    stop_loss = entry_price * 0.985  # 1.5% below entry
-                    tp1 = entry_price * 1.015  # 1.5% above entry
-                    tp2 = entry_price * 1.02   # 2% above entry (capped)
+                    stop_loss = entry_price * (1 - base_sl_pct / 100)  # Dynamic SL
+                    tp1 = entry_price * (1 + (base_sl_pct * 1.5) / 100)  # 1.5x SL for TP
+                    tp2 = entry_price * (1 + (base_sl_pct * 2.0) / 100)  # 2x SL for TP2
                 else:
                     # Short trade: SL above entry, TP below entry
-                    stop_loss = entry_price * 1.015  # 1.5% above entry
-                    tp1 = entry_price * 0.985  # 1.5% below entry
-                    tp2 = entry_price * 0.98   # 2% below entry (capped)
+                    stop_loss = entry_price * (1 + base_sl_pct / 100)  # Dynamic SL
+                    tp1 = entry_price * (1 - (base_sl_pct * 1.5) / 100)  # 1.5x SL for TP
+                    tp2 = entry_price * (1 - (base_sl_pct * 2.0) / 100)  # 2x SL for TP2
 
                 # SIMPLIFIED: No complex pivot point logic for scalping
                 # Use simple, predictable levels
                 
-                # Entry price validation (0.5% slippage tolerance)
-                entry_tolerance = entry_price * 0.005  # 0.5% tolerance
-                min_entry_price = entry_price - entry_tolerance
-                max_entry_price = entry_price + entry_tolerance
+                # Entry price validation (0.5% slippage tolerance) - for future use
+                # entry_tolerance = entry_price * 0.005  # 0.5% tolerance
+                # min_entry_price = entry_price - entry_tolerance
+                # max_entry_price = entry_price + entry_tolerance
                 
                 # SIMPLIFIED: Realistic profit calculation
                 position_size = self.balance * self.config["trading"]["position_size_ratio"]
@@ -342,40 +382,40 @@ class ScalpingStrategy:
                 net_profit = inr_profit - taker_fee
                 
                 # Simple profit adjustment based on score
-                score_multiplier = 1.0 + (score - 6) * 0.1  # 10% increase per score point above 6
-                final_profit = net_profit * score_multiplier
+                score_multiplier = 1.0 + (score - 11) * 0.1  # 10% increase per score point above 11
+                final_profit = max(net_profit * score_multiplier, 0)  # Ensure non-negative profit
                 
                 # Cap profit at reasonable levels
                 final_profit = min(final_profit, 1000.0)  # Maximum ₹1000 profit
 
-                # CAP SL TO 2.1% AND TP TO 2% FOR SCALPING
+                # CAP SL TO 1.5% AND TP TO 3% FOR SCALPING
                 if side == "long":
-                    stop_loss = max(stop_loss, entry_price * 0.979)
-                    tp1 = min(tp1, entry_price * 1.02)
-                    tp2 = tp1
+                    stop_loss = max(stop_loss, entry_price * 0.985)  # Max 1.5% SL
+                    tp1 = min(tp1, entry_price * 1.03)  # Max 3% TP
+                    tp2 = min(tp2, entry_price * 1.03)  # Max 3% TP2
                 else:
-                    stop_loss = min(stop_loss, entry_price * 1.021)
-                    tp1 = max(tp1, entry_price * 0.98)
-                    tp2 = tp1
+                    stop_loss = min(stop_loss, entry_price * 1.015)  # Max 1.5% SL
+                    tp1 = max(tp1, entry_price * 0.97)  # Max 3% TP
+                    tp2 = max(tp2, entry_price * 0.97)  # Max 3% TP2
 
                 # Remove undefined multipliers from profit calculation
                 # final_profit = net_profit * score_multiplier * rsi_multiplier * volume_multiplier * macd_multiplier * structure_multiplier
-                final_profit = net_profit * score_multiplier
+                final_profit = max(final_profit, 0)  # Ensure positive profit
                 # Remove minimum profit threshold (no more final_profit = max(final_profit, 100.0))
                 # Keep only the maximum cap if needed
                 final_profit = min(final_profit, 1000.0)  # Increased maximum from ₹500 to ₹1000
                 
                 # Calculate confidence and quality score with multi-timeframe trend
-                base_confidence = min(score / 8.0, 1.0)  # Normalize to 0-1
+                base_confidence = min(score / 16.0, 1.0)  # Normalize to 0-1 based on 16 conditions
                 confidence = (base_confidence + trend_strength) / 2
                 quality_score = (score * 10) + (trend_strength * 50) + (confidence * 100)
                 
                 # Normalize quality score to 0-100
-                max_possible_score = 8 * 10 + 1.0 * 50 + 1.0 * 100  # 230
+                max_possible_score = 16 * 10 + 1.0 * 50 + 1.0 * 100  # 310
                 normalized_score = min((quality_score / max_possible_score) * 100, 100)
 
                 # Calculate total possible score
-                score_max = len(long_conditions) + 5  # 5 is the max possible bonus points
+                score_max = 16 + 5  # 16 conditions + 5 max possible bonus points
                 # Add bonus_score to main score
                 total_score = score + bonus_score
                 total_reasons = reasons + bonus_reasons
@@ -427,15 +467,15 @@ class ScalpingStrategy:
                     "bonus_reasons": bonus_reasons
                 }
                 
-                if score >= 8:
-                    self.logger.info(f"[Scalping] Generated STRONG signal (score {score}/9): {signal}")
-                elif score >= 7:
-                    self.logger.info(f"[Scalping] Generated signal (score {score}/9): {signal}")
+                if score >= 13:
+                    self.logger.info(f"[Scalping] Generated STRONG signal (score {score}/16): {signal}")
+                elif score >= 11:
+                    self.logger.info(f"[Scalping] Generated signal (score {score}/16): {signal}")
                 else:
-                    self.logger.debug(f"[Scalping] Generated weak signal (score {score}/9): {signal}")
+                    self.logger.debug(f"[Scalping] Generated weak signal (score {score}/16): {signal}")
                 return signal
             else:
-                self.logger.debug(f"[Scalping] No signal for {symbol}: Long score={long_score}/9, Short score={short_score}/9 (need 7+)")
+                self.logger.debug(f"[Scalping] No signal for {symbol}: Long score={long_score}/16, Short score={short_score}/16 (need 11+)")
                 return None
                 
         except Exception as e:
@@ -485,7 +525,6 @@ class ScalpingStrategy:
                 # Calculate price momentum (more sensitive for scalping)
                 if len(candles) >= 10:
                     price_3_ago = float(candles[-3]["close"])  # 3 candles ago for scalping
-                    price_5_ago = float(candles[-5]["close"])
                     price_momentum = (current_price - price_3_ago) / price_3_ago
                     momentum_scores.append(price_momentum)
                 
@@ -576,36 +615,72 @@ class ScalpingStrategy:
             self.logger.error(f"Error analyzing multi-timeframe trend: {e}")
             return {'trend': 'neutral', 'strength': 0.5}
 
-    def _check_liquidity_filter(self, symbol, candles):
-        """Check if symbol meets liquidity requirements for scalping.
+    def _check_volume_volatility_filter(self, symbol, candles):
+        """Check if symbol meets high volume and volatility requirements for scalping.
         
         Args:
             symbol: Trading symbol
             candles: Candlestick data
             
         Returns:
-            bool: True if liquidity requirements are met
+            bool: True if volume and volatility requirements are met
         """
         try:
-            # Calculate average volume over last 20 candles
+            # Calculate volume metrics
             volumes = [float(candle["volume"]) for candle in candles[-20:]]
             avg_volume = sum(volumes) / len(volumes) if volumes else 0
-            
-            # Get current volume
             current_volume = float(candles[-1]["volume"]) if candles else 0
             
-            # Liquidity requirements for scalping - INCREASED for highly voluminous signals
-            min_avg_volume = 200000  # Increased minimum average volume for high volume signals
-            min_current_volume = 100000  # Increased minimum current volume for high volume signals
+            # Calculate volatility (ATR-based)
+            prices = [float(candle["close"]) for candle in candles[-20:]]
+            highs = [float(candle["high"]) for candle in candles[-20:]]
+            lows = [float(candle["low"]) for candle in candles[-20:]]
             
-            # Check if volume meets requirements
+            # Calculate True Range for each period
+            true_ranges = []
+            for i in range(1, len(candles[-20:])):
+                high = highs[i]
+                low = lows[i]
+                prev_close = prices[i-1]
+                
+                tr = max(
+                    high - low,
+                    abs(high - prev_close),
+                    abs(low - prev_close)
+                )
+                true_ranges.append(tr)
+            
+            # Calculate Average True Range (ATR)
+            atr = sum(true_ranges) / len(true_ranges) if true_ranges else 0
+            current_price = prices[-1] if prices else 1
+            volatility_pct = (atr / current_price) * 100 if current_price else 0
+            
+            # HIGH VOLUME AND HIGH VOLATILITY requirements
+            min_avg_volume = 300000  # Very high minimum average volume
+            min_current_volume = 200000  # Very high minimum current volume
+            min_volatility_pct = 1.5  # Minimum 1.5% volatility (ATR)
+            max_volatility_pct = 8.0  # Maximum 8% volatility to avoid extreme conditions
+            
+            # Volume surge requirement - current volume should be significantly higher
+            volume_surge_factor = current_volume / avg_volume if avg_volume > 0 else 0
+            min_volume_surge = 1.8  # Current volume should be at least 1.8x average
+            
+            # Check all requirements
             volume_ok = avg_volume >= min_avg_volume and current_volume >= min_current_volume
+            volatility_ok = min_volatility_pct <= volatility_pct <= max_volatility_pct
+            volume_surge_ok = volume_surge_factor >= min_volume_surge
             
-            if not volume_ok:
-                self.logger.debug(f"[Scalping] Liquidity filter failed for {symbol}: avg_volume={avg_volume:.0f}, current_volume={current_volume:.0f}")
+            all_checks_pass = volume_ok and volatility_ok and volume_surge_ok
             
-            return volume_ok
+            if not all_checks_pass:
+                self.logger.debug(f"[Scalping] Volume/Volatility filter failed for {symbol}: "
+                                f"avg_volume={avg_volume:.0f} (need {min_avg_volume}), "
+                                f"current_volume={current_volume:.0f} (need {min_current_volume}), "
+                                f"volatility={volatility_pct:.2f}% (need {min_volatility_pct}-{max_volatility_pct}%), "
+                                f"volume_surge={volume_surge_factor:.2f}x (need {min_volume_surge}x)")
+            
+            return all_checks_pass
             
         except Exception as e:
-            self.logger.error(f"Error checking liquidity filter for {symbol}: {e}")
+            self.logger.error(f"Error checking volume/volatility filter for {symbol}: {e}")
             return False
