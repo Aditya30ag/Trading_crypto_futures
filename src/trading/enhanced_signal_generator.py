@@ -467,17 +467,18 @@ class EnhancedSignalGenerator:
             scalping_signals.sort(key=lambda s: s.estimated_profit_inr, reverse=True)
             all_signals.sort(key=lambda s: s.estimated_profit_inr, reverse=True)
             final_signals = []
-            final_signals.extend(scalping_signals[:4])
-            final_signals.extend(swing_signals[:4])
-            final_signals.extend(long_swing_signals[:4])
+            # PRIORITIZE SHORT-TERM SIGNALS: More scalping and swing, less long_swing
+            final_signals.extend(scalping_signals[:6])  # 6 scalping signals (increased from 4)
+            final_signals.extend(swing_signals[:6])     # 6 swing signals (increased from 4) 
+            final_signals.extend(long_swing_signals[:2]) # 2 long_swing signals (reduced from 4)
             used = set((s.symbol, s.strategy, s.timeframe) for s in final_signals)
             for s in all_signals:
                 key = (s.symbol, s.strategy, s.timeframe)
-                if key not in used and len(final_signals) < 12:
+                if key not in used and len(final_signals) < 15:  # Increased to 15 to allow more short-term signals
                     final_signals.append(s)
                     used.add(key)
             final_signals.sort(key=lambda s: s.estimated_profit_inr, reverse=True)
-            self.logger.info(f"Generated {len(final_signals)} profitable signals (mix of scalping, swing, and long_swing) from {len(top_movers)} top movers")
+            self.logger.info(f"Generated {len(final_signals)} profitable signals (PRIORITIZING scalping & swing over long_swing) from {len(top_movers)} top movers")
             for i, signal in enumerate(final_signals, 1):
                 self.logger.info(f"{i}. {signal.symbol} - {signal.strategy} ({signal.timeframe}): Score {signal.score}, Normalized {signal.normalized_score:.1f}%, Confidence {signal.confidence:.3f}, Est. Profit ₹{signal.estimated_profit_inr:.2f}")
             return final_signals

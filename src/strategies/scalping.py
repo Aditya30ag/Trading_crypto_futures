@@ -174,7 +174,7 @@ class ScalpingStrategy:
             # Calculate ATR first for volatility conditions
             atr = self.indicators.calculate_atr(candles)
             if atr is None:
-                atr = entry_price * 0.01  # Default 1% ATR if calculation fails
+                atr = current_price * 0.01  # Default 1% ATR if calculation fails
             
             # 13. Strong momentum confirmation - EMA20 slope positive
             ema_20_slope = ((ema_20 - self.indicators.calculate_ema(candles[:-1], 20)) / ema_20) * 100 if len(candles) > 20 else 0
@@ -300,17 +300,17 @@ class ScalpingStrategy:
             short_score = sum(1 for _, condition in short_conditions if condition)
             self.logger.debug(f"[Scalping] {symbol} {timeframe} Short conditions: {[(name, condition) for name, condition in short_conditions]}")
             
-            # DETERMINE TRADE DIRECTION (MUCH MORE SELECTIVE: Need 11 out of 16 for better quality)
-            if long_score >= 11 and long_score > short_score:
+            # DETERMINE TRADE DIRECTION (BALANCED SCALPING: Need 8 out of 16 for good quality)
+            if long_score >= 8 and long_score > short_score:
                 side = "long"
                 score = long_score
                 reasons = [name for name, condition in long_conditions if condition]
-            elif short_score >= 11 and short_score > long_score:
+            elif short_score >= 8 and short_score > long_score:
                 side = "short"
                 score = short_score
                 reasons = [name for name, condition in short_conditions if condition]
             else:
-                self.logger.debug(f"[Scalping] No signal for {symbol}: Long score={long_score}/16, Short score={short_score}/16 (need 11+)")
+                self.logger.debug(f"[Scalping] No signal for {symbol}: Long score={long_score}/16, Short score={short_score}/16 (need 8+)")
                 return None
 
             # ENHANCED: Incorporate multi-timeframe trend confirmation
@@ -334,8 +334,8 @@ class ScalpingStrategy:
             # Calculate pivot points (for potential future use)
             # pivots = self.indicators.calculate_pivot_points(candles)
 
-            # Generate signal if conditions are met (MUCH MORE SELECTIVE: Need 11+ for better quality)
-            if side and score >= 11:  # MUCH MORE SELECTIVE: Need 11+ out of 16
+            # Generate signal if conditions are met (BALANCED SCALPING: Need 8+ for good quality)
+            if side and score >= 8:  # BALANCED SCALPING: Need 8+ out of 16
                 entry_price = current_price
                 
                 # SIMPLIFIED AND REALISTIC TP/SL CALCULATION

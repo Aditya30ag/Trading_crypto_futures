@@ -3696,3 +3696,702 @@ Saved 3 enhanced signals to enhanced_signals_test.json
 2025-08-06 19:28:34 - INFO - SIGNAL: B-OM_USDT LONG swing - Score: 9
 2025-08-06 19:28:34 - INFO - SIGNAL: B-1000BONK_USDT SHORT swing - Score: 8
 2025-08-06 19:28:34 - INFO - === Trading Bot execution completed ===
+2025-08-08 00:16:40 - INFO - === Logger initialized successfully ===
+2025-08-08 00:16:40 - INFO - Log file: logs/trading_bot.log
+2025-08-08 00:16:40 - INFO - Log level: INFO
+2025-08-08 00:16:40 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:16:40 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:16:40 - INFO - EnhancedSignalGenerator initialized
+2025-08-08 00:16:40 - INFO - === GENERATING ENTRY SIGNALS (HIGH VOLUME SYMBOLS, MIXED STRATEGY) ===
+2025-08-08 00:16:40 - INFO - Fetching top 40 high volume symbols from CoinDCX with increased volume filter...
+2025-08-08 00:16:41 - INFO - Filtered to 24 top movers that are active instruments
+2025-08-08 00:16:41 - INFO - Found 24 top movers to analyze (min_volume=500000)
+2025-08-08 00:17:11 - INFO - Selected 15 symbols with high ATR% (max of 15m/30m/1h) and volume for signal generation.
+2025-08-08 00:17:11 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:11 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:11 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:11 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:11 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:11 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:11 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:11 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:13 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:13 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:13 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:14 - WARNING - Insufficient 15m candles for B-SUI_USDT: 0
+2025-08-08 00:17:15 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:15 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:20 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:20 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:23 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:23 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:26 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:26 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:26 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:26 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:26 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:26 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:26 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:26 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:28 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:28 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:28 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:29 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:29 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:30 - WARNING - Insufficient 15m candles for B-1000PEPE_USDT: 0
+2025-08-08 00:17:30 - WARNING - Insufficient 15m candles for B-BIO_USDT: 0
+2025-08-08 00:17:30 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:30 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:30 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:30 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:41 - WARNING - Insufficient 15m candles for B-ETH_USDT: 0
+2025-08-08 00:17:42 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:42 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:42 - WARNING - Insufficient 15m candles for B-XRP_USDT: 0
+2025-08-08 00:17:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:43 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:44 - WARNING - Insufficient 15m candles for B-PENGU_USDT: 0
+2025-08-08 00:17:44 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:44 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:44 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:45 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:46 - WARNING - Insufficient 15m candles for B-ENA_USDT: 0
+2025-08-08 00:17:47 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:47 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:49 - INFO - [Swing] Generated LONG signal for B-XRP_USDT on 15m - Score: 6/7, Confidence: 0.770, TP: 3.091690, SL: 3.000310
+2025-08-08 00:17:50 - INFO - [Swing] Generated LONG signal for B-BIO_USDT on 15m - Score: 8/7, Confidence: 0.842, TP: 0.095532, SL: 0.092708
+2025-08-08 00:17:50 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:50 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:17:50 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:17:50 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:18:02 - INFO - [Swing] Skipping B-ETH_USDT due to low liquidity (avg_volume=17915.63 < 300000)
+2025-08-08 00:18:02 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:18:03 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:18:03 - WARNING - Insufficient 15m candles for B-SOL_USDT: 0
+2025-08-08 00:18:04 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:18:04 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:18:04 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:18:04 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:18:12 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:18:12 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:18:26 - INFO - [Swing] Skipping B-SOL_USDT due to low liquidity (avg_volume=68077.44 < 300000)
+2025-08-08 00:18:27 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:18:27 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:18:27 - INFO - [Swing] Generated LONG signal for B-ENA_USDT on 15m - Score: 7/7, Confidence: 0.842, TP: 0.629300, SL: 0.610700
+2025-08-08 00:18:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:18:28 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:18:28 - INFO - [Swing] Skipping B-ETH_USDT due to low liquidity (avg_volume=10850.44 < 300000)
+2025-08-08 00:18:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:18:29 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:18:30 - INFO - [Long Swing] Generated LONG signal for B-SUI_USDT on 1h - Score: 7/9, Confidence: 0.719, TP: 3.819686, SL: 3.601629
+2025-08-08 00:18:30 - INFO - Skipping blacklisted symbol: B-FARTCOIN_USDT
+2025-08-08 00:18:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:18:31 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:18:45 - INFO - [Swing] Skipping B-SOL_USDT due to low liquidity (avg_volume=50299.06 < 300000)
+2025-08-08 00:18:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:18:46 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:18:47 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:18:47 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:18:50 - INFO - [LongSwing] Skipping B-ETH_USDT due to low liquidity (avg_volume=239540.96 < 300000)
+2025-08-08 00:18:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:18:52 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:02 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:02 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:02 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:02 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:02 - INFO - [LongSwing] FILTERED OUT B-SOL_USDT - Poor movement characteristics:
+2025-08-08 00:19:02 - INFO -   Momentum: 0.05% (need ±0.5%)
+2025-08-08 00:19:02 - INFO -   Movement efficiency: 0.20 (need ≥0.3)
+2025-08-08 00:19:02 - INFO -   ATR/Movement ratio: 1.22 (need ≤3.0)
+2025-08-08 00:19:02 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-08 00:19:03 - ERROR - Attempt 1/3 - Error fetching order book for B-1000PEPE_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-1000PEPE_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f276c59e1a0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-08 00:19:04 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:04 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:09 - INFO - [Swing] Generated LONG signal for B-BIO_USDT on 5m - Score: 6/7, Confidence: 0.770, TP: 0.095562, SL: 0.092738
+2025-08-08 00:19:09 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:09 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:09 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:09 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:17 - WARNING - Insufficient 15m candles for B-CFX_USDT: 0
+2025-08-08 00:19:18 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:18 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:18 - INFO - [Long Swing] Generated LONG signal for B-1000PEPE_USDT on 1h - Score: 7/9, Confidence: 0.814, TP: 0.011081, SL: 0.010551
+2025-08-08 00:19:19 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:19 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:09 - WARNING - Insufficient 15m candles for B-LTC_USDT: 0
+2025-08-08 00:19:09 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2774b84c40>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-08 00:19:09 - INFO - [Long Swing] Generated LONG signal for B-BIO_USDT on 1h - Score: 10/9, Confidence: 0.950, TP: 0.113593, SL: 0.082644
+2025-08-08 00:19:10 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:10 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:11 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:11 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:11 - WARNING - Insufficient 15m candles for B-LINK_USDT: 0
+2025-08-08 00:19:11 - INFO - [Swing] Generated LONG signal for B-XRP_USDT on 5m - Score: 6/7, Confidence: 0.770, TP: 3.091284, SL: 2.999916
+2025-08-08 00:19:12 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:25 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:12 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:12 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:14 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:14 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:20 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:20 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:20 - INFO - [Swing] Skipping B-LINK_USDT due to low liquidity (avg_volume=130301.32 < 300000)
+2025-08-08 00:19:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:21 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:42 - INFO - [Swing] Skipping B-LINK_USDT due to low liquidity (avg_volume=98992.40 < 300000)
+2025-08-08 00:19:42 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:42 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:42 - INFO - [Long Swing] FILTERED OUT: B-XRP_USDT 1h LONG signal with score 8/8 - Score 8 signals tend to hit stop loss frequently
+2025-08-08 00:19:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:44 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:49 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:49 - INFO - [Swing] Generated LONG signal for B-ENA_USDT on 5m - Score: 8/7, Confidence: 0.842, TP: 0.629807, SL: 0.611193
+2025-08-08 00:19:50 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:50 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:50 - WARNING - Insufficient 15m candles for B-ADA_USDT: 0
+2025-08-08 00:19:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:51 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:51 - INFO - [Swing] Generated LONG signal for B-CFX_USDT on 15m - Score: 9/7, Confidence: 0.975, TP: 0.227807, SL: 0.221073
+2025-08-08 00:19:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:51 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:54 - INFO - [LongSwing] FILTERED OUT B-PENGU_USDT - Poor movement characteristics:
+2025-08-08 00:19:54 - INFO -   Momentum: 0.25% (need ±0.5%)
+2025-08-08 00:19:54 - INFO -   Movement efficiency: 0.01 (need ≥0.3)
+2025-08-08 00:19:54 - INFO -   ATR/Movement ratio: 45.56 (need ≤3.0)
+2025-08-08 00:19:54 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-08 00:19:54 - INFO - [Long Swing] Generated LONG signal for B-LINK_USDT on 1h - Score: 10/9, Confidence: 0.950, TP: 18.530786, SL: 17.527929
+2025-08-08 00:19:55 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:55 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:19:55 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:19:55 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:20:03 - ERROR - Attempt 1/3 - Error fetching order book for B-CFX_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-CFX_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f276c59ca60>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-08 00:20:06 - INFO - [Swing] Skipping B-LTC_USDT due to low liquidity (avg_volume=15622.84 < 300000)
+2025-08-08 00:20:06 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:20:06 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:20:10 - WARNING - Insufficient 15m candles for B-OMNI_USDT: 0
+2025-08-08 00:20:12 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:20:12 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:20:16 - INFO - [Swing] Skipping B-OMNI_USDT due to low liquidity (avg_volume=279355.29 < 300000)
+2025-08-08 00:20:16 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:20:16 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:20:16 - INFO - [Swing] Generated LONG signal for B-CFX_USDT on 5m - Score: 9/7, Confidence: 0.975, TP: 0.227796, SL: 0.221064
+2025-08-08 00:20:17 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:20:17 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:20:15 - INFO - [Swing] Skipping B-OMNI_USDT due to low liquidity (avg_volume=90062.87 < 300000)
+2025-08-08 00:20:16 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:20:16 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:20:16 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:20:16 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:20:18 - INFO - [LongSwing] FILTERED OUT B-ADA_USDT - Poor movement characteristics:
+2025-08-08 00:20:18 - INFO -   Momentum: 0.97% (need ±0.5%)
+2025-08-08 00:20:18 - INFO -   Movement efficiency: 0.28 (need ≥0.3)
+2025-08-08 00:20:18 - INFO -   ATR/Movement ratio: 0.75 (need ≤3.0)
+2025-08-08 00:20:18 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-08 00:20:20 - INFO - [Long Swing] Generated LONG signal for B-ENA_USDT on 1h - Score: 11/9, Confidence: 0.975, TP: 0.652593, SL: 0.603164
+2025-08-08 00:20:22 - INFO - [Swing] Skipping B-LTC_USDT due to low liquidity (avg_volume=9693.41 < 300000)
+2025-08-08 00:20:22 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:20:22 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:20:26 - INFO - [LongSwing] Skipping B-LTC_USDT due to low liquidity (avg_volume=197225.47 < 300000)
+2025-08-08 00:20:30 - WARNING - Insufficient 15m candles for B-DOGE_USDT: 0
+2025-08-08 00:20:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:20:31 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:20:35 - INFO - [Long Swing] FILTERED OUT: B-OMNI_USDT 1h LONG signal with score 8/8 - Score 8 signals tend to hit stop loss frequently
+2025-08-08 00:20:48 - INFO - [Swing] Generated LONG signal for B-DOGE_USDT on 15m - Score: 6/7, Confidence: 0.670, TP: 0.215657, SL: 0.209283
+2025-08-08 00:20:48 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:20:48 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:21:19 - INFO - [LongSwing] FILTERED OUT B-CFX_USDT - Poor movement characteristics:
+2025-08-08 00:21:19 - INFO -   Momentum: 1.40% (need ±0.5%)
+2025-08-08 00:21:19 - INFO -   Movement efficiency: 0.15 (need ≥0.3)
+2025-08-08 00:21:19 - INFO -   ATR/Movement ratio: 1.64 (need ≤3.0)
+2025-08-08 00:21:19 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-08 00:21:22 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:21:22 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:21:24 - INFO - [Long Swing] Generated LONG signal for B-DOGE_USDT on 1h - Score: 7/9, Confidence: 0.719, TP: 0.218359, SL: 0.208905
+2025-08-08 00:21:24 - INFO - Generated 15 profitable signals (PRIORITIZING scalping & swing over long_swing) from 15 top movers
+2025-08-08 00:21:24 - INFO - 1. B-BIO_USDT - long_swing (1h): Score 12, Normalized 171.4%, Confidence 0.756, Est. Profit ₹288208.21
+2025-08-08 00:21:24 - INFO - 2. B-ENA_USDT - long_swing (1h): Score 13, Normalized 185.7%, Confidence 0.800, Est. Profit ₹99964.73
+2025-08-08 00:21:24 - INFO - 3. B-LINK_USDT - long_swing (1h): Score 13, Normalized 185.7%, Confidence 0.800, Est. Profit ₹52054.67
+2025-08-08 00:21:24 - INFO - 4. B-SUI_USDT - long_swing (1h): Score 8, Normalized 114.3%, Confidence 0.420, Est. Profit ₹39734.06
+2025-08-08 00:21:24 - INFO - 5. B-1000PEPE_USDT - long_swing (1h): Score 9, Normalized 128.6%, Confidence 0.630, Est. Profit ₹34295.64
+2025-08-08 00:21:24 - INFO - 6. B-DOGE_USDT - long_swing (1h): Score 8, Normalized 114.3%, Confidence 0.420, Est. Profit ₹29868.51
+2025-08-08 00:21:24 - INFO - 7. B-CFX_USDT - swing (15m): Score 11, Normalized 157.1%, Confidence 0.800, Est. Profit ₹21946.14
+2025-08-08 00:21:24 - INFO - 8. B-ENA_USDT - swing (5m): Score 11, Normalized 157.1%, Confidence 0.800, Est. Profit ₹21946.14
+2025-08-08 00:21:24 - INFO - 9. B-CFX_USDT - swing (5m): Score 11, Normalized 157.1%, Confidence 0.800, Est. Profit ₹21946.14
+2025-08-08 00:21:24 - INFO - 10. B-BIO_USDT - swing (15m): Score 10, Normalized 142.9%, Confidence 0.800, Est. Profit ₹20574.51
+2025-08-08 00:21:24 - INFO - 11. B-ENA_USDT - swing (15m): Score 9, Normalized 128.6%, Confidence 0.693, Est. Profit ₹19202.87
+2025-08-08 00:21:24 - INFO - 12. B-XRP_USDT - swing (5m): Score 9, Normalized 128.6%, Confidence 0.693, Est. Profit ₹19202.87
+2025-08-08 00:21:24 - INFO - 13. B-XRP_USDT - swing (15m): Score 9, Normalized 128.6%, Confidence 0.693, Est. Profit ₹19202.87
+2025-08-08 00:21:24 - INFO - 14. B-DOGE_USDT - swing (15m): Score 9, Normalized 128.6%, Confidence 0.630, Est. Profit ₹16698.15
+2025-08-08 00:21:24 - INFO - 15. B-BIO_USDT - swing (5m): Score 8, Normalized 114.3%, Confidence 0.525, Est. Profit ₹15505.42
+2025-08-08 00:27:16 - INFO - === Logger initialized successfully ===
+2025-08-08 00:27:16 - INFO - Log file: logs/trading_bot.log
+2025-08-08 00:27:16 - INFO - Log level: INFO
+2025-08-08 00:27:16 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:16 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:16 - INFO - EnhancedSignalGenerator initialized
+2025-08-08 00:27:16 - INFO - === GENERATING ENTRY SIGNALS (HIGH VOLUME SYMBOLS, MIXED STRATEGY) ===
+2025-08-08 00:27:16 - INFO - Fetching top 40 high volume symbols from CoinDCX with increased volume filter...
+2025-08-08 00:27:17 - INFO - Filtered to 24 top movers that are active instruments
+2025-08-08 00:27:17 - INFO - Found 24 top movers to analyze (min_volume=500000)
+2025-08-08 00:27:35 - INFO - Selected 15 symbols with high ATR% (max of 15m/30m/1h) and volume for signal generation.
+2025-08-08 00:27:35 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:36 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:36 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:36 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:36 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:36 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:39 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:39 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:39 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:39 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:41 - WARNING - Insufficient 15m candles for B-SUI_USDT: 0
+2025-08-08 00:27:41 - WARNING - Insufficient 15m candles for B-1000PEPE_USDT: 0
+2025-08-08 00:27:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:41 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:41 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:49 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:49 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:49 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:49 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:52 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:52 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:52 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:55 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:55 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:58 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:27:59 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:27:59 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:02 - WARNING - Insufficient 15m candles for B-ENA_USDT: 0
+2025-08-08 00:28:04 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:04 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:04 - WARNING - Insufficient 15m candles for B-BIO_USDT: 0
+2025-08-08 00:28:04 - WARNING - Insufficient 15m candles for B-PENGU_USDT: 0
+2025-08-08 00:28:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:05 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:05 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:09 - WARNING - Insufficient 15m candles for B-XRP_USDT: 0
+2025-08-08 00:28:10 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:10 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:16 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:16 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:17 - INFO - [Swing] Generated LONG signal for B-SUI_USDT on 5m - Score: 6/7, Confidence: 0.770, TP: 3.745045, SL: 3.634355
+2025-08-08 00:28:17 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:17 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:20 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:20 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:20 - INFO - [Swing] Generated LONG signal for B-ENA_USDT on 15m - Score: 9/7, Confidence: 0.917, TP: 0.632446, SL: 0.613753
+2025-08-08 00:28:20 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:20 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:21 - WARNING - Insufficient 15m candles for B-SOL_USDT: 0
+2025-08-08 00:28:24 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:24 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:25 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:25 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:26 - INFO - [Swing] Generated LONG signal for B-BIO_USDT on 15m - Score: 6/7, Confidence: 0.770, TP: 0.091929, SL: 0.089211
+2025-08-08 00:28:26 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:26 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:28 - INFO - [Swing] Skipping B-SOL_USDT due to low liquidity (avg_volume=69249.02 < 300000)
+2025-08-08 00:28:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:28 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:28 - ERROR - Attempt 1/3 - Error fetching order book for B-1000PEPE_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-1000PEPE_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd23fbb94e0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-08 00:28:35 - INFO - [Long Swing] Generated LONG signal for B-1000PEPE_USDT on 1h - Score: 7/9, Confidence: 0.719, TP: 0.011096, SL: 0.010566
+2025-08-08 00:28:35 - INFO - Skipping blacklisted symbol: B-FARTCOIN_USDT
+2025-08-08 00:28:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:36 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:38 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:38 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:38 - INFO - [Swing] Generated LONG signal for B-XRP_USDT on 15m - Score: 8/7, Confidence: 0.917, TP: 3.099099, SL: 3.007500
+2025-08-08 00:28:39 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:39 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:46 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:37 - INFO - [Long Swing] FILTERED OUT: B-SUI_USDT 1h LONG signal with score 8/8 - Score 8 signals tend to hit stop loss frequently
+2025-08-08 00:28:38 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:38 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:43 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:28:45 - WARNING - Insufficient 15m candles for B-ETH_USDT: 0
+2025-08-08 00:28:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:28:46 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:03 - WARNING - Insufficient 15m candles for B-LTC_USDT: 0
+2025-08-08 00:29:03 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:03 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:12 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:12 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:14 - WARNING - Insufficient 15m candles for B-CFX_USDT: 0
+2025-08-08 00:29:15 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:15 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:19 - INFO - [Swing] Skipping B-SOL_USDT due to low liquidity (avg_volume=48324.94 < 300000)
+2025-08-08 00:29:19 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:19 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:20 - INFO - [Swing] Generated LONG signal for B-ENA_USDT on 5m - Score: 9/7, Confidence: 0.892, TP: 0.631736, SL: 0.613064
+2025-08-08 00:29:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:21 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:24 - INFO - [Swing] Skipping B-LTC_USDT due to low liquidity (avg_volume=15770.31 < 300000)
+2025-08-08 00:29:24 - INFO - [LongSwing] FILTERED OUT B-SOL_USDT - Poor movement characteristics:
+2025-08-08 00:29:24 - INFO -   Momentum: 0.08% (need ±0.5%)
+2025-08-08 00:29:24 - INFO -   Movement efficiency: 0.26 (need ≥0.3)
+2025-08-08 00:29:24 - INFO -   ATR/Movement ratio: 0.97 (need ≤3.0)
+2025-08-08 00:29:24 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-08 00:29:24 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:24 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:24 - INFO - [Swing] Generated LONG signal for B-XRP_USDT on 5m - Score: 8/7, Confidence: 0.917, TP: 3.099099, SL: 3.007500
+2025-08-08 00:29:25 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:25 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:25 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:25 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:29 - INFO - [Long Swing] Generated LONG signal for B-BIO_USDT on 1h - Score: 10/9, Confidence: 0.831, TP: 0.110588, SL: 0.078399
+2025-08-08 00:29:29 - INFO - [Swing] Generated LONG signal for B-CFX_USDT on 15m - Score: 9/7, Confidence: 0.975, TP: 0.227147, SL: 0.220433
+2025-08-08 00:29:29 - INFO - [Swing] Skipping B-ETH_USDT due to low liquidity (avg_volume=18178.28 < 300000)
+2025-08-08 00:29:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:29 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:29 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:29 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:30 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:30 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:30 - INFO - [Swing] Skipping B-LTC_USDT due to low liquidity (avg_volume=9426.93 < 300000)
+2025-08-08 00:29:30 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:30 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:30 - INFO - [Swing] Generated LONG signal for B-PENGU_USDT on 5m - Score: 6/7, Confidence: 0.770, TP: 0.036282, SL: 0.035210
+2025-08-08 00:29:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:31 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:31 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:33 - WARNING - Insufficient 15m candles for B-OMNI_USDT: 0
+2025-08-08 00:29:34 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:34 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:35 - INFO - [Long Swing] Generated LONG signal for B-ENA_USDT on 1h - Score: 11/9, Confidence: 0.975, TP: 0.652793, SL: 0.603364
+2025-08-08 00:29:35 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:35 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:36 - INFO - [Swing] Skipping B-OMNI_USDT due to low liquidity (avg_volume=283337.16 < 300000)
+2025-08-08 00:29:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:36 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:38 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:38 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:40 - INFO - [Long Swing] Generated LONG signal for B-XRP_USDT on 1h - Score: 9/9, Confidence: 0.906, TP: 3.122389, SL: 3.011846
+2025-08-08 00:29:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:41 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:42 - INFO - [LongSwing] FILTERED OUT B-PENGU_USDT - Poor movement characteristics:
+2025-08-08 00:29:42 - INFO -   Momentum: 0.30% (need ±0.5%)
+2025-08-08 00:29:42 - INFO -   Movement efficiency: 0.03 (need ≥0.3)
+2025-08-08 00:29:42 - INFO -   ATR/Movement ratio: 6.92 (need ≤3.0)
+2025-08-08 00:29:42 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-08 00:29:44 - INFO - [Swing] Generated LONG signal for B-CFX_USDT on 5m - Score: 9/7, Confidence: 0.975, TP: 0.227147, SL: 0.220433
+2025-08-08 00:29:44 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:44 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:44 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:44 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:44 - INFO - [Swing] Skipping B-ETH_USDT due to low liquidity (avg_volume=10881.62 < 300000)
+2025-08-08 00:29:44 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:44 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:45 - INFO - [LongSwing] FILTERED OUT B-CFX_USDT - Poor movement characteristics:
+2025-08-08 00:29:45 - INFO -   Momentum: 1.40% (need ±0.5%)
+2025-08-08 00:29:45 - INFO -   Movement efficiency: 0.15 (need ≥0.3)
+2025-08-08 00:29:45 - INFO -   ATR/Movement ratio: 1.64 (need ≤3.0)
+2025-08-08 00:29:45 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-08 00:29:45 - WARNING - Insufficient 15m candles for B-DOGE_USDT: 0
+2025-08-08 00:29:45 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:45 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:46 - INFO - [LongSwing] Skipping B-ETH_USDT due to low liquidity (avg_volume=240857.81 < 300000)
+2025-08-08 00:29:47 - INFO - [LongSwing] Skipping B-LTC_USDT due to low liquidity (avg_volume=197689.62 < 300000)
+2025-08-08 00:29:48 - INFO - [Swing] Skipping B-OMNI_USDT due to low liquidity (avg_volume=90730.77 < 300000)
+2025-08-08 00:29:48 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:48 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:50 - INFO - [Long Swing] FILTERED OUT: B-OMNI_USDT 1h LONG signal with score 8/8 - Score 8 signals tend to hit stop loss frequently
+2025-08-08 00:29:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:52 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:29:54 - WARNING - Insufficient 15m candles for B-ADA_USDT: 0
+2025-08-08 00:29:55 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:29:55 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:30:00 - WARNING - Insufficient 15m candles for B-LINK_USDT: 0
+2025-08-08 00:30:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:30:00 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:30:05 - INFO - [Swing] Generated LONG signal for B-ADA_USDT on 15m - Score: 6/7, Confidence: 0.854, TP: 0.766325, SL: 0.743675
+2025-08-08 00:30:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:30:05 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:30:08 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd2662bae60>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-08 00:30:16 - INFO - [Swing] Generated LONG signal for B-ADA_USDT on 5m - Score: 7/7, Confidence: 0.925, TP: 0.766223, SL: 0.743576
+2025-08-08 00:30:17 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:30:17 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:30:19 - ERROR - Attempt 2/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd23fbba230>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-08 00:30:21 - INFO - [Swing] Generated LONG signal for B-DOGE_USDT on 15m - Score: 8/7, Confidence: 0.892, TP: 0.216682, SL: 0.210278
+2025-08-08 00:30:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:30:21 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:30:48 - INFO - [Swing] Skipping B-LINK_USDT due to low liquidity (avg_volume=131463.35 < 300000)
+2025-08-08 00:30:48 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:30:48 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:30:53 - ERROR - Attempt 1/3 - Error fetching order book for B-DOGE_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-DOGE_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd23fbbb550>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-08 00:30:56 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd23fbbbd30>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-08 00:30:57 - INFO - [Long Swing] Generated LONG signal for B-ADA_USDT on 1h - Score: 9/9, Confidence: 0.925, TP: 0.776004, SL: 0.742718
+2025-08-08 00:31:11 - INFO - [Swing] Generated LONG signal for B-DOGE_USDT on 5m - Score: 7/7, Confidence: 0.917, TP: 0.216662, SL: 0.210258
+2025-08-08 00:31:11 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:31:11 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:31:15 - INFO - [Long Swing] FILTERED OUT: B-DOGE_USDT 1h LONG signal with score 8/8 - Score 8 signals tend to hit stop loss frequently
+2025-08-08 00:31:36 - INFO - [Swing] Skipping B-LINK_USDT due to low liquidity (avg_volume=82448.04 < 300000)
+2025-08-08 00:31:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:31:36 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:32:25 - INFO - [Long Swing] Generated LONG signal for B-LINK_USDT on 1h - Score: 10/9, Confidence: 1.000, TP: 18.584143, SL: 17.604714
+2025-08-08 00:32:25 - INFO - Generated 15 profitable signals (PRIORITIZING scalping & swing over long_swing) from 15 top movers
+2025-08-08 00:32:25 - INFO - 1. B-BIO_USDT - long_swing (1h): Score 11, Normalized 157.1%, Confidence 0.773, Est. Profit ₹324848.58
+2025-08-08 00:32:25 - INFO - 2. B-ENA_USDT - long_swing (1h): Score 13, Normalized 185.7%, Confidence 0.800, Est. Profit ₹99932.58
+2025-08-08 00:32:25 - INFO - 3. B-LINK_USDT - long_swing (1h): Score 13, Normalized 185.7%, Confidence 0.800, Est. Profit ₹50646.22
+2025-08-08 00:32:25 - INFO - 4. B-ADA_USDT - long_swing (1h): Score 11, Normalized 157.1%, Confidence 0.800, Est. Profit ₹49259.84
+2025-08-08 00:32:25 - INFO - 5. B-XRP_USDT - long_swing (1h): Score 11, Normalized 157.1%, Confidence 0.800, Est. Profit ₹35185.23
+2025-08-08 00:32:25 - INFO - 6. B-1000PEPE_USDT - long_swing (1h): Score 9, Normalized 128.6%, Confidence 0.630, Est. Profit ₹34247.22
+2025-08-08 00:32:25 - INFO - 7. B-XRP_USDT - swing (5m): Score 12, Normalized 171.4%, Confidence 0.800, Est. Profit ₹25772.28
+2025-08-08 00:32:25 - INFO - 8. B-ADA_USDT - swing (5m): Score 11, Normalized 157.1%, Confidence 0.800, Est. Profit ₹24256.26
+2025-08-08 00:32:25 - INFO - 9. B-CFX_USDT - swing (5m): Score 12, Normalized 171.4%, Confidence 0.800, Est. Profit ₹23317.77
+2025-08-08 00:32:25 - INFO - 10. B-ENA_USDT - swing (5m): Score 12, Normalized 171.4%, Confidence 0.800, Est. Profit ₹23317.77
+2025-08-08 00:32:25 - INFO - 11. B-DOGE_USDT - swing (5m): Score 11, Normalized 157.1%, Confidence 0.800, Est. Profit ₹21946.14
+2025-08-08 00:32:25 - INFO - 12. B-ENA_USDT - swing (15m): Score 11, Normalized 157.1%, Confidence 0.800, Est. Profit ₹21946.14
+2025-08-08 00:32:25 - INFO - 13. B-CFX_USDT - swing (15m): Score 11, Normalized 157.1%, Confidence 0.800, Est. Profit ₹21946.14
+2025-08-08 00:32:25 - INFO - 14. B-DOGE_USDT - swing (15m): Score 10, Normalized 142.9%, Confidence 0.800, Est. Profit ₹20574.51
+2025-08-08 00:32:25 - INFO - 15. B-SUI_USDT - swing (5m): Score 9, Normalized 128.6%, Confidence 0.693, Est. Profit ₹19202.87
+2025-08-08 00:33:30 - INFO - === Logger initialized successfully ===
+2025-08-08 00:33:30 - INFO - Log file: logs/trading_bot.log
+2025-08-08 00:33:30 - INFO - Log level: INFO
+2025-08-08 00:33:32 - INFO - === Starting Crypto Futures Trading Bot ===
+2025-08-08 00:33:32 - INFO - Configuration loaded successfully
+2025-08-08 00:33:32 - INFO - Trading instruments: 11
+2025-08-08 00:33:32 - INFO - Initial balance: 10000 INR
+2025-08-08 00:33:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:32 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:32 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:32 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:32 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:32 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:32 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:32 - INFO - StrategyManager initialized with all strategies
+2025-08-08 00:33:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:32 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:32 - INFO - EnhancedSignalGenerator initialized
+2025-08-08 00:33:32 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:32 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:32 - INFO - SignalMonitor initialized
+2025-08-08 00:33:32 - INFO - Trade executor initialized
+2025-08-08 00:33:32 - INFO - Generating trading signals...
+2025-08-08 00:33:32 - INFO - === GENERATING ENTRY SIGNALS (HIGH VOLUME SYMBOLS, MIXED STRATEGY) ===
+2025-08-08 00:33:32 - INFO - Fetching top 40 high volume symbols from CoinDCX with increased volume filter...
+2025-08-08 00:33:33 - INFO - Filtered to 24 top movers that are active instruments
+2025-08-08 00:33:33 - INFO - Found 24 top movers to analyze (min_volume=500000)
+2025-08-08 00:33:50 - INFO - Selected 15 symbols with high ATR% (max of 15m/30m/1h) and volume for signal generation.
+2025-08-08 00:33:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:51 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:51 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:51 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:51 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:51 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:51 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:53 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:53 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:54 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:54 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:54 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:54 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:42 - WARNING - Insufficient 15m candles for B-SUI_USDT: 0
+2025-08-08 00:33:42 - WARNING - Insufficient 15m candles for B-ENA_USDT: 0
+2025-08-08 00:33:42 - WARNING - Insufficient 15m candles for B-BIO_USDT: 0
+2025-08-08 00:33:42 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:42 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:42 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:42 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:43 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:43 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:52 - WARNING - Insufficient 15m candles for B-SOL_USDT: 0
+2025-08-08 00:33:52 - WARNING - Insufficient 15m candles for B-1000PEPE_USDT: 0
+2025-08-08 00:33:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:52 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:52 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:53 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:53 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:53 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:53 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:55 - INFO - [Swing] Skipping B-SOL_USDT due to low liquidity (avg_volume=64303.19 < 300000)
+2025-08-08 00:33:55 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:55 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:33:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:33:58 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:00 - INFO - [Swing] Skipping B-SOL_USDT due to low liquidity (avg_volume=48764.79 < 300000)
+2025-08-08 00:34:01 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:01 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:02 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:02 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:02 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:02 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:17 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:17 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:17 - INFO - [LongSwing] FILTERED OUT B-SOL_USDT - Poor movement characteristics:
+2025-08-08 00:34:17 - INFO -   Momentum: -0.02% (need ±0.5%)
+2025-08-08 00:34:17 - INFO -   Movement efficiency: 0.29 (need ≥0.3)
+2025-08-08 00:34:17 - INFO -   ATR/Movement ratio: 0.79 (need ≤3.0)
+2025-08-08 00:34:17 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-08 00:34:17 - INFO - Skipping blacklisted symbol: B-FARTCOIN_USDT
+2025-08-08 00:34:18 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:18 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:21 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:22 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:22 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:25 - WARNING - Insufficient 15m candles for B-PENGU_USDT: 0
+2025-08-08 00:34:25 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:25 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:27 - WARNING - Insufficient 15m candles for B-ETH_USDT: 0
+2025-08-08 00:34:28 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:28 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:28 - ERROR - Attempt 1/3 - Error fetching order book for B-1000PEPE_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-1000PEPE_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7f943efe80>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-08 00:34:31 - INFO - [Swing] Skipping B-ETH_USDT due to low liquidity (avg_volume=17183.54 < 300000)
+2025-08-08 00:34:31 - INFO - [Swing] Generated LONG signal for B-ENA_USDT on 15m - Score: 9/7, Confidence: 1.000, TP: 0.633258, SL: 0.614541
+2025-08-08 00:34:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:31 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:31 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:31 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:35 - WARNING - Insufficient 15m candles for B-CFX_USDT: 0
+2025-08-08 00:34:36 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:36 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:44 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:44 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:44 - ERROR - Attempt 1/3 - Error fetching order book for B-ENA_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-ENA_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7f972ef190>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-08 00:34:57 - INFO - [Swing] Generated LONG signal for B-CFX_USDT on 15m - Score: 9/7, Confidence: 0.867, TP: 0.226873, SL: 0.220167
+2025-08-08 00:34:57 - ERROR - Attempt 1/3 - Error fetching order book for B-BIO_USDT: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/orderbook/B-BIO_USDT-futures/50 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7f7cf37400>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-08 00:34:58 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:58 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:02 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:49 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:51 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:53 - WARNING - Insufficient 15m candles for B-XRP_USDT: 0
+2025-08-08 00:34:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:54 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:34:57 - INFO - [Long Swing] Generated LONG signal for B-BIO_USDT on 1h - Score: 10/9, Confidence: 0.831, TP: 0.111804, SL: 0.079238
+2025-08-08 00:34:59 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:34:59 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:21 - INFO - [Swing] Generated LONG signal for B-SUI_USDT on 5m - Score: 8/7, Confidence: 0.842, TP: 3.742203, SL: 3.631597
+2025-08-08 00:35:22 - INFO - [Swing] Generated LONG signal for B-XRP_USDT on 15m - Score: 9/7, Confidence: 0.917, TP: 3.099911, SL: 3.008288
+2025-08-08 00:35:22 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:22 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:23 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:23 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:30 - ERROR - Attempt 1/3 - Error fetching USDT/INR rate: HTTPSConnectionPool(host='public.coindcx.com', port=443): Max retries exceeded with url: /market_data/v3/current_prices/futures/rt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7f943ed8d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2025-08-08 00:35:33 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:33 - ERROR - Connection error on attempt 1/3 for B-ETH_USDT: HTTPSConnectionPool(host='min-api.cryptocompare.com', port=443): Max retries exceeded with url: /data/v2/histominute?fsym=ETH&tsym=USDT&limit=120&aggregate=15 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7f7cf37ca0>, 'Connection to min-api.cryptocompare.com timed out. (connect timeout=15)'))
+2025-08-08 00:35:33 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:36 - WARNING - Insufficient 15m candles for B-LINK_USDT: 0
+2025-08-08 00:35:37 - INFO - [Long Swing] Generated LONG signal for B-SUI_USDT on 1h - Score: 7/9, Confidence: 0.719, TP: 3.820868, SL: 3.611639
+2025-08-08 00:35:37 - INFO - [Swing] Generated LONG signal for B-1000PEPE_USDT on 5m - Score: 7/7, Confidence: 0.842, TP: 0.010931, SL: 0.010608
+2025-08-08 00:35:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:37 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:37 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:38 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:38 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:38 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:40 - INFO - [Swing] Skipping B-ETH_USDT due to low liquidity (avg_volume=10432.38 < 300000)
+2025-08-08 00:35:41 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:41 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:42 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:42 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:43 - INFO - [Swing] Skipping B-LINK_USDT due to low liquidity (avg_volume=116471.96 < 300000)
+2025-08-08 00:35:44 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:44 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:45 - INFO - [LongSwing] Skipping B-ETH_USDT due to low liquidity (avg_volume=238792.25 < 300000)
+2025-08-08 00:35:45 - INFO - [Long Swing] FILTERED OUT: B-1000PEPE_USDT 1h LONG signal with score 8/8 - Score 8 signals tend to hit stop loss frequently
+2025-08-08 00:35:45 - INFO - [Swing] Generated LONG signal for B-ENA_USDT on 5m - Score: 10/7, Confidence: 1.000, TP: 0.633969, SL: 0.615231
+2025-08-08 00:35:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:46 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:46 - WARNING - Insufficient 15m candles for B-LTC_USDT: 0
+2025-08-08 00:35:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:46 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:46 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:46 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:46 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:51 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:51 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:52 - INFO - [Swing] Generated LONG signal for B-PENGU_USDT on 5m - Score: 7/7, Confidence: 0.925, TP: 0.036381, SL: 0.035305
+2025-08-08 00:35:52 - INFO - [Swing] Skipping B-LTC_USDT due to low liquidity (avg_volume=15213.77 < 300000)
+2025-08-08 00:35:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:52 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:52 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:52 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:54 - WARNING - Insufficient 15m candles for B-OMNI_USDT: 0
+2025-08-08 00:35:54 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:54 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:54 - INFO - [Swing] Generated LONG signal for B-CFX_USDT on 5m - Score: 8/7, Confidence: 0.950, TP: 0.227106, SL: 0.220394
+2025-08-08 00:35:55 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:55 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:55 - INFO - [Swing] Skipping B-OMNI_USDT due to low liquidity (avg_volume=268399.32 < 300000)
+2025-08-08 00:35:55 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:55 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:56 - INFO - [LongSwing] FILTERED OUT B-CFX_USDT - Poor movement characteristics:
+2025-08-08 00:35:56 - INFO -   Momentum: 1.51% (need ±0.5%)
+2025-08-08 00:35:56 - INFO -   Movement efficiency: 0.25 (need ≥0.3)
+2025-08-08 00:35:56 - INFO -   ATR/Movement ratio: 0.96 (need ≤3.0)
+2025-08-08 00:35:56 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-08 00:35:56 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:56 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:56 - INFO - [Swing] Skipping B-LTC_USDT due to low liquidity (avg_volume=8800.34 < 300000)
+2025-08-08 00:35:56 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:56 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:57 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:35:57 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:35:59 - WARNING - Insufficient 15m candles for B-DOGE_USDT: 0
+2025-08-08 00:36:00 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:36:00 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:36:00 - INFO - [LongSwing] Skipping B-LTC_USDT due to low liquidity (avg_volume=192910.81 < 300000)
+2025-08-08 00:36:03 - INFO - [Swing] Generated LONG signal for B-DOGE_USDT on 15m - Score: 9/7, Confidence: 0.917, TP: 0.216814, SL: 0.210406
+2025-08-08 00:36:03 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:36:03 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:36:03 - INFO - [LongSwing] FILTERED OUT B-PENGU_USDT - Poor movement characteristics:
+2025-08-08 00:36:03 - INFO -   Momentum: 0.07% (need ±0.5%)
+2025-08-08 00:36:03 - INFO -   Movement efficiency: 0.24 (need ≥0.3)
+2025-08-08 00:36:03 - INFO -   ATR/Movement ratio: 0.97 (need ≤3.0)
+2025-08-08 00:36:03 - INFO -   This symbol tends to hang without hitting targets - similar to CFX behavior
+2025-08-08 00:36:03 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:36:03 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:36:05 - WARNING - Insufficient 15m candles for B-ADA_USDT: 0
+2025-08-08 00:36:05 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:36:05 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:36:06 - INFO - [Swing] Skipping B-OMNI_USDT due to low liquidity (avg_volume=90062.71 < 300000)
+2025-08-08 00:36:07 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:36:07 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:36:11 - INFO - [Long Swing] FILTERED OUT: B-OMNI_USDT 1h LONG signal with score 8/8 - Score 8 signals tend to hit stop loss frequently
+2025-08-08 00:36:01 - INFO - [Long Swing] Generated LONG signal for B-ENA_USDT on 1h - Score: 10/9, Confidence: 1.000, TP: 0.652571, SL: 0.606857
+2025-08-08 00:36:21 - INFO - [Swing] Generated LONG signal for B-XRP_USDT on 5m - Score: 7/7, Confidence: 0.917, TP: 3.099810, SL: 3.008190
+2025-08-08 00:36:21 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:36:21 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:36:23 - INFO - CoinDCXFetcher initialized with public_base_url: https://public.coindcx.com, api_base_url: https://api.coindcx.com
+2025-08-08 00:36:23 - INFO - CryptoCompare API enabled: True
+2025-08-08 00:36:30 - INFO - [Long Swing] Generated LONG signal for B-XRP_USDT on 1h - Score: 9/9, Confidence: 0.881, TP: 3.120025, SL: 3.015025
