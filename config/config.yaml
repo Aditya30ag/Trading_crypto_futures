@@ -2,7 +2,7 @@
 api:
   public_base_url: "https://public.coindcx.com"  # For public endpoints like /market_data
   api_base_url: "https://api.coindcx.com"        # For authenticated endpoints like /exchange
-  api_key: ""
+  api_key: "305278f1f0feb851ccb23cbab26a6d5078703085633826503c363b4084e53e5d"
   api_secret: "bda2091e1095547751a75ea180db885a9a026bcdee85fba88ada7c9cbbb03711"
 
 # External Data API settings
@@ -31,7 +31,7 @@ trading:
     - B-TRX_USDT
     - B-AVAX_USDT
   timeframes:
-    scalping: ["5m", "15m"]  # Added 15m for more scalping opportunities
+    scalping: ["1m", "5m"]  # 1m and 5m for true scalping opportunities
     swing: ["15m","1h"]  # Focus on 15m and 1h for swing
     long_swing: ["1h"]  # Reduced to only 1h for long swing (remove 30m)
     trend: ["1d"]  # Keep 1d for trend

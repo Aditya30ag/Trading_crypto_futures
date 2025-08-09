@@ -302,7 +302,7 @@ class EnhancedSignalGenerator:
                 symbol_signals = []
                 
                 # Focus on strategies that typically generate high profits
-                high_profit_strategies = ["long_swing", "swing"]  # Prioritize these strategies
+                high_profit_strategies = ["scalping", "swing", "long_swing"]  # Prioritize all strategies including scalping
                 
                 for strategy in high_profit_strategies:
                     try:
@@ -314,7 +314,9 @@ class EnhancedSignalGenerator:
                         # Test each timeframe for this strategy
                         for timeframe in timeframes:
                             signal = self._generate_signal_for_timeframe(symbol, timeframe, strategy)
-                            if signal and signal.estimated_profit_inr >= 300:  # Increased threshold for higher profits
+                            # Different profit thresholds for different strategies
+                            min_profit = 100 if strategy == "scalping" else 300  # Lower threshold for scalping
+                            if signal and signal.estimated_profit_inr >= min_profit:
                                 symbol_signals.append(signal)
                                 self.logger.debug(f"Generated additional {strategy} signal for {symbol} {timeframe}: Profit ₹{signal.estimated_profit_inr:.2f}")
                     except Exception as e:
@@ -326,8 +328,9 @@ class EnhancedSignalGenerator:
                     symbol_signals.sort(key=lambda s: s.estimated_profit_inr, reverse=True)
                     best_signal = symbol_signals[0]
                     
-                    # Only include if profit is significant (increased threshold)
-                    if best_signal.estimated_profit_inr >= 400:  # Higher threshold for additional signals
+                    # Only include if profit is significant (strategy-specific threshold)
+                    min_best_profit = 150 if best_signal.strategy == "scalping" else 400  # Lower threshold for scalping
+                    if best_signal.estimated_profit_inr >= min_best_profit:
                         additional_signals.append(best_signal)
                         self.logger.info(f"Additional high-profit signal: {symbol} - {best_signal.strategy} ({best_signal.timeframe}): Profit ₹{best_signal.estimated_profit_inr:.2f}")
             
