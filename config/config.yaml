@@ -2,7 +2,7 @@
 api:
   public_base_url: "https://public.coindcx.com"  # For public endpoints like /market_data
   api_base_url: "https://api.coindcx.com"        # For authenticated endpoints like /exchange
-  api_key: "305278f1f0feb851ccb23cbab26a6d5078703085633826503c363b4084e53e5d"
+  api_key: ""
   api_secret: "bda2091e1095547751a75ea180db885a9a026bcdee85fba88ada7c9cbbb03711"
 
 # External Data API settings
