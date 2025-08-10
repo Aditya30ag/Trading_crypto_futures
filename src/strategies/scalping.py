@@ -12,6 +12,10 @@ class ScalpingStrategy:
             self.config = yaml.safe_load(file)
         self.balance = balance
         self.logger = setup_logger()
+        # Scalping behavior configuration
+        self.scalping_cfg = (self.config.get("trading", {}).get("scalping", {})
+                             if isinstance(self.config, dict) else {})
+        self.relaxed = bool(self.scalping_cfg.get("relaxed", False))
 
     def generate_signal(self, symbol, timeframe):
         self.logger.debug(f"[Scalping] generate_signal called for {symbol} {timeframe}")
@@ -98,7 +102,11 @@ class ScalpingStrategy:
                 return None
             spread = order_book.get("spread", 0)
             spread_pct = (spread / current_price) * 100 if spread and current_price else 100
-            spread_limit = 0.5  # 0.5% for scalping
+            # Allow configurable/relaxed spread limit
+            spread_limit = float(self.scalping_cfg.get(
+                "max_spread_pct",
+                1.0 if self.relaxed else 0.5
+            ))
             if spread_pct > spread_limit:
                 self.logger.debug(f"Spread too high for {symbol}: {spread_pct:.3f}% > {spread_limit}%")
                 return None
@@ -113,10 +121,30 @@ class ScalpingStrategy:
             keltner_upper, keltner_lower = self.indicators.calculate_keltner_channels(candles)
             fib_levels = self.indicators.calculate_fibonacci_levels(candles)
 
-            # Add to indicator failure check
+            # Add to indicator failure check (relax if configured)
             if any(x is None for x in [ema_100, supertrend, adx, obv, cci, momentum_osc, keltner_upper, keltner_lower, fib_levels]):
-                self.logger.warning(f"Advanced indicator failure for {symbol}")
-                return None
+                if not self.relaxed:
+                    self.logger.warning(f"Advanced indicator failure for {symbol}")
+                    return None
+                # Provide safe fallbacks in relaxed mode to avoid aborting signal creation
+                if ema_100 is None:
+                    ema_100 = ema_50 if ema_50 is not None else ema_20
+                if supertrend is None:
+                    supertrend = {"in_uptrend": bool(ema_20 and ema_50 and ema_20 >= ema_50)}
+                if adx is None:
+                    adx = {"adx": 20.0, "di_plus": 25.0, "di_minus": 25.0}
+                if obv is None:
+                    obv = 0.0
+                if cci is None:
+                    cci = 0.0
+                if momentum_osc is None:
+                    momentum_osc = 0.0
+                if keltner_upper is None or keltner_lower is None:
+                    # Use a narrow synthetic channel around price
+                    keltner_upper = current_price * 1.01
+                    keltner_lower = current_price * 0.99
+                if fib_levels is None:
+                    fib_levels = {"38.2%": current_price * 0.982, "61.8%": current_price * 1.018}
 
             # --- SIMPLIFIED AND RELIABLE SCALPING ENTRY LOGIC ---
             signal = None
@@ -292,20 +320,21 @@ class ScalpingStrategy:
             # Add bonus_score to main score for final decision
             # (You may want to cap the max score or adjust thresholds accordingly)
 
-            # Check long conditions (NEED 8 out of 12 for higher precision)
+            # Check long conditions (threshold configurable/relaxed)
             long_score = sum(1 for _, condition in long_conditions if condition)
             self.logger.debug(f"[Scalping] {symbol} {timeframe} Long conditions: {[(name, condition) for name, condition in long_conditions]}")
             
-            # Check short conditions (NEED 8 out of 12 for higher precision)
+            # Check short conditions (threshold configurable/relaxed)
             short_score = sum(1 for _, condition in short_conditions if condition)
             self.logger.debug(f"[Scalping] {symbol} {timeframe} Short conditions: {[(name, condition) for name, condition in short_conditions]}")
             
-            # DETERMINE TRADE DIRECTION (BALANCED SCALPING: Need 8 out of 16 for good quality)
-            if long_score >= 8 and long_score > short_score:
+            # DETERMINE TRADE DIRECTION (threshold configurable/relaxed)
+            min_conditions_score = int(self.scalping_cfg.get("min_conditions_score", 6 if self.relaxed else 8))
+            if long_score >= min_conditions_score and long_score > short_score:
                 side = "long"
                 score = long_score
                 reasons = [name for name, condition in long_conditions if condition]
-            elif short_score >= 8 and short_score > long_score:
+            elif short_score >= min_conditions_score and short_score > long_score:
                 side = "short"
                 score = short_score
                 reasons = [name for name, condition in short_conditions if condition]
@@ -334,8 +363,8 @@ class ScalpingStrategy:
             # Calculate pivot points (for potential future use)
             # pivots = self.indicators.calculate_pivot_points(candles)
 
-            # Generate signal if conditions are met (BALANCED SCALPING: Need 8+ for good quality)
-            if side and score >= 8:  # BALANCED SCALPING: Need 8+ out of 16
+            # Generate signal if conditions are met (threshold configurable/relaxed)
+            if side and score >= min_conditions_score:
                 entry_price = current_price
                 
                 # SIMPLIFIED AND REALISTIC TP/SL CALCULATION
@@ -467,9 +496,9 @@ class ScalpingStrategy:
                     "bonus_reasons": bonus_reasons
                 }
                 
-                if score >= 13:
+                if score >= max(min_conditions_score + 5, 13):
                     self.logger.info(f"[Scalping] Generated STRONG signal (score {score}/16): {signal}")
-                elif score >= 11:
+                elif score >= max(min_conditions_score + 3, 11):
                     self.logger.info(f"[Scalping] Generated signal (score {score}/16): {signal}")
                 else:
                     self.logger.debug(f"[Scalping] Generated weak signal (score {score}/16): {signal}")
@@ -655,15 +684,28 @@ class ScalpingStrategy:
             current_price = prices[-1] if prices else 1
             volatility_pct = (atr / current_price) * 100 if current_price else 0
             
-            # HIGH VOLUME AND HIGH VOLATILITY requirements
-            min_avg_volume = 300000  # Very high minimum average volume
-            min_current_volume = 200000  # Very high minimum current volume
-            min_volatility_pct = 1.5  # Minimum 1.5% volatility (ATR)
-            max_volatility_pct = 8.0  # Maximum 8% volatility to avoid extreme conditions
+            # HIGH VOLUME AND HIGH VOLATILITY requirements (configurable/relaxed)
+            if self.relaxed:
+                default_min_avg = 50000
+                default_min_curr = 30000
+                default_min_vol = 0.5
+                default_max_vol = 12.0
+                default_surge = 1.2
+            else:
+                default_min_avg = 300000
+                default_min_curr = 200000
+                default_min_vol = 1.5
+                default_max_vol = 8.0
+                default_surge = 1.8
+
+            min_avg_volume = float(self.scalping_cfg.get("min_avg_volume", default_min_avg))
+            min_current_volume = float(self.scalping_cfg.get("min_current_volume", default_min_curr))
+            min_volatility_pct = float(self.scalping_cfg.get("min_volatility_pct", default_min_vol))
+            max_volatility_pct = float(self.scalping_cfg.get("max_volatility_pct", default_max_vol))
             
             # Volume surge requirement - current volume should be significantly higher
             volume_surge_factor = current_volume / avg_volume if avg_volume > 0 else 0
-            min_volume_surge = 1.8  # Current volume should be at least 1.8x average
+            min_volume_surge = float(self.scalping_cfg.get("min_volume_surge", default_surge))
             
             # Check all requirements
             volume_ok = avg_volume >= min_avg_volume and current_volume >= min_current_volume
@@ -678,6 +720,11 @@ class ScalpingStrategy:
                                 f"current_volume={current_volume:.0f} (need {min_current_volume}), "
                                 f"volatility={volatility_pct:.2f}% (need {min_volatility_pct}-{max_volatility_pct}%), "
                                 f"volume_surge={volume_surge_factor:.2f}x (need {min_volume_surge}x)")
+            
+            # In relaxed mode, allow passing with partial checks if at least volatility and one volume condition pass
+            if self.relaxed and not all_checks_pass:
+                partial_ok = (volatility_ok and (volume_ok or volume_surge_ok))
+                return partial_ok
             
             return all_checks_pass
             

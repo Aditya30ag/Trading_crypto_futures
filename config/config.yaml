@@ -35,6 +35,15 @@ trading:
     swing: ["15m","1h"]  # Focus on 15m and 1h for swing
     long_swing: ["1h"]  # Reduced to only 1h for long swing (remove 30m)
     trend: ["1d"]  # Keep 1d for trend
+  scalping:
+    relaxed: true             # Enable relaxed filters to ensure some scalp signals
+    max_spread_pct: 1.0       # Allow up to 1.0% spread
+    min_avg_volume: 50000     # Relaxed volume thresholds
+    min_current_volume: 30000
+    min_volatility_pct: 0.5   # Allow lower ATR% environments
+    max_volatility_pct: 12.0  # Allow higher ATR% environments
+    min_volume_surge: 1.2     # 1.2x average volume
+    min_conditions_score: 6   # Fewer conditions needed
   leverage:
     scalping: 25
     swing: 25
@@ -60,6 +69,18 @@ trading:
     profit_threshold: 300  # Minimum estimated profit
     confidence_threshold: 0.5  # Confidence threshold
     min_profit_for_monitoring: 200  # Minimum profit for monitoring
+    # Top movers and ATR filter tuning to increase candidates
+    top_movers_count: 50
+    min_volume_for_top_movers: 200000
+    min_volume_for_atr_filter: 200000
+    min_atr_pct_filter: 0.6
+    top_filtered_count: 20
+    # Increase scalping share
+    strategy_order: ["scalping", "swing", "long_swing"]
+    max_scalping_signals: 10
+    max_swing_signals: 6
+    max_long_swing_signals: 1
+    max_final_signals: 20
 
 # Logging settings
 logging:

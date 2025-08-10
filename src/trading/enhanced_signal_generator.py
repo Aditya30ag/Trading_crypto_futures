@@ -351,9 +351,12 @@ class EnhancedSignalGenerator:
     def generate_entry_signals(self) -> List[EntrySignal]:
         try:
             self.logger.info("=== GENERATING ENTRY SIGNALS (HIGH VOLUME SYMBOLS, MIXED STRATEGY) ===")
-            self.logger.info("Fetching top 40 high volume symbols from CoinDCX with increased volume filter...")
-            min_volume = 500000  # Increased from 100K to 500K for highly voluminous signals
-            top_movers = self.fetcher.fetch_top_movers(top_n=40, min_volume=min_volume)
+            # Configurable top-mover scan params
+            sg_cfg = self.config.get("trading", {}).get("signal_generation", {})
+            self.logger.info("Fetching top movers with configurable volume filter...")
+            min_volume = int(sg_cfg.get("min_volume_for_top_movers", 300000))
+            topn = int(sg_cfg.get("top_movers_count", 40))
+            top_movers = self.fetcher.fetch_top_movers(top_n=topn, min_volume=min_volume)
             if not top_movers:
                 self.logger.warning("No top movers found")
                 return []
@@ -377,7 +380,7 @@ class EnhancedSignalGenerator:
             top_movers = filtered_movers
             self.logger.info(f"Found {len(top_movers)} top movers to analyze (min_volume={min_volume})")
 
-            # --- NEW: Filter by ATR% (max of 15m, 30m, 1h) and volume ---
+            # --- Configurable: Filter by ATR% (max of 15m, 30m, 1h) and volume ---
             filtered_by_atr = []
             for symbol, pct_change, volume in top_movers:
                 atr_pcts = []
@@ -395,12 +398,15 @@ class EnhancedSignalGenerator:
                 if not atr_pcts:
                     continue
                 max_atr_pct = max(atr_pcts)
-                if volume >= 500000 and max_atr_pct >= 0.8:  # Increased volume threshold for more selective signals
+                min_vol_cfg = float(sg_cfg.get("min_volume_for_atr_filter", 300000))
+                min_atr_pct_cfg = float(sg_cfg.get("min_atr_pct_filter", 0.6))
+                if volume >= min_vol_cfg and max_atr_pct >= min_atr_pct_cfg:
                     filtered_by_atr.append((symbol, pct_change, volume, max_atr_pct))
             # Sort by ATR% * volume (composite score)
             filtered_by_atr.sort(key=lambda x: x[2] * x[3], reverse=True)
-            # Only keep top 15
-            top_filtered = filtered_by_atr[:15]
+            # Only keep top N configurable
+            top_filtered_count = int(sg_cfg.get("top_filtered_count", 15))
+            top_filtered = filtered_by_atr[:top_filtered_count]
             self.logger.info(f"Selected {len(top_filtered)} symbols with high ATR% (max of 15m/30m/1h) and volume for signal generation.")
             # Use only these for signal generation
             top_movers = [(symbol, pct_change, volume) for symbol, pct_change, volume, atr_pct in top_filtered]
@@ -421,7 +427,9 @@ class EnhancedSignalGenerator:
                     return []
                 candidate_signals = []
                 direction = TradeDirection.LONG if pct_change > 0 else TradeDirection.SHORT
-                for strategy in ["scalping", "swing", "long_swing"]:
+                # Strategy priority configurable; default keep scalping first
+                strategy_order = sg_cfg.get("strategy_order", ["scalping", "swing", "long_swing"])
+                for strategy in strategy_order:
                     config_timeframes = self.config.get("trading", {}).get("timeframes", {})
                     timeframes = config_timeframes.get(strategy, [])
                     if not timeframes:
@@ -470,14 +478,18 @@ class EnhancedSignalGenerator:
             scalping_signals.sort(key=lambda s: s.estimated_profit_inr, reverse=True)
             all_signals.sort(key=lambda s: s.estimated_profit_inr, reverse=True)
             final_signals = []
-            # PRIORITIZE SHORT-TERM SIGNALS: More scalping and swing, less long_swing
-            final_signals.extend(scalping_signals[:6])  # 6 scalping signals (increased from 4)
-            final_signals.extend(swing_signals[:6])     # 6 swing signals (increased from 4) 
-            final_signals.extend(long_swing_signals[:2]) # 2 long_swing signals (reduced from 4)
+            # PRIORITIZE SHORT-TERM SIGNALS: counts configurable
+            max_scalp = int(sg_cfg.get("max_scalping_signals", 8))
+            max_swing = int(sg_cfg.get("max_swing_signals", 6))
+            max_long = int(sg_cfg.get("max_long_swing_signals", 1))
+            final_signals.extend(scalping_signals[:max_scalp])
+            final_signals.extend(swing_signals[:max_swing])
+            final_signals.extend(long_swing_signals[:max_long])
             used = set((s.symbol, s.strategy, s.timeframe) for s in final_signals)
             for s in all_signals:
                 key = (s.symbol, s.strategy, s.timeframe)
-                if key not in used and len(final_signals) < 15:  # Increased to 15 to allow more short-term signals
+                max_final = int(sg_cfg.get("max_final_signals", 20))
+                if key not in used and len(final_signals) < max_final:
                     final_signals.append(s)
                     used.add(key)
             final_signals.sort(key=lambda s: s.estimated_profit_inr, reverse=True)
