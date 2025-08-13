@@ -33,16 +33,19 @@ trading:
   timeframes:
     scalping: ["1m", "5m"]  # 1m and 5m for true scalping opportunities
     swing: ["15m","1h"]  # Focus on 15m and 1h for swing
-    long_swing: ["1h"]  # Reduced to only 1h for long swing (remove 30m)
+    long_swing: []  # Disabled long swing
     trend: ["1d"]  # Keep 1d for trend
   scalping:
-    relaxed: true             # Enable relaxed filters to ensure some scalp signals
-    max_spread_pct: 1.0       # Allow up to 1.0% spread
-    min_avg_volume: 50000     # Relaxed volume thresholds
-    min_current_volume: 30000
-    min_volatility_pct: 0.5   # Allow lower ATR% environments
+    relaxed: true             # Relax filters to allow more scalp signals
+    max_spread_pct: 0.35      # Keep tight spread for quality
+    max_slippage_pct: 0.30    # Tighter slippage for scalping validation
+    min_volume_ratio: 0.7     # Require >=70% of 20-SMA volume for entries
+    # Note: Per-candle volumes are in base units; use realistic thresholds for 1m/5m
+    min_avg_volume: 800       # Average volume over last 20 candles (base units)
+    min_current_volume: 500   # Current candle volume (base units)
+    min_volatility_pct: 0.3   # Allow lower ATR% on 1m/5m
     max_volatility_pct: 12.0  # Allow higher ATR% environments
-    min_volume_surge: 1.2     # 1.2x average volume
+    min_volume_surge: 1.1     # 1.1x average volume
     min_conditions_score: 6   # Fewer conditions needed
   leverage:
     scalping: 25
@@ -76,11 +79,19 @@ trading:
     min_atr_pct_filter: 0.6
     top_filtered_count: 20
     # Increase scalping share
-    strategy_order: ["scalping", "swing", "long_swing"]
+    strategy_order: ["scalping", "swing"]
     max_scalping_signals: 10
     max_swing_signals: 6
-    max_long_swing_signals: 1
+    max_long_swing_signals: 0
     max_final_signals: 20
+    # Generate signals only during allowed IST hours to avoid weak afternoon sessions
+    # Ranges are inclusive; example below allows 18:00–23:59 and 00:00–02:59 IST
+    allowed_ist_hours:
+      - [18, 23]
+      - [0, 2]
+    disable_time_filter: true  # set true to allow generation at any time (for testing)
+    # Ensure a minimum number of SHORT signals are selected when available
+    min_short_signals: 5
 
 # Logging settings
 logging:

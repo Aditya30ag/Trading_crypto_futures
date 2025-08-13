@@ -1,6 +1,7 @@
 from src.data.fetcher import CoinDCXFetcher
 from src.data.indicators import TechnicalIndicators
 from src.utils.logger import setup_logger
+from datetime import datetime, timezone, timedelta
 import yaml
 import pandas as pd
 
@@ -74,12 +75,13 @@ class ScalpingStrategy:
             rsi = self.indicators.calculate_rsi(candles)
             ema_20 = self.indicators.calculate_ema(candles, 20)
             ema_50 = self.indicators.calculate_ema(candles, 50)
+            ema_200 = self.indicators.calculate_ema(candles, 200)
             macd = self.indicators.calculate_macd(candles)
             bb_upper, bb_lower = self.indicators.calculate_bollinger_bands(candles)
             stoch_rsi = self.indicators.calculate_stoch_rsi(candles)
             vwap_daily = self.indicators.calculate_vwap_daily(candles)
 
-            if any(x is None for x in [rsi, ema_20, ema_50, macd, bb_upper, bb_lower, stoch_rsi, vwap_daily]):
+            if any(x is None for x in [rsi, ema_20, ema_50, ema_200, macd, bb_upper, bb_lower, stoch_rsi, vwap_daily]):
                 self.logger.warning(f"Indicator failure for {symbol}: rsi={rsi}, ema_20={ema_20}, ema_50={ema_50}, macd={macd}, bb_upper={bb_upper}, bb_lower={bb_lower}, stoch_rsi={stoch_rsi}, vwap_daily={vwap_daily}")
                 return None
 
@@ -163,7 +165,8 @@ class ScalpingStrategy:
             long_conditions.append(("Price > EMA20", price_above_ema))
             
             # 3. RSI NOT OVERBOUGHT: RSI between 50-70 (optimal bullish range)
-            rsi_bullish = 50 <= rsi <= 70  # Refined range for better precision
+            # Tighter RSI band to avoid overbought late entries at night
+            rsi_bullish = 48 <= rsi <= 62
             long_conditions.append(("RSI optimal bullish (50-70)", rsi_bullish))
             
             # 4. MACD POSITIVE AND RISING: MACD > 0 and histogram increasing
@@ -178,7 +181,7 @@ class ScalpingStrategy:
             long_conditions.append(("Price > VWAP", above_vwap))
             
             # 7. NOT OVERBOUGHT: StochRSI < 80 (avoid extreme overbought)
-            not_overbought = stoch_k < 80 and stoch_d < 80
+            not_overbought = stoch_k < 75 and stoch_d < 75
             long_conditions.append(("Not overbought (StochRSI < 80)", not_overbought))
             
             # 8. MULTI-TIMEFRAME TREND CONFIRMATION
@@ -195,7 +198,10 @@ class ScalpingStrategy:
             # 11. Price above EMA100
             price_above_ema100 = current_price > ema_100
             long_conditions.append(("Price > EMA100", price_above_ema100))
-            # 12. OBV rising (last 2 values)
+            # 12. Price above EMA200 (trend filter)
+            price_above_ema200 = current_price > ema_200
+            long_conditions.append(("Price > EMA200", price_above_ema200))
+            # 13. OBV rising (last 2 values)
             obv_rising = obv > 0  # For simplicity, positive OBV means rising
             long_conditions.append(("OBV rising", obv_rising))
             
@@ -219,7 +225,8 @@ class ScalpingStrategy:
             
             # 16. Volatility confirmation - ATR within optimal range
             atr_pct = (atr / current_price) * 100 if atr and current_price else 0
-            volatility_optimal = 1.5 <= atr_pct <= 6.0  # Optimal volatility range for scalping
+            # Slightly narrower volatility window improves scalp accuracy at night
+            volatility_optimal = 1.0 <= atr_pct <= 4.5
             long_conditions.append(("Optimal volatility (1.5-6% ATR)", volatility_optimal))
 
             # --- SIMPLIFIED SHORT CONDITIONS - Focus on clear bearish setups only ---
@@ -234,7 +241,7 @@ class ScalpingStrategy:
             short_conditions.append(("Price < EMA20", price_below_ema))
             
             # 3. RSI NOT OVERSOLD: RSI between 30-50 (optimal bearish range)
-            rsi_bearish = 30 <= rsi <= 50  # Refined range for better precision
+            rsi_bearish = 38 <= rsi <= 52
             short_conditions.append(("RSI optimal bearish (30-50)", rsi_bearish))
             
             # 4. MACD NEGATIVE AND FALLING: MACD < 0 and histogram decreasing
@@ -249,7 +256,7 @@ class ScalpingStrategy:
             short_conditions.append(("Price < VWAP", below_vwap))
             
             # 7. NOT OVERSOLD: StochRSI > 20 (avoid extreme oversold)
-            not_oversold = stoch_k > 20 and stoch_d > 20
+            not_oversold = stoch_k > 25 and stoch_d > 25
             short_conditions.append(("Not oversold (StochRSI > 20)", not_oversold))
             
             # 8. MULTI-TIMEFRAME TREND CONFIRMATION
@@ -266,6 +273,9 @@ class ScalpingStrategy:
             # 11. Price below EMA100
             price_below_ema100 = current_price < ema_100
             short_conditions.append(("Price < EMA100", price_below_ema100))
+            # 12. Price below EMA200 (trend filter)
+            price_below_ema200 = current_price < ema_200
+            short_conditions.append(("Price < EMA200", price_below_ema200))
             # 12. OBV falling (last 2 values)
             obv_falling = obv < 0  # For simplicity, negative OBV means falling
             short_conditions.append(("OBV falling", obv_falling))
@@ -283,7 +293,7 @@ class ScalpingStrategy:
             short_conditions.append(("Volume surge (1.8x average)", volume_surge))
             
             # 16. Volatility confirmation - ATR within optimal range (reuse calculated values)
-            volatility_optimal = 1.5 <= atr_pct <= 6.0  # Optimal volatility range for scalping
+            volatility_optimal = 1.0 <= atr_pct <= 4.5
             short_conditions.append(("Optimal volatility (1.5-6% ATR)", volatility_optimal))
 
             # --- BONUS CONFIDENCE BOOSTERS ---
@@ -330,6 +340,14 @@ class ScalpingStrategy:
             
             # DETERMINE TRADE DIRECTION (threshold configurable/relaxed)
             min_conditions_score = int(self.scalping_cfg.get("min_conditions_score", 6 if self.relaxed else 8))
+            # Apply stricter filter during evening IST session for accuracy
+            try:
+                ist = timezone(timedelta(hours=5, minutes=30))
+                hour_ist = datetime.now(ist).hour
+                if hour_ist >= 18 or hour_ist <= 2:
+                    min_conditions_score = max(min_conditions_score, 10)
+            except Exception:
+                pass
             if long_score >= min_conditions_score and long_score > short_score:
                 side = "long"
                 score = long_score

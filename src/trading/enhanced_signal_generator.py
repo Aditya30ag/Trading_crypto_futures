@@ -5,15 +5,13 @@ Implements single-entry enforcement and intelligent post-entry management
 """
 
 import time
-import json
-import logging
 import threading
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional, Tuple, Any
 from dataclasses import dataclass, asdict
 from enum import Enum
 import numpy as np
-import pandas as pd
+import pandas as pd  # noqa: F401
 import concurrent.futures
 
 from src.data.fetcher import CoinDCXFetcher
@@ -245,6 +243,11 @@ class EnhancedSignalGenerator:
         
         self.logger.info("EnhancedSignalGenerator initialized")
 
+        # Time-of-day filter (IST)
+        sg_cfg = self.config.get("trading", {}).get("signal_generation", {})
+        self.allowed_ist_hours = sg_cfg.get("allowed_ist_hours", [])  # list of [start,end]
+        self.disable_time_filter = bool(sg_cfg.get("disable_time_filter", False))
+
     def _fetch_high_volume_symbols(self, min_volume=1000000, max_symbols=50) -> List[str]:
         """Fetch high-volume trading symbols (predefined only, no API)."""
         # Use only the default/predefined symbols, no API fetching
@@ -351,6 +354,10 @@ class EnhancedSignalGenerator:
     def generate_entry_signals(self) -> List[EntrySignal]:
         try:
             self.logger.info("=== GENERATING ENTRY SIGNALS (HIGH VOLUME SYMBOLS, MIXED STRATEGY) ===")
+            # Session gating by IST hour
+            if not self._is_allowed_ist_hour():
+                self.logger.info("Outside allowed IST session window. Skipping signal generation.")
+                return []
             # Configurable top-mover scan params
             sg_cfg = self.config.get("trading", {}).get("signal_generation", {})
             self.logger.info("Fetching top movers with configurable volume filter...")
@@ -426,9 +433,10 @@ class EnhancedSignalGenerator:
                     self.logger.info(f"Skipping blacklisted symbol: {symbol}")
                     return []
                 candidate_signals = []
-                direction = TradeDirection.LONG if pct_change > 0 else TradeDirection.SHORT
+                # Do not force direction from 24h change; let strategy decide
+                direction = None
                 # Strategy priority configurable; default keep scalping first
-                strategy_order = sg_cfg.get("strategy_order", ["scalping", "swing", "long_swing"])
+                strategy_order = sg_cfg.get("strategy_order", ["scalping", "swing"]) 
                 for strategy in strategy_order:
                     config_timeframes = self.config.get("trading", {}).get("timeframes", {})
                     timeframes = config_timeframes.get(strategy, [])
@@ -444,7 +452,7 @@ class EnhancedSignalGenerator:
                             signal = self._generate_signal_for_timeframe(symbol, timeframe, strategy, direction)
                             if signal and signal.estimated_profit_inr:
                                 candidate_signals.append(signal)
-                                self.logger.debug(f"Candidate {strategy} {direction.value} signal for {symbol} {timeframe}: Profit ₹{signal.estimated_profit_inr:.2f}, Confidence {signal.confidence:.3f}")
+                                self.logger.debug(f"Candidate {strategy} signal for {symbol} {timeframe}: Profit ₹{signal.estimated_profit_inr:.2f}, Confidence {signal.confidence:.3f}")
                         except Exception as e:
                             self.logger.debug(f"Skipping {symbol} {timeframe}: {e}")
                             continue
@@ -477,14 +485,35 @@ class EnhancedSignalGenerator:
             long_swing_signals.sort(key=lambda s: s.estimated_profit_inr, reverse=True)
             scalping_signals.sort(key=lambda s: s.estimated_profit_inr, reverse=True)
             all_signals.sort(key=lambda s: s.estimated_profit_inr, reverse=True)
+
+            # Enforce a minimum number of SHORT signals if available
+            min_short = int(sg_cfg.get("min_short_signals", 0))
+            def take_with_short_min(signals: List[EntrySignal], limit: int) -> List[EntrySignal]:
+                if limit <= 0:
+                    return []
+                shorts = [s for s in signals if s.direction == TradeDirection.SHORT]
+                longs = [s for s in signals if s.direction == TradeDirection.LONG]
+                picked = []
+                # Take required shorts first
+                if min_short > 0 and shorts:
+                    picked.extend(shorts[:min(min_short, limit)])
+                # Fill the rest by best remaining
+                remaining = [s for s in signals if s not in picked]
+                remaining.sort(key=lambda s: s.estimated_profit_inr, reverse=True)
+                for s in remaining:
+                    if len(picked) >= limit:
+                        break
+                    picked.append(s)
+                return picked
+
             final_signals = []
             # PRIORITIZE SHORT-TERM SIGNALS: counts configurable
             max_scalp = int(sg_cfg.get("max_scalping_signals", 8))
             max_swing = int(sg_cfg.get("max_swing_signals", 6))
-            max_long = int(sg_cfg.get("max_long_swing_signals", 1))
-            final_signals.extend(scalping_signals[:max_scalp])
-            final_signals.extend(swing_signals[:max_swing])
-            final_signals.extend(long_swing_signals[:max_long])
+            max_long = int(sg_cfg.get("max_long_swing_signals", 0))
+            final_signals.extend(take_with_short_min(scalping_signals, max_scalp))
+            final_signals.extend(take_with_short_min(swing_signals, max_swing))
+            final_signals.extend(take_with_short_min(long_swing_signals, max_long))
             used = set((s.symbol, s.strategy, s.timeframe) for s in final_signals)
             for s in all_signals:
                 key = (s.symbol, s.strategy, s.timeframe)
@@ -493,13 +522,34 @@ class EnhancedSignalGenerator:
                     final_signals.append(s)
                     used.add(key)
             final_signals.sort(key=lambda s: s.estimated_profit_inr, reverse=True)
-            self.logger.info(f"Generated {len(final_signals)} profitable signals (PRIORITIZING scalping & swing over long_swing) from {len(top_movers)} top movers")
+            short_count = sum(1 for s in final_signals if s.direction == TradeDirection.SHORT)
+            long_count = sum(1 for s in final_signals if s.direction == TradeDirection.LONG)
+            self.logger.info(f"Generated {len(final_signals)} signals: {long_count} LONG / {short_count} SHORT (prioritizing scalping & swing) from {len(top_movers)} symbols")
             for i, signal in enumerate(final_signals, 1):
                 self.logger.info(f"{i}. {signal.symbol} - {signal.strategy} ({signal.timeframe}): Score {signal.score}, Normalized {signal.normalized_score:.1f}%, Confidence {signal.confidence:.3f}, Est. Profit ₹{signal.estimated_profit_inr:.2f}")
             return final_signals
         except Exception as e:
             self.logger.error(f"Error generating entry signals: {e}")
             return []
+
+    def _is_allowed_ist_hour(self) -> bool:
+        try:
+            if self.disable_time_filter or not self.allowed_ist_hours:
+                return True
+            ist = timezone(timedelta(hours=5, minutes=30))
+            now_ist = datetime.now(ist)
+            hour = now_ist.hour
+            for start, end in self.allowed_ist_hours:
+                if start <= end:
+                    if start <= hour <= end:
+                        return True
+                else:
+                    # Wrap-around (e.g., 22-2)
+                    if hour >= start or hour <= end:
+                        return True
+            return False
+        except Exception:
+            return True
 
     def _generate_signal_for_timeframe(self, symbol: str, timeframe: str, strategy: str, direction: TradeDirection = None) -> Optional[EntrySignal]:
         """Generate signal for specific symbol and timeframe using the specified strategy and forced direction."""
@@ -516,11 +566,12 @@ class EnhancedSignalGenerator:
             elif strategy == "swing":
                 from src.strategies.swing import SwingStrategy
                 strategy_instance = SwingStrategy(self.config.get("trading", {}).get("balance", 10000))
-                signal_data = strategy_instance.generate_signal(symbol, timeframe, direction.value if direction else None)
+                # Let swing decide direction internally; do not force
+                signal_data = strategy_instance.generate_signal(symbol, timeframe, None)
             elif strategy == "long_swing":
                 from src.strategies.long_swing import LongSwingStrategy
                 strategy_instance = LongSwingStrategy(self.config.get("trading", {}).get("balance", 10000))
-                signal_data = strategy_instance.generate_signal(symbol, timeframe, direction.value if direction else None)
+                signal_data = strategy_instance.generate_signal(symbol, timeframe, None)
             else:
                 self.logger.error(f"Unknown strategy: {strategy}")
                 return None
@@ -706,7 +757,7 @@ class EnhancedSignalGenerator:
             # Scalping strategy logic
             if strategy == "scalping":
                 macd = indicators.get("macd")
-                vwap = indicators.get("vwap")
+                vwap = indicators.get("vwap") or indicators.get("vwap_daily")
                 stoch_k = indicators.get("stoch_rsi_k")
                 stoch_d = indicators.get("stoch_rsi_d")
                 
@@ -738,7 +789,7 @@ class EnhancedSignalGenerator:
             # Swing strategy logic
             elif strategy == "swing":
                 macd_histogram = indicators.get("macd_histogram")
-                vwap = indicators.get("vwap")
+                vwap = indicators.get("vwap") or indicators.get("vwap_daily")
                 stoch_k = indicators.get("stoch_rsi_k")
                 stoch_d = indicators.get("stoch_rsi_d")
                 
@@ -1042,9 +1093,9 @@ class EnhancedSignalGenerator:
             price_difference = abs(live_price - signal.entry_price)
             price_difference_pct = (price_difference / signal.entry_price) * 100
             
-            # Strategy-specific slippage tolerance
+            # Strategy-specific slippage tolerance (configurable)
             if signal.strategy == "scalping":
-                max_slippage_pct = 0.5  # 0.5% for scalping (tight)
+                max_slippage_pct = float(self.config.get("trading", {}).get("scalping", {}).get("max_slippage_pct", 0.5))
             elif signal.strategy == "swing":
                 max_slippage_pct = 1.0  # 1.0% for swing
             elif signal.strategy == "long_swing":
@@ -1060,9 +1111,9 @@ class EnhancedSignalGenerator:
             if order_book and order_book.get("spread"):
                 spread_pct = (order_book["spread"] / live_price) * 100
                 
-                # Strategy-specific spread tolerance
+                # Strategy-specific spread tolerance (configurable)
                 if signal.strategy == "scalping":
-                    max_spread_pct = 0.3  # 0.3% for scalping
+                    max_spread_pct = float(self.config.get("trading", {}).get("scalping", {}).get("max_spread_pct", 0.3))
                 elif signal.strategy == "swing":
                     max_spread_pct = 0.5  # 0.5% for swing
                 elif signal.strategy == "long_swing":
@@ -1108,9 +1159,9 @@ class EnhancedSignalGenerator:
                 current_volume = float(candles[-1]["volume"]) if candles else 0
                 volume_sma = self._calculate_volume_sma(candles, 20)
                 
-                # Strategy-specific volume requirements
+                # Strategy-specific volume requirements (configurable)
                 if signal.strategy == "scalping":
-                    min_volume_ratio = 0.5  # 50% of SMA for scalping
+                    min_volume_ratio = float(self.config.get("trading", {}).get("scalping", {}).get("min_volume_ratio", 0.5))
                 elif signal.strategy == "swing":
                     min_volume_ratio = 0.7  # 70% of SMA for swing
                 elif signal.strategy == "long_swing":
